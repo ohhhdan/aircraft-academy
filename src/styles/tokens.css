@@ -1,0 +1,46 @@
+/* Spotter's Field Guide — design tokens from design_handoff_aircraft_field_guide/README.md */
+
+:root {
+  --paper: #f4efe4;
+  --surface: #fffdf8;
+  --surface-warm: #fbf6ea;
+  --surface-hover: #fbf3e6;
+  --surface-locked: #f4eee0;
+  --surface-image: #f1ead9;
+  --module-locked: #f7f2e6;
+  --ink: #23201a;
+  --ink-muted: #6f6a5e;
+  --ink-faint: #46413a;
+  --locked-text: #a59d8a;
+  --ochre: #c2772f;
+  --ochre-hover: #b06b28;
+  --teal: #2e6f72;
+  --teal-hover: #285f62;
+  --green: #3c7d54;
+  --green-dark: #2d5c3c;
+  --green-bg: #e7f0e6;
+  --green-bg-soft: #eef4ec;
+  --brick: #b8442f;
+  --brick-dark: #8a3426;
+  --brick-bg: #f6e3dd;
+  --brick-bg-soft: #f8ece7;
+  --cream: #fff7ec;
+  --line-subtle: #e0d8c6;
+  --line-locked: #d6ccb6;
+  --dashed-plate: #c9bfa6;
+  --dashed-empty: #b9ac8f;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --shadow: 0 3px 0 var(--ink);
+  --shadow-sm: 0 2px 0 var(--ink);
+  --shadow-dark: 0 3px 0 #6f6a5e;
+  --radius-card: 14px;
+  --radius-btn: 11px;
+  --max-width: 1040px;
+  /* legacy aliases used in pages */
+  --success: var(--green);
+  --error: var(--brick);
+  --notam-red: var(--brick);
+  --runway-amber: var(--ochre);
+}

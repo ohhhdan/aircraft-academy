@@ -1,0 +1,1195 @@
+[
+  {
+    "id": "a320",
+    "family": "Airbus A320",
+    "variants": ["A319", "A320", "A321", "A320neo", "A321neo"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1988,
+    "nickname": null,
+    "rangeNm": 3300,
+    "role": "commercial",
+    "equivalents": ["b737"],
+    "keyFeatures": ["rounded nose profile", "winglets or sharklets on wingtips", "distinctive cockpit side windows (four-pane)", "underwing engines with circular nacelles"],
+    "geekFacts": ["First commercial fly-by-wire airliner", "A320neo winglets are called sharklets"],
+    "diagramId": "a320",
+    "callouts": [
+      { "id": "c1", "label": "Sharklets", "description": "Curved wingtip devices on neo variants", "x": 82, "y": 38 },
+      { "id": "c2", "label": "Four-pane windows", "description": "Distinctive cockpit side window shape", "x": 12, "y": 32 },
+      { "id": "c3", "label": "Rounded nose", "description": "Blunter nose compared to Boeing narrowbodies", "x": 5, "y": 40 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Jetstar_Airbus_A320_VH-XNJ_Perth_2023_%2801%29.jpg/1280px-Jetstar_Airbus_A320_VH-XNJ_Perth_2023_%2801%29.jpg",
+        "attribution": "Wikimedia Commons / Bidgee",
+        "variant": "A320"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": ["CDG ramp", "LHR Terminal 4", "FRA apron"]
+  },
+  {
+    "id": "b737",
+    "family": "Boeing 737",
+    "variants": ["737-700", "737-800", "737-900", "737 MAX 8", "737 MAX 9"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1967,
+    "nickname": null,
+    "rangeNm": 3200,
+    "role": "commercial",
+    "equivalents": ["a320"],
+    "keyFeatures": ["pointed nose", "flattened bottom engine nacelle", "tail sits lower relative to fuselage", "eyebrow windows on older classics"],
+    "geekFacts": ["Best-selling commercial jet family in history", "MAX has distinctive chevron engine nacelles"],
+    "diagramId": "b737",
+    "callouts": [
+      { "id": "c1", "label": "Flat engine bottom", "description": "Flattened lower nacelle — classic 737 tell", "x": 38, "y": 58 },
+      { "id": "c2", "label": "Pointed nose", "description": "Sharper nose profile than Airbus narrowbodies", "x": 4, "y": 38 },
+      { "id": "c3", "label": "Low tail", "description": "Tail fin appears shorter relative to fuselage", "x": 88, "y": 22 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Wikimedia Commons / Aero Icarus",
+        "variant": "737-800"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": ["ORD ramp", "DUB stand", "LAX Terminal 1"]
+  },
+  {
+    "id": "b757",
+    "family": "Boeing 757",
+    "variants": ["757-200", "757-300"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1983,
+    "nickname": null,
+    "rangeNm": 3900,
+    "role": "commercial",
+    "equivalents": ["a321"],
+    "keyFeatures": ["long narrow fuselage", "tall landing gear", "large high-bypass engines", "Boeing narrowbody nose but stretched body"],
+    "geekFacts": ["Only Boeing narrowbody with a 200+ seat stretched variant", "Still prized for hot-and-high performance"],
+    "diagramId": "b757",
+    "callouts": [
+      { "id": "c1", "label": "Long fuselage", "description": "Distinctively long narrowbody silhouette", "x": 50, "y": 48 },
+      { "id": "c2", "label": "Tall gear", "description": "Unusually tall landing gear struts", "x": 42, "y": 72 },
+      { "id": "c3", "label": "Large engines", "description": "Big nacelles for a narrowbody", "x": 35, "y": 55 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Delta_Air_Lines_Boeing_757-200_N6715C.jpg/1280px-Delta_Air_Lines_Boeing_757-200_N6715C.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "757-200"
+      }
+    ],
+    "spotterLocations": ["ATL concourse", "EWR ramp"]
+  },
+  {
+    "id": "a330",
+    "family": "Airbus A330",
+    "variants": ["A330-200", "A330-300", "A330neo"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1994,
+    "nickname": null,
+    "rangeNm": 6350,
+    "role": "commercial",
+    "equivalents": ["b767", "b787"],
+    "keyFeatures": ["wide twin-engine fuselage", "distinctive canted winglets", "Airbus cockpit windows", "blended wing root fairing"],
+    "geekFacts": ["A330 and A340 share the same fuselage cross-section", "A330neo has distinctive curved sharklets"],
+    "diagramId": "a330",
+    "callouts": [
+      { "id": "c1", "label": "Canted winglets", "description": "Angular upward-swept wingtip fences", "x": 80, "y": 35 },
+      { "id": "c2", "label": "Wide fuselage", "description": "Twin-aisle widebody proportions", "x": 45, "y": 42 },
+      { "id": "c3", "label": "Airbus windows", "description": "Four-pane cockpit side windows", "x": 10, "y": 30 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Airbus_A330-300%2C_Air_China_JP7246668.jpg/1280px-Airbus_A330-300%2C_Air_China_JP7246668.jpg",
+        "attribution": "Wikimedia Commons / Aero Icarus",
+        "variant": "A330-300"
+      }
+    ],
+    "spotterLocations": ["HKG apron", "LHR Terminal 3"]
+  },
+  {
+    "id": "b767",
+    "family": "Boeing 767",
+    "variants": ["767-200", "767-300", "767-400"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1982,
+    "nickname": null,
+    "rangeNm": 5980,
+    "role": "commercial",
+    "equivalents": ["a330"],
+    "keyFeatures": ["wide but shorter fuselage than 777", "conventional tail", "Boeing cockpit windows", "swept winglets on later variants"],
+    "geekFacts": ["First widebody twinjet to enter service", "Still used heavily as freighter and tanker"],
+    "diagramId": "b767",
+    "callouts": [
+      { "id": "c1", "label": "Wide twin", "description": "Widebody with only two engines", "x": 40, "y": 50 },
+      { "id": "c2", "label": "Boeing nose", "description": "Pointed Boeing narrowbody-style nose on widebody", "x": 6, "y": 36 },
+      { "id": "c3", "label": "Conventional tail", "description": "Single vertical stabilizer, no third engine", "x": 90, "y": 20 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/United_Airlines_Boeing_767-300_N641UA.jpg/1280px-United_Airlines_Boeing_767-300_N641UA.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "767-300"
+      }
+    ],
+    "spotterLocations": ["EWR ramp", "NRT cargo"]
+  },
+  {
+    "id": "a220",
+    "family": "Airbus A220",
+    "variants": ["A220-100", "A220-300"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 2016,
+    "nickname": null,
+    "rangeNm": 3450,
+    "role": "commercial",
+    "equivalents": ["e190"],
+    "keyFeatures": ["small narrowbody", "distinctive pointed nose", "large cabin windows", "originally Bombardier CSeries"],
+    "geekFacts": ["Originally developed as Bombardier CSeries", "Designed for 100-150 seat market"],
+    "diagramId": "a220",
+    "callouts": [
+      { "id": "c1", "label": "Compact size", "description": "Smaller than A320/737", "x": 48, "y": 46 },
+      { "id": "c2", "label": "Large windows", "description": "Oversized passenger windows", "x": 30, "y": 40 },
+      { "id": "c3", "label": "Slim tail", "description": "Elegant narrow vertical stabilizer", "x": 92, "y": 18 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Airbus_A220-300%2C_airBaltic_JP7562214.jpg/1280px-Airbus_A220-300%2C_airBaltic_JP7562214.jpg",
+        "attribution": "Wikimedia Commons / Aero Icarus",
+        "variant": "A220-300"
+      }
+    ],
+    "spotterLocations": ["YUL gate", "ZRH apron"]
+  },
+  {
+    "id": "e190",
+    "family": "Embraer E-Jet",
+    "variants": ["E170", "E175", "E190", "E195"],
+    "manufacturer": "Embraer",
+    "skycardsCategories": ["Airliner", "Twin Jet"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 2004,
+    "nickname": null,
+    "rangeNm": 2400,
+    "role": "commercial",
+    "equivalents": ["a220", "crj"],
+    "keyFeatures": ["regional jet proportions", "low swept wing", "engines under wing", "two-over-three seating in E190"],
+    "geekFacts": ["E195-E2 competes directly with A220-300", "Widely used by US regional carriers"],
+    "diagramId": "e190",
+    "callouts": [
+      { "id": "c1", "label": "Regional size", "description": "Smaller than mainline narrowbodies", "x": 50, "y": 45 },
+      { "id": "c2", "label": "Low wing", "description": "Wing mounted low on fuselage", "x": 55, "y": 55 },
+      { "id": "c3", "label": "Twin underwing", "description": "Two podded engines", "x": 38, "y": 58 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
+        "attribution": "Wikimedia Commons / Anna Zvereva",
+        "variant": "E190"
+      }
+    ],
+    "spotterLocations": ["AMS regional", "BOS Terminal C"]
+  },
+  {
+    "id": "a321",
+    "family": "Airbus A321",
+    "variants": ["A321ceo", "A321neo", "A321LR", "A321XLR"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1994,
+    "nickname": null,
+    "rangeNm": 4000,
+    "role": "commercial",
+    "equivalents": ["b757"],
+    "keyFeatures": ["stretched A320 fuselage", "single overwing exit pair on early models", "sharklets on neo", "longest A320 family member"],
+    "geekFacts": ["A321XLR enables transatlantic narrowbody routes", "Longest narrowbody in production"],
+    "diagramId": "a321",
+    "callouts": [
+      { "id": "c1", "label": "Stretched body", "description": "Longer than A320 with extra doors", "x": 52, "y": 44 },
+      { "id": "c2", "label": "A320 family nose", "description": "Same nose profile as A320", "x": 6, "y": 38 },
+      { "id": "c3", "label": "Sharklets", "description": "On neo variants", "x": 84, "y": 36 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/American_Airlines_Airbus_A321-231_N564AM.jpg/1280px-American_Airlines_Airbus_A321-231_N564AM.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "A321"
+      }
+    ],
+    "spotterLocations": ["JFK Terminal 8", "LAX gate"]
+  },
+  {
+    "id": "b787",
+    "family": "Boeing 787 Dreamliner",
+    "variants": ["787-8", "787-9", "787-10"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 2011,
+    "nickname": "Dreamliner",
+    "rangeNm": 7650,
+    "role": "commercial",
+    "equivalents": ["a350"],
+    "keyFeatures": ["sawtooth engine nacelle rear", "raked wingtips", "smooth nose contour", "smaller windows with dimmable tint"],
+    "geekFacts": ["First major composite airliner", "Cabin altitude simulated at 6,000 ft"],
+    "diagramId": "b787",
+    "callouts": [
+      { "id": "c1", "label": "Sawtooth nacelle", "description": "Scalloped rear engine edge reduces noise", "x": 36, "y": 56 },
+      { "id": "c2", "label": "Raked wingtips", "description": "Swept-back wingtip extensions", "x": 82, "y": 34 },
+      { "id": "c3", "label": "Dreamliner nose", "description": "Smooth, rounded Boeing nose", "x": 5, "y": 38 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A.jpg/1280px-All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A.jpg",
+        "attribution": "Wikimedia Commons / Kentaro Iemoto",
+        "variant": "787-8"
+      }
+    ],
+    "spotterLocations": ["HND apron", "SEA ramp"]
+  },
+  {
+    "id": "a350",
+    "family": "Airbus A350",
+    "variants": ["A350-900", "A350-1000"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 2015,
+    "nickname": null,
+    "rangeNm": 8100,
+    "role": "commercial",
+    "equivalents": ["b787", "b777"],
+    "keyFeatures": ["distinctive black mask around cockpit windows", "curved winglets", "smooth fuselage", "six-wheel main bogies"],
+    "geekFacts": ["Cockpit window 'raccoon mask' is a key identifier", "53% composite structure"],
+    "diagramId": "a350",
+    "callouts": [
+      { "id": "c1", "label": "Raccoon mask", "description": "Dark band around cockpit windows", "x": 10, "y": 28 },
+      { "id": "c2", "label": "Curved winglets", "description": "Smoothly curved wingtip devices", "x": 83, "y": 33 },
+      { "id": "c3", "label": "Six-wheel bogie", "description": "Triple twin-wheel main gear", "x": 58, "y": 72 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Qatar_Airways_Airbus_A350-941_A7-ALA.jpg/1280px-Qatar_Airways_Airbus_A350-941_A7-ALA.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "A350-900"
+      }
+    ],
+    "spotterLocations": ["DOH hub", "SIN Terminal 3"]
+  },
+  {
+    "id": "b777",
+    "family": "Boeing 777",
+    "variants": ["777-200", "777-300", "777-200ER", "777-300ER", "777X"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "Twin Jet", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1995,
+    "nickname": "Triple Seven",
+    "rangeNm": 8200,
+    "role": "commercial",
+    "equivalents": ["a350", "a340"],
+    "keyFeatures": ["very large diameter engines", "six-wheel main landing gear trucks", "long widebody fuselage", "blade-shaped tail cone"],
+    "geekFacts": ["First Boeing fly-by-wire airliner", "777-300ER is the best-selling 777 variant"],
+    "diagramId": "b777",
+    "callouts": [
+      { "id": "c1", "label": "Huge engines", "description": "Among the largest turbofans on any twinjet", "x": 34, "y": 54 },
+      { "id": "c2", "label": "Six-wheel bogie", "description": "Twin three-axle main gear trucks", "x": 55, "y": 74 },
+      { "id": "c3", "label": "Blade tail cone", "description": "Distinctive apu exhaust shape", "x": 94, "y": 48 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Emirates_Boeing_777-31H%28ER%29_A6-EBK.jpg/1280px-Emirates_Boeing_777-31H%28ER%29_A6-EBK.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "777-300ER"
+      }
+    ],
+    "spotterLocations": ["DXB concourse", "LHR Terminal 5"]
+  },
+  {
+    "id": "b747",
+    "family": "Boeing 747",
+    "variants": ["747-400", "747-8"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "4+ Engine", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 1970,
+    "nickname": "Queen of the Skies",
+    "rangeNm": 7260,
+    "role": "commercial",
+    "equivalents": ["a380"],
+    "keyFeatures": ["forward upper deck hump", "four engines", "wide fuselage", "iconic silhouette"],
+    "geekFacts": ["Nicknamed Queen of the Skies", "747-8 upper deck extends further than -400"],
+    "diagramId": "b747",
+    "callouts": [
+      { "id": "c1", "label": "Forward hump", "description": "Distinctive upper deck bubble at front", "x": 18, "y": 28 },
+      { "id": "c2", "label": "Four engines", "description": "Two per wing, all podded", "x": 32, "y": 58 },
+      { "id": "c3", "label": "Wide body", "description": "Twin-aisle widebody proportions", "x": 50, "y": 44 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lufthansa_Boeing_747-430_D-ABVU.jpg/1280px-Lufthansa_Boeing_747-430_D-ABVU.jpg",
+        "attribution": "Wikimedia Commons / Aero Icarus",
+        "variant": "747-400"
+      }
+    ],
+    "spotterLocations": ["FRA apron", "JFK Terminal 1"]
+  },
+  {
+    "id": "a380",
+    "family": "Airbus A380",
+    "variants": ["A380-800"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "4+ Engine", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 2007,
+    "nickname": "Superjumbo",
+    "rangeNm": 8200,
+    "role": "commercial",
+    "equivalents": ["b747"],
+    "keyFeatures": ["full-length double deck", "four engines", "massive wingspan", "no hump — straight upper deck"],
+    "geekFacts": ["Largest passenger airliner ever built", "Two complete passenger decks floor to ceiling"],
+    "diagramId": "a380",
+    "callouts": [
+      { "id": "c1", "label": "Full double deck", "description": "Two decks along entire fuselage length", "x": 45, "y": 35 },
+      { "id": "c2", "label": "Four engines", "description": "Massive podded turbofans", "x": 30, "y": 60 },
+      { "id": "c3", "label": "Huge wingspan", "description": "Wingspan of 79.8 meters", "x": 75, "y": 30 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emirates_Airbus_A380-861_A6-EDB.jpg/1280px-Emirates_Airbus_A380-861_A6-EDB.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "A380-800"
+      }
+    ],
+    "spotterLocations": ["DXB Terminal 3", "LHR Terminal 3"]
+  },
+  {
+    "id": "a340",
+    "family": "Airbus A340",
+    "variants": ["A340-300", "A340-500", "A340-600"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Airliner", "4+ Engine", "Airbus"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 1993,
+    "nickname": null,
+    "rangeNm": 7400,
+    "role": "commercial",
+    "equivalents": ["b777", "b747"],
+    "keyFeatures": ["four engines on widebody", "very long -600 fuselage", "no hump", "centerline gear on -500/-600"],
+    "geekFacts": ["A340-600 is one of the longest airliners ever", "Four engines when twins dominated long-haul"],
+    "diagramId": "a340",
+    "callouts": [
+      { "id": "c1", "label": "Four engines", "description": "Four underwing podded engines", "x": 28, "y": 58 },
+      { "id": "c2", "label": "No hump", "description": "Unlike 747, single continuous upper line", "x": 40, "y": 36 },
+      { "id": "c3", "label": "Long fuselage", "description": "Especially on -600 variant", "x": 55, "y": 44 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lufthansa_Airbus_A340-313_D-AIFA.jpg/1280px-Lufthansa_Airbus_A340-313_D-AIFA.jpg",
+        "attribution": "Wikimedia Commons / Aero Icarus",
+        "variant": "A340-300"
+      }
+    ],
+    "spotterLocations": ["FRA apron", "MUC gate"]
+  },
+  {
+    "id": "b727",
+    "family": "Boeing 727",
+    "variants": ["727-100", "727-200"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Airliner", "4+ Engine", "Boeing"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 3,
+    "introYear": 1964,
+    "nickname": null,
+    "rangeNm": 2400,
+    "role": "commercial",
+    "equivalents": ["md80"],
+    "keyFeatures": ["three engines", "two wing-mounted plus tail S-duct", "T-tail configuration", "narrowbody"],
+    "geekFacts": ["Tail engine fed by distinctive S-duct intake", "Once the world's most produced jetliner"],
+    "diagramId": "b727",
+    "callouts": [
+      { "id": "c1", "label": "S-duct intake", "description": "Third engine intake at base of tail", "x": 88, "y": 42 },
+      { "id": "c2", "label": "T-tail", "description": "Horizontal stabilizer atop vertical fin", "x": 92, "y": 12 },
+      { "id": "c3", "label": "Three engines", "description": "Two wing, one tail", "x": 35, "y": 56 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/FedEx_Express_Boeing_727-200F_N217FE.jpg/1280px-FedEx_Express_Boeing_727-200F_N217FE.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "727-200"
+      }
+    ],
+    "spotterLocations": ["MEM cargo", "MEX ramp"]
+  },
+  {
+    "id": "md11",
+    "family": "McDonnell Douglas MD-11",
+    "variants": ["MD-11", "MD-11F"],
+    "manufacturer": "McDonnell Douglas",
+    "skycardsCategories": ["Airliner", "4+ Engine"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 3,
+    "introYear": 1990,
+    "nickname": null,
+    "rangeNm": 6350,
+    "role": "commercial",
+    "equivalents": ["b747", "a340"],
+    "keyFeatures": ["three engines widebody", "winglets", "third engine on tail", "DC-10 derivative"],
+    "geekFacts": ["Last trijet widebody built", "FedEx operates the largest remaining fleet"],
+    "diagramId": "md11",
+    "callouts": [
+      { "id": "c1", "label": "Tail engine", "description": "Third engine mounted on tail cone", "x": 90, "y": 38 },
+      { "id": "c2", "label": "Winglets", "description": "Small upward wingtip devices", "x": 78, "y": 34 },
+      { "id": "c3", "label": "Wide trijet", "description": "Three-engine widebody layout", "x": 45, "y": 46 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FedEx_Express_McDonnell_Douglas_MD-11F_N601FE.jpg/1280px-FedEx_Express_McDonnell_Douglas_MD-11F_N601FE.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "MD-11F"
+      }
+    ],
+    "spotterLocations": ["MEM hub", "ANC cargo"]
+  },
+  {
+    "id": "g650",
+    "family": "Gulfstream G650",
+    "variants": ["G650", "G650ER"],
+    "manufacturer": "Gulfstream",
+    "skycardsCategories": ["Jet", "Twin Jet"],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 2012,
+    "nickname": null,
+    "rangeNm": 7000,
+    "role": "business",
+    "equivalents": ["global7500"],
+    "businessOrLeisure": "business",
+    "keyFeatures": ["large oval windows", "T-tail", "swept wings with winglets", "long low fuselage"],
+    "geekFacts": ["Ultra-long-range flagship bizjet", "Can fly London to Buenos Aires nonstop"],
+    "diagramId": "g650",
+    "callouts": [
+      { "id": "c1", "label": "Oval windows", "description": "Large distinctive cabin windows", "x": 35, "y": 40 },
+      { "id": "c2", "label": "T-tail", "description": "High-mounted horizontal stabilizer", "x": 90, "y": 14 },
+      { "id": "c3", "label": "Low long fuselage", "description": "Sleek stretched cabin", "x": 50, "y": 46 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Gulfstream_G650_N650PH.jpg/1280px-Gulfstream_G650_N650PH.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["TEB ramp", "VNY FBO"]
+  },
+  {
+    "id": "citationx",
+    "family": "Cessna Citation X",
+    "variants": ["Citation X", "Citation X+"],
+    "manufacturer": "Cessna",
+    "skycardsCategories": ["Jet", "Twin Jet", "Cessna"],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 1996,
+    "nickname": null,
+    "rangeNm": 3460,
+    "role": "business",
+    "equivalents": ["falcon7x"],
+    "businessOrLeisure": "business",
+    "keyFeatures": ["highly swept wings", "large diameter engines", "T-tail", "fastest civilian aircraft for years"],
+    "geekFacts": ["Was the fastest civilian aircraft in the world", "Distinctive large engine nacelles"],
+    "diagramId": "citationx",
+    "callouts": [
+      { "id": "c1", "label": "Swept wings", "description": "Highly swept wing planform", "x": 55, "y": 50 },
+      { "id": "c2", "label": "Big engines", "description": "Oversized nacelles for speed", "x": 40, "y": 56 },
+      { "id": "c3", "label": "T-tail", "description": "Tailplane atop fin", "x": 88, "y": 16 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cessna_Citation_X_N208CX.jpg/1280px-Cessna_Citation_X_N208CX.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["DAL FBO", "OPF ramp"]
+  },
+  {
+    "id": "falcon7x",
+    "family": "Dassault Falcon 7X",
+    "variants": ["Falcon 7X", "Falcon 8X"],
+    "manufacturer": "Dassault",
+    "skycardsCategories": ["Jet", "4+ Engine"],
+    "categoryGroup": "business-jets",
+    "engineCount": 3,
+    "introYear": 2007,
+    "nickname": null,
+    "rangeNm": 5950,
+    "role": "business",
+    "equivalents": ["g650", "global7500"],
+    "businessOrLeisure": "business",
+    "keyFeatures": ["three engines", "low swept wing", "cranked wing design", "tail-mounted center engine"],
+    "geekFacts": ["First fly-by-wire business jet", "Three-engine layout like older trijets"],
+    "diagramId": "falcon7x",
+    "callouts": [
+      { "id": "c1", "label": "Trijet layout", "description": "Two wing engines plus tail engine", "x": 42, "y": 54 },
+      { "id": "c2", "label": "Cranked wing", "description": "Distinctive wing kink", "x": 60, "y": 48 },
+      { "id": "c3", "label": "S-duct tail", "description": "Center engine intake at tail root", "x": 86, "y": 40 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dassault_Falcon_7X_F-WFBW.jpg/1280px-Dassault_Falcon_7X_F-WFBW.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["LBG ramp", "GVA FBO"]
+  },
+  {
+    "id": "global7500",
+    "family": "Bombardier Global 7500",
+    "variants": ["Global 7500", "Global 8000"],
+    "manufacturer": "Bombardier",
+    "skycardsCategories": ["Jet", "Twin Jet"],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 2018,
+    "nickname": null,
+    "rangeNm": 7700,
+    "role": "business",
+    "equivalents": ["g650"],
+    "businessOrLeisure": "business",
+    "keyFeatures": ["very long fuselage", "large cabin windows", "low wing T-tail", "transcontinental range"],
+    "geekFacts": ["Longest-range purpose-built business jet", "Competes directly with G650ER"],
+    "diagramId": "global7500",
+    "callouts": [
+      { "id": "c1", "label": "Long fuselage", "description": "Extra-long cabin section", "x": 48, "y": 44 },
+      { "id": "c2", "label": "Large windows", "description": "Big rectangular cabin windows", "x": 32, "y": 38 },
+      { "id": "c3", "label": "T-tail", "description": "High tail configuration", "x": 91, "y": 15 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bombardier_Global_7500_C-GXLV.jpg/1280px-Bombardier_Global_7500_C-GXLV.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["YYZ FBO", "Farnborough"]
+  },
+  {
+    "id": "phenom300",
+    "family": "Embraer Phenom 300",
+    "variants": ["Phenom 300", "Phenom 300E"],
+    "manufacturer": "Embraer",
+    "skycardsCategories": ["Jet", "Twin Jet"],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 2009,
+    "nickname": null,
+    "rangeNm": 2010,
+    "role": "business",
+    "equivalents": ["citationx"],
+    "businessOrLeisure": "both",
+    "keyFeatures": ["light jet size", "low wing", "winglets", "single pilot certified"],
+    "geekFacts": ["Best-selling light jet for several years", "Popular for owner-operators"],
+    "diagramId": "phenom300",
+    "callouts": [
+      { "id": "c1", "label": "Light jet scale", "description": "Smaller than mid-size bizjets", "x": 50, "y": 46 },
+      { "id": "c2", "label": "Winglets", "description": "Small curved wingtip devices", "x": 78, "y": 36 },
+      { "id": "c3", "label": "Low wing", "description": "Wing below fuselage", "x": 55, "y": 52 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Embraer_Phenom_300_PP-EMB.jpg/1280px-Embraer_Phenom_300_PP-EMB.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["SDL FBO", "APA ramp"]
+  },
+  {
+    "id": "learjet75",
+    "family": "Learjet 75",
+    "variants": ["Learjet 75", "Learjet 75 Liberty"],
+    "manufacturer": "Bombardier",
+    "skycardsCategories": ["Jet", "Twin Jet"],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 2013,
+    "nickname": null,
+    "rangeNm": 2040,
+    "role": "business",
+    "equivalents": ["phenom300"],
+    "businessOrLeisure": "leisure",
+    "keyFeatures": ["distinctive delta-fuselage wing fairing", "T-tail", "swept wings", "classic Learjet profile"],
+    "geekFacts": ["Last of the legendary Learjet line", "Iconic among private aviation enthusiasts"],
+    "diagramId": "learjet75",
+    "callouts": [
+      { "id": "c1", "label": "Delta fairing", "description": "Wing-body fairing unique to Learjet", "x": 52, "y": 50 },
+      { "id": "c2", "label": "T-tail", "description": "High-mounted tailplane", "x": 89, "y": 14 },
+      { "id": "c3", "label": "Swept wing", "description": "Moderately swept wing", "x": 58, "y": 48 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Learjet_75_N626JS.jpg/1280px-Learjet_75_N626JS.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["LAS FBO", "TEB ramp"]
+  },
+  {
+    "id": "f16",
+    "family": "F-16 Fighting Falcon",
+    "variants": ["F-16A", "F-16C", "F-16V"],
+    "manufacturer": "Lockheed Martin",
+    "skycardsCategories": ["Military", "Jet", "Single Seat"],
+    "categoryGroup": "military",
+    "engineCount": 1,
+    "introYear": 1978,
+    "nickname": "Viper",
+    "rangeNm": 1600,
+    "role": "military",
+    "equivalents": ["f35"],
+    "keyFeatures": ["single engine", "bubble canopy", "blended wing-body", "ventral stabilator"],
+    "geekFacts": ["Nicknamed Viper by pilots", "Most-produced Western fighter"],
+    "diagramId": "f16",
+    "callouts": [
+      { "id": "c1", "label": "Bubble canopy", "description": "Frameless bubble cockpit", "x": 22, "y": 28 },
+      { "id": "c2", "label": "Blended body", "description": "Fuselage blends into wing root", "x": 45, "y": 44 },
+      { "id": "c3", "label": "Single engine", "description": "One exhaust nozzle", "x": 92, "y": 52 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/F-16_Fighting_Falcon_%28cropped%29.jpg/1280px-F-16_Fighting_Falcon_%28cropped%29.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["LCK Air Show", "Nellis AFB"]
+  },
+  {
+    "id": "f35",
+    "family": "F-35 Lightning II",
+    "variants": ["F-35A", "F-35B", "F-35C"],
+    "manufacturer": "Lockheed Martin",
+    "skycardsCategories": ["Military", "Jet", "Single Seat"],
+    "categoryGroup": "military",
+    "engineCount": 1,
+    "introYear": 2015,
+    "nickname": "Lightning II",
+    "rangeNm": 1200,
+    "role": "military",
+    "equivalents": ["f16"],
+    "keyFeatures": ["stealth shaping", "single engine", "lift fan on B variant", "angled vertical tails"],
+    "geekFacts": ["Three variants: conventional, STOVL, carrier", "Most expensive weapons program ever"],
+    "diagramId": "f35",
+    "callouts": [
+      { "id": "c1", "label": "Stealth shaping", "description": "Angled surfaces, no protrusions", "x": 40, "y": 42 },
+      { "id": "c2", "label": "Canted tails", "description": "Outward-angled vertical stabilizers", "x": 85, "y": 22 },
+      { "id": "c3", "label": "Single exhaust", "description": "One stealth-shaped nozzle", "x": 93, "y": 50 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/F-35A_flight_%28cropped%29.jpg/1280px-F-35A_flight_%28cropped%29.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["EGLIN", "Luke AFB"]
+  },
+  {
+    "id": "c130",
+    "family": "C-130 Hercules",
+    "variants": ["C-130H", "C-130J", "AC-130"],
+    "manufacturer": "Lockheed Martin",
+    "skycardsCategories": ["Military", "Propeller", "4+ Engine"],
+    "categoryGroup": "military",
+    "engineCount": 4,
+    "introYear": 1956,
+    "nickname": "Hercules",
+    "rangeNm": 2400,
+    "role": "military",
+    "equivalents": ["a400m"],
+    "keyFeatures": ["four turboprops", "high wing", "rear loading ramp", "boxy fuselage"],
+    "geekFacts": ["In continuous production since 1954", "Operates from unprepared strips worldwide"],
+    "diagramId": "c130",
+    "callouts": [
+      { "id": "c1", "label": "Four turboprops", "description": "Four propeller engines", "x": 30, "y": 30 },
+      { "id": "c2", "label": "High wing", "description": "Wing above fuselage", "x": 50, "y": 22 },
+      { "id": "c3", "label": "Rear ramp", "description": "Cargo ramp at tail", "x": 94, "y": 48 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/C-130J_Hercules.jpg/1280px-C-130J_Hercules.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["Ramstein AB", "Dyess AFB"]
+  },
+  {
+    "id": "b52",
+    "family": "B-52 Stratofortress",
+    "variants": ["B-52H"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Military", "Jet", "4+ Engine", "Boeing"],
+    "categoryGroup": "military",
+    "engineCount": 8,
+    "introYear": 1955,
+    "nickname": "BUFF",
+    "rangeNm": 8800,
+    "role": "military",
+    "equivalents": [],
+    "keyFeatures": ["eight engines in four pods", "long slender fuselage", "high swept wing", "dual bicycle landing gear"],
+    "geekFacts": ["BUFF: Big Ugly Fat Fellow", "Expected to fly past 2050"],
+    "diagramId": "b52",
+    "callouts": [
+      { "id": "c1", "label": "Eight engines", "description": "Four twin-engine pods under wing", "x": 35, "y": 55 },
+      { "id": "c2", "label": "High swept wing", "description": "Very swept high-mounted wing", "x": 50, "y": 28 },
+      { "id": "c3", "label": "Long fuselage", "description": "Slender bomb bay body", "x": 55, "y": 44 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/B-52_Stratofortress_%28cropped%29.jpg/1280px-B-52_Stratofortress_%28cropped%29.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["Barksdale AFB", "Minot AFB"]
+  },
+  {
+    "id": "a10",
+    "family": "A-10 Thunderbolt II",
+    "variants": ["A-10A", "A-10C"],
+    "manufacturer": "Fairchild Republic",
+    "skycardsCategories": ["Military", "Jet", "Twin Jet"],
+    "categoryGroup": "military",
+    "engineCount": 2,
+    "introYear": 1977,
+    "nickname": "Warthog",
+    "rangeNm": 800,
+    "role": "military",
+    "equivalents": [],
+    "keyFeatures": ["engines mounted high on fuselage", "straight wing", "twin tail", "GAU-8 gun barrel visible"],
+    "geekFacts": ["Nicknamed Warthog for its ugly effectiveness", "Built around the 30mm GAU-8 Avenger cannon"],
+    "diagramId": "a10",
+    "callouts": [
+      { "id": "c1", "label": "High engines", "description": "Engines above wing, not below", "x": 55, "y": 32 },
+      { "id": "c2", "label": "Straight wing", "description": "Unswept wing for low-speed agility", "x": 48, "y": 48 },
+      { "id": "c3", "label": "Twin tail", "description": "Two vertical stabilizers", "x": 88, "y": 20 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/A-10_Thunderbolt_II_inflight.jpg/1280px-A-10_Thunderbolt_II_inflight.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["Davis-Monthan", "Spangdahlem AB"]
+  },
+  {
+    "id": "kc135",
+    "family": "KC-135 Stratotanker",
+    "variants": ["KC-135R", "KC-135T"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Military", "Jet", "4+ Engine", "Boeing"],
+    "categoryGroup": "military",
+    "engineCount": 4,
+    "introYear": 1957,
+    "nickname": null,
+    "rangeNm": 1500,
+    "role": "military",
+    "equivalents": ["a330-mrt"],
+    "keyFeatures": ["707-derived fuselage", "four underwing engines", "boom refueling pod at tail", "low swept wing"],
+    "geekFacts": ["Based on Boeing 367-80 prototype", "Primary USAF aerial refueling platform"],
+    "diagramId": "kc135",
+    "callouts": [
+      { "id": "c1", "label": "707 heritage", "description": "Narrowbody derived from 707", "x": 42, "y": 44 },
+      { "id": "c2", "label": "Four engines", "description": "Four podded turbofans", "x": 32, "y": 56 },
+      { "id": "c3", "label": "Boom pod", "description": "Refueling boom at tail", "x": 93, "y": 42 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/KC-135R_Stratotanker.jpg/1280px-KC-135R_Stratotanker.jpg",
+        "attribution": "Wikimedia Commons / US Air Force"
+      }
+    ],
+    "spotterLocations": ["Mildenhall", "Travis AFB"]
+  },
+  {
+    "id": "c172",
+    "family": "Cessna 172 Skyhawk",
+    "variants": ["172R", "172S", "172N"],
+    "manufacturer": "Cessna",
+    "skycardsCategories": ["Propeller", "Piston", "Cessna"],
+    "categoryGroup": "propeller",
+    "engineCount": 1,
+    "introYear": 1956,
+    "nickname": "Skyhawk",
+    "rangeNm": 640,
+    "role": "general",
+    "equivalents": ["pa28"],
+    "businessOrLeisure": "leisure",
+    "keyFeatures": ["high wing", "single propeller", "tricycle gear", "strut-braced wing"],
+    "geekFacts": ["Most produced aircraft in history", "Standard trainer worldwide"],
+    "diagramId": "c172",
+    "callouts": [
+      { "id": "c1", "label": "High wing", "description": "Wing above cabin", "x": 45, "y": 22 },
+      { "id": "c2", "label": "Single prop", "description": "One nose-mounted propeller", "x": 6, "y": 42 },
+      { "id": "c3", "label": "Strut brace", "description": "Diagonal wing strut", "x": 30, "y": 35 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cessna_172_Skyhawk_N6184F.jpg/1280px-Cessna_172_Skyhawk_N6184F.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["Local GA field", "Flight school ramp"]
+  },
+  {
+    "id": "pa28",
+    "family": "Piper PA-28 Cherokee",
+    "variants": ["PA-28-161", "PA-28-181", "PA-28R"],
+    "manufacturer": "Piper",
+    "skycardsCategories": ["Propeller", "Piston"],
+    "categoryGroup": "propeller",
+    "engineCount": 1,
+    "introYear": 1961,
+    "nickname": "Cherokee",
+    "rangeNm": 465,
+    "role": "general",
+    "equivalents": ["c172"],
+    "businessOrLeisure": "leisure",
+    "keyFeatures": ["low wing", "single engine", "tapered wing", "tricycle gear"],
+    "geekFacts": ["Cherokee family includes Archer, Warrior, Arrow", "Classic rival to Cessna 172"],
+    "diagramId": "pa28",
+    "callouts": [
+      { "id": "c1", "label": "Low wing", "description": "Wing below fuselage", "x": 50, "y": 52 },
+      { "id": "c2", "label": "Single prop", "description": "Nose-mounted propeller", "x": 5, "y": 40 },
+      { "id": "c3", "label": "Tapered wing", "description": "Wing tapers toward tip", "x": 72, "y": 48 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Piper_PA-28-161_Cherokee_Warrior_III_N5508U.jpg/1280px-Piper_PA-28-161_Cherokee_Warrior_III_N5508U.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["Regional airfield", "Flight club"]
+  },
+  {
+    "id": "kingair",
+    "family": "Beechcraft King Air",
+    "variants": ["King Air 200", "King Air 350", "King Air 90"],
+    "manufacturer": "Beechcraft",
+    "skycardsCategories": ["Propeller", "Twin Jet"],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1964,
+    "nickname": null,
+    "rangeNm": 1800,
+    "role": "general",
+    "equivalents": ["pc12"],
+    "businessOrLeisure": "business",
+    "keyFeatures": ["twin turboprops", "low wing", "T-tail", "boxy fuselage"],
+    "geekFacts": ["Best-selling turboprop family", "Staple of regional corporate travel"],
+    "diagramId": "kingair",
+    "callouts": [
+      { "id": "c1", "label": "Twin turboprops", "description": "Two wing-mounted propellers", "x": 38, "y": 50 },
+      { "id": "c2", "label": "T-tail", "description": "High horizontal stabilizer", "x": 90, "y": 14 },
+      { "id": "c3", "label": "Boxy fuselage", "description": "Square cross-section cabin", "x": 48, "y": 42 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Beechcraft_B200_Super_King_Air_N25DL.jpg/1280px-Beechcraft_B200_Super_King_Air_N25DL.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["TEB FBO", "Regional airport"]
+  },
+  {
+    "id": "dash8",
+    "family": "De Havilland Dash 8",
+    "variants": ["Q200", "Q300", "Q400"],
+    "manufacturer": "De Havilland Canada",
+    "skycardsCategories": ["Propeller", "Twin Jet", "Airliner"],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1984,
+    "nickname": "Q400",
+    "rangeNm": 1100,
+    "role": "commercial",
+    "equivalents": ["atr72"],
+    "keyFeatures": ["high wing twin turboprop", "long landing gear", "T-tail on Q400", "regional airliner size"],
+    "geekFacts": ["Q400 has active noise cancellation", "Competes with ATR 72 on regional routes"],
+    "diagramId": "dash8",
+    "callouts": [
+      { "id": "c1", "label": "High wing", "description": "Wing mounted above fuselage", "x": 48, "y": 24 },
+      { "id": "c2", "label": "Twin turboprops", "description": "Two large propellers", "x": 35, "y": 32 },
+      { "id": "c3", "label": "T-tail", "description": "On Q400 variant", "x": 91, "y": 12 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porter_Airlines_Dash_8-Q400_C-GKQA.jpg/1280px-Porter_Airlines_Dash_8-Q400_C-GKQA.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "Q400"
+      }
+    ],
+    "spotterLocations": ["YTZ island", "BHX regional"]
+  },
+  {
+    "id": "atr72",
+    "family": "ATR 72",
+    "variants": ["ATR 72-500", "ATR 72-600"],
+    "manufacturer": "ATR",
+    "skycardsCategories": ["Propeller", "Twin Jet", "Airliner"],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1989,
+    "nickname": null,
+    "rangeNm": 825,
+    "role": "commercial",
+    "equivalents": ["dash8"],
+    "keyFeatures": ["high wing", "twin turboprops", "conventional tail", "glazed pointed nose"],
+    "geekFacts": ["Dominant regional turboprop in Europe", "ATR 72-600 has glass cockpit"],
+    "diagramId": "atr72",
+    "callouts": [
+      { "id": "c1", "label": "High wing", "description": "Wing above fuselage", "x": 46, "y": 26 },
+      { "id": "c2", "label": "Pointed nose", "description": "Distinctive glazed nose profile", "x": 4, "y": 38 },
+      { "id": "c3", "label": "Conventional tail", "description": "Low-mounted tailplane", "x": 90, "y": 28 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/ATR_72-600_F-ORLB.jpg/1280px-ATR_72-600_F-ORLB.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "ATR 72-600"
+      }
+    ],
+    "spotterLocations": ["TLS apron", "BOD regional"]
+  },
+  {
+    "id": "bell206",
+    "family": "Bell 206 JetRanger",
+    "variants": ["206B", "206L LongRanger"],
+    "manufacturer": "Bell",
+    "skycardsCategories": ["Helicopter"],
+    "categoryGroup": "helicopter",
+    "engineCount": 1,
+    "introYear": 1967,
+    "nickname": "JetRanger",
+    "rangeNm": 370,
+    "role": "helicopter",
+    "equivalents": ["h145"],
+    "businessOrLeisure": "both",
+    "keyFeatures": ["single turboshaft", "skid or wheeled gear", "two-blade main rotor", "compact fuselage"],
+    "geekFacts": ["Most recognizable light helicopter", "News and tour industry staple"],
+    "diagramId": "bell206",
+    "callouts": [
+      { "id": "c1", "label": "Two-blade rotor", "description": "Characteristic two-blade main rotor", "x": 50, "y": 8 },
+      { "id": "c2", "label": "Slim tail boom", "description": "Long narrow tail boom", "x": 78, "y": 42 },
+      { "id": "c3", "label": "Compact body", "description": "Small rounded cabin", "x": 30, "y": 48 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bell_206B_JetRanger_III.jpg/1280px-Bell_206B_JetRanger_III.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["Heliport", "News station pad"]
+  },
+  {
+    "id": "uh60",
+    "family": "Sikorsky UH-60 Black Hawk",
+    "variants": ["UH-60A", "UH-60M", "HH-60"],
+    "manufacturer": "Sikorsky",
+    "skycardsCategories": ["Helicopter", "Military"],
+    "categoryGroup": "helicopter",
+    "engineCount": 2,
+    "introYear": 1979,
+    "nickname": "Black Hawk",
+    "rangeNm": 320,
+    "role": "helicopter",
+    "equivalents": ["chinook"],
+    "keyFeatures": ["twin engines", "four-blade main rotor", "wheeled gear", "military transport profile"],
+    "geekFacts": ["Named after Native American leader", "Standard US Army utility helicopter"],
+    "diagramId": "uh60",
+    "callouts": [
+      { "id": "c1", "label": "Four-blade rotor", "description": "Four-blade main rotor system", "x": 48, "y": 6 },
+      { "id": "c2", "label": "Twin engines", "description": "Two turboshaft engines", "x": 55, "y": 38 },
+      { "id": "c3", "label": "Wheeled gear", "description": "Retractable wheeled landing gear", "x": 35, "y": 68 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/UH-60_Black_Hawk.jpg/1280px-UH-60_Black_Hawk.jpg",
+        "attribution": "Wikimedia Commons / US Army"
+      }
+    ],
+    "spotterLocations": ["Fort Campbell", "Ramstein AB"]
+  },
+  {
+    "id": "h145",
+    "family": "Airbus H145",
+    "variants": ["H145", "H145M"],
+    "manufacturer": "Airbus",
+    "skycardsCategories": ["Helicopter"],
+    "categoryGroup": "helicopter",
+    "engineCount": 2,
+    "introYear": 2014,
+    "nickname": null,
+    "rangeNm": 340,
+    "role": "helicopter",
+    "equivalents": ["bell206"],
+    "businessOrLeisure": "both",
+    "keyFeatures": ["fenestron tail rotor", "twin engines", "bear paw landing gear", "compact EC145 derivative"],
+    "geekFacts": ["Fenestron is a shrouded tail rotor", "Popular for EMS and police"],
+    "diagramId": "h145",
+    "callouts": [
+      { "id": "c1", "label": "Fenestron", "description": "Enclosed fan tail rotor", "x": 92, "y": 38 },
+      { "id": "c2", "label": "Bear paw gear", "description": "Skid-like landing gear", "x": 38, "y": 70 },
+      { "id": "c3", "label": "Twin engines", "description": "Two rear-mounted turboshafts", "x": 58, "y": 40 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Airbus_H145_D-HYAO.jpg/1280px-Airbus_H145_D-HYAO.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["EMS base", "Police helipad"]
+  },
+  {
+    "id": "chinook",
+    "family": "Boeing CH-47 Chinook",
+    "variants": ["CH-47D", "CH-47F"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Helicopter", "Military", "Boeing"],
+    "categoryGroup": "helicopter",
+    "engineCount": 2,
+    "introYear": 1962,
+    "nickname": "Chinook",
+    "rangeNm": 400,
+    "role": "helicopter",
+    "equivalents": ["uh60"],
+    "keyFeatures": ["tandem rotors", "twin engines", "large boxy fuselage", "rear loading ramp"],
+    "geekFacts": ["Tandem rotor design needs no tail rotor", "Primary heavy-lift helicopter for US Army"],
+    "diagramId": "chinook",
+    "callouts": [
+      { "id": "c1", "label": "Tandem rotors", "description": "Front and rear counter-rotating rotors", "x": 25, "y": 6 },
+      { "id": "c2", "label": "Boxy fuselage", "description": "Large rectangular cargo body", "x": 48, "y": 46 },
+      { "id": "c3", "label": "Rear ramp", "description": "Cargo loading ramp", "x": 94, "y": 50 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/CH-47_Chinook.jpg/1280px-CH-47_Chinook.jpg",
+        "attribution": "Wikimedia Commons / US Army"
+      }
+    ],
+    "spotterLocations": ["Fort Hood", "RAF Odiham"]
+  },
+  {
+    "id": "apache",
+    "family": "Boeing AH-64 Apache",
+    "variants": ["AH-64A", "AH-64D", "AH-64E"],
+    "manufacturer": "Boeing",
+    "skycardsCategories": ["Helicopter", "Military", "Boeing"],
+    "categoryGroup": "helicopter",
+    "engineCount": 2,
+    "introYear": 1986,
+    "nickname": "Apache",
+    "rangeNm": 260,
+    "role": "helicopter",
+    "equivalents": [],
+    "keyFeatures": ["tandem cockpit", "stub wings with weapons", "four-blade main rotor", "sensor turret nose"],
+    "geekFacts": ["Primary US Army attack helicopter", "Distinctive sensor ball under nose"],
+    "diagramId": "apache",
+    "callouts": [
+      { "id": "c1", "label": "Sensor turret", "description": "Ball-shaped nose sensor", "x": 4, "y": 44 },
+      { "id": "c2", "label": "Stub wings", "description": "Weapon pylons on sides", "x": 42, "y": 55 },
+      { "id": "c3", "label": "Tandem cockpit", "description": "Pilot and gunner in sequence", "x": 28, "y": 40 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/AH-64_Apache.jpg/1280px-AH-64_Apache.jpg",
+        "attribution": "Wikimedia Commons / US Army"
+      }
+    ],
+    "spotterLocations": ["Fort Riley", "Hohenfels"]
+  },
+  {
+    "id": "crj",
+    "family": "Bombardier CRJ",
+    "variants": ["CRJ-200", "CRJ-700", "CRJ-900", "CRJ-1000"],
+    "manufacturer": "Bombardier",
+    "skycardsCategories": ["Airliner", "Twin Jet"],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1992,
+    "nickname": null,
+    "rangeNm": 1700,
+    "role": "commercial",
+    "equivalents": ["e190"],
+    "keyFeatures": ["regional jet size", "t-tail", "engines at rear fuselage", "narrow diameter fuselage"],
+    "geekFacts": ["CRJ series launched the 50-seat regional jet era", "Rear-mounted engines distinguish from E-Jets"],
+    "diagramId": "crj",
+    "callouts": [
+      { "id": "c1", "label": "T-tail", "description": "High-mounted horizontal stabilizer", "x": 90, "y": 14 },
+      { "id": "c2", "label": "Rear engines", "description": "Engines mounted on aft fuselage", "x": 72, "y": 48 },
+      { "id": "c3", "label": "Slim fuselage", "description": "Narrow regional-jet body", "x": 48, "y": 44 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lufthansa_CityLine_Bombardier_CRJ-900LR_D-ACNA.jpg/1280px-Lufthansa_CityLine_Bombardier_CRJ-900LR_D-ACNA.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer",
+        "variant": "CRJ-900"
+      }
+    ],
+    "spotterLocations": ["MUC regional", "ORD Terminal 2"]
+  },
+  {
+    "id": "pc12",
+    "family": "Pilatus PC-12",
+    "variants": ["PC-12", "PC-12 NGX"],
+    "manufacturer": "Pilatus",
+    "skycardsCategories": ["Propeller", "Piston"],
+    "categoryGroup": "propeller",
+    "engineCount": 1,
+    "introYear": 1994,
+    "nickname": null,
+    "rangeNm": 1800,
+    "role": "general",
+    "equivalents": ["kingair"],
+    "businessOrLeisure": "both",
+    "keyFeatures": ["single turboprop", "high wing", "retractable gear", "large cargo door"],
+    "geekFacts": ["Popular single-engine turboprop for business and medevac", "Swiss-built, operates from short strips"],
+    "diagramId": "pc12",
+    "callouts": [
+      { "id": "c1", "label": "High wing", "description": "Wing above fuselage", "x": 44, "y": 24 },
+      { "id": "c2", "label": "Single prop", "description": "Nose-mounted turboprop", "x": 6, "y": 40 },
+      { "id": "c3", "label": "Bulky fuselage", "description": "Large cabin cross-section", "x": 50, "y": 46 }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pilatus_PC-12_HB-FPC.jpg/1280px-Pilatus_PC-12_HB-FPC.jpg",
+        "attribution": "Wikimedia Commons / Markus Eigenheer"
+      }
+    ],
+    "spotterLocations": ["Stans airfield", "Regional FBO"]
+  }
+]

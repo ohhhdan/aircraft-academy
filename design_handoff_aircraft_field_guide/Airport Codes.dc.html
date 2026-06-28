@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;}
+  *{box-sizing:border-box;}
+  input{font-family:inherit;}
+  @keyframes fgflip { from { transform:rotateX(90deg); opacity:0; } to { transform:rotateX(0); opacity:1; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#f4efe4; color:#23201a; font-family:'Hanken Grotesk',system-ui,sans-serif;">
+
+  <!-- ===== TOP BAR ===== -->
+  <div style="position:sticky; top:0; z-index:30; background:#f4efe4; border-bottom:1.5px solid #23201a;">
+    <div style="max-width:1040px; margin:0 auto; padding:11px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+      <div onClick="{{ goHome }}" style="display:flex; align-items:center; gap:11px; cursor:pointer;">
+        <div style="width:34px; height:34px; border:1.5px solid #23201a; border-radius:9px; background:#2e6f72; color:#fff7ec; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:12px; box-shadow:0 2px 0 #23201a;">IATA</div>
+        <div style="line-height:1;">
+          <div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600;">Airport Codes</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.18em; color:#6f6a5e; margin-top:2px;">MODULE 04 &middot; DEPARTURE BOARD</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <sc-if value="{{ notQuiz }}" hint-placeholder-val="{{ true }}">
+          <div onClick="{{ goHome }}" style="display:flex; align-items:center; gap:7px; border:1.5px solid #23201a; border-radius:10px; padding:7px 12px; background:#fffdf8; box-shadow:0 2px 0 #23201a; cursor:pointer; font-weight:600; font-size:14px;" style-active="transform:translateY(2px); box-shadow:0 0 0 #23201a;">Levels</div>
+        </sc-if>
+        <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+          <div onClick="{{ goHome }}" style="border:1.5px solid #23201a; border-radius:10px; padding:7px 12px; background:#fffdf8; cursor:pointer; font-weight:600; font-size:14px;">Quit</div>
+        </sc-if>
+        <a href="Field Guide.dc.html" style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; color:#6f6a5e; text-decoration:none; border-bottom:1px solid #c9bfa6; padding-bottom:1px;">&#8617; FIELD GUIDE</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1040px; margin:0 auto; padding:28px 20px 90px;">
+
+    <!-- ============ HOME ============ -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="display:flex; gap:36px; align-items:stretch; flex-wrap:wrap; margin-bottom:30px;">
+          <div style="flex:1.3; min-width:300px; display:flex; flex-direction:column; justify-content:center;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; color:#2e6f72; margin-bottom:14px;">MODULE 04 &middot; AIRPORT CODES</div>
+            <div style="font-family:'Newsreader',serif; font-size:52px; line-height:1.02; font-weight:600; letter-spacing:-0.01em; margin-bottom:16px; text-wrap:balance;">Three letters. One city.</div>
+            <div style="font-size:17px; line-height:1.6; color:#46413a; max-width:470px; margin-bottom:26px; text-wrap:pretty;">Every airport hides behind a three-letter IATA code. Some spell themselves out; most don&rsquo;t. Work up the board from the world&rsquo;s great hubs to regional fields only a local would know &mdash; clear a level at {{ targetLabel }} to earn your wings into the Full Board.</div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <div onClick="{{ startEasy }}" style="display:inline-flex; align-items:center; gap:9px; background:#2e6f72; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:14px 22px; font-weight:700; font-size:16px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#285f62;">Board now &rarr;</div>
+            </div>
+          </div>
+          <div style="flex:1; min-width:260px; display:flex; align-items:center; justify-content:center;">
+            <!-- baggage tag -->
+            <div style="width:230px; border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 4px 0 #23201a; padding:18px 18px 20px; position:relative;">
+              <div style="width:30px; height:30px; border:1.5px solid #23201a; border-radius:50%; background:#f4efe4; margin:0 auto 14px;"></div>
+              <div style="border-top:1.5px dashed #c9bfa6; padding-top:16px; text-align:center;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; color:#6f6a5e; margin-bottom:8px;">DESTINATION</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:64px; letter-spacing:.06em; line-height:1; color:#2e6f72;">{{ tagCode }}</div>
+                <div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600; margin-top:10px;">{{ tagCity }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#c2772f; margin-top:6px;">{{ tagTease }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cleared strip -->
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fbf6ea; padding:18px 20px; box-shadow:0 3px 0 #23201a; margin-bottom:28px; display:flex; gap:28px; align-items:center; flex-wrap:wrap;">
+          <div style="flex:none;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:4px;">LEVELS CLEARED</div>
+            <div style="font-family:'Newsreader',serif; font-size:46px; font-weight:600; line-height:1; color:#3c7d54;">{{ clearedLabel }}</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="height:13px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#fffdf8; margin-bottom:8px;"><div style="width:{{ clearedBarWidth }}; height:100%; background:#3c7d54;"></div></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;">Hit {{ targetLabel }} on a level to clear it. Each level keeps its own accuracy &mdash; no cumulative score.</div>
+          </div>
+          <div onClick="{{ resetStats }}" style="flex:none; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; color:#2e6f72; text-decoration:underline; cursor:pointer;">reset progress</div>
+        </div>
+
+        <!-- full board banner -->
+        <sc-if value="{{ masterReady }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #23201a; border-radius:16px; background:#23201a; color:#f4efe4; padding:18px 20px; box-shadow:0 3px 0 #6f6a5e; margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap;">
+            <div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; color:#e0b483;">FULL BOARD &middot; CLEARED FOR DEPARTURE</div><div style="font-family:'Newsreader',serif; font-size:24px; font-weight:600; margin-top:3px;">Every code you&rsquo;ve cleared, all at once</div><div style="font-size:13.5px; color:#cfc6b4; margin-top:3px;">{{ masterCountText }}</div></div>
+            <div onClick="{{ startMaster }}" style="flex:none; display:inline-flex; align-items:center; gap:8px; background:#2e6f72; color:#fff7ec; border:1.5px solid #f4efe4; border-radius:12px; box-shadow:0 3px 0 #6f6a5e; padding:13px 20px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6f6a5e;">Run the full board &rarr;</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ masterLocked }}" hint-placeholder-val="{{ true }}">
+          <div style="border:1.5px dashed #b9ac8f; border-radius:16px; background:#f4eee0; padding:16px 20px; margin-bottom:28px; display:flex; align-items:center; gap:12px;">
+            <div style="font-size:22px;">&#128274;</div>
+            <div><div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600;">Full Board locked</div><div style="font-size:14px; color:#6f6a5e;">Clear any one level ({{ targetLabel }}+) to unlock the all-levels gauntlet.</div></div>
+          </div>
+        </sc-if>
+
+        <!-- levels -->
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:14px;">CHOOSE YOUR ALTITUDE</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px;">
+          <sc-for list="{{ levels }}" as="lv" hint-placeholder-count="3">
+            <div onClick="{{ lv.onClick }}" style="border:1.5px solid #23201a; border-left:7px solid {{ lv.accent }}; border-radius:15px; background:#fffdf8; padding:18px; box-shadow:0 3px 0 #23201a; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#fbf3e6;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                <div style="font-family:'Newsreader',serif; font-size:24px; font-weight:600; line-height:1.05;">{{ lv.name }}</div>
+                <sc-if value="{{ lv.mastered }}" hint-placeholder-val="{{ false }}"><div style="flex:none; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3c7d54; font-weight:700;">&#9733; CLEARED</div></sc-if>
+              </div>
+              <div style="font-size:14px; color:#6f6a5e; line-height:1.5; margin-bottom:14px; min-height:42px; text-wrap:pretty;">{{ lv.blurb }}</div>
+              <div style="display:flex; gap:6px; margin-bottom:14px;">
+                <sc-for list="{{ lv.samples }}" as="sc" hint-placeholder-count="3">
+                  <div style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:13px; letter-spacing:.08em; padding:5px 9px; border:1.5px solid #23201a; border-radius:7px; background:#f1ead9; color:#23201a;">{{ sc.code }}</div>
+                </sc-for>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:baseline; border-top:1.5px dashed #e0d8c6; padding-top:11px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;">{{ lv.countLabel }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:{{ lv.accColor }};">{{ lv.accLabel }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ LEVEL HUB ============ -->
+    <sc-if value="{{ isLevel }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:16px;">&larr; ALL LEVELS</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#2e6f72; margin-bottom:6px;">{{ lvTag }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:40px; font-weight:600; margin-bottom:6px;">{{ lvName }}</div>
+        <div style="font-size:16px; color:#6f6a5e; margin-bottom:22px; max-width:560px; text-wrap:pretty;">{{ lvBlurb }}</div>
+
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:20px; margin-bottom:30px; display:flex; gap:26px; align-items:center; flex-wrap:wrap;">
+          <div style="flex:none;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:3px;">ACCURACY</div>
+            <div style="font-family:'Newsreader',serif; font-size:48px; font-weight:600; line-height:1; color:#3c7d54;">{{ lvAccPct }}</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="position:relative; height:14px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#f4eee0; margin-bottom:8px;">
+              <div style="width:{{ lvMasteryWidth }}; height:100%; background:#3c7d54;"></div>
+              <div style="position:absolute; left:{{ targetLeft }}; top:-3px; bottom:-3px; width:2px; background:#c2772f;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;"><span>{{ lvAttemptsText }}</span><span style="color:#c2772f;">CLEAR {{ targetLabel }}</span></div>
+            <div style="font-size:13.5px; color:#46413a; margin-top:8px;">{{ lvToGoText }}</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <div onClick="{{ startLevelQuiz }}" style="flex:1; min-width:240px; border:1.5px solid #23201a; border-radius:15px; background:#2e6f72; color:#fff7ec; padding:20px; box-shadow:0 3px 0 #23201a; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#285f62;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; color:#cfe2e3; margin-bottom:8px;">DRILL</div>
+            <div style="font-family:'Newsreader',serif; font-size:26px; font-weight:600; margin-bottom:6px;">Quiz this level &rarr;</div>
+            <div style="font-size:14px; color:#dcebd9; opacity:.85;">Multiple choice {{ typeModeNote }} &mdash; tracks your accuracy.</div>
+          </div>
+          <div onClick="{{ goStudy }}" style="flex:1; min-width:240px; border:1.5px solid #23201a; border-radius:15px; background:#fffdf8; padding:20px; box-shadow:0 3px 0 #23201a; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#fbf3e6;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; color:#2e6f72; margin-bottom:8px;">STUDY</div>
+            <div style="font-family:'Newsreader',serif; font-size:26px; font-weight:600; margin-bottom:6px;">Flip the cards &rarr;</div>
+            <div style="font-size:14px; color:#6f6a5e;">{{ lvCount }} flashcards. Tap to reveal the city &amp; its story.</div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ STUDY (FLASHCARDS) ============ -->
+    <sc-if value="{{ isStudy }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:16px;">&larr; {{ lvNameUpper }}</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px; margin-bottom:6px;">
+          <div style="font-family:'Newsreader',serif; font-size:34px; font-weight:600;">{{ lvName }} &middot; Flashcards</div>
+          <div onClick="{{ flipAll }}" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; color:#2e6f72; text-decoration:underline; cursor:pointer;">{{ flipAllLabel }}</div>
+        </div>
+        <div style="font-size:16px; color:#6f6a5e; margin-bottom:24px;">Tap a tag to flip it. Front = the code; back = the city and how to remember it.</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(214px,1fr)); gap:16px;">
+          <sc-for list="{{ studyList }}" as="card" hint-placeholder-count="8">
+            <sc-if value="{{ card.flipped }}" hint-placeholder-val="{{ false }}">
+              <div onClick="{{ card.onClick }}" style="border:1.5px solid #23201a; border-radius:14px; background:#2e6f72; color:#f4efe4; box-shadow:0 3px 0 #23201a; padding:16px; min-height:178px; cursor:pointer; display:flex; flex-direction:column;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+                <div style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; letter-spacing:.1em; color:#bcdada;">{{ card.code }}</div>
+                <div style="font-family:'Newsreader',serif; font-size:24px; font-weight:600; line-height:1.05; margin:6px 0 2px;">{{ card.city }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.06em; color:#bcdada; margin-bottom:9px;">{{ card.name }} &middot; {{ card.country }}</div>
+                <div style="font-size:13px; line-height:1.5; color:#e7efef; text-wrap:pretty;">{{ card.story }}</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ card.front }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ card.onClick }}" style="border:1.5px solid #23201a; border-radius:14px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:16px; min-height:178px; cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#fbf3e6;">
+                <div style="width:22px; height:22px; border:1.5px solid #23201a; border-radius:50%; background:#f4efe4; margin-bottom:14px;"></div>
+                <div style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:46px; letter-spacing:.1em; line-height:1; color:#2e6f72;">{{ card.code }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; color:#a59d8a; margin-top:16px;">TAP TO REVEAL</div>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ QUIZ ============ -->
+    <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:680px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <div style="flex:1; height:12px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#fffdf8;"><div style="width:{{ qProgress }}; height:100%; background:#2e6f72; transition:width .35s ease;"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;">{{ qIndexLabel }}</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2e6f72; margin-bottom:18px;">{{ qScopeLabel }}</div>
+
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#c2772f; margin-bottom:10px;">{{ qKicker }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:28px; font-weight:600; line-height:1.2; margin-bottom:20px; text-wrap:balance;">{{ qPrompt }}</div>
+
+        <sc-if value="{{ qShowBoard }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #23201a; border-radius:14px; background:#23201a; box-shadow:0 3px 0 #6f6a5e; padding:22px; margin-bottom:20px; text-align:center;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; color:#cfc6b4; margin-bottom:10px;">{{ qBoardLabel }}</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-weight:700; font-size:58px; letter-spacing:.16em; color:#e0b483;">{{ qBoardBig }}</div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qIsChoice }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <sc-for list="{{ qOptions }}" as="opt" hint-placeholder-count="4">
+              <div onClick="{{ opt.onClick }}" style="display:flex; justify-content:space-between; align-items:center; gap:10px; border:1.5px solid; border-color:{{ opt.border }}; background:{{ opt.bg }}; color:{{ opt.fg }}; border-radius:12px; padding:15px 17px; font-weight:600; font-size:16px; cursor:pointer; box-shadow:0 3px 0 #23201a;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+                <span style="flex:1; min-width:0; line-height:1.3; {{ opt.labelFont }}">{{ opt.label }}</span>
+                <span style="flex:none; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:18px; color:{{ opt.markColor }};">{{ opt.mark }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qIsType }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <input value="{{ typedValue }}" onInput="{{ onType }}" onKeyDown="{{ onTypeKey }}" disabled="{{ qAnswered }}" maxLength="3" placeholder="&mdash; &mdash; &mdash;" style="width:100%; text-align:center; text-transform:uppercase; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:46px; letter-spacing:.18em; color:#2e6f72; background:#fffdf8; border:1.5px solid #23201a; border-radius:14px; box-shadow:0 3px 0 #23201a; padding:16px 10px; outline:none;">
+            <sc-if value="{{ qTypePending }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ submitTyped }}" style="margin-top:14px; display:inline-flex; align-items:center; gap:8px; background:#2e6f72; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 22px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Check code &rarr;</div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qAnswered }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:20px; border:1.5px solid #23201a; border-radius:13px; padding:15px 17px; background:{{ qFeedbackBg }}; display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;"><div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600; color:{{ qFeedbackColor }};">{{ qFeedbackHead }}</div><div style="font-size:14.5px; color:#46413a; margin-top:3px; text-wrap:pretty;">{{ qFeedbackText }}</div></div>
+            <div onClick="{{ nextQuestion }}" style="flex:none; display:inline-flex; align-items:center; gap:8px; background:#23201a; color:#f4efe4; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #6f6a5e; padding:12px 20px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6f6a5e;">{{ qNextLabel }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <!-- ============ RESULT ============ -->
+    <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:560px; margin:10px auto 0; text-align:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; color:#c2772f; margin-bottom:14px;">{{ resultKicker }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:44px; font-weight:600; line-height:1; margin-bottom:8px;">{{ sessionPct }} this round</div>
+        <div style="font-size:17px; color:#6f6a5e; margin-bottom:22px;">{{ sessionLine }}</div>
+        <div style="border:1.5px solid #23201a; border-radius:14px; padding:15px 18px; background:{{ resultMasteryBg }}; box-shadow:0 3px 0 #23201a; margin-bottom:22px;">
+          <div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600; color:{{ resultMasteryColor }};">{{ resultMasteryMsg }}</div>
+        </div>
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:20px; display:flex; justify-content:space-around; margin-bottom:26px;">
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600; color:#3c7d54;">{{ sessionCorrect }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">CORRECT</div></div>
+          <div style="border-left:1.5px solid #e0d8c6;"></div>
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600;">{{ sessionTotal }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">QUESTIONS</div></div>
+          <div style="border-left:1.5px solid #e0d8c6;"></div>
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600; color:#3c7d54;">{{ resultAccPct }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">{{ resultAccLabel }}</div></div>
+        </div>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <div onClick="{{ goHome }}" style="display:inline-flex; align-items:center; gap:8px; background:#2e6f72; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 22px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Back to levels</div>
+          <div onClick="{{ replayScope }}" style="display:inline-flex; align-items:center; gap:8px; background:#fffdf8; color:#23201a; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 22px; font-weight:600; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Run it again</div>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1040,&quot;height&quot;:760},&quot;quizLength&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:8,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:4,&quot;max&quot;:12,&quot;step&quot;:1},&quot;typeToRecall&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;masteryTarget&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:80,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:50,&quot;max&quot;:100,&quot;step&quot;:5}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.MIN = 5;
+    this.state = {
+      screen: 'home', history: [],
+      level: 'Easy', flipped: {},
+      quiz: null, quizScope: 'Easy', qIdx: 0, answered: false, chosenIdx: -1, isCorrect: false, typed: '',
+      sessionCorrect: 0, sessionTotal: 0,
+      stats: {},
+    };
+    this.LEVELS = this.buildLevels();
+    this.ALL = [];
+    this.LEVELS.forEach(L => L.airports.forEach(a => this.ALL.push({ ...a, level: L.key })));
+  }
+
+  componentDidMount() {
+    try { const raw = localStorage.getItem('fg.airports.v1'); if (raw) this.setState({ stats: JSON.parse(raw) }); } catch (e) {}
+  }
+
+  target() { const t = this.props.masteryTarget; return (typeof t === 'number' ? t : 80); }
+  quizLen() { const n = this.props.quizLength; return (typeof n === 'number' ? n : 8); }
+  typeOn() { const v = this.props.typeToRecall; return v === undefined ? true : !!v; }
+
+  buildLevels() {
+    return [
+      { key:'Easy', accent:'#3c7d54', blurb:'The world\u2019s busiest hubs \u2014 codes you\u2019ve half-learned from a thousand boarding passes.',
+        airports:[
+          { code:'ATL', city:'Atlanta', name:'Hartsfield\u2013Jackson', country:'USA', story:'Most years, the busiest airport on Earth by passenger count.' },
+          { code:'JFK', city:'New York', name:'John F. Kennedy Intl', country:'USA', story:'Renamed for the president in 1963 \u2014 it was \u201cIdlewild\u201d (IDL) before.' },
+          { code:'LHR', city:'London', name:'Heathrow', country:'UK', story:'Heath Row was a hamlet bulldozed to lay the runways.' },
+          { code:'CDG', city:'Paris', name:'Charles de Gaulle', country:'France', story:'Named for the wartime general and president.' },
+          { code:'DXB', city:'Dubai', name:'Dubai Intl', country:'UAE', story:'The world\u2019s busiest airport for international passengers.' },
+          { code:'HND', city:'Tokyo', name:'Haneda', country:'Japan', story:'Haneda means \u201cwing field\u201d \u2014 rather fitting.' },
+          { code:'SIN', city:'Singapore', name:'Changi', country:'Singapore', story:'SIN simply spells the city-state itself.' },
+          { code:'FRA', city:'Frankfurt', name:'Frankfurt am Main', country:'Germany', story:'Europe\u2019s freight powerhouse and a giant connecting hub.' },
+          { code:'AMS', city:'Amsterdam', name:'Schiphol', country:'Netherlands', story:'Built on a drained lake bed, sitting metres below sea level.' },
+          { code:'HKG', city:'Hong Kong', name:'Chek Lap Kok', country:'Hong Kong', story:'Replaced the white-knuckle Kai Tak approach in 1998.' },
+          { code:'LAX', city:'Los Angeles', name:'Los Angeles Intl', country:'USA', story:'The X is filler \u2014 codes grew from two letters to three in the 1930s.' },
+        ] },
+      { key:'Intermediate', accent:'#c2772f', blurb:'Mid-size cities and holiday gateways. A few spell themselves out; most make you work.',
+        airports:[
+          { code:'PDX', city:'Portland', name:'Portland Intl', country:'USA', story:'Famous teal carpet \u2014 and the X is that same 1930s filler letter.' },
+          { code:'NCE', city:'Nice', name:'C\u00f4te d\u2019Azur', country:'France', story:'The gateway to the French Riviera.' },
+          { code:'AUS', city:'Austin', name:'Austin\u2013Bergstrom', country:'USA', story:'Spells the city; it sits on a former Air Force base.' },
+          { code:'BCN', city:'Barcelona', name:'Josep Tarradellas El Prat', country:'Spain', story:'B-C-N \u2014 the city\u2019s own shorthand.' },
+          { code:'DUB', city:'Dublin', name:'Dublin', country:'Ireland', story:'Europe\u2019s main US pre-clearance gateway.' },
+          { code:'HEL', city:'Helsinki', name:'Helsinki-Vantaa', country:'Finland', story:'A short hop over the pole makes it a Europe\u2013Asia shortcut.' },
+          { code:'MSY', city:'New Orleans', name:'Louis Armstrong', country:'USA', story:'From Moisant Stock Yards \u2014 aviator John Moisant died on the site.' },
+          { code:'YVR', city:'Vancouver', name:'Vancouver Intl', country:'Canada', story:'Canadian codes all start with Y \u2014 a radio-station legacy.' },
+          { code:'LIS', city:'Lisbon', name:'Humberto Delgado', country:'Portugal', story:'L-I-S, perched right above the city.' },
+          { code:'PRG', city:'Prague', name:'V\u00e1clav Havel', country:'Czechia', story:'Renamed for the playwright-president in 2012.' },
+          { code:'SAN', city:'San Diego', name:'San Diego Intl', country:'USA', story:'One runway, with a famously downtown-close approach.' },
+        ] },
+      { key:'Difficult', accent:'#b8442f', blurb:'Regional fields where the code is anyone\u2019s guess unless you\u2019ve flown there.',
+        airports:[
+          { code:'CID', city:'Cedar Rapids', name:'The Eastern Iowa', country:'USA', story:'Serves Cedar Rapids and nearby Iowa City both.' },
+          { code:'GRZ', city:'Graz', name:'Graz', country:'Austria', story:'Austria\u2019s second city, deep in green Styria.' },
+          { code:'BZN', city:'Bozeman', name:'Bozeman Yellowstone', country:'USA', story:'The northern gateway to Yellowstone.' },
+          { code:'EUG', city:'Eugene', name:'Eugene', country:'USA', story:'E-U-G, spelled straight from the city.' },
+          { code:'BOI', city:'Boise', name:'Boise', country:'USA', story:'B-O-I for Idaho\u2019s capital.' },
+          { code:'LBB', city:'Lubbock', name:'Lubbock Preston Smith', country:'USA', story:'Deep in the Texas Panhandle.' },
+          { code:'INV', city:'Inverness', name:'Inverness', country:'UK', story:'Capital of the Scottish Highlands.' },
+          { code:'TRD', city:'Trondheim', name:'Trondheim V\u00e6rnes', country:'Norway', story:'Norway\u2019s medieval capital, north of the fjords.' },
+          { code:'PIA', city:'Peoria', name:'General Wayne A. Downing', country:'USA', story:'The original \u201cwill it play in Peoria?\u201d town.' },
+          { code:'SBA', city:'Santa Barbara', name:'Santa Barbara', country:'USA', story:'A Spanish-mission terminal beside the Pacific.' },
+          { code:'BRN', city:'Bern', name:'Bern', country:'Switzerland', story:'A tiny field for the Swiss capital.' },
+        ] },
+    ];
+  }
+
+  // ---------- nav ----------
+  nav(screen) { this.setState(s => ({ screen, history: [...s.history, s.screen] })); }
+  goBack() { this.setState(s => { const h=[...s.history]; const prev=h.pop()||'home'; return { screen: prev, history: h }; }); }
+  goHome() { this.setState({ screen: 'home', history: [] }); }
+
+  // ---------- data ----------
+  levelObj(key) { return this.LEVELS.find(L => L.key === key) || this.LEVELS[0]; }
+  levelAirports(key) { return this.levelObj(key).airports; }
+  masterableLevels() { return this.LEVELS.map(L => L.key); }
+
+  // ---------- stats ----------
+  scopeStats(name) { const s = this.state.stats[name]; return { correct: s ? s.correct : 0, total: s ? s.total : 0 }; }
+  scopePct(name) { const s = this.scopeStats(name); return s.total > 0 ? Math.round(s.correct / s.total * 100) : 0; }
+  isMastered(name) { const s = this.scopeStats(name); return s.total >= this.MIN && (s.correct / s.total) >= (this.target() / 100); }
+  saveStats(stats) { try { localStorage.setItem('fg.airports.v1', JSON.stringify(stats)); } catch (e) {} }
+  resetStats() { this.setState({ stats: {} }); this.saveStats({}); }
+  recordAnswer(correct) {
+    this.setState(s => {
+      const scope = s.quizScope;
+      const prev = s.stats[scope] || { correct: 0, total: 0 };
+      const stats = { ...s.stats, [scope]: { correct: prev.correct + (correct ? 1 : 0), total: prev.total + 1 } };
+      this.saveStats(stats);
+      return { stats, sessionCorrect: s.sessionCorrect + (correct ? 1 : 0), sessionTotal: s.sessionTotal + 1, answered: true, isCorrect: correct };
+    });
+  }
+
+  // ---------- helpers ----------
+  rand(n) { return Math.floor(Math.random() * n); }
+  pick(arr) { return arr[this.rand(arr.length)]; }
+  shuffle(arr) { return arr.slice().sort(() => Math.random() - 0.5); }
+  pickN(arr, n, exclude) { const ex = exclude || []; const uniq = [...new Set(arr)].filter(x => ex.indexOf(x) === -1); return this.shuffle(uniq).slice(0, n); }
+  mkOptions(correct, distractors) { return this.shuffle([{ label: correct, correct: true }, ...distractors.map(d => ({ label: d, correct: false }))]); }
+
+  // ---------- question generators ----------
+  mkCode2City(a) {
+    const others = this.ALL.filter(x => x.code !== a.code).map(x => x.city);
+    return { type:'code2city', kicker:'CODE \u2192 CITY', board:a.code, boardLabel:'IATA CODE', prompt:'Which city does this code serve?', options:this.mkOptions(a.city, this.pickN(others, 3, [a.city])), serif:true, explain: a.code + ' \u2014 ' + a.name + ', ' + a.city + '. ' + a.story };
+  }
+  mkCity2Code(a) {
+    const others = this.ALL.filter(x => x.code !== a.code).map(x => x.code);
+    return { type:'city2code', kicker:'CITY \u2192 CODE', prompt:'What\u2019s the IATA code for ' + a.city + ' (' + a.name + ')?', options:this.mkOptions(a.code, this.pickN(others, 3, [a.code])), mono:true, explain: a.city + ' is ' + a.code + '. ' + a.story };
+  }
+  mkCountry(a) {
+    const others = this.ALL.filter(x => x.country !== a.country).map(x => x.country);
+    return { type:'country', kicker:'PLACE IT', board:a.code, boardLabel:'WHERE IS', prompt:'In which country will you find ' + a.code + ' (' + a.city + ')?', options:this.mkOptions(a.country, this.pickN(others, 3, [a.country])), serif:true, explain: a.code + ' \u2014 ' + a.city + ', ' + a.country + '.' };
+  }
+  mkType(a) {
+    return { type:'type', kicker:'TYPE THE CODE', prompt:'Type the three-letter IATA code for ' + a.city + ' (' + a.name + ').', answer:a.code, explain: a.city + ' is ' + a.code + '. ' + a.story };
+  }
+
+  genPool(pool, scope) {
+    const useType = this.typeOn();
+    let qs = [];
+    pool.forEach(a => {
+      qs.push(this.mkCode2City(a));
+      qs.push(this.mkCity2Code(a));
+      qs.push(this.mkCountry(a));
+      if (useType) qs.push(this.mkType(a));
+    });
+    qs = this.shuffle(qs);
+    return qs.slice(0, this.quizLen());
+  }
+
+  startQuiz(questions, scope) {
+    if (!questions.length) return;
+    this.setState({ quiz: questions, quizScope: scope, qIdx: 0, answered: false, chosenIdx: -1, isCorrect: false, typed: '', sessionCorrect: 0, sessionTotal: 0 });
+    this.nav('quiz');
+  }
+  startLevelQuiz(key) { const k = key || this.state.level; this.startQuiz(this.genPool(this.levelAirports(k), k), k); }
+  startMaster() {
+    const mastered = this.masterableLevels().filter(k => this.isMastered(k));
+    const pool = this.ALL.filter(a => mastered.indexOf(a.level) !== -1);
+    if (!pool.length) return;
+    this.startQuiz(this.genPool(pool, 'Full Board'), 'Full Board');
+  }
+  replayScope() {
+    const sc = this.state.quizScope;
+    if (sc === 'Full Board') { this.startMaster(); return; }
+    this.startLevelQuiz(sc);
+  }
+
+  choose(idx) { if (this.state.answered) return; const q = this.state.quiz[this.state.qIdx]; this.setState({ chosenIdx: idx }); this.recordAnswer(!!q.options[idx].correct); }
+  submitTyped() { if (this.state.answered) return; const q = this.state.quiz[this.state.qIdx]; const ok = (this.state.typed || '').trim().toUpperCase() === q.answer; this.recordAnswer(ok); }
+  nextQuestion() { if (this.state.qIdx >= this.state.quiz.length - 1) { this.nav('result'); return; } this.setState(s => ({ qIdx: s.qIdx + 1, answered: false, chosenIdx: -1, isCorrect: false, typed: '' })); }
+
+  // ---------- study ----------
+  toggleFlip(code) { this.setState(s => { const f = { ...s.flipped }; if (f[code]) delete f[code]; else f[code] = true; return { flipped: f }; }); }
+  flipAll() {
+    const list = this.levelAirports(this.state.level);
+    const allFlipped = list.every(a => this.state.flipped[a.code]);
+    if (allFlipped) { this.setState({ flipped: {} }); }
+    else { const f = {}; list.forEach(a => f[a.code] = true); this.setState({ flipped: f }); }
+  }
+
+  // ---------- render ----------
+  renderVals() {
+    const st = this.state;
+    const tgt = this.target();
+    const v = {
+      goHome: () => this.goHome(), goBack: () => this.goBack(),
+      goStudy: () => this.nav('study'),
+      resetStats: () => this.resetStats(), nextQuestion: () => this.nextQuestion(),
+      startEasy: () => this.startLevelQuiz('Easy'),
+      startLevelQuiz: () => this.startLevelQuiz(), startMaster: () => this.startMaster(), replayScope: () => this.replayScope(),
+      flipAll: () => this.flipAll(),
+      submitTyped: () => this.submitTyped(),
+      onType: (e) => this.setState({ typed: e.target.value }),
+      onTypeKey: (e) => { if (e.key === 'Enter') this.submitTyped(); },
+      isHome: st.screen === 'home', isLevel: st.screen === 'level', isStudy: st.screen === 'study',
+      isQuiz: st.screen === 'quiz', isResult: st.screen === 'result', notQuiz: st.screen !== 'quiz',
+      targetLabel: tgt + '%', targetLeft: tgt + '%',
+      typeModeNote: this.typeOn() ? '\u0026 type-the-code' : '',
+    };
+
+    // hero tag (rotate through a memorable few)
+    const teasers = [
+      { code:'ORD', city:'Chicago', tease:'\u2026wait, why O-R-D?' },
+      { code:'YYZ', city:'Toronto', tease:'\u2026the Y is a Canada thing' },
+      { code:'MSY', city:'New Orleans', tease:'\u2026Moisant Stock Yards' },
+      { code:'PDX', city:'Portland', tease:'\u2026that famous carpet' },
+    ];
+    const tease = teasers[0];
+    v.tagCode = tease.code; v.tagCity = tease.city; v.tagTease = tease.tease;
+
+    // cleared strip
+    const levelKeys = this.masterableLevels();
+    const clearedList = levelKeys.filter(k => this.isMastered(k));
+    v.clearedLabel = clearedList.length + ' / ' + levelKeys.length;
+    v.clearedBarWidth = Math.round(clearedList.length / levelKeys.length * 100) + '%';
+    v.masterReady = clearedList.length >= 1;
+    v.masterLocked = clearedList.length < 1;
+    v.masterCountText = clearedList.length + (clearedList.length === 1 ? ' level cleared' : ' levels cleared') + ' \u2014 ' + clearedList.join(', ') + '.';
+
+    // level cards
+    v.levels = this.LEVELS.map(L => {
+      const s = this.scopeStats(L.key);
+      const mastered = this.isMastered(L.key);
+      const accLabel = s.total > 0 ? this.scopePct(L.key) + '% accuracy' : 'not started';
+      return {
+        name: L.key, accent: L.accent, blurb: L.blurb, mastered,
+        samples: L.airports.slice(0, 3).map(a => ({ code: a.code })),
+        countLabel: L.airports.length + ' codes',
+        accLabel, accColor: mastered ? '#3c7d54' : '#6f6a5e',
+        onClick: () => { this.setState({ level: L.key }); this.nav('level'); },
+      };
+    });
+
+    // level hub
+    const L = this.levelObj(st.level);
+    const ls = this.scopeStats(st.level);
+    const lpct = this.scopePct(st.level);
+    const lMastered = this.isMastered(st.level);
+    v.lvName = L.key; v.lvNameUpper = L.key.toUpperCase(); v.lvBlurb = L.blurb;
+    v.lvTag = L.key === 'Easy' ? 'GROUND LEVEL' : L.key === 'Intermediate' ? 'CRUISING' : 'HIGH ALTITUDE';
+    v.lvCount = L.airports.length;
+    v.lvAccPct = ls.total > 0 ? lpct + '%' : '\u2014';
+    v.lvMasteryWidth = lpct + '%';
+    v.lvAttemptsText = ls.total > 0 ? (ls.correct + ' / ' + ls.total + ' correct') : 'no attempts yet';
+    v.lvToGoText = lMastered ? '\u2605 Cleared \u2014 this level is in the Full Board.' : (ls.total > 0 ? (ls.total < this.MIN ? ('Answer ' + (this.MIN - ls.total) + ' more to qualify (need ' + tgt + '%).') : ('Reach ' + tgt + '% to clear \u2014 you\u2019re at ' + lpct + '%.')) : 'Take the quiz to start tracking this level.');
+
+    // study flashcards
+    v.studyList = this.levelAirports(st.level).map(a => {
+      const flipped = !!st.flipped[a.code];
+      return { code:a.code, city:a.city, name:a.name, country:a.country, story:a.story, flipped, front: !flipped, onClick: () => this.toggleFlip(a.code) };
+    });
+    const allFlipped = this.levelAirports(st.level).every(a => st.flipped[a.code]);
+    v.flipAllLabel = allFlipped ? 'flip all back' : 'reveal all';
+
+    // quiz
+    if (st.quiz) {
+      const q = st.quiz[st.qIdx]; const total = st.quiz.length;
+      v.qKicker = q.kicker; v.qPrompt = q.prompt; v.qIndexLabel = (st.qIdx + 1) + ' / ' + total;
+      v.qScopeLabel = st.quizScope === 'Full Board' ? 'FULL BOARD CHALLENGE' : st.quizScope.toUpperCase() + ' LEVEL';
+      v.qProgress = Math.round((st.qIdx + (st.answered ? 1 : 0)) / total * 100) + '%';
+      v.qShowBoard = !!q.board; v.qBoardBig = q.board || ''; v.qBoardLabel = q.boardLabel || '';
+      v.qIsChoice = q.type !== 'type'; v.qIsType = q.type === 'type';
+      v.qAnswered = st.answered; v.qTypePending = q.type === 'type' && !st.answered;
+      v.typedValue = st.typed || '';
+      v.qOptions = (q.options || []).map((o, i) => {
+        let bg = '#fffdf8', border = '#23201a', fg = '#23201a', mark = '', markColor = '#23201a';
+        if (st.answered) {
+          if (o.correct) { bg = '#e7f0e6'; border = '#3c7d54'; mark = '\u2713'; markColor = '#3c7d54'; }
+          else if (i === st.chosenIdx) { bg = '#f6e3dd'; border = '#b8442f'; mark = '\u2717'; markColor = '#b8442f'; }
+          else { bg = '#f4eee0'; border = '#d6ccb6'; fg = '#a59d8a'; }
+        }
+        const labelFont = q.mono ? "font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:.1em;" : '';
+        return { label: o.label, bg, border, fg, mark, markColor, labelFont, onClick: () => this.choose(i) };
+      });
+      const correctOpt = q.type === 'type' ? q.answer : (q.options.find(o => o.correct) || {}).label;
+      v.qFeedbackHead = st.isCorrect ? 'Correct.' : 'Not quite.';
+      v.qFeedbackText = st.isCorrect ? q.explain : ('The answer is \u201c' + correctOpt + '.\u201d ' + q.explain);
+      v.qFeedbackBg = st.isCorrect ? '#eef4ec' : '#f8ece7'; v.qFeedbackColor = st.isCorrect ? '#3c7d54' : '#b8442f';
+      v.qNextLabel = (st.qIdx >= total - 1) ? 'See results \u2192' : 'Next \u2192';
+    } else {
+      v.qOptions = []; v.qIsChoice = true; v.qIsType = false; v.qAnswered = false; v.qShowBoard = false; v.typedValue = '';
+    }
+
+    // result
+    v.sessionCorrect = st.sessionCorrect; v.sessionTotal = st.sessionTotal;
+    v.sessionPct = st.sessionTotal > 0 ? Math.round(st.sessionCorrect / st.sessionTotal * 100) + '%' : '\u2014';
+    const sp = st.sessionTotal > 0 ? st.sessionCorrect / st.sessionTotal : 0;
+    v.sessionLine = sp === 1 ? 'A perfect board \u2014 not a code out of place.' : sp >= 0.6 ? 'Solid. A couple more runs and these are automatic.' : 'Early days \u2014 flip through the cards and come back.';
+    const rscope = st.quizScope;
+    if (rscope === 'Full Board') {
+      v.resultKicker = 'FULL BOARD CHALLENGE'; v.resultAccLabel = 'FULL BOARD'; v.resultAccPct = this.scopeStats('Full Board').total > 0 ? this.scopePct('Full Board') + '%' : '\u2014';
+      v.resultMasteryMsg = 'The arena of cleared codes \u2014 keep your edge sharp.'; v.resultMasteryColor = '#2e6f72'; v.resultMasteryBg = '#eaf1f1';
+    } else {
+      const rpct = this.scopePct(rscope); const rmastered = this.isMastered(rscope); const rs = this.scopeStats(rscope);
+      v.resultKicker = rscope.toUpperCase() + ' LEVEL'; v.resultAccLabel = 'LEVEL'; v.resultAccPct = rs.total > 0 ? rpct + '%' : '\u2014';
+      if (rmastered) { v.resultMasteryMsg = '\u2605 ' + rscope + ' cleared \u2014 now in the Full Board!'; v.resultMasteryColor = '#3c7d54'; v.resultMasteryBg = '#eef4ec'; }
+      else if (rs.total < this.MIN) { v.resultMasteryMsg = 'Answer ' + (this.MIN - rs.total) + ' more in ' + rscope + ' to qualify.'; v.resultMasteryColor = '#23201a'; v.resultMasteryBg = '#fbf6ea'; }
+      else { v.resultMasteryMsg = rscope + ' is at ' + rpct + '% \u2014 reach ' + tgt + '% to clear it.'; v.resultMasteryColor = '#23201a'; v.resultMasteryBg = '#fbf6ea'; }
+    }
+
+    return v;
+  }
+}
+</script>
+</body>
+</html>

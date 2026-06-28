@@ -1,0 +1,421 @@
+{
+  "a320": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Jetstar_Airbus_A320_VH-XNJ_Perth_2023_%2801%29.jpg/1280px-Jetstar_Airbus_A320_VH-XNJ_Perth_2023_%2801%29.jpg",
+      "attribution": "Wikimedia Commons / Bidgee",
+      "variant": "A320"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Airbus_A320_v1.0.png/1280px-Airbus_A320_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b737": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Wikimedia Commons / Aero Icarus",
+      "variant": "737-800"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Boeing_737-800_v1.0.png/1280px-Boeing_737-800_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b757": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Delta_Air_Lines_Boeing_757-200_N6715C.jpg/1280px-Delta_Air_Lines_Boeing_757-200_N6715C.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "757-200"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Boeing_757_family_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "a330": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Airbus_A330-300%2C_Air_China_JP7246668.jpg/1280px-Airbus_A330-300%2C_Air_China_JP7246668.jpg",
+      "attribution": "Wikimedia Commons / Aero Icarus",
+      "variant": "A330-300"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Airbus_A330-300_v1.0.png/1280px-Airbus_A330-300_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b767": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/United_Airlines_Boeing_767-300_N641UA.jpg/1280px-United_Airlines_Boeing_767-300_N641UA.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "767-300"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Boeing_767-300_silhouette.svg/1280px-Boeing_767-300_silhouette.svg.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "a220": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Airbus_A220-300%2C_airBaltic_JP7562214.jpg/1280px-Airbus_A220-300%2C_airBaltic_JP7562214.jpg",
+      "attribution": "Wikimedia Commons / Aero Icarus",
+      "variant": "A220-300"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Airbus_A220-300_v1.0.png/1280px-Airbus_A220-300_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "e190": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
+      "attribution": "Wikimedia Commons / Anna Zvereva",
+      "variant": "E190"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Embraer_E-Jet_family_v1.0.png/1280px-Embraer_E-Jet_family_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "a321": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/American_Airlines_Airbus_A321-231_N564AM.jpg/1280px-American_Airlines_Airbus_A321-231_N564AM.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "A321"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Airbus_A321_v1.0.png/1280px-Airbus_A321_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b787": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A.jpg/1280px-All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A.jpg",
+      "attribution": "Wikimedia Commons / Kentaro Iemoto",
+      "variant": "787-8"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Boeing_787-800_Dreamliner_v1.0.png/1280px-Boeing_787-800_Dreamliner_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "a350": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Qatar_Airways_Airbus_A350-941_A7-ALA.jpg/1280px-Qatar_Airways_Airbus_A350-941_A7-ALA.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "A350-900"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/A350_variant_sizes.png/1280px-A350_variant_sizes.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "b777": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Emirates_Boeing_777-31H%28ER%29_A6-EBK.jpg/1280px-Emirates_Boeing_777-31H%28ER%29_A6-EBK.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "777-300ER"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Boeing_777_family_v1.1.png/1280px-Boeing_777_family_v1.1.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b747": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Lufthansa_Boeing_747-430_D-ABVU.jpg/1280px-Lufthansa_Boeing_747-430_D-ABVU.jpg",
+      "attribution": "Wikimedia Commons / Aero Icarus",
+      "variant": "747-400"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Boeing_747-400_silhouette.svg/1280px-Boeing_747-400_silhouette.svg.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "a380": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emirates_Airbus_A380-861_A6-EDB.jpg/1280px-Emirates_Airbus_A380-861_A6-EDB.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "A380-800"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Airbus_A380_sideview.svg/1280px-Airbus_A380_sideview.svg.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "a340": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lufthansa_Airbus_A340-313_D-AIFA.jpg/1280px-Lufthansa_Airbus_A340-313_D-AIFA.jpg",
+      "attribution": "Wikimedia Commons / Aero Icarus",
+      "variant": "A340-300"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Airbus_A340-300_v1.0.png/1280px-Airbus_A340-300_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "b727": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/FedEx_Express_Boeing_727-200F_N217FE.jpg/1280px-FedEx_Express_Boeing_727-200F_N217FE.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "727-200"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Boeing_727_family_v1.0.png/1280px-Boeing_727_family_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "md11": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FedEx_Express_McDonnell_Douglas_MD-11F_N601FE.jpg/1280px-FedEx_Express_McDonnell_Douglas_MD-11F_N601FE.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "MD-11F"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/McDonnell_Douglas_MD-11_v1.0.png/1280px-McDonnell_Douglas_MD-11_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini & contributors (technical drawing)"
+    }
+  },
+  "g650": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Gulfstream_G650_N650PH.jpg/1280px-Gulfstream_G650_N650PH.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gulfstream_G650_v1.0.png/1280px-Gulfstream_G650_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "citationx": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cessna_Citation_X_N208CX.jpg/1280px-Cessna_Citation_X_N208CX.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Cessna_Citation_X_v1.0.png/1280px-Cessna_Citation_X_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "falcon7x": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dassault_Falcon_7X_F-WFBW.jpg/1280px-Dassault_Falcon_7X_F-WFBW.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Dassault_Falcon_7X_v1.0.png/1280px-Dassault_Falcon_7X_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "global7500": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bombardier_Global_7500_C-GXLV.jpg/1280px-Bombardier_Global_7500_C-GXLV.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Bombardier_Global_7500_v1.0.png/1280px-Bombardier_Global_7500_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "phenom300": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Embraer_Phenom_300_PP-EMB.jpg/1280px-Embraer_Phenom_300_PP-EMB.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Embraer_Phenom_300_v1.0.png/1280px-Embraer_Phenom_300_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "learjet75": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Learjet_75_N626JS.jpg/1280px-Learjet_75_N626JS.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Learjet_75_v1.0.png/1280px-Learjet_75_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "f16": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/F-16_Fighting_Falcon_%28cropped%29.jpg/1280px-F-16_Fighting_Falcon_%28cropped%29.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/F16_drawing.svg/1280px-F16_drawing.svg.png",
+      "attribution": "Wikimedia Commons / US Government (DISAM)"
+    }
+  },
+  "f35": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/F-35A_flight_%28cropped%29.jpg/1280px-F-35A_flight_%28cropped%29.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Lockheed_Martin_F-35_Lightning_II_3-view_line_drawing.png/1280px-Lockheed_Martin_F-35_Lightning_II_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "c130": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/C-130J_Hercules.jpg/1280px-C-130J_Hercules.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Lockheed_C-130_Hercules_3-view_line_drawing.png/1280px-Lockheed_C-130_Hercules_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "b52": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/B-52_Stratofortress_%28cropped%29.jpg/1280px-B-52_Stratofortress_%28cropped%29.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Boeing_B-52H_Stratofortress_3-view_line_drawing.png/1280px-Boeing_B-52H_Stratofortress_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "a10": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/A-10_Thunderbolt_II_inflight.jpg/1280px-A-10_Thunderbolt_II_inflight.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Fairchild_Republic_A-10_Thunderbolt_II_3-view_line_drawing.png/1280px-Fairchild_Republic_A-10_Thunderbolt_II_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "kc135": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/KC-135R_Stratotanker.jpg/1280px-KC-135R_Stratotanker.jpg",
+      "attribution": "Wikimedia Commons / US Air Force"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Boeing_KC-135_Stratotanker_line_drawing_-_USAF_medium_res.png/1280px-Boeing_KC-135_Stratotanker_line_drawing_-_USAF_medium_res.png",
+      "attribution": "Wikimedia Commons / US Air Force"
+    }
+  },
+  "c172": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cessna_172_Skyhawk_N6184F.jpg/1280px-Cessna_172_Skyhawk_N6184F.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Cessna_172_Skyhawk_3-view_line_drawing.png/1280px-Cessna_172_Skyhawk_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / line drawing"
+    }
+  },
+  "pa28": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Piper_PA-28-161_Cherokee_Warrior_III_N5508U.jpg/1280px-Piper_PA-28-161_Cherokee_Warrior_III_N5508U.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Piper_PA-28_Cherokee_3-view_line_drawing.png/1280px-Piper_PA-28_Cherokee_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / line drawing"
+    }
+  },
+  "kingair": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Beechcraft_B200_Super_King_Air_N25DL.jpg/1280px-Beechcraft_B200_Super_King_Air_N25DL.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Beechcraft_King_Air_350_v1.0.png/1280px-Beechcraft_King_Air_350_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "dash8": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porter_Airlines_Dash_8-Q400_C-GKQA.jpg/1280px-Porter_Airlines_Dash_8-Q400_C-GKQA.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "Q400"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/De_Havilland_Canada_DHC-8-400_v1.0.png/1280px-De_Havilland_Canada_DHC-8-400_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "atr72": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/ATR_72-600_F-ORLB.jpg/1280px-ATR_72-600_F-ORLB.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "ATR 72-600"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ATR_72_sideview.svg/1280px-ATR_72_sideview.svg.png",
+      "attribution": "Wikimedia Commons / Olivier Cleynen (side view)"
+    }
+  },
+  "bell206": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bell_206B_JetRanger_III.jpg/1280px-Bell_206B_JetRanger_III.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bell_206_JetRanger_3-view_line_drawing.png/1280px-Bell_206_JetRanger_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / line drawing"
+    }
+  },
+  "uh60": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/UH-60_Black_Hawk.jpg/1280px-UH-60_Black_Hawk.jpg",
+      "attribution": "Wikimedia Commons / US Army"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sikorsky_UH-60_Black_Hawk_3-view_line_drawing.png/1280px-Sikorsky_UH-60_Black_Hawk_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "h145": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Airbus_H145_D-HYAO.jpg/1280px-Airbus_H145_D-HYAO.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Eurocopter_EC145_v1.0.png/1280px-Eurocopter_EC145_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "chinook": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/CH-47_Chinook.jpg/1280px-CH-47_Chinook.jpg",
+      "attribution": "Wikimedia Commons / US Army"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Boeing_CH-47_Chinook_3-view_line_drawing.png/1280px-Boeing_CH-47_Chinook_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "apache": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/AH-64_Apache.jpg/1280px-AH-64_Apache.jpg",
+      "attribution": "Wikimedia Commons / US Army"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Boeing_AH-64_Apache_3-view_line_drawing.png/1280px-Boeing_AH-64_Apache_3-view_line_drawing.png",
+      "attribution": "Wikimedia Commons / US DoD line drawing"
+    }
+  },
+  "crj": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lufthansa_CityLine_Bombardier_CRJ-900LR_D-ACNA.jpg/1280px-Lufthansa_CityLine_Bombardier_CRJ-900LR_D-ACNA.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer",
+      "variant": "CRJ-900"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bombardier_CRJ-700_v1.0.png/1280px-Bombardier_CRJ-700_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  },
+  "pc12": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pilatus_PC-12_HB-FPC.jpg/1280px-Pilatus_PC-12_HB-FPC.jpg",
+      "attribution": "Wikimedia Commons / Markus Eigenheer"
+    },
+    "diagram": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pilatus_PC-12_v1.0.png/1280px-Pilatus_PC-12_v1.0.png",
+      "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
+    }
+  }
+}

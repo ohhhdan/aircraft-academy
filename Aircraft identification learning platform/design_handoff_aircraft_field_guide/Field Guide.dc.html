@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  html,body{margin:0;padding:0;}
+  *{box-sizing:border-box;}
+  image-slot{display:block;}
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#f4efe4; color:#23201a; font-family:'Hanken Grotesk',system-ui,sans-serif;">
+
+  <!-- ===== TOP BAR ===== -->
+  <div style="position:sticky; top:0; z-index:30; background:#f4efe4; border-bottom:1.5px solid #23201a;">
+    <div style="max-width:1040px; margin:0 auto; padding:11px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+      <div onClick="{{ goHome }}" style="display:flex; align-items:center; gap:11px; cursor:pointer;">
+        <div style="width:34px; height:34px; border:1.5px solid #23201a; border-radius:9px; background:#c2772f; color:#fff7ec; display:flex; align-items:center; justify-content:center; font-size:17px; box-shadow:0 2px 0 #23201a;">&#9992;</div>
+        <div style="line-height:1;">
+          <div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600;">Field Guide</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.18em; color:#6f6a5e; margin-top:2px;">SPOTTER'S LOGBOOK</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <sc-if value="{{ canReference }}" hint-placeholder-val="{{ true }}">
+          <div onClick="{{ goReference }}" style="display:flex; align-items:center; gap:7px; border:1.5px solid #23201a; border-radius:10px; padding:7px 12px; background:#fffdf8; box-shadow:0 2px 0 #23201a; cursor:pointer; font-weight:600; font-size:14px;" style-active="transform:translateY(2px); box-shadow:0 0 0 #23201a;">&#9906; Index</div>
+        </sc-if>
+        <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+          <div onClick="{{ goHome }}" style="border:1.5px solid #23201a; border-radius:10px; padding:7px 12px; background:#fffdf8; cursor:pointer; font-weight:600; font-size:14px;">Quit</div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1040px; margin:0 auto; padding:28px 20px 90px;">
+
+    <!-- ============ HOME ============ -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="display:flex; gap:36px; align-items:stretch; flex-wrap:wrap; margin-bottom:34px;">
+          <div style="flex:1; min-width:300px; display:flex; flex-direction:column; justify-content:center;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; color:#c2772f; margin-bottom:14px;">MODULE 01 &middot; KEY FEATURES</div>
+            <div style="font-family:'Newsreader',serif; font-size:52px; line-height:1.02; font-weight:600; letter-spacing:-0.01em; margin-bottom:16px; text-wrap:balance;">Learn to read the sky.</div>
+            <div style="font-size:17px; line-height:1.6; color:#46413a; max-width:460px; margin-bottom:26px; text-wrap:pretty;">Every airliner tells on itself &mdash; a hump, a nose, the size of its engines. Train your eye on the shapes first, and the names will follow. Master a collection at 80% to earn it into the Master Challenge.</div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <div onClick="{{ goCategories }}" style="display:inline-flex; align-items:center; gap:9px; background:#c2772f; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:14px 22px; font-weight:700; font-size:16px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#b06b28;">Start spotting &rarr;</div>
+              <div onClick="{{ goReference }}" style="display:inline-flex; align-items:center; gap:9px; background:#fffdf8; color:#23201a; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:14px 22px; font-weight:600; font-size:16px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Open the index</div>
+            </div>
+          </div>
+          <div style="flex:1; min-width:300px;">
+            <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; padding:14px; box-shadow:0 3px 0 #23201a; height:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e;">PLATE I &middot; SPECIMEN</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e;">DROP TO FILL</div>
+              </div>
+              <div style="border:1.5px dashed #c9bfa6; border-radius:12px; overflow:hidden;">
+                <image-slot id="ac-747-400" style="width:100%; height:300px;" radius="0" placeholder="Drop a Boeing 747 photo"></image-slot>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:12px;">
+                <div style="font-family:'Newsreader',serif; font-size:22px; font-weight:600;">Boeing 747-400</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#c2772f;">&ldquo;Queen of the Skies&rdquo;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- mastery strip -->
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fbf6ea; padding:18px 20px; box-shadow:0 3px 0 #23201a; margin-bottom:34px; display:flex; gap:28px; align-items:center; flex-wrap:wrap;">
+          <div style="flex:none;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:4px;">COLLECTIONS MASTERED</div>
+            <div style="font-family:'Newsreader',serif; font-size:46px; font-weight:600; line-height:1; color:#3c7d54;">{{ masteredLabel }}</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="height:13px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#fffdf8; margin-bottom:8px;"><div style="width:{{ masteredBarWidth }}; height:100%; background:#3c7d54;"></div></div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;">Reach 80% on a collection to master it. No cumulative score &mdash; each collection stands on its own.</div>
+          </div>
+          <div onClick="{{ resetStats }}" style="flex:none; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; color:#2e6f72; text-decoration:underline; cursor:pointer;">reset progress</div>
+        </div>
+
+        <!-- modules -->
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:14px;">THE CURRICULUM</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px;">
+          <div onClick="{{ goCategories }}" style="border:1.5px solid #23201a; border-left:7px solid #c2772f; border-radius:14px; background:#fffdf8; padding:16px; box-shadow:0 3px 0 #23201a; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600;">01 &middot; Key Features</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#c2772f;">OPEN</div></div>
+            <div style="font-size:14px; color:#6f6a5e; margin-top:5px;">Read the silhouette before the livery.</div>
+          </div>
+          <div style="border:1.5px solid #d6ccb6; border-radius:14px; background:#f7f2e6; padding:16px; color:#a59d8a;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600;">02 &middot; Identify by Photo</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px;">SOON</div></div>
+            <div style="font-size:14px; margin-top:5px;">Easy = type &middot; Hard = variant.</div>
+          </div>
+          <div style="border:1.5px solid #d6ccb6; border-radius:14px; background:#f7f2e6; padding:16px; color:#a59d8a;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600;">03 &middot; Deep Dive</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px;">SOON</div></div>
+            <div style="font-size:14px; margin-top:5px;">Rivals, range &amp; geek lore.</div>
+          </div>
+          <div style="border:1.5px solid #d6ccb6; border-radius:14px; background:#f7f2e6; padding:16px; color:#a59d8a;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600;">04 &middot; Airport Codes</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px;">SOON</div></div>
+            <div style="font-size:14px; margin-top:5px;">Drill the IATA three-letters.</div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ CATEGORIES ============ -->
+    <sc-if value="{{ isCategories }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:18px;">&larr; HOME</div>
+        <div style="font-family:'Newsreader',serif; font-size:38px; font-weight:600; margin-bottom:6px;">Choose a collection</div>
+        <div style="font-size:16px; color:#6f6a5e; margin-bottom:22px; max-width:560px;">SkyCards collections. Start with <b style="color:#23201a;">Airliner</b> for the jets you meet at every gate &mdash; each tracks its own accuracy.</div>
+
+        <!-- master challenge -->
+        <sc-if value="{{ masterReady }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #23201a; border-radius:16px; background:#23201a; color:#f4efe4; padding:18px 20px; box-shadow:0 3px 0 #6f6a5e; margin-bottom:22px; display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap;">
+            <div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; color:#e0b483;">MASTER CHALLENGE &middot; UNLOCKED</div><div style="font-family:'Newsreader',serif; font-size:24px; font-weight:600; margin-top:3px;">Test everything you&rsquo;ve mastered</div><div style="font-size:13.5px; color:#cfc6b4; margin-top:3px;">{{ masterCountText }}</div></div>
+            <div onClick="{{ startMaster }}" style="flex:none; display:inline-flex; align-items:center; gap:8px; background:#c2772f; color:#fff7ec; border:1.5px solid #f4efe4; border-radius:12px; box-shadow:0 3px 0 #6f6a5e; padding:13px 20px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6f6a5e;">Quiz all mastered &rarr;</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ masterLocked }}" hint-placeholder-val="{{ true }}">
+          <div style="border:1.5px dashed #b9ac8f; border-radius:16px; background:#f4eee0; padding:16px 20px; margin-bottom:22px; display:flex; align-items:center; gap:12px;">
+            <div style="font-size:22px;">&#128274;</div>
+            <div><div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600;">Master Challenge locked</div><div style="font-size:14px; color:#6f6a5e;">Master one collection (80%+) to unlock the all-collections quiz.</div></div>
+          </div>
+        </sc-if>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px;">
+          <sc-for list="{{ categories }}" as="c" hint-placeholder-count="12">
+            <sc-if value="{{ c.active }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ c.onClick }}" style="border:1.5px solid #23201a; border-radius:13px; background:#fffdf8; padding:13px 14px; box-shadow:0 3px 0 #23201a; cursor:pointer; min-height:92px; display:flex; flex-direction:column; justify-content:space-between;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#fbf3e6;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:6px;">
+                  <div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600; line-height:1.1;">{{ c.name }}</div>
+                  <sc-if value="{{ c.mastered }}" hint-placeholder-val="{{ false }}"><div style="flex:none; font-family:'JetBrains Mono',monospace; font-size:10px; color:#3c7d54; font-weight:600;">&#9733;</div></sc-if>
+                </div>
+                <div>
+                  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#6f6a5e; letter-spacing:.04em;">{{ c.countLabel }}</div>
+                  <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:{{ c.accColor }}; letter-spacing:.04em; margin-top:2px;">{{ c.accLabel }}</div>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ c.inactive }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1.5px solid #d6ccb6; border-radius:13px; background:#f4eee0; padding:13px 14px; min-height:92px; display:flex; flex-direction:column; justify-content:space-between; color:#a59d8a;">
+                <div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600; line-height:1.1;">{{ c.name }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em;">SOON</div>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ COLLECTION HUB ============ -->
+    <sc-if value="{{ isCollection }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:16px;">&larr; COLLECTIONS</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#2e6f72; margin-bottom:6px;">COLLECTION</div>
+        <div style="font-family:'Newsreader',serif; font-size:40px; font-weight:600; margin-bottom:20px;">{{ colName }}</div>
+
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:20px; margin-bottom:30px; display:flex; gap:26px; align-items:center; flex-wrap:wrap;">
+          <div style="flex:none;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:3px;">ACCURACY</div>
+            <div style="font-family:'Newsreader',serif; font-size:48px; font-weight:600; line-height:1; color:#3c7d54;">{{ colAccPct }}</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="position:relative; height:14px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#f4eee0; margin-bottom:8px;">
+              <div style="width:{{ colMasteryWidth }}; height:100%; background:#3c7d54;"></div>
+              <div style="position:absolute; left:80%; top:-3px; bottom:-3px; width:2px; background:#c2772f;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;"><span>{{ colAttemptsText }}</span><span style="color:#c2772f;">MASTER 80%</span></div>
+            <div style="font-size:13.5px; color:#46413a; margin-top:8px;">{{ colToGoText }}</div>
+          </div>
+          <div onClick="{{ startCollectionQuiz }}" style="flex:none; display:inline-flex; align-items:center; gap:8px; background:#c2772f; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:14px 22px; font-weight:700; font-size:16px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#b06b28;">Quiz this collection &rarr;</div>
+        </div>
+
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#6f6a5e; margin-bottom:14px;">OR STUDY BY ENGINE COUNT</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;">
+          <sc-for list="{{ engineSections }}" as="s" hint-placeholder-count="3">
+            <sc-if value="{{ s.active }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ s.onClick }}" style="border:1.5px solid #23201a; border-radius:15px; background:#fffdf8; padding:18px; box-shadow:0 3px 0 #23201a; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#fbf3e6;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; color:#2e6f72; margin-bottom:10px;">{{ s.tag }}</div>
+                <div style="font-family:'Newsreader',serif; font-size:26px; font-weight:600; margin-bottom:6px;">{{ s.label }}</div>
+                <div style="font-size:14px; color:#6f6a5e; margin-bottom:14px;">{{ s.sub }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#c2772f;">{{ s.countLabel }} &rarr;</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ s.inactive }}" hint-placeholder-val="{{ false }}">
+              <div style="border:1.5px solid #d6ccb6; border-radius:15px; background:#f4eee0; padding:18px; color:#a59d8a;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; margin-bottom:10px;">{{ s.tag }}</div>
+                <div style="font-family:'Newsreader',serif; font-size:26px; font-weight:600; margin-bottom:6px;">{{ s.label }}</div>
+                <div style="font-size:14px; margin-bottom:14px;">{{ s.emptyNote }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px;">{{ s.countLabel }}</div>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ BROWSE ============ -->
+    <sc-if value="{{ isBrowse }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:18px;">&larr; {{ catLabel }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:34px; font-weight:600; margin-bottom:6px;">{{ catLabel }} &middot; {{ groupLabel }}</div>
+        <div style="font-size:16px; color:#6f6a5e; margin-bottom:24px;">Pick a specimen to study. Train on the silhouette &mdash; the shape is what you'll see first.</div>
+        <sc-if value="{{ browseEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px dashed #b9ac8f; border-radius:16px; background:#fbf6ea; padding:30px; text-align:center; max-width:560px;">
+            <div style="font-family:'Newsreader',serif; font-size:24px; font-weight:600; margin-bottom:10px;">Almost nothing here &mdash; and that's the lesson.</div>
+            <div style="font-size:15px; color:#6f6a5e; line-height:1.6;">{{ browseExplain }}</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ browseHasItems }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(248px,1fr)); gap:16px;">
+            <sc-for list="{{ browseList }}" as="a" hint-placeholder-count="4">
+              <div onClick="{{ a.onClick }}" style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; overflow:hidden; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+                <div style="border-bottom:1.5px solid #23201a; background:#f1ead9;">
+                  <image-slot id="{{ a.photoId }}" style="width:100%; height:150px;" radius="0" placeholder="{{ a.dropLabel }}"></image-slot>
+                </div>
+                <div style="padding:14px;">
+                  <div style="display:flex; justify-content:space-between; align-items:baseline; gap:8px;"><div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600;">{{ a.name }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#6f6a5e;">{{ a.year }}</div></div>
+                  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; color:#2e6f72; margin:4px 0 8px;">{{ a.maker }}</div>
+                  <div style="font-size:13.5px; color:#46413a; line-height:1.5; text-wrap:pretty;">{{ a.tells }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <!-- ============ LEARN ============ -->
+    <sc-if value="{{ isLearn }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:16px;">&larr; BACK TO {{ groupLabelUpper }}</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:4px;">
+          <div>
+            <div style="font-family:'Newsreader',serif; font-size:40px; font-weight:600; line-height:1.02;">{{ ac.name }}</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; color:#2e6f72; margin-top:6px;">{{ ac.maker }} &middot; ENTERED SERVICE {{ ac.year }}</div>
+          </div>
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-size:20px; color:#c2772f;">&ldquo;{{ ac.nickname }}&rdquo;</div>
+        </div>
+        <div style="display:flex; gap:28px; flex-wrap:wrap; margin-top:22px;">
+          <div style="flex:1; min-width:300px; display:flex; flex-direction:column; gap:16px;">
+            <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; overflow:hidden;">
+              <div style="display:flex; justify-content:space-between; padding:9px 13px; border-bottom:1.5px solid #23201a; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#6f6a5e;"><span>PLATE A &middot; PHOTOGRAPH</span><span>DROP TO FILL</span></div>
+              <image-slot id="{{ ac.photoId }}" style="width:100%; height:230px;" radius="0" placeholder="{{ ac.dropPhoto }}"></image-slot>
+            </div>
+            <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; overflow:hidden;">
+              <div style="display:flex; justify-content:space-between; padding:9px 13px; border-bottom:1.5px solid #23201a; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#6f6a5e;"><span>PLATE B &middot; DIAGRAM</span><span>DROP SIDE-PROFILE</span></div>
+              <image-slot id="{{ ac.diagramId }}" style="width:100%; height:170px;" radius="0" placeholder="{{ ac.dropDiagram }}"></image-slot>
+            </div>
+          </div>
+          <div style="flex:1; min-width:300px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#c2772f; margin-bottom:12px;">HOW TO SPOT IT</div>
+            <div style="display:flex; flex-direction:column; gap:11px; margin-bottom:18px;">
+              <sc-for list="{{ acFeatures }}" as="f" hint-placeholder-count="4">
+                <div style="display:flex; gap:13px; align-items:flex-start;">
+                  <div style="flex:none; width:30px; height:30px; border-radius:50%; background:#c2772f; color:#fff7ec; border:1.5px solid #23201a; display:flex; align-items:center; justify-content:center; font-family:'Newsreader',serif; font-weight:600; font-size:15px; box-shadow:0 2px 0 #23201a;">{{ f.n }}</div>
+                  <div style="padding-top:1px;"><div style="font-weight:700; font-size:15.5px;">{{ f.label }}</div><div style="font-size:14px; color:#6f6a5e; line-height:1.5; text-wrap:pretty;">{{ f.blurb }}</div></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border-left:3px solid #2e6f72; padding:4px 0 4px 14px; margin-bottom:22px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2e6f72; margin-bottom:4px;">THE ONE-LINE TELL</div>
+              <div style="font-family:'Newsreader',serif; font-size:18px; line-height:1.4; text-wrap:pretty;">{{ ac.tells }}</div>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <div onClick="{{ beginQuiz }}" style="display:inline-flex; align-items:center; gap:8px; background:#c2772f; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 20px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;" style-hover="background:#b06b28;">Quiz this aircraft &rarr;</div>
+              <div onClick="{{ openDetailCurrent }}" style="display:inline-flex; align-items:center; gap:8px; background:#fffdf8; color:#23201a; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 20px; font-weight:600; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Full entry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ QUIZ ============ -->
+    <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:680px; margin:0 auto;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+          <div style="flex:1; height:12px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#fffdf8;"><div style="width:{{ qProgress }}; height:100%; background:#c2772f; transition:width .35s ease;"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6f6a5e;">{{ qIndexLabel }}</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2e6f72; margin-bottom:18px;">{{ qScopeLabel }}</div>
+
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#c2772f; margin-bottom:10px;">{{ qKicker }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:28px; font-weight:600; line-height:1.2; margin-bottom:20px; text-wrap:balance;">{{ qPrompt }}</div>
+
+        <sc-if value="{{ qHasPhoto }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1.5px solid #23201a; border-radius:14px; overflow:hidden; box-shadow:0 3px 0 #23201a; margin-bottom:20px; background:#f1ead9;">
+            <image-slot id="{{ qPhotoId }}" style="width:100%; height:240px;" radius="0" placeholder="{{ qPhotoLabel }}"></image-slot>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qIsChoice }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <sc-for list="{{ qOptions }}" as="opt" hint-placeholder-count="4">
+              <div onClick="{{ opt.onClick }}" style="display:flex; justify-content:space-between; align-items:center; gap:10px; border:1.5px solid; border-color:{{ opt.border }}; background:{{ opt.bg }}; color:{{ opt.fg }}; border-radius:12px; padding:15px 17px; font-weight:600; font-size:16px; cursor:pointer; box-shadow:0 3px 0 #23201a;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+                <span style="flex:1; min-width:0; line-height:1.3;">{{ opt.label }}</span>
+                <span style="flex:none; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:18px; color:{{ opt.markColor }};">{{ opt.mark }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qIsHotspot }}" hint-placeholder-val="{{ false }}">
+          <div style="position:relative; border:1.5px solid #23201a; border-radius:14px; overflow:hidden; box-shadow:0 3px 0 #23201a; background:#f1ead9;">
+            <image-slot id="{{ qPhotoId }}" style="width:100%; height:280px;" radius="0" placeholder="{{ qPhotoLabel }}"></image-slot>
+            <div onClick="{{ tapHump }}" style="position:absolute; left:28%; top:24%; width:48px; height:48px; margin:-24px 0 0 -24px; border-radius:50%; border:2.5px dashed; border-color:{{ qz.hump }}; cursor:pointer; background:rgba(255,253,248,.12);"></div>
+            <div onClick="{{ tapWing }}" style="position:absolute; left:52%; top:70%; width:48px; height:48px; margin:-24px 0 0 -24px; border-radius:50%; border:2.5px dashed; border-color:{{ qz.wing }}; cursor:pointer; background:rgba(255,253,248,.12);"></div>
+            <div onClick="{{ tapTail }}" style="position:absolute; left:85%; top:34%; width:48px; height:48px; margin:-24px 0 0 -24px; border-radius:50%; border:2.5px dashed; border-color:{{ qz.tail }}; cursor:pointer; background:rgba(255,253,248,.12);"></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ qAnswered }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:20px; border:1.5px solid #23201a; border-radius:13px; padding:15px 17px; background:{{ qFeedbackBg }}; display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;"><div style="font-family:'Newsreader',serif; font-size:19px; font-weight:600; color:{{ qFeedbackColor }};">{{ qFeedbackHead }}</div><div style="font-size:14.5px; color:#46413a; margin-top:3px; text-wrap:pretty;">{{ qFeedbackText }}</div></div>
+            <div onClick="{{ nextQuestion }}" style="flex:none; display:inline-flex; align-items:center; gap:8px; background:#23201a; color:#f4efe4; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #6f6a5e; padding:12px 20px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6f6a5e;">{{ qNextLabel }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <!-- ============ RESULT ============ -->
+    <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:560px; margin:10px auto 0; text-align:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; color:#c2772f; margin-bottom:14px;">{{ resultKicker }}</div>
+        <div style="font-family:'Newsreader',serif; font-size:44px; font-weight:600; line-height:1; margin-bottom:8px;">{{ sessionPct }} this round</div>
+        <div style="font-size:17px; color:#6f6a5e; margin-bottom:22px;">{{ sessionLine }}</div>
+        <div style="border:1.5px solid #23201a; border-radius:14px; padding:15px 18px; background:{{ resultMasteryBg }}; box-shadow:0 3px 0 #23201a; margin-bottom:22px;">
+          <div style="font-family:'Newsreader',serif; font-size:20px; font-weight:600; color:{{ resultMasteryColor }};">{{ resultMasteryMsg }}</div>
+        </div>
+        <div style="border:1.5px solid #23201a; border-radius:16px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:20px; display:flex; justify-content:space-around; margin-bottom:26px;">
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600; color:#3c7d54;">{{ sessionCorrect }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">CORRECT</div></div>
+          <div style="border-left:1.5px solid #e0d8c6;"></div>
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600;">{{ sessionTotal }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">QUESTIONS</div></div>
+          <div style="border-left:1.5px solid #e0d8c6;"></div>
+          <div><div style="font-family:'Newsreader',serif; font-size:30px; font-weight:600; color:#3c7d54;">{{ resultAccPct }}</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-top:3px;">{{ resultAccLabel }}</div></div>
+        </div>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <div onClick="{{ goCategories }}" style="display:inline-flex; align-items:center; gap:8px; background:#c2772f; color:#fff7ec; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 22px; font-weight:700; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Back to collections</div>
+          <div onClick="{{ goReference }}" style="display:inline-flex; align-items:center; gap:8px; background:#fffdf8; color:#23201a; border:1.5px solid #23201a; border-radius:12px; box-shadow:0 3px 0 #23201a; padding:13px 22px; font-weight:600; font-size:15px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">Browse the index</div>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ REFERENCE INDEX ============ -->
+    <sc-if value="{{ isReference }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goHome }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:18px;">&larr; HOME</div>
+        <div style="font-family:'Newsreader',serif; font-size:38px; font-weight:600; margin-bottom:4px;">The Field Guide Index</div>
+        <div style="font-size:16px; color:#6f6a5e; margin-bottom:20px;">Every specimen you can study &mdash; open for browsing anytime you're not mid-exercise.</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px;">
+          <sc-for list="{{ refChips }}" as="chip" hint-placeholder-count="6">
+            <div onClick="{{ chip.onClick }}" style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.06em; padding:7px 13px; border:1.5px solid #23201a; border-radius:20px; background:{{ chip.bg }}; color:{{ chip.fg }}; cursor:pointer;">{{ chip.label }}</div>
+          </sc-for>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;">
+          <sc-for list="{{ refList }}" as="r" hint-placeholder-count="6">
+            <div onClick="{{ r.onClick }}" style="display:flex; gap:13px; align-items:center; border:1.5px solid #23201a; border-radius:14px; background:#fffdf8; box-shadow:0 3px 0 #23201a; padding:11px; cursor:pointer;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #23201a;">
+              <div style="flex:none; width:84px; height:60px; border:1.5px solid #23201a; border-radius:8px; overflow:hidden; background:#f1ead9;">
+                <image-slot id="{{ r.photoId }}" style="width:100%; height:100%;" radius="0" placeholder="photo"></image-slot>
+              </div>
+              <div style="flex:1; min-width:0;">
+                <div style="font-family:'Newsreader',serif; font-size:18px; font-weight:600; line-height:1.1;">{{ r.name }}</div>
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#6f6a5e; margin-top:4px;">{{ r.meta }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- ============ DETAIL ============ -->
+    <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div onClick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#6f6a5e; cursor:pointer; margin-bottom:16px;">&larr; BACK</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+          <div>
+            <div style="font-family:'Newsreader',serif; font-size:40px; font-weight:600; line-height:1.02;">{{ det.name }}</div>
+            <div style="font-family:'Newsreader',serif; font-style:italic; font-size:18px; color:#c2772f; margin-top:4px;">&ldquo;{{ det.nickname }}&rdquo;</div>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; color:#2e6f72; text-align:right; padding-top:8px;">{{ det.maker }}</div>
+        </div>
+        <div style="display:flex; gap:24px; flex-wrap:wrap; margin-bottom:24px;">
+          <div style="flex:2; min-width:300px; border:1.5px solid #23201a; border-radius:16px; overflow:hidden; box-shadow:0 3px 0 #23201a; background:#f1ead9;">
+            <image-slot id="{{ det.photoId }}" style="width:100%; height:240px;" radius="0" placeholder="{{ det.dropPhoto }}"></image-slot>
+          </div>
+          <div style="flex:1; min-width:240px; display:grid; grid-template-columns:1fr 1fr; gap:11px; align-content:start;">
+            <div style="border:1.5px solid #23201a; border-radius:11px; padding:11px; background:#fffdf8;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:#6f6a5e;">SERVICE ENTRY</div><div style="font-family:'Newsreader',serif; font-size:21px; font-weight:600;">{{ det.year }}</div></div>
+            <div style="border:1.5px solid #23201a; border-radius:11px; padding:11px; background:#fffdf8;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:#6f6a5e;">RANGE</div><div style="font-family:'Newsreader',serif; font-size:21px; font-weight:600;">{{ det.range }}</div></div>
+            <div style="border:1.5px solid #23201a; border-radius:11px; padding:11px; background:#fffdf8;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:#6f6a5e;">SEATS</div><div style="font-family:'Newsreader',serif; font-size:21px; font-weight:600;">{{ det.seats }}</div></div>
+            <div style="border:1.5px solid #23201a; border-radius:11px; padding:11px; background:#fffdf8;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:#6f6a5e;">RIVAL</div><div style="font-family:'Newsreader',serif; font-size:17px; font-weight:600; line-height:1.15;">{{ det.rival }}</div></div>
+            <div style="grid-column:1 / -1; border:1.5px solid #23201a; border-radius:11px; padding:11px; background:#fffdf8;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:#6f6a5e;">ENGINES</div><div style="font-family:'Newsreader',serif; font-size:18px; font-weight:600;">{{ det.engines }}</div></div>
+          </div>
+        </div>
+        <div style="display:flex; gap:28px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:280px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#c2772f; margin-bottom:12px;">HOW TO SPOT IT</div>
+            <div style="display:flex; flex-direction:column; gap:11px;">
+              <sc-for list="{{ detFeatures }}" as="f" hint-placeholder-count="4">
+                <div style="display:flex; gap:13px; align-items:flex-start;">
+                  <div style="flex:none; width:28px; height:28px; border-radius:50%; background:#fbf6ea; color:#23201a; border:1.5px solid #23201a; display:flex; align-items:center; justify-content:center; font-family:'Newsreader',serif; font-weight:600; font-size:14px;">{{ f.n }}</div>
+                  <div><div style="font-weight:700; font-size:15px;">{{ f.label }}</div><div style="font-size:13.5px; color:#6f6a5e; line-height:1.5;">{{ f.blurb }}</div></div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="flex:1; min-width:280px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; color:#c2772f; margin-bottom:12px;">ILLUSTRATED DIAGRAM</div>
+            <div style="border:1.5px solid #23201a; border-radius:14px; overflow:hidden; box-shadow:0 3px 0 #23201a; margin-bottom:18px; background:#f1ead9;">
+              <image-slot id="{{ det.diagramId }}" style="width:100%; height:150px;" radius="0" placeholder="{{ det.dropDiagram }}"></image-slot>
+            </div>
+            <div style="border-left:3px solid #2e6f72; padding:4px 0 4px 14px; margin-bottom:18px;">
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:#2e6f72; margin-bottom:4px;">THE ONE-LINE TELL</div>
+              <div style="font-family:'Newsreader',serif; font-size:18px; line-height:1.4; text-wrap:pretty;">{{ det.tells }}</div>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:#6f6a5e; margin-bottom:8px;">APPEARS IN COLLECTIONS</div>
+            <div style="display:flex; gap:7px; flex-wrap:wrap;">
+              <sc-for list="{{ detTags }}" as="t" hint-placeholder-count="4">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:11px; padding:5px 11px; border:1.5px solid #23201a; border-radius:18px; background:#fbf6ea;">{{ t.name }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1040,&quot;height&quot;:760}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.MIN = 5; // minimum attempts before a collection can be mastered
+    this.state = {
+      screen: 'home', history: [],
+      category: null, group: null, aircraftId: null, detailId: null,
+      refFilter: 'All',
+      quiz: null, quizScope: 'Airliner', qIdx: 0, answered: false, chosenIdx: -1, isCorrect: false,
+      sessionCorrect: 0, sessionTotal: 0,
+      stats: {},
+    };
+    this.AIRCRAFT = this.buildAircraft();
+    this.CATEGORIES = ['Anything Goes','Light Weight','Medium Weight','Heavy Weight','Uncommon','Scarce','Rare','Jet','Twin Jet','4+ Engine','Glider','Propeller','Piston','Taildragger','Airliner','Single Seat','Wide Wings','Military','Helicopter','Slow','Fast','Oldies','21st Century','Airbus','Boeing','Cessna'];
+  }
+
+  componentDidMount() {
+    try { const raw = localStorage.getItem('fg.stats.v2'); if (raw) this.setState({ stats: JSON.parse(raw) }); } catch (e) {}
+  }
+
+  buildAircraft() {
+    return [
+      { id:'737-800', name:'Boeing 737-800', maker:'Boeing', group:'twin', year:'1998', range:'2,935 nmi', engines:'2 \u00d7 CFM56-7B', seats:'162\u2013189', rival:'Airbus A320 family', nickname:'The Workhorse',
+        tags:['Jet','Twin Jet','Airliner','Boeing','Medium Weight','Fast'],
+        tells:'Sits low to the ground with flat-bottomed engine intakes and a sharp, pointed nose.',
+        features:[ {label:'Pointed nose cone', blurb:'Sharper and more tapered than the Airbus A320\u2019s rounded snout.'}, {label:'Flat-bottom engines', blurb:'CFM nacelles are squashed flat underneath to clear the low gear.'}, {label:'Blended winglets', blurb:'Most -800s wear the upward-angled blended winglet.'}, {label:'Low stance', blurb:'Hugs the tarmac \u2014 you can almost touch the engines.'} ] },
+      { id:'a320neo', name:'Airbus A320neo', maker:'Airbus', group:'twin', year:'2016', range:'3,500 nmi', engines:'2 \u00d7 CFM LEAP-1A', seats:'150\u2013180', rival:'Boeing 737 MAX', nickname:'New Engine Option',
+        tags:['Jet','Twin Jet','Airliner','Airbus','Medium Weight','Fast','21st Century'],
+        tells:'Rounded nose, tall curved sharklets, and it stands noticeably higher than a 737.',
+        features:[ {label:'Rounded nose cone', blurb:'Smooth and bulbous where the 737 is pointed.'}, {label:'Tall sharklets', blurb:'Big, gracefully curved wingtip fins \u2014 the neo signature.'}, {label:'Fat LEAP fans', blurb:'Larger-diameter engine intakes than older A320s.'}, {label:'Taller gear', blurb:'Sits higher off the ground than a Boeing 737.'} ] },
+      { id:'777-300er', name:'Boeing 777-300ER', maker:'Boeing', group:'twin', year:'2004', range:'7,370 nmi', engines:'2 \u00d7 GE90-115B', seats:'\u2248 396', rival:'Airbus A350 / A340', nickname:'Triple Seven',
+        tags:['Jet','Twin Jet','Airliner','Boeing','Heavy Weight','Wide Wings','Fast','Scarce'],
+        tells:'An enormous twin: the largest jet engines in the sky and a flat blade-like tailcone.',
+        features:[ {label:'Giant GE90 engines', blurb:'The biggest jet engines ever flown \u2014 wider than a 737\u2019s fuselage.'}, {label:'Six-wheel bogies', blurb:'Each main gear has three axles, not two.'}, {label:'Raked wingtips', blurb:'Wings sweep to a sharp swept point rather than a winglet.'}, {label:'Flat tailcone', blurb:'The \u201cbeaver tail\u201d is squashed flat, not round.'} ] },
+      { id:'a350-900', name:'Airbus A350-900', maker:'Airbus', group:'twin', year:'2015', range:'8,100 nmi', engines:'2 \u00d7 RR Trent XWB', seats:'300\u2013350', rival:'Boeing 777 / 787', nickname:'Xtra Wide Body',
+        tags:['Jet','Twin Jet','Airliner','Airbus','Heavy Weight','Wide Wings','Fast','21st Century'],
+        tells:'The curved black cockpit \u201cmask\u201d and gently curling wingtips give it away instantly.',
+        features:[ {label:'Black \u201cmask\u201d windows', blurb:'Cockpit glass is wrapped in a curved black surround like sunglasses.'}, {label:'Curved winglets', blurb:'Wingtips blend up in one smooth, continuous curve.'}, {label:'One-piece nose', blurb:'Smooth composite nose with no panel seams.'}, {label:'Trent XWB engines', blurb:'Slim, quiet Rolls-Royce engines under a high wing.'} ] },
+      { id:'747-400', name:'Boeing 747-400', maker:'Boeing', group:'quad', year:'1989', range:'7,260 nmi', engines:'4 \u00d7 wing-mounted', seats:'\u2248 416', rival:'Airbus A340 / A380', nickname:'Queen of the Skies',
+        tags:['Jet','4+ Engine','Airliner','Boeing','Heavy Weight','Wide Wings','Fast'],
+        tells:'The hump. Nothing else has that upper-deck bulge near the nose.',
+        features:[ {label:'Upper-deck hump', blurb:'A partial second deck up front \u2014 the single giveaway feature.'}, {label:'Four wing engines', blurb:'Two slung under each wing.'}, {label:'Long upper windows', blurb:'A row of windows along the raised forward deck.'}, {label:'Wingtip winglets', blurb:'The -400 added tall angled winglets to the older jumbo.'} ] },
+      { id:'a380-800', name:'Airbus A380-800', maker:'Airbus', group:'quad', year:'2007', range:'8,000 nmi', engines:'4 \u00d7 wing-mounted', seats:'\u2248 525', rival:'Boeing 747', nickname:'Superjumbo',
+        tags:['Jet','4+ Engine','Airliner','Airbus','Heavy Weight','Wide Wings','Scarce'],
+        tells:'The double deck runs the entire length \u2014 a smooth, whale-like giant.',
+        features:[ {label:'Full-length double deck', blurb:'Two passenger decks the whole way back, not just a hump.'}, {label:'Four engines', blurb:'Like the 747, but on a far bulkier body.'}, {label:'Smooth whale nose', blurb:'Rounded, bulging forehead with no hump break.'}, {label:'Towering tail', blurb:'An enormous vertical fin, taller than a seven-storey building.'} ] },
+      { id:'727-200', name:'Boeing 727-200', maker:'Boeing', group:'tri', year:'1967', range:'2,550 nmi', engines:'3 \u00d7 P&W JT8D', seats:'134\u2013155', rival:'Trident / DC-9 era', nickname:'Three-Holer',
+        tags:['Jet','Airliner','Boeing','Medium Weight','Oldies','Fast','Uncommon'],
+        tells:'Three engines clustered at the tail beneath a T-tail \u2014 a 1960s classic.',
+        features:[ {label:'Three rear engines', blurb:'Two on the sides, one buried in the tail.'}, {label:'S-duct center inlet', blurb:'The middle engine breathes through a scoop at the fin base.'}, {label:'T-tail', blurb:'Horizontal stabiliser perched at the very top of the fin.'}, {label:'Built-in airstairs', blurb:'Famous rear stairway that drops from the tail.'} ] },
+      { id:'concorde', name:'Concorde', maker:'A\u00e9rospatiale / BAC', group:'quad', year:'1976', range:'3,900 nmi', engines:'4 \u00d7 Olympus 593', seats:'\u2248 100', rival:'Tupolev Tu-144', nickname:'The SST',
+        tags:['Jet','4+ Engine','Oldies','Fast','Rare','Wide Wings'],
+        tells:'A needle nose that droops for landing over a slender ogival delta wing.',
+        features:[ {label:'Drooping needle nose', blurb:'The pointed nose tilts down so pilots can see on approach.'}, {label:'Ogival delta wing', blurb:'A single curved delta \u2014 no separate tailplane.'}, {label:'Four afterburning engines', blurb:'Paired under the wing, with reheat for supersonic dash.'}, {label:'Slim fuselage', blurb:'Long, thin and low \u2014 built to cut through the air at Mach 2.'} ] },
+      { id:'c172', name:'Cessna 172 Skyhawk', maker:'Cessna', group:'single', year:'1956', range:'640 nmi', engines:'1 \u00d7 Lycoming piston', seats:'4', rival:'Piper PA-28', nickname:'Skyhawk',
+        tags:['Propeller','Piston','Cessna','Light Weight','Slow'],
+        tells:'High strut-braced wing, fixed tricycle gear and one nose propeller \u2014 the most-produced aircraft ever.',
+        features:[ {label:'High braced wing', blurb:'Wing sits on top of the cabin, held by a diagonal strut.'}, {label:'Single nose prop', blurb:'One piston engine and propeller up front.'}, {label:'Fixed tricycle gear', blurb:'Three wheels that never retract.'}, {label:'Stabilator tail', blurb:'The whole horizontal tail surface pivots as one.'} ] },
+      { id:'atr72', name:'ATR 72', maker:'ATR', group:'twin', year:'1989', range:'825 nmi', engines:'2 \u00d7 PWC turboprop', seats:'\u2248 72', rival:'De Havilland Dash 8', nickname:'The Regional',
+        tags:['Propeller','Light Weight','Slow'],
+        tells:'A high straight wing carrying two big turboprops, topped by a tall T-tail.',
+        features:[ {label:'High straight wing', blurb:'Mounted on the roofline above the cabin.'}, {label:'Two turboprops', blurb:'Propellers, not jets \u2014 you\u2019ll hear them before you see them.'}, {label:'T-tail', blurb:'Tailplane sits high atop the fin, clear of the props.'}, {label:'Long thin tube', blurb:'A slim fuselage with a distinctive upswept rear.'} ] },
+    ];
+  }
+
+  // ---------- nav ----------
+  nav(screen) { this.setState(s => ({ screen, history: [...s.history, s.screen] })); }
+  goBack() { this.setState(s => { const h=[...s.history]; const prev=h.pop()||'home'; return { screen: prev, history: h }; }); }
+  goHome() { this.setState({ screen: 'home', history: [] }); }
+
+  // ---------- data helpers ----------
+  matchCat(a, name) { return name === 'Anything Goes' || a.tags.includes(name); }
+  countFor(name) { return this.AIRCRAFT.filter(a => this.matchCat(a, name)).length; }
+  collectionAircraft(name) { return this.AIRCRAFT.filter(a => this.matchCat(a, name)); }
+  groupList(name, key) { return this.AIRCRAFT.filter(a => this.matchCat(a, name) && (key === '3plus' ? (a.group === 'tri' || a.group === 'quad') : a.group === key)); }
+  groupLabelOf(key) { return key === 'single' ? 'Single Engine' : key === 'twin' ? 'Twin Engine' : '3+ Engine'; }
+  acById(id) { return this.AIRCRAFT.find(a => a.id === id) || this.AIRCRAFT[0]; }
+  engineNum(a) { return a.group === 'single' ? 1 : a.group === 'twin' ? 2 : a.group === 'tri' ? 3 : 4; }
+  engineWord(a) { const n = this.engineNum(a); return n === 1 ? 'a single engine' : n === 2 ? 'two engines' : n === 3 ? 'three engines' : 'four engines'; }
+  masterableCollections() { return this.CATEGORIES.filter(c => c !== 'Anything Goes' && this.countFor(c) > 0); }
+
+  // ---------- stats ----------
+  scopeStats(name) { const s = this.state.stats[name]; return { correct: s ? s.correct : 0, total: s ? s.total : 0 }; }
+  scopePct(name) { const s = this.scopeStats(name); return s.total > 0 ? Math.round(s.correct / s.total * 100) : 0; }
+  isMastered(name) { const s = this.scopeStats(name); return s.total >= this.MIN && (s.correct / s.total) >= 0.8; }
+  saveStats(stats) { try { localStorage.setItem('fg.stats.v2', JSON.stringify(stats)); } catch (e) {} }
+  resetStats() { this.setState({ stats: {} }); this.saveStats({}); }
+  recordAnswer(correct) {
+    this.setState(s => {
+      const scope = s.quizScope;
+      const prev = s.stats[scope] || { correct: 0, total: 0 };
+      const stats = { ...s.stats, [scope]: { correct: prev.correct + (correct ? 1 : 0), total: prev.total + 1 } };
+      this.saveStats(stats);
+      return { stats, sessionCorrect: s.sessionCorrect + (correct ? 1 : 0), sessionTotal: s.sessionTotal + 1, answered: true, isCorrect: correct };
+    });
+  }
+
+  // ---------- question generators ----------
+  rand(n) { return Math.floor(Math.random() * n); }
+  pick(arr) { return arr[this.rand(arr.length)]; }
+  shuffle(arr) { return arr.slice().sort(() => Math.random() - 0.5); }
+  pickN(arr, n, exclude) { const ex = exclude || []; const uniq = [...new Set(arr)].filter(x => ex.indexOf(x) === -1); return this.shuffle(uniq).slice(0, n); }
+  mkOptions(correct, distractors) { return this.shuffle([{ label: correct, correct: true }, ...distractors.map(d => ({ label: d, correct: false }))]); }
+
+  mkFeature(a) {
+    const correct = this.pick(a.features).label;
+    const others = this.AIRCRAFT.filter(x => x.id !== a.id).flatMap(x => x.features.map(f => f.label)).filter(l => !a.features.some(f => f.label === l));
+    return { type: 'feature', photoId: 'ac-' + a.id, photoLabel: 'Drop a ' + a.name + ' photo', kicker: 'SPOT THE TELL', prompt: 'What identifies this as the ' + a.name + '?', options: this.mkOptions(correct, this.pickN(others, 3, [correct])), explain: a.tells };
+  }
+  mkName(a) {
+    const others = this.AIRCRAFT.filter(x => x.id !== a.id).map(x => x.name);
+    return { type: 'name', kicker: 'NAME THAT AIRCRAFT', prompt: 'Which aircraft fits this description? \u201c' + a.tells + '\u201d', options: this.mkOptions(a.name, this.pickN(others, 3, [a.name])), explain: a.name + ' \u2014 \u201c' + a.nickname + '.\u201d' };
+  }
+  mkYear(a) {
+    const years = this.AIRCRAFT.map(x => x.year);
+    return { type: 'year', kicker: 'KNOW YOUR DATES', prompt: 'When did the ' + a.name + ' enter service?', options: this.mkOptions(a.year, this.pickN(years, 3, [a.year])), explain: 'The ' + a.name + ' entered service in ' + a.year + '.' };
+  }
+  mkEngines(a) {
+    const correct = String(this.engineNum(a));
+    const options = ['1', '2', '3', '4'].map(n => ({ label: n, correct: n === correct }));
+    return { type: 'engines', kicker: 'COUNT THE ENGINES', prompt: 'How many engines does the ' + a.name + ' have?', options, explain: 'The ' + a.name + ' has ' + this.engineWord(a) + '.' };
+  }
+  mkComparative(a) {
+    const partners = this.AIRCRAFT.filter(x => x.id !== a.id && x.group === a.group);
+    if (!partners.length) return null;
+    const correct = this.pick(partners).name;
+    const others = this.AIRCRAFT.filter(x => x.group !== a.group).map(x => x.name);
+    return { type: 'comparative', kicker: 'COMPARE & CONTRAST', prompt: 'The ' + a.name + ' has ' + this.engineWord(a) + '. Which of these shares that?', options: this.mkOptions(correct, this.pickN(others, 3, [correct])), explain: 'Both the ' + a.name + ' and the ' + correct + ' have ' + this.engineWord(a) + '.' };
+  }
+  mkHotspot() {
+    return { type: 'hotspot', photoId: 'ac-747-400', photoLabel: 'Drop a Boeing 747 photo', kicker: 'TAP THE FEATURE', prompt: 'Tap the feature that earns the 747 its \u201cQueen of the Skies\u201d title.', explain: 'The hump \u2014 that raised forward upper deck \u2014 is the 747\u2019s signature.' };
+  }
+
+  genFocus(a) {
+    let qs = [this.mkFeature(a), this.mkEngines(a), this.mkYear(a), this.mkName(a)];
+    const c = this.mkComparative(a); if (c) qs.push(c);
+    if (a.id === '747-400') qs.push(this.mkHotspot());
+    return this.shuffle(qs).slice(0, 6);
+  }
+  genPool(pool) {
+    let qs = [];
+    pool.forEach(a => { [this.mkFeature(a), this.mkEngines(a), this.mkYear(a), this.mkName(a), this.mkComparative(a)].filter(Boolean).forEach(q => qs.push(q)); });
+    qs = this.shuffle(qs);
+    const cap = Math.min(8, Math.max(5, pool.length + 3));
+    return qs.slice(0, cap);
+  }
+
+  startQuiz(questions, scope) {
+    if (!questions.length) return;
+    this.setState({ quiz: questions, quizScope: scope, qIdx: 0, answered: false, chosenIdx: -1, isCorrect: false, sessionCorrect: 0, sessionTotal: 0 });
+    this.nav('quiz');
+  }
+  startCollectionQuiz() { const cat = this.state.category || 'Airliner'; this.startQuiz(this.genPool(this.collectionAircraft(cat)), cat); }
+  startAircraftQuiz() { const a = this.acById(this.state.aircraftId || '747-400'); this.startQuiz(this.genFocus(a), this.state.category || 'Airliner'); }
+  startMaster() {
+    const mastered = this.masterableCollections().filter(c => this.isMastered(c));
+    const pool = this.AIRCRAFT.filter(a => mastered.some(c => this.matchCat(a, c)));
+    if (!pool.length) return;
+    this.startQuiz(this.genPool(pool), 'Master');
+  }
+
+  choose(idx) { if (this.state.answered) return; const q = this.state.quiz[this.state.qIdx]; this.setState({ chosenIdx: idx }); this.recordAnswer(!!q.options[idx].correct); }
+  tapZone(id) { if (this.state.answered) return; this.setState({ chosenIdx: id === 'hump' ? 0 : id === 'wing' ? 1 : 2 }); this.recordAnswer(id === 'hump'); }
+  nextQuestion() { if (this.state.qIdx >= this.state.quiz.length - 1) { this.nav('result'); return; } this.setState(s => ({ qIdx: s.qIdx + 1, answered: false, chosenIdx: -1, isCorrect: false })); }
+
+  openDetail(id) { this.setState({ detailId: id }); this.nav('detail'); }
+  setRef(tag) { this.setState({ refFilter: tag }); }
+
+  // ---------- render ----------
+  renderVals() {
+    const st = this.state;
+    const v = {
+      goHome: () => this.goHome(), goBack: () => this.goBack(),
+      goCategories: () => this.nav('categories'), goReference: () => this.nav('reference'),
+      resetStats: () => this.resetStats(), nextQuestion: () => this.nextQuestion(),
+      beginQuiz: () => this.startAircraftQuiz(), startCollectionQuiz: () => this.startCollectionQuiz(), startMaster: () => this.startMaster(),
+      openDetailCurrent: () => this.openDetail(st.aircraftId),
+      isHome: st.screen === 'home', isCategories: st.screen === 'categories', isCollection: st.screen === 'collection',
+      isBrowse: st.screen === 'browse', isLearn: st.screen === 'learn', isQuiz: st.screen === 'quiz',
+      isResult: st.screen === 'result', isReference: st.screen === 'reference', isDetail: st.screen === 'detail',
+      canReference: st.screen !== 'quiz',
+      catLabel: st.category || '', groupLabel: this.groupLabelOf(st.group || 'twin'), groupLabelUpper: this.groupLabelOf(st.group || 'twin').toUpperCase(),
+    };
+
+    // home mastery
+    const masterable = this.masterableCollections();
+    const masteredList = masterable.filter(c => this.isMastered(c));
+    v.masteredLabel = masteredList.length + ' / ' + masterable.length;
+    v.masteredBarWidth = (masterable.length > 0 ? Math.round(masteredList.length / masterable.length * 100) : 0) + '%';
+
+    // categories
+    v.categories = this.CATEGORIES.map(name => {
+      const count = this.countFor(name);
+      const active = count > 0;
+      const s = this.scopeStats(name);
+      const mastered = this.isMastered(name);
+      const accLabel = s.total > 0 ? this.scopePct(name) + '% accuracy' : 'not started';
+      return { name, active, inactive: !active, mastered, countLabel: count + (count === 1 ? ' card' : ' cards'), accLabel, accColor: mastered ? '#3c7d54' : '#6f6a5e', onClick: active ? () => { this.setState({ category: name }); this.nav('collection'); } : null };
+    });
+    v.masterReady = masteredList.length >= 1;
+    v.masterLocked = masteredList.length < 1;
+    v.masterCountText = masteredList.length + (masteredList.length === 1 ? ' collection mastered' : ' collections mastered') + ' \u2014 ' + masteredList.join(', ') + '.';
+
+    // collection hub
+    const cat = st.category || 'Airliner';
+    const cs = this.scopeStats(cat);
+    const cpct = this.scopePct(cat);
+    const cMastered = this.isMastered(cat);
+    v.colName = cat;
+    v.colAccPct = cs.total > 0 ? cpct + '%' : '\u2014';
+    v.colMasteryWidth = cpct + '%';
+    v.colAttemptsText = cs.total > 0 ? (cs.correct + ' / ' + cs.total + ' correct') : 'no attempts yet';
+    v.colToGoText = cMastered ? '\u2605 Mastered \u2014 this collection is in the Master Challenge.' : (cs.total > 0 ? (cs.total < this.MIN ? ('Answer ' + (this.MIN - cs.total) + ' more to qualify for mastery (need 80%).') : ('Reach 80% to master \u2014 you\u2019re at ' + cpct + '%.')) : 'Take the quiz to start tracking this collection.');
+    v.engineSections = [
+      { key:'single', label:'Single Engine', tag:'ONE FAN', sub:'One engine doing all the work.' },
+      { key:'twin', label:'Twin Engine', tag:'THE STANDARD', sub:'The default for almost every modern jet.' },
+      { key:'3plus', label:'3+ Engine', tag:'THE HEAVIES', sub:'Tri-jets and four-engine giants.' },
+    ].map(s => {
+      const count = this.groupList(cat, s.key).length;
+      const active = count > 0;
+      return { ...s, active, inactive: !active, countLabel: count + ' aircraft', emptyNote: 'No specimens in this branch \u2014 a tell in itself.', onClick: active ? () => { this.setState({ group: s.key }); this.nav('browse'); } : null };
+    });
+
+    // browse
+    const blist = this.groupList(cat, st.group || 'twin');
+    v.browseHasItems = blist.length > 0; v.browseEmpty = blist.length === 0;
+    v.browseExplain = 'Single-engine jet airliners essentially don\u2019t exist \u2014 even the smallest commercial jets carry two engines for safety over water and on one-engine climbs. The single-engine world belongs to light propeller aircraft and a handful of tiny business jets.';
+    v.browseList = blist.map(a => ({ id:a.id, name:a.name, maker:a.maker.toUpperCase(), year:a.year, tells:a.tells, photoId:'ac-'+a.id, dropLabel:'Drop a '+a.name+' photo', onClick: () => { this.setState({ aircraftId: a.id }); this.nav('learn'); } }));
+
+    // learn
+    const ac = this.acById(st.aircraftId || '747-400');
+    v.ac = { name:ac.name, maker:ac.maker.toUpperCase(), year:ac.year, nickname:ac.nickname, tells:ac.tells, photoId:'ac-'+ac.id, diagramId:'dia-'+ac.id, dropPhoto:'Drop a '+ac.name+' photo', dropDiagram:'Drop an illustrated side-profile' };
+    v.acFeatures = ac.features.map((f, i) => ({ n: i + 1, label: f.label, blurb: f.blurb }));
+
+    // quiz
+    if (st.quiz) {
+      const q = st.quiz[st.qIdx]; const total = st.quiz.length;
+      v.qKicker = q.kicker; v.qPrompt = q.prompt; v.qIndexLabel = (st.qIdx + 1) + ' / ' + total;
+      v.qScopeLabel = (st.quizScope === 'Master' ? 'MASTER CHALLENGE' : (st.quizScope + ' \u2014 ' + (st.aircraftId && st.screen ? '' : '')) ).trim();
+      v.qScopeLabel = st.quizScope === 'Master' ? 'MASTER CHALLENGE' : st.quizScope.toUpperCase() + ' COLLECTION';
+      v.qProgress = Math.round((st.qIdx + (st.answered ? 1 : 0)) / total * 100) + '%';
+      v.qHasPhoto = q.type === 'feature'; v.qPhotoId = q.photoId || ''; v.qPhotoLabel = q.photoLabel || 'Drop a photo';
+      v.qIsChoice = q.type !== 'hotspot'; v.qIsHotspot = q.type === 'hotspot'; v.qAnswered = st.answered;
+      v.tapHump = () => this.tapZone('hump'); v.tapWing = () => this.tapZone('wing'); v.tapTail = () => this.tapZone('tail');
+      const zoneColor = (isC, idx) => { if (!st.answered) return '#2e6f72'; if (isC) return '#3c7d54'; if (st.chosenIdx === idx) return '#b8442f'; return 'rgba(46,111,114,.25)'; };
+      v.qz = { hump: zoneColor(true, 0), wing: zoneColor(false, 1), tail: zoneColor(false, 2) };
+      v.qOptions = (q.options || []).map((o, i) => {
+        let bg = '#fffdf8', border = '#23201a', fg = '#23201a', mark = '', markColor = '#23201a';
+        if (st.answered) {
+          if (o.correct) { bg = '#e7f0e6'; border = '#3c7d54'; mark = '\u2713'; markColor = '#3c7d54'; }
+          else if (i === st.chosenIdx) { bg = '#f6e3dd'; border = '#b8442f'; mark = '\u2717'; markColor = '#b8442f'; }
+          else { bg = '#f4eee0'; border = '#d6ccb6'; fg = '#a59d8a'; }
+        }
+        return { label: o.label, bg, border, fg, mark, markColor, onClick: () => this.choose(i) };
+      });
+      const correctOpt = q.options ? (q.options.find(o => o.correct) || {}).label : 'the hump';
+      v.qFeedbackHead = st.isCorrect ? 'Correct.' : 'Not quite.';
+      v.qFeedbackText = st.isCorrect ? q.explain : ('The answer is \u201c' + correctOpt + '.\u201d ' + q.explain);
+      v.qFeedbackBg = st.isCorrect ? '#eef4ec' : '#f8ece7'; v.qFeedbackColor = st.isCorrect ? '#3c7d54' : '#b8442f';
+      v.qNextLabel = (st.qIdx >= total - 1) ? 'See results \u2192' : 'Next \u2192';
+    } else {
+      v.qOptions = []; v.qz = { hump:'#2e6f72', wing:'#2e6f72', tail:'#2e6f72' }; v.qIsChoice = true; v.qIsHotspot = false; v.qHasPhoto = false; v.qAnswered = false;
+    }
+
+    // result
+    v.sessionCorrect = st.sessionCorrect; v.sessionTotal = st.sessionTotal;
+    v.sessionPct = st.sessionTotal > 0 ? Math.round(st.sessionCorrect / st.sessionTotal * 100) + '%' : '\u2014';
+    const sp = st.sessionTotal > 0 ? st.sessionCorrect / st.sessionTotal : 0;
+    v.sessionLine = sp === 1 ? 'A clean sweep \u2014 your eye is sharp.' : sp >= 0.6 ? 'Solid spotting. A few more rounds and these are reflex.' : 'Early days \u2014 study the plates and come back for another pass.';
+    const rscope = st.quizScope;
+    if (rscope === 'Master') {
+      v.resultKicker = 'MASTER CHALLENGE'; v.resultAccLabel = 'MASTER'; v.resultAccPct = this.scopeStats('Master').total > 0 ? this.scopePct('Master') + '%' : '\u2014';
+      v.resultMasteryMsg = 'The arena of the mastered \u2014 keep your edge sharp.'; v.resultMasteryColor = '#2e6f72'; v.resultMasteryBg = '#eaf1f1';
+    } else {
+      const rpct = this.scopePct(rscope); const rmastered = this.isMastered(rscope); const rs = this.scopeStats(rscope);
+      v.resultKicker = rscope.toUpperCase() + ' COLLECTION'; v.resultAccLabel = 'COLLECTION'; v.resultAccPct = rs.total > 0 ? rpct + '%' : '\u2014';
+      if (rmastered) { v.resultMasteryMsg = '\u2605 ' + rscope + ' mastered \u2014 now in the Master Challenge!'; v.resultMasteryColor = '#3c7d54'; v.resultMasteryBg = '#eef4ec'; }
+      else if (rs.total < this.MIN) { v.resultMasteryMsg = 'Answer ' + (this.MIN - rs.total) + ' more in ' + rscope + ' to qualify for mastery.'; v.resultMasteryColor = '#23201a'; v.resultMasteryBg = '#fbf6ea'; }
+      else { v.resultMasteryMsg = rscope + ' is at ' + rpct + '% \u2014 reach 80% to master it.'; v.resultMasteryColor = '#23201a'; v.resultMasteryBg = '#fbf6ea'; }
+    }
+
+    // reference
+    const chipTags = ['All','Jet','Propeller','Oldies','Airbus','Boeing'];
+    v.refChips = chipTags.map(t => ({ label: t, onClick: () => this.setRef(t), bg: st.refFilter === t ? '#c2772f' : '#fffdf8', fg: st.refFilter === t ? '#fff7ec' : '#23201a' }));
+    const filtered = this.AIRCRAFT.filter(a => st.refFilter === 'All' || a.tags.includes(st.refFilter));
+    v.refList = filtered.map(a => ({ name:a.name, meta: a.maker.toUpperCase() + ' \u00b7 ' + a.year + ' \u00b7 ' + a.nickname, photoId:'ac-'+a.id, onClick: () => this.openDetail(a.id) }));
+
+    // detail
+    const det = this.acById(st.detailId || '747-400');
+    v.det = { name:det.name, maker:det.maker.toUpperCase(), nickname:det.nickname, year:det.year, range:det.range, engines:det.engines, seats:det.seats, rival:det.rival, tells:det.tells, photoId:'ac-'+det.id, diagramId:'dia-'+det.id, dropPhoto:'Drop a '+det.name+' photo', dropDiagram:'Drop an illustrated side-profile' };
+    v.detFeatures = det.features.map((f, i) => ({ n: i + 1, label: f.label, blurb: f.blurb }));
+    v.detTags = det.tags.map(t => ({ name: t }));
+
+    return v;
+  }
+}
+</script>
+</body>
+</html>
