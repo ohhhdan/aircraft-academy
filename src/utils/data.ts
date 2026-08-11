@@ -50,7 +50,7 @@ function catalogDiagrams(aircraftId: string): PhotoCatalogEntry[] {
   return photoCatalog.byAircraft?.[aircraftId]?.diagram ?? [];
 }
 
-/** Local photos/ catalog entries for an aircraft (after npm run sync-photos). */
+/** Local images/ catalog entries for an aircraft (after npm run sync-images). */
 export function getCatalogPhotos(ac: Aircraft): {
   spot: PhotoCatalogEntry[];
   diagram: PhotoCatalogEntry[];
