@@ -34,10 +34,28 @@ Add `?demo=true` to reset progress for portfolio reviewers.
 
 ## Content
 
-- **40 aircraft** in `src/content/aircraft.json`
+- **Curated aircraft families** in `src/content/aircraft.json` (includes COMAC C909/C919, Superjet, etc.)
+- **ICAO type catalog** in `src/content/icaoTypes.json` (Doc 8643 codes + marketing labels like `C909`)
 - **174 airports** in `src/content/airports.json`
 - **Wikimedia** spot photos and profile diagrams in `src/content/aircraftMedia.json`
+- **Local photo catalog** in `src/content/photoCatalog.json` (from `images/` via `npm run sync-images`)
 - **Media admin** at `/admin` for custom uploads
+
+Drop your shots in [`images/`](./images/README.md), then:
+
+```bash
+npm run sync-images
+```
+
+Rebuild / enrich aircraft type codes:
+
+```bash
+npm run build-icao      # regenerate ICAO catalog + family maps
+npm run expand-aircraft # merge additional spotting families
+# Optional — FlightAware AeroAPI (single-type lookup; needs AEROAPI_KEY):
+# PowerShell: $env:AEROAPI_KEY="YOUR_KEY"
+npm run enrich-icao
+```
 
 See [PHOTO_NEEDS.md](./PHOTO_NEEDS.md) for aircraft needing your photo pack.
 

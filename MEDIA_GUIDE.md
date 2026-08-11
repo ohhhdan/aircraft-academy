@@ -1,8 +1,48 @@
 # Media Guide — Better Images for Runway Reference
 
-The auto-generated SVG silhouettes are placeholders only. Use the **admin panel** or the instructions below to get portfolio-quality visuals.
+The auto-generated SVG silhouettes are placeholders only. Prefer the **`images/` drop folder** (baked into the build) or the **admin panel** (browser-only) for portfolio-quality visuals.
 
-## Admin panel (recommended)
+## Images folder (recommended for your own shots)
+
+1. Drop images into **`images/`** at the repo root (see [`images/README.md`](./images/README.md) for naming).
+2. Run **`npm run sync-images`**.
+3. The script identifies aircraft from filenames, copies files to `public/assets/aircraft/{id}/`, and writes **`src/content/photoCatalog.json`**.
+
+The app prefers catalog photos over Wikimedia defaults. Admin / IndexedDB uploads still override both.
+
+```bash
+npm run sync-images
+node scripts/sync-images.mjs --dry-run
+```
+
+### Schema
+
+`photoCatalog.json` is the local photo database:
+
+| Field | Meaning |
+|-------|---------|
+| `photos[]` | Flat list of matched files |
+| `byAircraft.{id}.spot` | Spot photos for Spotter / Index |
+| `byAircraft.{id}.diagram` | Profile diagrams for Learn |
+| `unmatched[]` | Files that need renaming |
+| `stats` | Coverage counts |
+
+Each entry stores `aircraftId`, optional `variant`, `publicPath`, `sourceFile`, and `matchedBy`.
+
+## ICAO type catalog (C909, B738, …)
+
+`src/content/icaoTypes.json` holds ~180 ICAO/IATA/marketing type codes mapped to learning families. Filenames like `C909.jpg` or `AJ27_side.jpg` resolve to **COMAC C909**.
+
+FlightAware AeroAPI only supports **single-type lookup** (`GET /aircraft/types/{icao}`), not a bulk dump. To enrich manufacturer/engine metadata:
+
+```powershell
+$env:AEROAPI_KEY="YOUR_KEY"
+npm run enrich-icao
+```
+
+Do not commit API keys — use `.env` locally (gitignored) or a shell env var.
+
+## Admin panel
 
 Open **`/admin`** while running the app (e.g. `http://localhost:5173/admin`).
 

@@ -1,8 +1,14 @@
 # Photo Needs — User Override Manifest
 
-**Easiest path:** open `/admin` in the app to upload or paste image URLs per aircraft. See [MEDIA_GUIDE.md](./MEDIA_GUIDE.md) for full instructions.
+**Easiest path for your own shots:** drop files in **`images/`**, then run **`npm run sync-images`**. See [`images/README.md`](./images/README.md) and [MEDIA_GUIDE.md](./MEDIA_GUIDE.md).
 
 These aircraft need **user-supplied photos** for reliable **hard-mode variant identification**. Wikimedia images are used for launch, but angles and lighting often make variant distinctions ambiguous.
+
+## How to supply photos (`images/` folder)
+
+1. Add JPG/WebP files under `images/` using aircraft ids when possible (`b737__737-800_01.jpg`)
+2. Run `npm run sync-images`
+3. Confirm coverage in `src/content/photoCatalog.json` (`stats` + `unmatched`)
 
 ## How to supply photos (admin panel)
 
@@ -11,11 +17,10 @@ These aircraft need **user-supplied photos** for reliable **hard-mode variant id
 3. Upload a file or paste a Wikimedia URL under **Spot photo** or **Profile diagram**
 4. Export your media pack when done (backup)
 
-## How to supply photos (static files)
+## How to supply photos (manual static files)
 
-1. Create folder: `public/assets/aircraft/{id}/`
-2. Add files: `01.jpg`, `02.jpg` (JPG/WebP, min 1200px wide, side or 3-quarter ramp angles)
-3. Use admin panel or ask the AI to add `"photoOverrides"` in `aircraft.json`
+1. Prefer the `images/` + sync pipeline above
+2. Or create folder: `public/assets/aircraft/{id}/` and wire paths via sync / catalog
 
 ---
 

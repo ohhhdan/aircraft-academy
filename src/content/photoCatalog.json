@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-11T03:46:08.533Z",
+  "sourceDir": "images",
+  "publicDir": "public/assets/aircraft",
+  "photos": [],
+  "byAircraft": {},
+  "unmatched": [],
+  "stats": {
+    "sourceFiles": 0,
+    "matched": 0,
+    "unmatched": 0,
+    "aircraftCovered": 0
+  }
+}

@@ -417,5 +417,68 @@
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pilatus_PC-12_v1.0.png/1280px-Pilatus_PC-12_v1.0.png",
       "attribution": "Wikimedia Commons / Julien.scavini (technical drawing)"
     }
+  },
+  "c909": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/COMAC_ARJ21_%284339941455%29.jpg/1280px-COMAC_ARJ21_%284339941455%29.jpg",
+      "attribution": "Wikimedia Commons / Kentaro Iemoto",
+      "variant": "C909"
+    }
+  },
+  "c919": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/B-658M_-_COMAC_Express_-_COMAC_C919_-_MSN_00017_-_VGHS.jpg/1280px-B-658M_-_COMAC_Express_-_COMAC_C919_-_MSN_00017_-_VGHS.jpg",
+      "attribution": "Wikimedia Commons",
+      "variant": "C919"
+    }
+  },
+  "ssj100": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sukhoi_Superjet_100_at_Paris_Air_Show_2013_%282%29.jpg/1280px-Sukhoi_Superjet_100_at_Paris_Air_Show_2013_%282%29.jpg",
+      "attribution": "Wikimedia Commons",
+      "variant": "SSJ100"
+    }
+  },
+  "erj145": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
+      "attribution": "Wikimedia Commons (placeholder — replace with ERJ ramp shot)",
+      "variant": "ERJ-145"
+    }
+  },
+  "atr42": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ATR_42.jpg/1280px-ATR_42.jpg",
+      "attribution": "Wikimedia Commons",
+      "variant": "ATR 42"
+    }
+  },
+  "bae146": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fokker_100.jpg/1280px-Fokker_100.jpg",
+      "attribution": "Wikimedia Commons (placeholder — replace with BAe 146 photo)",
+      "variant": "Avro RJ100"
+    }
+  },
+  "fokker100": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fokker_100.jpg/1280px-Fokker_100.jpg",
+      "attribution": "Wikimedia Commons",
+      "variant": "Fokker 100"
+    }
+  },
+  "b717": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Wikimedia Commons (placeholder — replace with 717 photo)",
+      "variant": "717-200"
+    }
+  },
+  "md80": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Boeing_757_family_v1.0.png/1280px-Boeing_757_family_v1.0.png",
+      "attribution": "Placeholder — replace with MD-80 ramp photo",
+      "variant": "MD-83"
+    }
   }
 }
