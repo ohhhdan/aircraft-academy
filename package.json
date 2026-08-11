@@ -8,6 +8,9 @@
     "build": "vite build",
     "sync-images": "node scripts/sync-images.mjs",
     "sync-photos": "node scripts/sync-images.mjs",
+    "build-icao": "node scripts/build-icao-types.mjs",
+    "expand-aircraft": "node scripts/expand-aircraft-catalog.mjs",
+    "enrich-icao": "node scripts/enrich-icao-aeroapi.mjs",
     "seed-media": "node scripts/seed-media.mjs && node scripts/apply-hardcoded-diagrams.mjs",
     "verify-media": "node scripts/verify-media-urls.mjs"
   },

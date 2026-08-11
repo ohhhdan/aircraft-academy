@@ -16,6 +16,10 @@ Use the **aircraft id** from `src/content/aircraft.json` as the start of the fil
 | `b737__737 MAX 8.jpg` | Spot for `737 MAX 8` |
 | `a320_diagram.png` | Profile diagram for A320 family |
 | `f35__F-35B.jpg` | F-35B spot photo |
+| `C909.jpg` / `AJ27.jpg` | COMAC C909 (ARJ21) — ICAO or marketing code |
+| `C919_ramp.jpg` | COMAC C919 |
+
+ICAO type codes from `src/content/icaoTypes.json` are recognized (e.g. `B738`, `A20N`, `SU95`).
 
 Separators `_`, `-`, and spaces are all fine. Extensions: `.jpg` `.jpeg` `.png` `.webp` `.gif`.
 

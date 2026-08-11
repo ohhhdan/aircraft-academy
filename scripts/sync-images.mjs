@@ -25,6 +25,7 @@ const IMAGES_DIR = join(ROOT, 'images');
 const PUBLIC_AIRCRAFT_DIR = join(ROOT, 'public', 'assets', 'aircraft');
 const CATALOG_PATH = join(ROOT, 'src', 'content', 'photoCatalog.json');
 const AIRCRAFT_PATH = join(ROOT, 'src', 'content', 'aircraft.json');
+const ICAO_PATH = join(ROOT, 'src', 'content', 'icaoTypes.json');
 
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif']);
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -71,6 +72,15 @@ const EXTRA_ALIASES = {
   b767: ['767', 'boeing 767'],
   b727: ['727', 'boeing 727'],
   a340: ['a340', 'airbus a340'],
+  c909: ['c909', 'comac 909', 'comac c909', 'arj21', 'arj 21', 'arj-21', 'aj27', 'xiangfeng'],
+  c919: ['c919', 'comac 919', 'comac c919'],
+  ssj100: ['ssj100', 'ssj 100', 'superjet', 'sukhoi superjet', 'su95'],
+  erj145: ['erj', 'erj145', 'erj-145', 'erj135', 'embraer 145'],
+  atr42: ['atr 42', 'atr42', 'atr-42'],
+  bae146: ['bae 146', 'bae146', 'avro rj', 'jumbolino', 'rj85', 'rj100'],
+  fokker100: ['fokker 100', 'fokker100', 'fokker 70', 'f100'],
+  b717: ['717', 'b717', 'boeing 717', 'md95'],
+  md80: ['md80', 'md-80', 'mad dog', 'md82', 'md83', 'md88', 'md90'],
 };
 
 function normalize(s) {
@@ -105,6 +115,14 @@ function walkImages(dir, base = dir) {
   return out;
 }
 
+function loadIcaoCatalog() {
+  try {
+    return JSON.parse(readFileSync(ICAO_PATH, 'utf8'));
+  } catch {
+    return { types: {} };
+  }
+}
+
 function buildAliasIndex(aircraft) {
   /** @type {Array<{ aircraftId: string, alias: string, compact: string, weight: number, variant?: string }>} */
   const entries = [];
@@ -127,9 +145,23 @@ function buildAliasIndex(aircraft) {
       add(ac.id, `${ac.id} ${v}`, 95, v);
     }
 
+    for (const code of ac.icaoCodes ?? []) {
+      add(ac.id, code, 98);
+    }
+
     for (const extra of EXTRA_ALIASES[ac.id] ?? []) {
       add(ac.id, extra, 70);
     }
+  }
+
+  // ICAO / IATA / marketing labels from icaoTypes.json (C909, AJ27, B738, …)
+  const icaoCatalog = loadIcaoCatalog();
+  for (const type of Object.values(icaoCatalog.types ?? {})) {
+    if (!type.familyId) continue;
+    add(type.familyId, type.icao, 97, type.variant);
+    for (const iata of type.iata ?? []) add(type.familyId, iata, 88, type.variant);
+    for (const alias of type.aliases ?? []) add(type.familyId, alias, 75, type.variant);
+    if (type.model) add(type.familyId, type.model, 85, type.variant);
   }
 
   // Longer aliases first so "a321neo" beats "a32" / "a320"
