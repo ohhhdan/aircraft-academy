@@ -1,8 +1,15 @@
-import type { Aircraft, Airport, CategoryGroup } from '../types';
+import type {
+  Aircraft,
+  Airport,
+  CategoryGroup,
+  PhotoCatalog,
+  PhotoCatalogEntry,
+} from '../types';
 
 import aircraftJson from '../content/aircraft.json';
 import airportsJson from '../content/airports.json';
 import aircraftMediaJson from '../content/aircraftMedia.json';
+import photoCatalogJson from '../content/photoCatalog.json';
 
 export interface AircraftMediaEntry {
   spotPhoto?: { url: string; attribution: string; variant?: string };
@@ -10,6 +17,7 @@ export interface AircraftMediaEntry {
 }
 
 export const aircraftMedia = aircraftMediaJson as Record<string, AircraftMediaEntry>;
+export const photoCatalog = photoCatalogJson as PhotoCatalog;
 
 export const aircraft = aircraftJson as Aircraft[];
 export const airports = airportsJson as Airport[];
@@ -34,7 +42,52 @@ export function getAirportsByTier(tier: Airport['tier']): Airport[] {
   return airports.filter((a) => a.tier === tier);
 }
 
+function catalogSpots(aircraftId: string): PhotoCatalogEntry[] {
+  return photoCatalog.byAircraft?.[aircraftId]?.spot ?? [];
+}
+
+function catalogDiagrams(aircraftId: string): PhotoCatalogEntry[] {
+  return photoCatalog.byAircraft?.[aircraftId]?.diagram ?? [];
+}
+
+/** Local photos/ catalog entries for an aircraft (after npm run sync-photos). */
+export function getCatalogPhotos(ac: Aircraft): {
+  spot: PhotoCatalogEntry[];
+  diagram: PhotoCatalogEntry[];
+} {
+  return {
+    spot: catalogSpots(ac.id),
+    diagram: catalogDiagrams(ac.id),
+  };
+}
+
+function pickCatalogSpot(
+  ac: Aircraft,
+  variant?: string
+): { url: string; attribution: string; variant?: string } | null {
+  const spots = catalogSpots(ac.id);
+  if (!spots.length) return null;
+
+  const variantMatch = variant
+    ? spots.find((s) => s.variant && s.variant.toLowerCase() === variant.toLowerCase())
+    : undefined;
+  const preferred = variantMatch ?? spots.find((s) => !s.variant) ?? spots[0];
+  return {
+    url: preferred.publicPath,
+    attribution: preferred.attribution,
+    variant: preferred.variant,
+  };
+}
+
+/**
+ * Resolve spot photo URL.
+ * Priority: local photoCatalog → bundled Wikimedia (aircraftMedia) → photoOverrides → aircraft.photos
+ * (IndexedDB admin uploads still win via MediaContext before this is called.)
+ */
 export function getPhotoUrl(ac: Aircraft, variant?: string): { url: string; attribution: string } {
+  const local = pickCatalogSpot(ac, variant);
+  if (local?.url) return local;
+
   const bundled = aircraftMedia[ac.id]?.spotPhoto;
   if (bundled?.url) {
     return { url: bundled.url, attribution: bundled.attribution };
@@ -50,6 +103,10 @@ export function getPhotoUrl(ac: Aircraft, variant?: string): { url: string; attr
 }
 
 export function getDiagramUrl(ac: Aircraft): { url: string; attribution?: string } | null {
+  const local = catalogDiagrams(ac.id)[0];
+  if (local) {
+    return { url: local.publicPath, attribution: local.attribution };
+  }
   const bundled = aircraftMedia[ac.id]?.diagram;
   if (bundled?.url) return bundled;
   return null;

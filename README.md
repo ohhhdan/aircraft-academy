@@ -37,7 +37,14 @@ Add `?demo=true` to reset progress for portfolio reviewers.
 - **40 aircraft** in `src/content/aircraft.json`
 - **174 airports** in `src/content/airports.json`
 - **Wikimedia** spot photos and profile diagrams in `src/content/aircraftMedia.json`
+- **Local photo catalog** in `src/content/photoCatalog.json` (from `photos/` via `npm run sync-photos`)
 - **Media admin** at `/admin` for custom uploads
+
+Drop your shots in [`photos/`](./photos/README.md), then:
+
+```bash
+npm run sync-photos
+```
 
 See [PHOTO_NEEDS.md](./PHOTO_NEEDS.md) for aircraft needing your photo pack.
 

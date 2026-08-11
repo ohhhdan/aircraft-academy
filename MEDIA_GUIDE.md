@@ -1,8 +1,35 @@
 # Media Guide — Better Images for Runway Reference
 
-The auto-generated SVG silhouettes are placeholders only. Use the **admin panel** or the instructions below to get portfolio-quality visuals.
+The auto-generated SVG silhouettes are placeholders only. Prefer the **`photos/` drop folder** (baked into the build) or the **admin panel** (browser-only) for portfolio-quality visuals.
 
-## Admin panel (recommended)
+## Photos folder (recommended for your own shots)
+
+1. Drop images into **`photos/`** at the repo root (see [`photos/README.md`](./photos/README.md) for naming).
+2. Run **`npm run sync-photos`**.
+3. The script identifies aircraft from filenames, copies files to `public/assets/aircraft/{id}/`, and writes **`src/content/photoCatalog.json`**.
+
+The app prefers catalog photos over Wikimedia defaults. Admin / IndexedDB uploads still override both.
+
+```bash
+npm run sync-photos
+node scripts/sync-photos.mjs --dry-run
+```
+
+### Schema
+
+`photoCatalog.json` is the local photo database:
+
+| Field | Meaning |
+|-------|---------|
+| `photos[]` | Flat list of matched files |
+| `byAircraft.{id}.spot` | Spot photos for Spotter / Index |
+| `byAircraft.{id}.diagram` | Profile diagrams for Learn |
+| `unmatched[]` | Files that need renaming |
+| `stats` | Coverage counts |
+
+Each entry stores `aircraftId`, optional `variant`, `publicPath`, `sourceFile`, and `matchedBy`.
+
+## Admin panel
 
 Open **`/admin`** while running the app (e.g. `http://localhost:5173/admin`).
 

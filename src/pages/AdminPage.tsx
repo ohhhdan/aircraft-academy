@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMedia } from '../context/MediaContext';
-import { aircraft } from '../utils/data';
+import { aircraft, photoCatalog, getCatalogPhotos } from '../utils/data';
 import { CATEGORY_ORDER } from '../types';
 
 export function AdminPage() {
@@ -37,6 +37,8 @@ export function AdminPage() {
     return list;
   }, [search, category]);
 
+  const catalogStats = photoCatalog.stats;
+
   const handleImport = async (file: File) => {
     const count = await importPack(file);
     setStatus(`Imported media for ${count} aircraft.`);
@@ -53,8 +55,9 @@ export function AdminPage() {
           <div className="eyebrow">Media Admin</div>
           <h1 style={{ margin: '0 0 8px', fontWeight: 400 }}>Aircraft Image Manager</h1>
           <p style={{ margin: 0, color: 'var(--ink-faint)', maxWidth: 640 }}>
-            Upload your own spot photos and profile diagrams per aircraft. Images are stored in your
-            browser (IndexedDB) and override the built-in SVG placeholders and Wikimedia defaults.
+            Browser uploads override everything. For photos baked into the build, drop files in{' '}
+            <code>photos/</code> and run <code>npm run sync-photos</code> — catalog coverage:{' '}
+            {catalogStats.aircraftCovered}/{aircraft.length} aircraft ({catalogStats.matched} files).
           </p>
         </div>
         <Link to="/" className="btn btn-secondary">← Back to app</Link>
@@ -144,6 +147,7 @@ function AircraftMediaCard({
   const { resolved, getSpotPhoto, getDiagram } = useMedia();
   const spot = resolved.get(ac.id)?.spotPhoto ?? (getSpotPhoto(ac).url ? getSpotPhoto(ac) : null);
   const diagram = getDiagram(ac);
+  const local = getCatalogPhotos(ac);
 
   const [spotUrl, setSpotUrl] = useState(record?.spotPhotoUrl ?? '');
   const [spotAttr, setSpotAttr] = useState(record?.spotAttribution ?? '');
@@ -157,7 +161,13 @@ function AircraftMediaCard({
           <strong>{ac.family}</strong>
           <div className="timestamp">ID: {ac.id} • {ac.manufacturer}</div>
         </div>
-        <div style={{ display: 'flex', gap: 4 }}>
+        <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+          {local.spot.length > 0 && (
+            <span className="tier-badge tier-hard">Local spot ×{local.spot.length}</span>
+          )}
+          {local.diagram.length > 0 && (
+            <span className="tier-badge tier-hard">Local diagram ×{local.diagram.length}</span>
+          )}
           {hasSpot && <span className="tier-badge tier-easy">Spot</span>}
           {hasDiagram && <span className="tier-badge tier-medium">Diagram</span>}
         </div>

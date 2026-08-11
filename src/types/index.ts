@@ -21,6 +21,42 @@ export interface AircraftPhoto {
   variant?: string;
 }
 
+/** Role of a file in the local photos/ → photoCatalog pipeline */
+export type PhotoCatalogRole = 'spot' | 'diagram';
+
+export interface PhotoCatalogEntry {
+  id: string;
+  aircraftId: string;
+  role: PhotoCatalogRole;
+  variant?: string;
+  sourceFile: string;
+  publicPath: string;
+  attribution: string;
+  matchedBy: string;
+  sortIndex: number;
+}
+
+export interface PhotoCatalogAircraftBucket {
+  spot: PhotoCatalogEntry[];
+  diagram: PhotoCatalogEntry[];
+}
+
+export interface PhotoCatalog {
+  version: number;
+  updatedAt: string | null;
+  sourceDir: string;
+  publicDir: string;
+  photos: PhotoCatalogEntry[];
+  byAircraft: Record<string, PhotoCatalogAircraftBucket>;
+  unmatched: Array<{ sourceFile: string; reason: string }>;
+  stats: {
+    sourceFiles: number;
+    matched: number;
+    unmatched: number;
+    aircraftCovered: number;
+  };
+}
+
 export interface Aircraft {
   id: string;
   family: string;
