@@ -55,7 +55,25 @@ function getWingPath(ac: Aircraft): string {
 }
 
 function getTailPath(ac: Aircraft): string {
-  const tTail = ['b727', 'md11', 'g650', 'citationx', 'global7500', 'learjet75', 'falcon7x', 'dash8'].includes(ac.id);
+  const tTail = [
+    'b727',
+    'md11',
+    'g650',
+    'citationx',
+    'global7500',
+    'learjet75',
+    'falcon7x',
+    'dash8',
+    'c909',
+    'erj145',
+    'crj',
+    'bae146',
+    'fokker100',
+    'b717',
+    'md80',
+    'atr42',
+    'atr72',
+  ].includes(ac.id);
   if (tTail) return 'M 88 36 L 92 20 L 96 36 Z M 90 24 L 98 24 L 98 28 L 90 28 Z';
   return 'M 88 36 L 94 18 L 96 36 Z';
 }
@@ -63,10 +81,20 @@ function getTailPath(ac: Aircraft): string {
 function getEngines(ac: Aircraft): { x: number; y: number }[] {
   if (ac.categoryGroup === 'helicopter') return [];
   if (ac.engineCount === 1) return [{ x: 12, y: 52 }];
-  if (ac.engineCount === 2) return [
-    { x: 32, y: 54 },
-    { x: 58, y: 54 },
-  ];
+
+  const rearTwin = ['c909', 'erj145', 'crj', 'fokker100', 'b717', 'md80', 'md11'].includes(ac.id);
+  if (ac.engineCount === 2) {
+    if (rearTwin) {
+      return [
+        { x: 72, y: 50 },
+        { x: 72, y: 58 },
+      ];
+    }
+    return [
+      { x: 32, y: 54 },
+      { x: 58, y: 54 },
+    ];
+  }
   if (ac.engineCount === 3) {
     if (ac.id === 'b727' || ac.id === 'falcon7x') {
       return [
@@ -88,6 +116,14 @@ function getEngines(ac: Aircraft): { x: number; y: number }[] {
         { x: 35, y: 56 },
         { x: 55, y: 56 },
         { x: 68, y: 56 },
+      ];
+    }
+    if (ac.id === 'bae146') {
+      return [
+        { x: 28, y: 52 },
+        { x: 40, y: 52 },
+        { x: 55, y: 52 },
+        { x: 67, y: 52 },
       ];
     }
     return [

@@ -79,6 +79,38 @@ export interface Aircraft {
   photoOverrides?: string[];
   needsUserPhotos?: boolean;
   spotterLocations?: string[];
+  /** ICAO Doc 8643 type designators linked to this family (e.g. AJ27, C909) */
+  icaoCodes?: string[];
+}
+
+export interface IcaoTypeRecord {
+  icao: string;
+  iata: string[];
+  model: string;
+  manufacturer: string | null;
+  familyId: string | null;
+  variant: string | null;
+  aliases: string[];
+  aeroapi: {
+    manufacturer?: string | null;
+    type?: string | null;
+    description?: string | null;
+    engine_count?: number | null;
+    engine_type?: string | null;
+    fetchedAt?: string;
+    missing?: boolean;
+  } | null;
+  marketingAlias?: boolean;
+}
+
+export interface IcaoTypeCatalog {
+  version: number;
+  updatedAt: string;
+  source: string;
+  note?: string;
+  count: number;
+  mappedToFamily: number;
+  types: Record<string, IcaoTypeRecord>;
 }
 
 export type AirportTier = 'easy' | 'medium' | 'hard';

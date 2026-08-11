@@ -29,6 +29,19 @@ node scripts/sync-images.mjs --dry-run
 
 Each entry stores `aircraftId`, optional `variant`, `publicPath`, `sourceFile`, and `matchedBy`.
 
+## ICAO type catalog (C909, B738, …)
+
+`src/content/icaoTypes.json` holds ~180 ICAO/IATA/marketing type codes mapped to learning families. Filenames like `C909.jpg` or `AJ27_side.jpg` resolve to **COMAC C909**.
+
+FlightAware AeroAPI only supports **single-type lookup** (`GET /aircraft/types/{icao}`), not a bulk dump. To enrich manufacturer/engine metadata:
+
+```powershell
+$env:AEROAPI_KEY="YOUR_KEY"
+npm run enrich-icao
+```
+
+Do not commit API keys — use `.env` locally (gitignored) or a shell env var.
+
 ## Admin panel
 
 Open **`/admin`** while running the app (e.g. `http://localhost:5173/admin`).

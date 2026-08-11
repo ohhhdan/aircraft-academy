@@ -1,0 +1,3365 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-11T03:46:08.203Z",
+  "source": "Wikipedia List of aircraft type designators (ICAO Doc 8643 partial) + family maps",
+  "note": "AeroAPI has no bulk type list — enrich individual codes with npm run enrich-icao (AEROAPI_KEY).",
+  "count": 178,
+  "mappedToFamily": 122,
+  "types": {
+    "A124": {
+      "icao": "A124",
+      "iata": [
+        "A4F"
+      ],
+      "model": "Antonov An-124 Ruslan",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "a124",
+        "a4f",
+        "antonov an-124 ruslan",
+        "antonov",
+        "an",
+        "124",
+        "ruslan"
+      ],
+      "aeroapi": null
+    },
+    "A140": {
+      "icao": "A140",
+      "iata": [
+        "A40"
+      ],
+      "model": "Antonov An-140",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "a140",
+        "a40",
+        "antonov an-140",
+        "antonov",
+        "an",
+        "140"
+      ],
+      "aeroapi": null
+    },
+    "A148": {
+      "icao": "A148",
+      "iata": [
+        "A81"
+      ],
+      "model": "Antonov An-148",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "a148",
+        "a81",
+        "antonov an-148",
+        "antonov",
+        "an",
+        "148"
+      ],
+      "aeroapi": null
+    },
+    "A158": {
+      "icao": "A158",
+      "iata": [
+        "A58"
+      ],
+      "model": "Antonov An-158",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "a158",
+        "a58",
+        "antonov an-158",
+        "antonov",
+        "an",
+        "158"
+      ],
+      "aeroapi": null
+    },
+    "A19N": {
+      "icao": "A19N",
+      "iata": [
+        "31N"
+      ],
+      "model": "Airbus A319neo",
+      "manufacturer": "Airbus",
+      "familyId": "a320",
+      "variant": "A320neo",
+      "aliases": [
+        "a19n",
+        "31n",
+        "airbus a319neo",
+        "airbus",
+        "a319neo"
+      ],
+      "aeroapi": null
+    },
+    "A20N": {
+      "icao": "A20N",
+      "iata": [
+        "32N"
+      ],
+      "model": "Airbus A320neo",
+      "manufacturer": "Airbus",
+      "familyId": "a320",
+      "variant": "A320neo",
+      "aliases": [
+        "a20n",
+        "32n",
+        "airbus a320neo",
+        "airbus",
+        "a320neo"
+      ],
+      "aeroapi": null
+    },
+    "A21N": {
+      "icao": "A21N",
+      "iata": [
+        "32Q"
+      ],
+      "model": "Airbus A321neo/LR/XLR",
+      "manufacturer": "Airbus",
+      "familyId": "a321",
+      "variant": "A321neo",
+      "aliases": [
+        "a21n",
+        "32q",
+        "airbus a321neo/lr/xlr",
+        "airbus",
+        "a321neo",
+        "lr",
+        "xlr"
+      ],
+      "aeroapi": null
+    },
+    "A225": {
+      "icao": "A225",
+      "iata": [
+        "A5F"
+      ],
+      "model": "Antonov An-225 Mriya",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "a225",
+        "a5f",
+        "antonov an-225 mriya",
+        "antonov",
+        "an",
+        "225",
+        "mriya"
+      ],
+      "aeroapi": null
+    },
+    "A306": {
+      "icao": "A306",
+      "iata": [
+        "AB6"
+      ],
+      "model": "Airbus A300-600",
+      "manufacturer": "Airbus",
+      "familyId": "a300",
+      "variant": "A300-600",
+      "aliases": [
+        "a306",
+        "ab6",
+        "airbus a300-600",
+        "airbus",
+        "a300",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "A30B": {
+      "icao": "A30B",
+      "iata": [
+        "AB4"
+      ],
+      "model": "Airbus A300B2/B4/C4",
+      "manufacturer": "Airbus",
+      "familyId": "a300",
+      "variant": "A300B4",
+      "aliases": [
+        "a30b",
+        "ab4",
+        "airbus a300b2/b4/c4",
+        "airbus",
+        "a300b2",
+        "b4",
+        "c4"
+      ],
+      "aeroapi": null
+    },
+    "A310": {
+      "icao": "A310",
+      "iata": [
+        "312"
+      ],
+      "model": "Airbus A310",
+      "manufacturer": "Airbus",
+      "familyId": "a310",
+      "variant": "A310-300",
+      "aliases": [
+        "a310",
+        "312",
+        "airbus a310",
+        "airbus"
+      ],
+      "aeroapi": null
+    },
+    "A318": {
+      "icao": "A318",
+      "iata": [
+        "318"
+      ],
+      "model": "Airbus A318",
+      "manufacturer": "Airbus",
+      "familyId": "a320",
+      "variant": "A318",
+      "aliases": [
+        "a318",
+        "318",
+        "airbus a318",
+        "airbus"
+      ],
+      "aeroapi": null
+    },
+    "A319": {
+      "icao": "A319",
+      "iata": [
+        "319"
+      ],
+      "model": "Airbus A319",
+      "manufacturer": "Airbus",
+      "familyId": "a320",
+      "variant": "A319",
+      "aliases": [
+        "a319",
+        "319",
+        "airbus a319",
+        "airbus"
+      ],
+      "aeroapi": null
+    },
+    "A320": {
+      "icao": "A320",
+      "iata": [
+        "320"
+      ],
+      "model": "Airbus A320",
+      "manufacturer": "Airbus",
+      "familyId": "a320",
+      "variant": "A320",
+      "aliases": [
+        "a320",
+        "320",
+        "airbus a320",
+        "airbus"
+      ],
+      "aeroapi": null
+    },
+    "A321": {
+      "icao": "A321",
+      "iata": [
+        "321"
+      ],
+      "model": "Airbus A321",
+      "manufacturer": "Airbus",
+      "familyId": "a321",
+      "variant": "A321ceo",
+      "aliases": [
+        "a321",
+        "321",
+        "airbus a321",
+        "airbus"
+      ],
+      "aeroapi": null
+    },
+    "A332": {
+      "icao": "A332",
+      "iata": [
+        "332"
+      ],
+      "model": "Airbus A330-200",
+      "manufacturer": "Airbus",
+      "familyId": "a330",
+      "variant": "A330-200",
+      "aliases": [
+        "a332",
+        "332",
+        "airbus a330-200",
+        "airbus",
+        "a330",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "A333": {
+      "icao": "A333",
+      "iata": [
+        "333"
+      ],
+      "model": "Airbus A330-300",
+      "manufacturer": "Airbus",
+      "familyId": "a330",
+      "variant": "A330-300",
+      "aliases": [
+        "a333",
+        "333",
+        "airbus a330-300",
+        "airbus",
+        "a330",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "A338": {
+      "icao": "A338",
+      "iata": [
+        "338"
+      ],
+      "model": "Airbus A330-800",
+      "manufacturer": "Airbus",
+      "familyId": "a330",
+      "variant": "A330neo",
+      "aliases": [
+        "a338",
+        "338",
+        "airbus a330-800",
+        "airbus",
+        "a330",
+        "800"
+      ],
+      "aeroapi": null
+    },
+    "A339": {
+      "icao": "A339",
+      "iata": [
+        "339"
+      ],
+      "model": "Airbus A330-900",
+      "manufacturer": "Airbus",
+      "familyId": "a330",
+      "variant": "A330neo",
+      "aliases": [
+        "a339",
+        "339",
+        "airbus a330-900",
+        "airbus",
+        "a330",
+        "900"
+      ],
+      "aeroapi": null
+    },
+    "A342": {
+      "icao": "A342",
+      "iata": [
+        "342"
+      ],
+      "model": "Airbus A340-200",
+      "manufacturer": "Airbus",
+      "familyId": "a340",
+      "variant": "A340-300",
+      "aliases": [
+        "a342",
+        "342",
+        "airbus a340-200",
+        "airbus",
+        "a340",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "A343": {
+      "icao": "A343",
+      "iata": [
+        "343"
+      ],
+      "model": "Airbus A340-300",
+      "manufacturer": "Airbus",
+      "familyId": "a340",
+      "variant": "A340-300",
+      "aliases": [
+        "a343",
+        "343",
+        "airbus a340-300",
+        "airbus",
+        "a340",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "A345": {
+      "icao": "A345",
+      "iata": [
+        "345"
+      ],
+      "model": "Airbus A340-500",
+      "manufacturer": "Airbus",
+      "familyId": "a340",
+      "variant": "A340-500",
+      "aliases": [
+        "a345",
+        "345",
+        "airbus a340-500",
+        "airbus",
+        "a340",
+        "500"
+      ],
+      "aeroapi": null
+    },
+    "A346": {
+      "icao": "A346",
+      "iata": [
+        "346"
+      ],
+      "model": "Airbus A340-600",
+      "manufacturer": "Airbus",
+      "familyId": "a340",
+      "variant": "A340-600",
+      "aliases": [
+        "a346",
+        "346",
+        "airbus a340-600",
+        "airbus",
+        "a340",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "A359": {
+      "icao": "A359",
+      "iata": [
+        "359"
+      ],
+      "model": "Airbus A350-900",
+      "manufacturer": "Airbus",
+      "familyId": "a350",
+      "variant": "A350-900",
+      "aliases": [
+        "a359",
+        "359",
+        "airbus a350-900",
+        "airbus",
+        "a350",
+        "900"
+      ],
+      "aeroapi": null
+    },
+    "A35K": {
+      "icao": "A35K",
+      "iata": [
+        "351"
+      ],
+      "model": "Airbus A350-1000",
+      "manufacturer": "Airbus",
+      "familyId": "a350",
+      "variant": "A350-1000",
+      "aliases": [
+        "a35k",
+        "351",
+        "airbus a350-1000",
+        "airbus",
+        "a350",
+        "1000"
+      ],
+      "aeroapi": null
+    },
+    "A388": {
+      "icao": "A388",
+      "iata": [
+        "388"
+      ],
+      "model": "Airbus A380-800",
+      "manufacturer": "Airbus",
+      "familyId": "a380",
+      "variant": "A380-800",
+      "aliases": [
+        "a388",
+        "388",
+        "airbus a380-800",
+        "airbus",
+        "a380",
+        "800"
+      ],
+      "aeroapi": null
+    },
+    "A400": {
+      "icao": "A400",
+      "iata": [
+        "AI4"
+      ],
+      "model": "Airbus A400M Atlas",
+      "manufacturer": "Airbus",
+      "familyId": "a400m",
+      "variant": "A400M",
+      "aliases": [
+        "a400",
+        "ai4",
+        "airbus a400m atlas",
+        "airbus",
+        "a400m",
+        "atlas"
+      ],
+      "aeroapi": null
+    },
+    "AJ27": {
+      "icao": "AJ27",
+      "iata": [
+        "C27"
+      ],
+      "model": "Comac ARJ21-700 / C909",
+      "manufacturer": "COMAC",
+      "familyId": "c909",
+      "variant": "C909",
+      "aliases": [
+        "aj27",
+        "c27",
+        "comac arj21-700 / c909",
+        "comac",
+        "arj21",
+        "700",
+        "c909",
+        "comac 909",
+        "comac c909",
+        "arj-21"
+      ],
+      "aeroapi": null
+    },
+    "AN12": {
+      "icao": "AN12",
+      "iata": [
+        "ANF"
+      ],
+      "model": "Antonov An-12",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "an12",
+        "anf",
+        "antonov an-12",
+        "antonov",
+        "an",
+        "12"
+      ],
+      "aeroapi": null
+    },
+    "AN24": {
+      "icao": "AN24",
+      "iata": [
+        "AN4"
+      ],
+      "model": "Antonov An-24",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "an24",
+        "an4",
+        "antonov an-24",
+        "antonov",
+        "an",
+        "24"
+      ],
+      "aeroapi": null
+    },
+    "AN26": {
+      "icao": "AN26",
+      "iata": [
+        "A26"
+      ],
+      "model": "Antonov An-26",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "an26",
+        "a26",
+        "antonov an-26",
+        "antonov",
+        "an",
+        "26"
+      ],
+      "aeroapi": null
+    },
+    "AN72": {
+      "icao": "AN72",
+      "iata": [
+        "AN7"
+      ],
+      "model": "Antonov An-72 / An-74",
+      "manufacturer": "Antonov",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "an72",
+        "an7",
+        "antonov an-72 / an-74",
+        "antonov",
+        "an",
+        "72",
+        "74"
+      ],
+      "aeroapi": null
+    },
+    "AT43": {
+      "icao": "AT43",
+      "iata": [
+        "AT4"
+      ],
+      "model": "ATR 42-300/320",
+      "manufacturer": "ATR",
+      "familyId": "atr42",
+      "variant": "ATR 42-300",
+      "aliases": [
+        "at43",
+        "at4",
+        "atr 42-300/320",
+        "atr",
+        "42",
+        "300",
+        "320"
+      ],
+      "aeroapi": null
+    },
+    "AT45": {
+      "icao": "AT45",
+      "iata": [
+        "AT5"
+      ],
+      "model": "ATR 42-500",
+      "manufacturer": "ATR",
+      "familyId": "atr42",
+      "variant": "ATR 42-500",
+      "aliases": [
+        "at45",
+        "at5",
+        "atr 42-500",
+        "atr",
+        "42",
+        "500"
+      ],
+      "aeroapi": null
+    },
+    "AT46": {
+      "icao": "AT46",
+      "iata": [
+        "ATR"
+      ],
+      "model": "ATR 42-600",
+      "manufacturer": "ATR",
+      "familyId": "atr42",
+      "variant": "ATR 42-600",
+      "aliases": [
+        "at46",
+        "atr",
+        "atr 42-600",
+        "42",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "AT72": {
+      "icao": "AT72",
+      "iata": [
+        "AT7"
+      ],
+      "model": "ATR 72-200",
+      "manufacturer": "ATR",
+      "familyId": "atr72",
+      "variant": "ATR 72-500",
+      "aliases": [
+        "at72",
+        "at7",
+        "atr 72-200",
+        "atr",
+        "72",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "AT73": {
+      "icao": "AT73",
+      "iata": [
+        "ATR"
+      ],
+      "model": "ATR 72-210",
+      "manufacturer": "ATR",
+      "familyId": "atr72",
+      "variant": "ATR 72-500",
+      "aliases": [
+        "at73",
+        "atr",
+        "atr 72-210",
+        "72",
+        "210"
+      ],
+      "aeroapi": null
+    },
+    "AT75": {
+      "icao": "AT75",
+      "iata": [
+        "ATR"
+      ],
+      "model": "ATR 72-500",
+      "manufacturer": "ATR",
+      "familyId": "atr72",
+      "variant": "ATR 72-500",
+      "aliases": [
+        "at75",
+        "atr",
+        "atr 72-500",
+        "72",
+        "500"
+      ],
+      "aeroapi": null
+    },
+    "AT76": {
+      "icao": "AT76",
+      "iata": [
+        "ATR"
+      ],
+      "model": "ATR 72-600",
+      "manufacturer": "ATR",
+      "familyId": "atr72",
+      "variant": "ATR 72-600",
+      "aliases": [
+        "at76",
+        "atr",
+        "atr 72-600",
+        "72",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "ATP": {
+      "icao": "ATP",
+      "iata": [
+        "ATP"
+      ],
+      "model": "British Aerospace ATP",
+      "manufacturer": "BAe",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "atp",
+        "british aerospace atp",
+        "british",
+        "aerospace"
+      ],
+      "aeroapi": null
+    },
+    "B190": {
+      "icao": "B190",
+      "iata": [
+        "BEH"
+      ],
+      "model": "Beechcraft 1900",
+      "manufacturer": "Beechcraft",
+      "familyId": "kingair",
+      "variant": "King Air 350",
+      "aliases": [
+        "b190",
+        "beh",
+        "beechcraft 1900",
+        "beechcraft",
+        "1900"
+      ],
+      "aeroapi": null
+    },
+    "B37M": {
+      "icao": "B37M",
+      "iata": [
+        "7M7"
+      ],
+      "model": "Boeing 737 MAX 7",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737 MAX 8",
+      "aliases": [
+        "b37m",
+        "7m7",
+        "boeing 737 max 7",
+        "boeing",
+        "737",
+        "max"
+      ],
+      "aeroapi": null
+    },
+    "B38M": {
+      "icao": "B38M",
+      "iata": [
+        "7M8"
+      ],
+      "model": "Boeing 737 MAX 8",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737 MAX 8",
+      "aliases": [
+        "b38m",
+        "7m8",
+        "boeing 737 max 8",
+        "boeing",
+        "737",
+        "max"
+      ],
+      "aeroapi": null
+    },
+    "B39M": {
+      "icao": "B39M",
+      "iata": [
+        "7M9"
+      ],
+      "model": "Boeing 737 MAX 9",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737 MAX 9",
+      "aliases": [
+        "b39m",
+        "7m9",
+        "boeing 737 max 9",
+        "boeing",
+        "737",
+        "max"
+      ],
+      "aeroapi": null
+    },
+    "B3XM": {
+      "icao": "B3XM",
+      "iata": [
+        "7MJ"
+      ],
+      "model": "Boeing 737 MAX 10",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737 MAX 9",
+      "aliases": [
+        "b3xm",
+        "7mj",
+        "boeing 737 max 10",
+        "boeing",
+        "737",
+        "max",
+        "10"
+      ],
+      "aeroapi": null
+    },
+    "B461": {
+      "icao": "B461",
+      "iata": [
+        "141"
+      ],
+      "model": "BAe 146-100",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "BAe 146-100",
+      "aliases": [
+        "b461",
+        "141",
+        "bae 146-100",
+        "bae",
+        "146",
+        "100"
+      ],
+      "aeroapi": null
+    },
+    "B462": {
+      "icao": "B462",
+      "iata": [
+        "142"
+      ],
+      "model": "BAe 146-200",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "BAe 146-200",
+      "aliases": [
+        "b462",
+        "142",
+        "bae 146-200",
+        "bae",
+        "146",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B463": {
+      "icao": "B463",
+      "iata": [
+        "143"
+      ],
+      "model": "BAe 146-300",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "BAe 146-300",
+      "aliases": [
+        "b463",
+        "143",
+        "bae 146-300",
+        "bae",
+        "146",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B52": {
+      "icao": "B52",
+      "iata": [],
+      "model": "Boeing B-52 Stratofortress",
+      "manufacturer": "Boeing",
+      "familyId": "b52",
+      "variant": "B-52H",
+      "aliases": [
+        "b52",
+        "boeing b-52 stratofortress",
+        "boeing",
+        "52",
+        "stratofortress"
+      ],
+      "aeroapi": null
+    },
+    "B703": {
+      "icao": "B703",
+      "iata": [
+        "703"
+      ],
+      "model": "Boeing 707",
+      "manufacturer": "Boeing",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "b703",
+        "703",
+        "boeing 707",
+        "boeing",
+        "707"
+      ],
+      "aeroapi": null
+    },
+    "B712": {
+      "icao": "B712",
+      "iata": [
+        "717"
+      ],
+      "model": "Boeing 717",
+      "manufacturer": "Boeing",
+      "familyId": "b717",
+      "variant": "717-200",
+      "aliases": [
+        "b712",
+        "717",
+        "boeing 717",
+        "boeing"
+      ],
+      "aeroapi": null
+    },
+    "B721": {
+      "icao": "B721",
+      "iata": [
+        "721"
+      ],
+      "model": "Boeing 727-100",
+      "manufacturer": "Boeing",
+      "familyId": "b727",
+      "variant": "727-100",
+      "aliases": [
+        "b721",
+        "721",
+        "boeing 727-100",
+        "boeing",
+        "727",
+        "100"
+      ],
+      "aeroapi": null
+    },
+    "B722": {
+      "icao": "B722",
+      "iata": [
+        "722"
+      ],
+      "model": "Boeing 727-200",
+      "manufacturer": "Boeing",
+      "familyId": "b727",
+      "variant": "727-200",
+      "aliases": [
+        "b722",
+        "722",
+        "boeing 727-200",
+        "boeing",
+        "727",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B732": {
+      "icao": "B732",
+      "iata": [
+        "732"
+      ],
+      "model": "Boeing 737-200",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-700",
+      "aliases": [
+        "b732",
+        "732",
+        "boeing 737-200",
+        "boeing",
+        "737",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B733": {
+      "icao": "B733",
+      "iata": [
+        "733"
+      ],
+      "model": "Boeing 737-300",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-700",
+      "aliases": [
+        "b733",
+        "733",
+        "boeing 737-300",
+        "boeing",
+        "737",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B734": {
+      "icao": "B734",
+      "iata": [
+        "734"
+      ],
+      "model": "Boeing 737-400",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-800",
+      "aliases": [
+        "b734",
+        "734",
+        "boeing 737-400",
+        "boeing",
+        "737",
+        "400"
+      ],
+      "aeroapi": null
+    },
+    "B735": {
+      "icao": "B735",
+      "iata": [
+        "735"
+      ],
+      "model": "Boeing 737-500",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-700",
+      "aliases": [
+        "b735",
+        "735",
+        "boeing 737-500",
+        "boeing",
+        "737",
+        "500"
+      ],
+      "aeroapi": null
+    },
+    "B736": {
+      "icao": "B736",
+      "iata": [
+        "736"
+      ],
+      "model": "Boeing 737-600",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-700",
+      "aliases": [
+        "b736",
+        "736",
+        "boeing 737-600",
+        "boeing",
+        "737",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "B737": {
+      "icao": "B737",
+      "iata": [
+        "73G"
+      ],
+      "model": "Boeing 737-700",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-700",
+      "aliases": [
+        "b737",
+        "73g",
+        "boeing 737-700",
+        "boeing",
+        "737",
+        "700"
+      ],
+      "aeroapi": null
+    },
+    "B738": {
+      "icao": "B738",
+      "iata": [
+        "738"
+      ],
+      "model": "Boeing 737-800",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-800",
+      "aliases": [
+        "b738",
+        "738",
+        "boeing 737-800",
+        "boeing",
+        "737",
+        "800"
+      ],
+      "aeroapi": null
+    },
+    "B739": {
+      "icao": "B739",
+      "iata": [
+        "739"
+      ],
+      "model": "Boeing 737-900",
+      "manufacturer": "Boeing",
+      "familyId": "b737",
+      "variant": "737-900",
+      "aliases": [
+        "b739",
+        "739",
+        "boeing 737-900",
+        "boeing",
+        "737",
+        "900"
+      ],
+      "aeroapi": null
+    },
+    "B741": {
+      "icao": "B741",
+      "iata": [
+        "741"
+      ],
+      "model": "Boeing 747-100",
+      "manufacturer": "Boeing",
+      "familyId": "b747",
+      "variant": "747-400",
+      "aliases": [
+        "b741",
+        "741",
+        "boeing 747-100",
+        "boeing",
+        "747",
+        "100"
+      ],
+      "aeroapi": null
+    },
+    "B742": {
+      "icao": "B742",
+      "iata": [
+        "742"
+      ],
+      "model": "Boeing 747-200",
+      "manufacturer": "Boeing",
+      "familyId": "b747",
+      "variant": "747-400",
+      "aliases": [
+        "b742",
+        "742",
+        "boeing 747-200",
+        "boeing",
+        "747",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B743": {
+      "icao": "B743",
+      "iata": [
+        "743"
+      ],
+      "model": "Boeing 747-300",
+      "manufacturer": "Boeing",
+      "familyId": "b747",
+      "variant": "747-400",
+      "aliases": [
+        "b743",
+        "743",
+        "boeing 747-300",
+        "boeing",
+        "747",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B744": {
+      "icao": "B744",
+      "iata": [
+        "744"
+      ],
+      "model": "Boeing 747-400",
+      "manufacturer": "Boeing",
+      "familyId": "b747",
+      "variant": "747-400",
+      "aliases": [
+        "b744",
+        "744",
+        "boeing 747-400",
+        "boeing",
+        "747",
+        "400"
+      ],
+      "aeroapi": null
+    },
+    "B748": {
+      "icao": "B748",
+      "iata": [
+        "74H"
+      ],
+      "model": "Boeing 747-8",
+      "manufacturer": "Boeing",
+      "familyId": "b747",
+      "variant": "747-8",
+      "aliases": [
+        "b748",
+        "74h",
+        "boeing 747-8",
+        "boeing",
+        "747"
+      ],
+      "aeroapi": null
+    },
+    "B752": {
+      "icao": "B752",
+      "iata": [
+        "752"
+      ],
+      "model": "Boeing 757-200",
+      "manufacturer": "Boeing",
+      "familyId": "b757",
+      "variant": "757-200",
+      "aliases": [
+        "b752",
+        "752",
+        "boeing 757-200",
+        "boeing",
+        "757",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B753": {
+      "icao": "B753",
+      "iata": [
+        "753"
+      ],
+      "model": "Boeing 757-300",
+      "manufacturer": "Boeing",
+      "familyId": "b757",
+      "variant": "757-300",
+      "aliases": [
+        "b753",
+        "753",
+        "boeing 757-300",
+        "boeing",
+        "757",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B762": {
+      "icao": "B762",
+      "iata": [
+        "762"
+      ],
+      "model": "Boeing 767-200",
+      "manufacturer": "Boeing",
+      "familyId": "b767",
+      "variant": "767-200",
+      "aliases": [
+        "b762",
+        "762",
+        "boeing 767-200",
+        "boeing",
+        "767",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B763": {
+      "icao": "B763",
+      "iata": [
+        "763"
+      ],
+      "model": "Boeing 767-300",
+      "manufacturer": "Boeing",
+      "familyId": "b767",
+      "variant": "767-300",
+      "aliases": [
+        "b763",
+        "763",
+        "boeing 767-300",
+        "boeing",
+        "767",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B764": {
+      "icao": "B764",
+      "iata": [
+        "764"
+      ],
+      "model": "Boeing 767-400ER",
+      "manufacturer": "Boeing",
+      "familyId": "b767",
+      "variant": "767-400",
+      "aliases": [
+        "b764",
+        "764",
+        "boeing 767-400er",
+        "boeing",
+        "767",
+        "400er"
+      ],
+      "aeroapi": null
+    },
+    "B772": {
+      "icao": "B772",
+      "iata": [
+        "772"
+      ],
+      "model": "Boeing 777-200",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777-200",
+      "aliases": [
+        "b772",
+        "772",
+        "boeing 777-200",
+        "boeing",
+        "777",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "B773": {
+      "icao": "B773",
+      "iata": [
+        "773"
+      ],
+      "model": "Boeing 777-300",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777-300",
+      "aliases": [
+        "b773",
+        "773",
+        "boeing 777-300",
+        "boeing",
+        "777",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "B77L": {
+      "icao": "B77L",
+      "iata": [
+        "77L"
+      ],
+      "model": "Boeing 777-200LR/F",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777-200ER",
+      "aliases": [
+        "b77l",
+        "77l",
+        "boeing 777-200lr/f",
+        "boeing",
+        "777",
+        "200lr"
+      ],
+      "aeroapi": null
+    },
+    "B77W": {
+      "icao": "B77W",
+      "iata": [
+        "77W"
+      ],
+      "model": "Boeing 777-300ER",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777-300ER",
+      "aliases": [
+        "b77w",
+        "77w",
+        "boeing 777-300er",
+        "boeing",
+        "777",
+        "300er"
+      ],
+      "aeroapi": null
+    },
+    "B778": {
+      "icao": "B778",
+      "iata": [
+        "778"
+      ],
+      "model": "Boeing 777-8",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777X",
+      "aliases": [
+        "b778",
+        "778",
+        "boeing 777-8",
+        "boeing",
+        "777"
+      ],
+      "aeroapi": null
+    },
+    "B779": {
+      "icao": "B779",
+      "iata": [
+        "779"
+      ],
+      "model": "Boeing 777-9",
+      "manufacturer": "Boeing",
+      "familyId": "b777",
+      "variant": "777X",
+      "aliases": [
+        "b779",
+        "779",
+        "boeing 777-9",
+        "boeing",
+        "777"
+      ],
+      "aeroapi": null
+    },
+    "B788": {
+      "icao": "B788",
+      "iata": [
+        "788"
+      ],
+      "model": "Boeing 787-8",
+      "manufacturer": "Boeing",
+      "familyId": "b787",
+      "variant": "787-8",
+      "aliases": [
+        "b788",
+        "788",
+        "boeing 787-8",
+        "boeing",
+        "787"
+      ],
+      "aeroapi": null
+    },
+    "B789": {
+      "icao": "B789",
+      "iata": [
+        "789"
+      ],
+      "model": "Boeing 787-9",
+      "manufacturer": "Boeing",
+      "familyId": "b787",
+      "variant": "787-9",
+      "aliases": [
+        "b789",
+        "789",
+        "boeing 787-9",
+        "boeing",
+        "787"
+      ],
+      "aeroapi": null
+    },
+    "B78X": {
+      "icao": "B78X",
+      "iata": [
+        "781"
+      ],
+      "model": "Boeing 787-10",
+      "manufacturer": "Boeing",
+      "familyId": "b787",
+      "variant": "787-10",
+      "aliases": [
+        "b78x",
+        "781",
+        "boeing 787-10",
+        "boeing",
+        "787",
+        "10"
+      ],
+      "aeroapi": null
+    },
+    "BCS1": {
+      "icao": "BCS1",
+      "iata": [
+        "221"
+      ],
+      "model": "Airbus A220-100 / Bombardier CS100",
+      "manufacturer": "Airbus",
+      "familyId": "a220",
+      "variant": "A220-100",
+      "aliases": [
+        "bcs1",
+        "221",
+        "airbus a220-100 / bombardier cs100",
+        "airbus",
+        "a220",
+        "100",
+        "bombardier",
+        "cs100"
+      ],
+      "aeroapi": null
+    },
+    "BCS3": {
+      "icao": "BCS3",
+      "iata": [
+        "223"
+      ],
+      "model": "Airbus A220-300 / Bombardier CS300",
+      "manufacturer": "Airbus",
+      "familyId": "a220",
+      "variant": "A220-300",
+      "aliases": [
+        "bcs3",
+        "223",
+        "airbus a220-300 / bombardier cs300",
+        "airbus",
+        "a220",
+        "300",
+        "bombardier",
+        "cs300"
+      ],
+      "aeroapi": null
+    },
+    "BE20": {
+      "icao": "BE20",
+      "iata": [
+        "B20"
+      ],
+      "model": "Beechcraft King Air 200",
+      "manufacturer": "Beechcraft",
+      "familyId": "kingair",
+      "variant": "King Air 200",
+      "aliases": [
+        "be20",
+        "b20",
+        "beechcraft king air 200",
+        "beechcraft",
+        "king",
+        "air",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "BE40": {
+      "icao": "BE40",
+      "iata": [
+        "BE4"
+      ],
+      "model": "Hawker 400",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "be40",
+        "be4",
+        "hawker 400",
+        "hawker",
+        "400"
+      ],
+      "aeroapi": null
+    },
+    "C130": {
+      "icao": "C130",
+      "iata": [
+        "LOH"
+      ],
+      "model": "Lockheed C-130 / L-100 Hercules",
+      "manufacturer": "Lockheed",
+      "familyId": "c130",
+      "variant": "C-130H",
+      "aliases": [
+        "c130",
+        "loh",
+        "lockheed c-130 / l-100 hercules",
+        "lockheed",
+        "130",
+        "100",
+        "hercules"
+      ],
+      "aeroapi": null
+    },
+    "C17": {
+      "icao": "C17",
+      "iata": [
+        "C17"
+      ],
+      "model": "Boeing C-17 Globemaster III",
+      "manufacturer": "Boeing",
+      "familyId": "c17",
+      "variant": "C-17",
+      "aliases": [
+        "c17",
+        "boeing c-17 globemaster iii",
+        "boeing",
+        "17",
+        "globemaster",
+        "iii"
+      ],
+      "aeroapi": null
+    },
+    "C208": {
+      "icao": "C208",
+      "iata": [
+        "C08"
+      ],
+      "model": "Cessna 208 Caravan",
+      "manufacturer": "Cessna",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "c208",
+        "c08",
+        "cessna 208 caravan",
+        "cessna",
+        "208",
+        "caravan"
+      ],
+      "aeroapi": null
+    },
+    "C30J": {
+      "icao": "C30J",
+      "iata": [
+        "LOH"
+      ],
+      "model": "Lockheed Martin C-130J Hercules",
+      "manufacturer": "Lockheed",
+      "familyId": "c130",
+      "variant": "C-130J",
+      "aliases": [
+        "c30j",
+        "loh",
+        "lockheed martin c-130j hercules",
+        "lockheed",
+        "martin",
+        "130j",
+        "hercules"
+      ],
+      "aeroapi": null
+    },
+    "C408": {
+      "icao": "C408",
+      "iata": [
+        "CS4"
+      ],
+      "model": "Cessna 408 SkyCourier",
+      "manufacturer": "Cessna",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "c408",
+        "cs4",
+        "cessna 408 skycourier",
+        "cessna",
+        "408",
+        "skycourier"
+      ],
+      "aeroapi": null
+    },
+    "C680": {
+      "icao": "C680",
+      "iata": [
+        "CNJ"
+      ],
+      "model": "Cessna Citation Sovereign",
+      "manufacturer": "Cessna",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "c680",
+        "cnj",
+        "cessna citation sovereign",
+        "cessna",
+        "citation",
+        "sovereign"
+      ],
+      "aeroapi": null
+    },
+    "C68A": {
+      "icao": "C68A",
+      "iata": [
+        "CNJ"
+      ],
+      "model": "Cessna Citation Latitude",
+      "manufacturer": "Cessna",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "c68a",
+        "cnj",
+        "cessna citation latitude",
+        "cessna",
+        "citation",
+        "latitude"
+      ],
+      "aeroapi": null
+    },
+    "C700": {
+      "icao": "C700",
+      "iata": [
+        "CNJ"
+      ],
+      "model": "Cessna Citation Longitude",
+      "manufacturer": "Cessna",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "c700",
+        "cnj",
+        "cessna citation longitude",
+        "cessna",
+        "citation",
+        "longitude"
+      ],
+      "aeroapi": null
+    },
+    "C750": {
+      "icao": "C750",
+      "iata": [
+        "CNJ"
+      ],
+      "model": "Cessna Citation X",
+      "manufacturer": "Cessna",
+      "familyId": "citationx",
+      "variant": "Citation X",
+      "aliases": [
+        "c750",
+        "cnj",
+        "cessna citation x",
+        "cessna",
+        "citation"
+      ],
+      "aeroapi": null
+    },
+    "C919": {
+      "icao": "C919",
+      "iata": [
+        "919"
+      ],
+      "model": "Comac C919",
+      "manufacturer": "COMAC",
+      "familyId": "c919",
+      "variant": "C919",
+      "aliases": [
+        "c919",
+        "919",
+        "comac c919",
+        "comac",
+        "comac 919"
+      ],
+      "aeroapi": null
+    },
+    "CL30": {
+      "icao": "CL30",
+      "iata": [
+        "CL3"
+      ],
+      "model": "Bombardier Challenger 300",
+      "manufacturer": "Bombardier",
+      "familyId": "challenger300",
+      "variant": "Challenger 300",
+      "aliases": [
+        "cl30",
+        "cl3",
+        "bombardier challenger 300",
+        "bombardier",
+        "challenger",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "CL35": {
+      "icao": "CL35",
+      "iata": [
+        "CL3"
+      ],
+      "model": "Bombardier Challenger 350",
+      "manufacturer": "Bombardier",
+      "familyId": "challenger300",
+      "variant": "Challenger 350",
+      "aliases": [
+        "cl35",
+        "cl3",
+        "bombardier challenger 350",
+        "bombardier",
+        "challenger",
+        "350"
+      ],
+      "aeroapi": null
+    },
+    "CL60": {
+      "icao": "CL60",
+      "iata": [
+        "CCJ"
+      ],
+      "model": "Canadair Challenger 600",
+      "manufacturer": "Bombardier",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "cl60",
+        "ccj",
+        "canadair challenger 600",
+        "canadair",
+        "challenger",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "CRJ1": {
+      "icao": "CRJ1",
+      "iata": [
+        "CR1"
+      ],
+      "model": "Bombardier CRJ100",
+      "manufacturer": "Bombardier",
+      "familyId": "crj",
+      "variant": "CRJ-200",
+      "aliases": [
+        "crj1",
+        "cr1",
+        "bombardier crj100",
+        "bombardier",
+        "crj100"
+      ],
+      "aeroapi": null
+    },
+    "CRJ2": {
+      "icao": "CRJ2",
+      "iata": [
+        "CR2"
+      ],
+      "model": "Bombardier CRJ200",
+      "manufacturer": "Bombardier",
+      "familyId": "crj",
+      "variant": "CRJ-200",
+      "aliases": [
+        "crj2",
+        "cr2",
+        "bombardier crj200",
+        "bombardier",
+        "crj200"
+      ],
+      "aeroapi": null
+    },
+    "CRJ7": {
+      "icao": "CRJ7",
+      "iata": [
+        "CR7"
+      ],
+      "model": "Bombardier CRJ700/550",
+      "manufacturer": "Bombardier",
+      "familyId": "crj",
+      "variant": "CRJ-700",
+      "aliases": [
+        "crj7",
+        "cr7",
+        "bombardier crj700/550",
+        "bombardier",
+        "crj700",
+        "550"
+      ],
+      "aeroapi": null
+    },
+    "CRJ9": {
+      "icao": "CRJ9",
+      "iata": [
+        "CR9"
+      ],
+      "model": "Bombardier CRJ900",
+      "manufacturer": "Bombardier",
+      "familyId": "crj",
+      "variant": "CRJ-900",
+      "aliases": [
+        "crj9",
+        "cr9",
+        "bombardier crj900",
+        "bombardier",
+        "crj900"
+      ],
+      "aeroapi": null
+    },
+    "CRJX": {
+      "icao": "CRJX",
+      "iata": [
+        "CRK"
+      ],
+      "model": "Bombardier CRJ1000",
+      "manufacturer": "Bombardier",
+      "familyId": "crj",
+      "variant": "CRJ-1000",
+      "aliases": [
+        "crjx",
+        "crk",
+        "bombardier crj1000",
+        "bombardier",
+        "crj1000"
+      ],
+      "aeroapi": null
+    },
+    "D228": {
+      "icao": "D228",
+      "iata": [
+        "D28"
+      ],
+      "model": "Dornier 228",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "d228",
+        "d28",
+        "dornier 228",
+        "dornier",
+        "228"
+      ],
+      "aeroapi": null
+    },
+    "D328": {
+      "icao": "D328",
+      "iata": [
+        "D38"
+      ],
+      "model": "Dornier 328",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "d328",
+        "d38",
+        "dornier 328",
+        "dornier",
+        "328"
+      ],
+      "aeroapi": null
+    },
+    "DC10": {
+      "icao": "DC10",
+      "iata": [
+        "D11"
+      ],
+      "model": "McDonnell Douglas DC-10",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "dc10",
+        "d11",
+        "mcdonnell douglas dc-10",
+        "mcdonnell",
+        "douglas",
+        "dc",
+        "10"
+      ],
+      "aeroapi": null
+    },
+    "DH8A": {
+      "icao": "DH8A",
+      "iata": [
+        "DH1"
+      ],
+      "model": "De Havilland Dash 8-100",
+      "manufacturer": "De Havilland",
+      "familyId": "dash8",
+      "variant": "Q200",
+      "aliases": [
+        "dh8a",
+        "dh1",
+        "de havilland dash 8-100",
+        "de",
+        "havilland",
+        "dash",
+        "100"
+      ],
+      "aeroapi": null
+    },
+    "DH8B": {
+      "icao": "DH8B",
+      "iata": [
+        "DH2"
+      ],
+      "model": "De Havilland Dash 8-200",
+      "manufacturer": "De Havilland",
+      "familyId": "dash8",
+      "variant": "Q200",
+      "aliases": [
+        "dh8b",
+        "dh2",
+        "de havilland dash 8-200",
+        "de",
+        "havilland",
+        "dash",
+        "200"
+      ],
+      "aeroapi": null
+    },
+    "DH8C": {
+      "icao": "DH8C",
+      "iata": [
+        "DH3"
+      ],
+      "model": "De Havilland Dash 8-300",
+      "manufacturer": "De Havilland",
+      "familyId": "dash8",
+      "variant": "Q300",
+      "aliases": [
+        "dh8c",
+        "dh3",
+        "de havilland dash 8-300",
+        "de",
+        "havilland",
+        "dash",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "DH8D": {
+      "icao": "DH8D",
+      "iata": [
+        "DH4"
+      ],
+      "model": "De Havilland Dash 8-400 / Q400",
+      "manufacturer": "De Havilland",
+      "familyId": "dash8",
+      "variant": "Q400",
+      "aliases": [
+        "dh8d",
+        "dh4",
+        "de havilland dash 8-400 / q400",
+        "de",
+        "havilland",
+        "dash",
+        "400",
+        "q400"
+      ],
+      "aeroapi": null
+    },
+    "DHC6": {
+      "icao": "DHC6",
+      "iata": [
+        "DHT"
+      ],
+      "model": "De Havilland DHC-6 Twin Otter",
+      "manufacturer": "De Havilland",
+      "familyId": "dhc6",
+      "variant": "DHC-6",
+      "aliases": [
+        "dhc6",
+        "dht",
+        "de havilland dhc-6 twin otter",
+        "de",
+        "havilland",
+        "dhc",
+        "twin",
+        "otter"
+      ],
+      "aeroapi": null
+    },
+    "DHC7": {
+      "icao": "DHC7",
+      "iata": [
+        "DH7"
+      ],
+      "model": "De Havilland DHC-7 Dash 7",
+      "manufacturer": "De Havilland",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "dhc7",
+        "dh7",
+        "de havilland dhc-7 dash 7",
+        "de",
+        "havilland",
+        "dhc",
+        "dash"
+      ],
+      "aeroapi": null
+    },
+    "E110": {
+      "icao": "E110",
+      "iata": [
+        "EMB"
+      ],
+      "model": "Embraer EMB 110 Bandeirante",
+      "manufacturer": "Embraer",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "e110",
+        "emb",
+        "embraer emb 110 bandeirante",
+        "embraer",
+        "110",
+        "bandeirante"
+      ],
+      "aeroapi": null
+    },
+    "E120": {
+      "icao": "E120",
+      "iata": [
+        "EM2"
+      ],
+      "model": "Embraer EMB 120 Brasilia",
+      "manufacturer": "Embraer",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "e120",
+        "em2",
+        "embraer emb 120 brasilia",
+        "embraer",
+        "emb",
+        "120",
+        "brasilia"
+      ],
+      "aeroapi": null
+    },
+    "E135": {
+      "icao": "E135",
+      "iata": [
+        "ER3"
+      ],
+      "model": "Embraer ERJ135/140",
+      "manufacturer": "Embraer",
+      "familyId": "erj145",
+      "variant": "ERJ-135",
+      "aliases": [
+        "e135",
+        "er3",
+        "embraer erj135/140",
+        "embraer",
+        "erj135",
+        "140"
+      ],
+      "aeroapi": null
+    },
+    "E145": {
+      "icao": "E145",
+      "iata": [
+        "ER4"
+      ],
+      "model": "Embraer ERJ145",
+      "manufacturer": "Embraer",
+      "familyId": "erj145",
+      "variant": "ERJ-145",
+      "aliases": [
+        "e145",
+        "er4",
+        "embraer erj145",
+        "embraer",
+        "erj145"
+      ],
+      "aeroapi": null
+    },
+    "E170": {
+      "icao": "E170",
+      "iata": [
+        "E70"
+      ],
+      "model": "Embraer E170",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E170",
+      "aliases": [
+        "e170",
+        "e70",
+        "embraer e170",
+        "embraer"
+      ],
+      "aeroapi": null
+    },
+    "E190": {
+      "icao": "E190",
+      "iata": [
+        "E90"
+      ],
+      "model": "Embraer E190",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E190",
+      "aliases": [
+        "e190",
+        "e90",
+        "embraer e190",
+        "embraer"
+      ],
+      "aeroapi": null
+    },
+    "E195": {
+      "icao": "E195",
+      "iata": [
+        "E95"
+      ],
+      "model": "Embraer E195",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E195",
+      "aliases": [
+        "e195",
+        "e95",
+        "embraer e195",
+        "embraer"
+      ],
+      "aeroapi": null
+    },
+    "E290": {
+      "icao": "E290",
+      "iata": [
+        "290"
+      ],
+      "model": "Embraer E190-E2",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E190",
+      "aliases": [
+        "e290",
+        "290",
+        "embraer e190-e2",
+        "embraer",
+        "e190",
+        "e2"
+      ],
+      "aeroapi": null
+    },
+    "E295": {
+      "icao": "E295",
+      "iata": [
+        "295"
+      ],
+      "model": "Embraer E195-E2",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E195",
+      "aliases": [
+        "e295",
+        "295",
+        "embraer e195-e2",
+        "embraer",
+        "e195",
+        "e2"
+      ],
+      "aeroapi": null
+    },
+    "E75L": {
+      "icao": "E75L",
+      "iata": [
+        "E7W"
+      ],
+      "model": "Embraer E175 (long wing)",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E175",
+      "aliases": [
+        "e75l",
+        "e7w",
+        "embraer e175 (long wing)",
+        "embraer",
+        "e175",
+        "long",
+        "wing"
+      ],
+      "aeroapi": null
+    },
+    "E75S": {
+      "icao": "E75S",
+      "iata": [
+        "E75"
+      ],
+      "model": "Embraer E175 (short wing)",
+      "manufacturer": "Embraer",
+      "familyId": "e190",
+      "variant": "E175",
+      "aliases": [
+        "e75s",
+        "e75",
+        "embraer e175 (short wing)",
+        "embraer",
+        "e175",
+        "short",
+        "wing"
+      ],
+      "aeroapi": null
+    },
+    "E50P": {
+      "icao": "E50P",
+      "iata": [
+        "EP1"
+      ],
+      "model": "Embraer Phenom 100",
+      "manufacturer": "Embraer",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "e50p",
+        "ep1",
+        "embraer phenom 100",
+        "embraer",
+        "phenom",
+        "100"
+      ],
+      "aeroapi": null
+    },
+    "E55P": {
+      "icao": "E55P",
+      "iata": [
+        "EP3"
+      ],
+      "model": "Embraer Phenom 300",
+      "manufacturer": "Embraer",
+      "familyId": "phenom300",
+      "variant": "Phenom 300",
+      "aliases": [
+        "e55p",
+        "ep3",
+        "embraer phenom 300",
+        "embraer",
+        "phenom",
+        "300"
+      ],
+      "aeroapi": null
+    },
+    "E545": {
+      "icao": "E545",
+      "iata": [
+        "E54"
+      ],
+      "model": "Embraer Legacy 450 / Praetor 500",
+      "manufacturer": "Embraer",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "e545",
+        "e54",
+        "embraer legacy 450 / praetor 500",
+        "embraer",
+        "legacy",
+        "450",
+        "praetor",
+        "500"
+      ],
+      "aeroapi": null
+    },
+    "E550": {
+      "icao": "E550",
+      "iata": [
+        "E55"
+      ],
+      "model": "Embraer Legacy 500 / Praetor 600",
+      "manufacturer": "Embraer",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "e550",
+        "e55",
+        "embraer legacy 500 / praetor 600",
+        "embraer",
+        "legacy",
+        "500",
+        "praetor",
+        "600"
+      ],
+      "aeroapi": null
+    },
+    "F100": {
+      "icao": "F100",
+      "iata": [
+        "100"
+      ],
+      "model": "Fokker 100",
+      "manufacturer": "Fokker",
+      "familyId": "fokker100",
+      "variant": "Fokker 100",
+      "aliases": [
+        "f100",
+        "100",
+        "fokker 100",
+        "fokker"
+      ],
+      "aeroapi": null
+    },
+    "F27": {
+      "icao": "F27",
+      "iata": [
+        "F27"
+      ],
+      "model": "Fokker F27 Friendship",
+      "manufacturer": "Fokker",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "f27",
+        "fokker f27 friendship",
+        "fokker",
+        "friendship"
+      ],
+      "aeroapi": null
+    },
+    "F28": {
+      "icao": "F28",
+      "iata": [
+        "F21"
+      ],
+      "model": "Fokker F28 Fellowship",
+      "manufacturer": "Fokker",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "f28",
+        "f21",
+        "fokker f28 fellowship",
+        "fokker",
+        "fellowship"
+      ],
+      "aeroapi": null
+    },
+    "F2TH": {
+      "icao": "F2TH",
+      "iata": [
+        "D20"
+      ],
+      "model": "Dassault Falcon 2000",
+      "manufacturer": "Dassault",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "f2th",
+        "d20",
+        "dassault falcon 2000",
+        "dassault",
+        "falcon",
+        "2000"
+      ],
+      "aeroapi": null
+    },
+    "F50": {
+      "icao": "F50",
+      "iata": [
+        "F50"
+      ],
+      "model": "Fokker 50",
+      "manufacturer": "Fokker",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "f50",
+        "fokker 50",
+        "fokker",
+        "50"
+      ],
+      "aeroapi": null
+    },
+    "F70": {
+      "icao": "F70",
+      "iata": [
+        "F70"
+      ],
+      "model": "Fokker 70",
+      "manufacturer": "Fokker",
+      "familyId": "fokker100",
+      "variant": "Fokker 70",
+      "aliases": [
+        "f70",
+        "fokker 70",
+        "fokker",
+        "70"
+      ],
+      "aeroapi": null
+    },
+    "F900": {
+      "icao": "F900",
+      "iata": [
+        "DF9"
+      ],
+      "model": "Dassault Falcon 900",
+      "manufacturer": "Dassault",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "f900",
+        "df9",
+        "dassault falcon 900",
+        "dassault",
+        "falcon",
+        "900"
+      ],
+      "aeroapi": null
+    },
+    "FA50": {
+      "icao": "FA50",
+      "iata": [
+        "DF3"
+      ],
+      "model": "Dassault Falcon 50",
+      "manufacturer": "Dassault",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "fa50",
+        "df3",
+        "dassault falcon 50",
+        "dassault",
+        "falcon",
+        "50"
+      ],
+      "aeroapi": null
+    },
+    "FA6X": {
+      "icao": "FA6X",
+      "iata": [
+        "DF6"
+      ],
+      "model": "Dassault Falcon 6X",
+      "manufacturer": "Dassault",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "fa6x",
+        "df6",
+        "dassault falcon 6x",
+        "dassault",
+        "falcon",
+        "6x"
+      ],
+      "aeroapi": null
+    },
+    "FA7X": {
+      "icao": "FA7X",
+      "iata": [
+        "DF7"
+      ],
+      "model": "Dassault Falcon 7X",
+      "manufacturer": "Dassault",
+      "familyId": "falcon7x",
+      "variant": "Falcon 7X",
+      "aliases": [
+        "fa7x",
+        "df7",
+        "dassault falcon 7x",
+        "dassault",
+        "falcon",
+        "7x"
+      ],
+      "aeroapi": null
+    },
+    "G280": {
+      "icao": "G280",
+      "iata": [
+        "GR3"
+      ],
+      "model": "Gulfstream G280",
+      "manufacturer": "Gulfstream",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "g280",
+        "gr3",
+        "gulfstream g280",
+        "gulfstream"
+      ],
+      "aeroapi": null
+    },
+    "GA7C": {
+      "icao": "GA7C",
+      "iata": [
+        "GL7"
+      ],
+      "model": "Gulfstream G700",
+      "manufacturer": "Gulfstream",
+      "familyId": "global7500",
+      "variant": "Global 7500",
+      "aliases": [
+        "ga7c",
+        "gl7",
+        "gulfstream g700",
+        "gulfstream",
+        "g700"
+      ],
+      "aeroapi": null
+    },
+    "GL5T": {
+      "icao": "GL5T",
+      "iata": [
+        "CCX"
+      ],
+      "model": "Bombardier Global 5000",
+      "manufacturer": "Bombardier",
+      "familyId": "global7500",
+      "variant": "Global 7500",
+      "aliases": [
+        "gl5t",
+        "ccx",
+        "bombardier global 5000",
+        "bombardier",
+        "global",
+        "5000"
+      ],
+      "aeroapi": null
+    },
+    "GLEX": {
+      "icao": "GLEX",
+      "iata": [
+        "CCX"
+      ],
+      "model": "Bombardier Global Express",
+      "manufacturer": "Bombardier",
+      "familyId": "global7500",
+      "variant": "Global 7500",
+      "aliases": [
+        "glex",
+        "ccx",
+        "bombardier global express",
+        "bombardier",
+        "global",
+        "express"
+      ],
+      "aeroapi": null
+    },
+    "GLF4": {
+      "icao": "GLF4",
+      "iata": [
+        "GJ4"
+      ],
+      "model": "Gulfstream IV / G400",
+      "manufacturer": "Gulfstream",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "glf4",
+        "gj4",
+        "gulfstream iv / g400",
+        "gulfstream",
+        "iv",
+        "g400"
+      ],
+      "aeroapi": null
+    },
+    "GLF5": {
+      "icao": "GLF5",
+      "iata": [
+        "GJ5"
+      ],
+      "model": "Gulfstream V / G500",
+      "manufacturer": "Gulfstream",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "glf5",
+        "gj5",
+        "gulfstream v / g500",
+        "gulfstream",
+        "g500"
+      ],
+      "aeroapi": null
+    },
+    "GLF6": {
+      "icao": "GLF6",
+      "iata": [
+        "GJ6"
+      ],
+      "model": "Gulfstream G650",
+      "manufacturer": "Gulfstream",
+      "familyId": "g650",
+      "variant": "G650",
+      "aliases": [
+        "glf6",
+        "gj6",
+        "gulfstream g650",
+        "gulfstream",
+        "g650"
+      ],
+      "aeroapi": null
+    },
+    "HDJT": {
+      "icao": "HDJT",
+      "iata": [
+        "HHJ"
+      ],
+      "model": "HondaJet HA-420",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "hdjt",
+        "hhj",
+        "hondajet ha-420",
+        "hondajet",
+        "ha",
+        "420"
+      ],
+      "aeroapi": null
+    },
+    "IL76": {
+      "icao": "IL76",
+      "iata": [
+        "IL7"
+      ],
+      "model": "Ilyushin Il-76",
+      "manufacturer": "Ilyushin",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "il76",
+        "il7",
+        "ilyushin il-76",
+        "ilyushin",
+        "il",
+        "76"
+      ],
+      "aeroapi": null
+    },
+    "IL96": {
+      "icao": "IL96",
+      "iata": [
+        "I93"
+      ],
+      "model": "Ilyushin Il-96",
+      "manufacturer": "Ilyushin",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "il96",
+        "i93",
+        "ilyushin il-96",
+        "ilyushin",
+        "il",
+        "96"
+      ],
+      "aeroapi": null
+    },
+    "J328": {
+      "icao": "J328",
+      "iata": [
+        "FRJ"
+      ],
+      "model": "Fairchild Dornier 328JET",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "j328",
+        "frj",
+        "fairchild dornier 328jet",
+        "fairchild",
+        "dornier",
+        "328jet"
+      ],
+      "aeroapi": null
+    },
+    "JS31": {
+      "icao": "JS31",
+      "iata": [
+        "J31"
+      ],
+      "model": "BAe Jetstream 31",
+      "manufacturer": "BAe",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "js31",
+        "j31",
+        "bae jetstream 31",
+        "bae",
+        "jetstream",
+        "31"
+      ],
+      "aeroapi": null
+    },
+    "JS41": {
+      "icao": "JS41",
+      "iata": [
+        "J41"
+      ],
+      "model": "BAe Jetstream 41",
+      "manufacturer": "BAe",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "js41",
+        "j41",
+        "bae jetstream 41",
+        "bae",
+        "jetstream",
+        "41"
+      ],
+      "aeroapi": null
+    },
+    "K35R": {
+      "icao": "K35R",
+      "iata": [
+        "K35"
+      ],
+      "model": "Boeing KC-135 Stratotanker",
+      "manufacturer": "Boeing",
+      "familyId": "kc135",
+      "variant": "KC-135R",
+      "aliases": [
+        "k35r",
+        "k35",
+        "boeing kc-135 stratotanker",
+        "boeing",
+        "kc",
+        "135",
+        "stratotanker"
+      ],
+      "aeroapi": null
+    },
+    "L101": {
+      "icao": "L101",
+      "iata": [
+        "L10"
+      ],
+      "model": "Lockheed L-1011 TriStar",
+      "manufacturer": "Lockheed",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "l101",
+        "l10",
+        "lockheed l-1011 tristar",
+        "lockheed",
+        "1011",
+        "tristar"
+      ],
+      "aeroapi": null
+    },
+    "L410": {
+      "icao": "L410",
+      "iata": [
+        "L4T"
+      ],
+      "model": "Let L-410 Turbolet",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "l410",
+        "l4t",
+        "let l-410 turbolet",
+        "let",
+        "410",
+        "turbolet"
+      ],
+      "aeroapi": null
+    },
+    "LJ35": {
+      "icao": "LJ35",
+      "iata": [
+        "LRJ"
+      ],
+      "model": "Learjet 35/36",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "lj35",
+        "lrj",
+        "learjet 35/36",
+        "learjet",
+        "35",
+        "36"
+      ],
+      "aeroapi": null
+    },
+    "LJ60": {
+      "icao": "LJ60",
+      "iata": [
+        "LRJ"
+      ],
+      "model": "Learjet 60",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "lj60",
+        "lrj",
+        "learjet 60",
+        "learjet",
+        "60"
+      ],
+      "aeroapi": null
+    },
+    "MD11": {
+      "icao": "MD11",
+      "iata": [
+        "M11"
+      ],
+      "model": "McDonnell Douglas MD-11",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md11",
+      "variant": "MD-11",
+      "aliases": [
+        "md11",
+        "m11",
+        "mcdonnell douglas md-11",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "11"
+      ],
+      "aeroapi": null
+    },
+    "MD81": {
+      "icao": "MD81",
+      "iata": [
+        "M81"
+      ],
+      "model": "McDonnell Douglas MD-81",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-81",
+      "aliases": [
+        "md81",
+        "m81",
+        "mcdonnell douglas md-81",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "81"
+      ],
+      "aeroapi": null
+    },
+    "MD82": {
+      "icao": "MD82",
+      "iata": [
+        "M82"
+      ],
+      "model": "McDonnell Douglas MD-82",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-82",
+      "aliases": [
+        "md82",
+        "m82",
+        "mcdonnell douglas md-82",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "82"
+      ],
+      "aeroapi": null
+    },
+    "MD83": {
+      "icao": "MD83",
+      "iata": [
+        "M83"
+      ],
+      "model": "McDonnell Douglas MD-83",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-83",
+      "aliases": [
+        "md83",
+        "m83",
+        "mcdonnell douglas md-83",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "83"
+      ],
+      "aeroapi": null
+    },
+    "MD87": {
+      "icao": "MD87",
+      "iata": [
+        "M87"
+      ],
+      "model": "McDonnell Douglas MD-87",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-87",
+      "aliases": [
+        "md87",
+        "m87",
+        "mcdonnell douglas md-87",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "87"
+      ],
+      "aeroapi": null
+    },
+    "MD88": {
+      "icao": "MD88",
+      "iata": [
+        "M88"
+      ],
+      "model": "McDonnell Douglas MD-88",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-88",
+      "aliases": [
+        "md88",
+        "m88",
+        "mcdonnell douglas md-88",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "88"
+      ],
+      "aeroapi": null
+    },
+    "MD90": {
+      "icao": "MD90",
+      "iata": [
+        "M90"
+      ],
+      "model": "McDonnell Douglas MD-90",
+      "manufacturer": "McDonnell Douglas",
+      "familyId": "md80",
+      "variant": "MD-90",
+      "aliases": [
+        "md90",
+        "m90",
+        "mcdonnell douglas md-90",
+        "mcdonnell",
+        "douglas",
+        "md",
+        "90"
+      ],
+      "aeroapi": null
+    },
+    "P180": {
+      "icao": "P180",
+      "iata": [
+        "P18"
+      ],
+      "model": "Piaggio P.180 Avanti",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "p180",
+        "p18",
+        "piaggio p.180 avanti",
+        "piaggio",
+        "180",
+        "avanti"
+      ],
+      "aeroapi": null
+    },
+    "PC12": {
+      "icao": "PC12",
+      "iata": [
+        "PL2"
+      ],
+      "model": "Pilatus PC-12",
+      "manufacturer": "Pilatus",
+      "familyId": "pc12",
+      "variant": "PC-12",
+      "aliases": [
+        "pc12",
+        "pl2",
+        "pilatus pc-12",
+        "pilatus",
+        "pc",
+        "12"
+      ],
+      "aeroapi": null
+    },
+    "PC24": {
+      "icao": "PC24",
+      "iata": [
+        "PL4"
+      ],
+      "model": "Pilatus PC-24",
+      "manufacturer": "Pilatus",
+      "familyId": "pc24",
+      "variant": "PC-24",
+      "aliases": [
+        "pc24",
+        "pl4",
+        "pilatus pc-24",
+        "pilatus",
+        "pc",
+        "24"
+      ],
+      "aeroapi": null
+    },
+    "RJ1H": {
+      "icao": "RJ1H",
+      "iata": [
+        "AR1"
+      ],
+      "model": "Avro RJ100",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "Avro RJ100",
+      "aliases": [
+        "rj1h",
+        "ar1",
+        "avro rj100",
+        "avro",
+        "rj100"
+      ],
+      "aeroapi": null
+    },
+    "RJ70": {
+      "icao": "RJ70",
+      "iata": [
+        "AR7"
+      ],
+      "model": "Avro RJ70",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "Avro RJ70",
+      "aliases": [
+        "rj70",
+        "ar7",
+        "avro rj70",
+        "avro"
+      ],
+      "aeroapi": null
+    },
+    "RJ85": {
+      "icao": "RJ85",
+      "iata": [
+        "AR8"
+      ],
+      "model": "Avro RJ85",
+      "manufacturer": "BAe",
+      "familyId": "bae146",
+      "variant": "Avro RJ85",
+      "aliases": [
+        "rj85",
+        "ar8",
+        "avro rj85",
+        "avro"
+      ],
+      "aeroapi": null
+    },
+    "SB20": {
+      "icao": "SB20",
+      "iata": [
+        "S20"
+      ],
+      "model": "Saab 2000",
+      "manufacturer": "Saab",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "sb20",
+        "s20",
+        "saab 2000",
+        "saab",
+        "2000"
+      ],
+      "aeroapi": null
+    },
+    "SF34": {
+      "icao": "SF34",
+      "iata": [
+        "SF3"
+      ],
+      "model": "Saab 340",
+      "manufacturer": "Saab",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "sf34",
+        "sf3",
+        "saab 340",
+        "saab",
+        "340"
+      ],
+      "aeroapi": null
+    },
+    "SH36": {
+      "icao": "SH36",
+      "iata": [
+        "SH6"
+      ],
+      "model": "Shorts 360",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "sh36",
+        "sh6",
+        "shorts 360",
+        "shorts",
+        "360"
+      ],
+      "aeroapi": null
+    },
+    "SU95": {
+      "icao": "SU95",
+      "iata": [
+        "SU9"
+      ],
+      "model": "Sukhoi Superjet 100",
+      "manufacturer": "Sukhoi",
+      "familyId": "ssj100",
+      "variant": "SSJ100",
+      "aliases": [
+        "su95",
+        "su9",
+        "sukhoi superjet 100",
+        "sukhoi",
+        "superjet",
+        "100",
+        "ssj100"
+      ],
+      "aeroapi": null
+    },
+    "T134": {
+      "icao": "T134",
+      "iata": [
+        "TU3"
+      ],
+      "model": "Tupolev Tu-134",
+      "manufacturer": "Tupolev",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "t134",
+        "tu3",
+        "tupolev tu-134",
+        "tupolev",
+        "tu",
+        "134"
+      ],
+      "aeroapi": null
+    },
+    "T154": {
+      "icao": "T154",
+      "iata": [
+        "TU5"
+      ],
+      "model": "Tupolev Tu-154",
+      "manufacturer": "Tupolev",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "t154",
+        "tu5",
+        "tupolev tu-154",
+        "tupolev",
+        "tu",
+        "154"
+      ],
+      "aeroapi": null
+    },
+    "T204": {
+      "icao": "T204",
+      "iata": [
+        "T20"
+      ],
+      "model": "Tupolev Tu-204/214",
+      "manufacturer": "Tupolev",
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "t204",
+        "t20",
+        "tupolev tu-204/214",
+        "tupolev",
+        "tu",
+        "204",
+        "214"
+      ],
+      "aeroapi": null
+    },
+    "YK40": {
+      "icao": "YK40",
+      "iata": [
+        "YK4"
+      ],
+      "model": "Yakovlev Yak-40",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "yk40",
+        "yk4",
+        "yakovlev yak-40",
+        "yakovlev",
+        "yak",
+        "40"
+      ],
+      "aeroapi": null
+    },
+    "YK42": {
+      "icao": "YK42",
+      "iata": [
+        "YK2"
+      ],
+      "model": "Yakovlev Yak-42",
+      "manufacturer": null,
+      "familyId": null,
+      "variant": null,
+      "aliases": [
+        "yk42",
+        "yk2",
+        "yakovlev yak-42",
+        "yakovlev",
+        "yak",
+        "42"
+      ],
+      "aeroapi": null
+    },
+    "C909": {
+      "icao": "C909",
+      "iata": [],
+      "model": "c909",
+      "manufacturer": "COMAC",
+      "familyId": "c909",
+      "variant": null,
+      "aliases": [
+        "c909",
+        "comac 909",
+        "comac c909",
+        "arj21",
+        "arj 21",
+        "arj-21",
+        "comac arj21"
+      ],
+      "aeroapi": null,
+      "marketingAlias": true
+    },
+    "SSJ100": {
+      "icao": "SSJ100",
+      "iata": [],
+      "model": "ssj100",
+      "manufacturer": null,
+      "familyId": "ssj100",
+      "variant": null,
+      "aliases": [
+        "ssj100",
+        "ssj 100",
+        "superjet",
+        "superjet 100",
+        "sukhoi superjet"
+      ],
+      "aeroapi": null,
+      "marketingAlias": true
+    }
+  }
+}
