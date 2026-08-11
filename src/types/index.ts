@@ -21,7 +21,7 @@ export interface AircraftPhoto {
   variant?: string;
 }
 
-/** Role of a file in the local photos/ → photoCatalog pipeline */
+/** Role of a file in the local images/ → photoCatalog pipeline */
 export type PhotoCatalogRole = 'spot' | 'diagram';
 
 export interface PhotoCatalogEntry {

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "sync-photos": "node scripts/sync-photos.mjs",
+    "sync-images": "node scripts/sync-images.mjs",
+    "sync-photos": "node scripts/sync-images.mjs",
     "seed-media": "node scripts/seed-media.mjs && node scripts/apply-hardcoded-diagrams.mjs",
     "verify-media": "node scripts/verify-media-urls.mjs"
   },

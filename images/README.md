@@ -1,6 +1,6 @@
-# Photos drop folder
+# Images drop folder
 
-Drop your own aircraft photos here. Run **`npm run sync-photos`** to identify them from filenames, copy them into the app’s static assets, and update the photo catalog the app reads at runtime.
+Drop your own aircraft photos here. Run **`npm run sync-images`** to identify them from filenames, copy them into the app’s static assets, and update the photo catalog the app reads at runtime.
 
 Wikimedia defaults stay as fallback until a local match exists.
 
@@ -22,9 +22,9 @@ Separators `_`, `-`, and spaces are all fine. Extensions: `.jpg` `.jpeg` `.png` 
 ## Folders also work
 
 ```
-photos/b737/01.jpg
-photos/b737/max8.jpg
-photos/a320/diagram.png
+images/b737/01.jpg
+images/b737/max8.jpg
+images/a320/diagram.png
 ```
 
 The parent folder name is treated like an id prefix when matching.
@@ -43,7 +43,7 @@ Ambiguous or unmatched files are listed in the catalog under `unmatched` — ren
 ## After dropping files
 
 ```bash
-npm run sync-photos
+npm run sync-images
 ```
 
 Then refresh the app. Local catalog photos override bundled Wikimedia URLs (admin / IndexedDB uploads still win over both).

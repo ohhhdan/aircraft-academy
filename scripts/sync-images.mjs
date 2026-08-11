@@ -1,10 +1,10 @@
 /**
- * Scan photos/ for aircraft images, identify them from filenames,
+ * Scan images/ for aircraft photos, identify them from filenames,
  * copy into public/assets/aircraft/{id}/, and write src/content/photoCatalog.json.
  *
  * Usage:
- *   npm run sync-photos
- *   node scripts/sync-photos.mjs --dry-run
+ *   npm run sync-images
+ *   node scripts/sync-images.mjs --dry-run
  */
 import {
   copyFileSync,
@@ -21,7 +21,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
-const PHOTOS_DIR = join(ROOT, 'photos');
+const IMAGES_DIR = join(ROOT, 'images');
 const PUBLIC_AIRCRAFT_DIR = join(ROOT, 'public', 'assets', 'aircraft');
 const CATALOG_PATH = join(ROOT, 'src', 'content', 'photoCatalog.json');
 const AIRCRAFT_PATH = join(ROOT, 'src', 'content', 'aircraft.json');
@@ -233,13 +233,13 @@ function safeSlug(s) {
 function main() {
   const aircraft = JSON.parse(readFileSync(AIRCRAFT_PATH, 'utf8'));
   const aliasIndex = buildAliasIndex(aircraft);
-  const files = walkImages(PHOTOS_DIR);
+  const files = walkImages(IMAGES_DIR);
 
-  if (!existsSync(PHOTOS_DIR)) {
-    mkdirSync(PHOTOS_DIR, { recursive: true });
+  if (!existsSync(IMAGES_DIR)) {
+    mkdirSync(IMAGES_DIR, { recursive: true });
   }
 
-  console.log(`Found ${files.length} image(s) in photos/`);
+  console.log(`Found ${files.length} image(s) in images/`);
 
   /** @type {import('../src/types/index.ts').PhotoCatalogEntry[]} */
   const photos = [];
@@ -310,7 +310,7 @@ function main() {
   const catalog = {
     version: 1,
     updatedAt: new Date().toISOString(),
-    sourceDir: 'photos',
+    sourceDir: 'images',
     publicDir: 'public/assets/aircraft',
     photos,
     byAircraft,
