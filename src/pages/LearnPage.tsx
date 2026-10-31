@@ -309,7 +309,7 @@ export function LearnPage() {
           {ENGINE_SECTIONS.find((e) => e.count === engineFilter)?.label}
         </h2>
         <p className="text-faint" style={{ fontSize: '0.9rem' }}>
-          Tap a specimen to study its plate. After 3 logged, you&apos;ll face a recall check.
+          Select an aircraft type to learn more. After you&apos;ve logged 3 aircraft, answer a question to check your understanding.
         </p>
         <div className="grid-browse" style={{ marginTop: 16 }}>
           {sectionAircraft.map((ac) => (
