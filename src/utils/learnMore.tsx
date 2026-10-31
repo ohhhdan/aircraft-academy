@@ -2,8 +2,24 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import type { Aircraft, Airport } from '../types';
 
+/** Short visual tells used in Spotter feedback (correct and incorrect). */
+export function spotterTell(aircraft: Aircraft): string {
+  const fromFeatures = aircraft.keyFeatures.filter(Boolean).slice(0, 2);
+  if (fromFeatures.length >= 2) {
+    return `${fromFeatures[0]} and ${fromFeatures[1]}`;
+  }
+  if (fromFeatures.length === 1) return fromFeatures[0];
+  const fromCallouts = aircraft.callouts
+    .map((c) => c.label)
+    .filter(Boolean)
+    .slice(0, 2);
+  if (fromCallouts.length >= 2) return `${fromCallouts[0].toLowerCase()} and ${fromCallouts[1].toLowerCase()}`;
+  if (fromCallouts.length === 1) return fromCallouts[0].toLowerCase();
+  return 'fuselage shape, wing position, and engines';
+}
+
 export function spotterLearnMore(aircraft: Aircraft, showLinks: boolean): ReactNode {
-  const tip = aircraft.keyFeatures[0] ?? aircraft.callouts[0]?.label ?? 'fuselage profile and engines';
+  const tip = spotterTell(aircraft);
   if (!showLinks) {
     return `Study ${aircraft.family} in the Index and look for: ${tip}. The Key Features module has full specimen plates with diagrams.`;
   }
