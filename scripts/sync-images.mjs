@@ -43,7 +43,20 @@ const EXTRA_ALIASES = {
   a380: ['a380', 'superjumbo', 'airbus a380'],
   a330: ['a330', 'a330neo', 'airbus a330'],
   a220: ['a220', 'cs300', 'bombardier cseries', 'airbus a220'],
-  e190: ['ejet', 'e-jet', 'embraer 190', 'e170', 'e175', 'e195'],
+  e190: [
+    'ejet',
+    'e-jet',
+    'embraer 190',
+    'e170',
+    'e175',
+    'e195',
+    'erj-190',
+    'erj190',
+    'erj-195',
+    'erj195',
+    'erj-170',
+    'erj-175',
+  ],
   md11: ['md-11', 'md11', 'mcdonnell douglas'],
   g650: ['g650', 'g650er', 'gulfstream'],
   citationx: ['citation x', 'citationx', 'cessna citation'],
@@ -76,7 +89,7 @@ const EXTRA_ALIASES = {
   c909: ['c909', 'comac 909', 'comac c909', 'arj21', 'arj 21', 'arj-21', 'aj27', 'xiangfeng'],
   c919: ['c919', 'comac 919', 'comac c919'],
   ssj100: ['ssj100', 'ssj 100', 'superjet', 'sukhoi superjet', 'su95'],
-  erj145: ['erj', 'erj145', 'erj-145', 'erj135', 'embraer 145'],
+  erj145: ['erj145', 'erj-145', 'erj135', 'erj-135', 'embraer 145', 'erj-140'],
   atr42: ['atr 42', 'atr42', 'atr-42'],
   bae146: ['bae 146', 'bae146', 'avro rj', 'jumbolino', 'rj85', 'rj100'],
   fokker100: ['fokker 100', 'fokker100', 'fokker 70', 'f100'],
@@ -258,12 +271,31 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
     }
   }
 
+  // Leading type token from Norebbo-style names: 707-320C_…, A320_…, ERJ-190_…
+  const lead = stem.match(
+    /^(A3\d{2}|A2\d{2}|B?\d{3}|DC-?\d|MD-?\d+|L-?1011|ERJ-?\d+|CRJ-?\d+|E1[789]\d|EMB-?\d+)/i
+  );
+  const leadCompact = lead ? compact(lead[1]) : '';
+
   let best = null;
   for (const alias of aliasIndex) {
     if (!hayCompact.includes(alias.compact) && !hayNorm.includes(alias.alias)) continue;
-    // Prefer boundary-ish matches: avoid "a32" matching inside unrelated strings via min length
+    // Prefer boundary-ish matches: avoid "a32" / "air" matching inside unrelated strings
     if (alias.compact.length < 3 && alias.weight < 90) continue;
-    const score = alias.weight * 10 + alias.compact.length;
+    if (alias.compact.length <= 3 && alias.weight < 90 && !/\d/.test(alias.compact)) continue;
+    let score = alias.weight * 10 + alias.compact.length;
+    // Strongly prefer the type code that starts the filename (707-320 → 707, not 320→a320)
+    if (leadCompact) {
+      if (alias.compact === leadCompact || leadCompact.startsWith(alias.compact) || alias.compact.startsWith(leadCompact)) {
+        score += 500;
+      } else if (
+        // Penalize Airbus 320-family aliases when the file is clearly a Boeing 7xx-320 series
+        /^(707|727|737|747|757|767|777|787)/i.test(leadCompact) &&
+        (alias.aircraftId === 'a320' || alias.aircraftId === 'a321')
+      ) {
+        score -= 800;
+      }
+    }
     if (!best || score > best.score) {
       best = {
         aircraftId: alias.aircraftId,
@@ -279,7 +311,7 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
   if (best && (best.aircraftId === 'a320' || best.aircraftId === 'a321')) {
     if (/\ba321\b|a321/.test(hayNorm) || hayCompact.includes('a321')) {
       best = { ...best, aircraftId: 'a321', matchedBy: `${best.matchedBy}+a321-prefer` };
-    } else if (/\ba320\b|a320/.test(hayNorm) || hayCompact.includes('a320')) {
+    } else if (/\ba320\b|a320/.test(hayNorm) || hayCompact.includes('a320') || /\ba319\b|a319/.test(hayNorm)) {
       best = { ...best, aircraftId: 'a320', matchedBy: `${best.matchedBy}+a320-prefer` };
     }
   }
@@ -391,7 +423,9 @@ function main() {
       ...(hit.sheetRow ? { sheetRow: hit.sheetRow } : {}),
       sourceFile: file.rel,
       publicPath,
-      attribution: 'User provided (Norebbo pack)',
+      attribution: /liveries\//i.test(file.rel)
+        ? 'Norebbo airline livery illustration'
+        : 'User provided (Norebbo pack)',
       matchedBy: hit.matchedBy,
       sortIndex: idx,
     };

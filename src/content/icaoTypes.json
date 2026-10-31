@@ -1563,9 +1563,9 @@
         "b20",
         "beechcraft king air 200",
         "beechcraft",
-        "king",
-        "air",
-        "200"
+        "king air",
+        "kingair",
+        "b200"
       ],
       "aeroapi": null
     },
