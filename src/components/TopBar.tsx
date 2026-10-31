@@ -1,13 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import { MAX_LIVES } from '../types';
+import { formatLifeTimer } from '../utils/data';
 import { UserProfile } from './UserProfile';
 
 export function TopBar() {
-  const { exerciseSession, state } = useApp();
+  const { exerciseSession, state, nextLifeIn } = useApp();
   const location = useLocation();
   const inExercise = exerciseSession?.active ?? false;
   const isHome = location.pathname === '/';
   const isIndex = location.pathname === '/airpedia';
+  const regenerating = nextLifeIn != null && state.lives < MAX_LIVES;
 
   return (
     <header className="top-bar">
@@ -29,9 +32,6 @@ export function TopBar() {
               <span className="top-stat" title="XP">
                 ⚡ {state.xp}
               </span>
-              <span className="top-stat top-stat-hearts" title="Hearts">
-                {'♥'.repeat(Math.max(0, state.lives))}
-              </span>
             </div>
           )}
           {!inExercise && !isIndex && (
@@ -44,6 +44,19 @@ export function TopBar() {
               Path
             </Link>
           )}
+          <div
+            className="top-hearts"
+            title={regenerating ? `Next heart in ${formatLifeTimer(nextLifeIn!)}` : `${state.lives} of ${MAX_LIVES} hearts`}
+            aria-label={`${state.lives} of ${MAX_LIVES} hearts${regenerating ? `, next in ${formatLifeTimer(nextLifeIn!)}` : ''}`}
+          >
+            <span className="top-hearts-icon" aria-hidden>
+              ♥
+            </span>
+            <span className="top-hearts-count">{state.lives}</span>
+            {regenerating && (
+              <span className="top-hearts-timer mono">+1 {formatLifeTimer(nextLifeIn!)}</span>
+            )}
+          </div>
           <UserProfile />
         </div>
       </div>

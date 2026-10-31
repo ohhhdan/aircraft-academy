@@ -1776,6 +1776,39 @@ footer.app-footer a {
   color: var(--brick);
 }
 
+.top-hearts {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.top-hearts-icon {
+  color: var(--brick);
+  font-size: 13px;
+}
+
+.top-hearts-count {
+  font-weight: 600;
+  min-width: 0.75em;
+}
+
+.top-hearts-timer {
+  margin-left: 2px;
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+}
+
 .user-profile-stat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

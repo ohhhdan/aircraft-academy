@@ -78,8 +78,7 @@ export function HomePage() {
         <div className="path-hud-item">
           <div className="path-hud-label">Hearts</div>
           <div className="path-hud-value path-hud-hearts">
-            {'♥'.repeat(Math.max(0, state.lives))}
-            <span className="path-hud-hearts-empty">{'♡'.repeat(Math.max(0, 5 - state.lives))}</span>
+            <span aria-hidden>♥</span> {state.lives}
           </div>
           {!canStartExercise && nextLifeIn != null && (
             <div className="mono text-muted" style={{ fontSize: 10 }}>+1 in {formatLifeTimer(nextLifeIn)}</div>

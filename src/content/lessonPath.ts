@@ -45,8 +45,8 @@ export const LESSON_PATH: PathUnit[] = [
       },
       {
         id: 'u1-spot-easy',
-        title: 'Practice · Family ID',
-        subtitle: '10 photos · name the family',
+        title: 'Practice · Type ID',
+        subtitle: '10 photos · name the aircraft',
         kind: 'practice',
         to: '/spotter?mode=easy&group=commercial-jets&node=u1-spot-easy',
         moduleId: 'spotter',
