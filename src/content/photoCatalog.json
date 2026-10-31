@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T17:56:19.272Z",
+  "updatedAt": "2026-10-31T18:36:21.232Z",
   "sourceDir": "images",
   "publicDir": "public/assets/aircraft",
   "photos": [
@@ -96,7 +96,7 @@
       "sourceFile": "liveries/A220-300_korean_air_livery.jpg",
       "publicPath": "/assets/aircraft/a220/spot__a220-300_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a220+variant:a220 300",
+      "matchedBy": "lead-type:A220→a220",
       "sortIndex": 6
     },
     {
@@ -155,7 +155,7 @@
       "sourceFile": "liveries/A300-600F_ups_2003_livery.jpg",
       "publicPath": "/assets/aircraft/a300/spot__a300-600f_02.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a300+variant:a300 600f",
+      "matchedBy": "lead-type:A300→a300",
       "sortIndex": 2
     },
     {
@@ -166,7 +166,7 @@
       "sourceFile": "liveries/A300B4-600R_emirates_livery.jpg",
       "publicPath": "/assets/aircraft/a300/spot__a300b4_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a300+variant:a300b4",
+      "matchedBy": "lead-type:A300→a300",
       "sortIndex": 3
     },
     {
@@ -345,7 +345,7 @@
       "sourceFile": "liveries/A319_allegiant_air_side_profile_livery.jpg",
       "publicPath": "/assets/aircraft/a320/diagram__a319_13.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 13
     },
     {
@@ -512,7 +512,7 @@
       "sourceFile": "liveries/A319_Spirit_blue_and_white_spirit_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_14.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 14
     },
     {
@@ -523,7 +523,7 @@
       "sourceFile": "liveries/A319_Spirit_silver_and_gray_pixels_spirit_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_15.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 15
     },
     {
@@ -534,7 +534,7 @@
       "sourceFile": "liveries/A319_Spirit_yellow_spirit_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_16.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 16
     },
     {
@@ -545,7 +545,7 @@
       "sourceFile": "liveries/A319_american_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_17.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 17
     },
     {
@@ -556,7 +556,7 @@
       "sourceFile": "liveries/A319_united_new_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_18.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 18
     },
     {
@@ -567,7 +567,7 @@
       "sourceFile": "liveries/A319_virgin_america_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a319_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a319+a320-prefer+variant:a319",
+      "matchedBy": "lead-type:A319→a320",
       "sortIndex": 19
     },
     {
@@ -578,7 +578,7 @@
       "sourceFile": "liveries/A320_ANA_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_20.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 20
     },
     {
@@ -589,7 +589,7 @@
       "sourceFile": "liveries/A320_air_canada_toothpaste_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_21.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 21
     },
     {
@@ -600,7 +600,7 @@
       "sourceFile": "liveries/A320_pan_am_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_22.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 22
     },
     {
@@ -611,7 +611,7 @@
       "sourceFile": "liveries/A320_qatar_airways_old_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_23.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 23
     },
     {
@@ -622,7 +622,7 @@
       "sourceFile": "liveries/A320_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_24.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 24
     },
     {
@@ -633,7 +633,7 @@
       "sourceFile": "liveries/A320_virgin_america_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_25.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 25
     },
     {
@@ -644,7 +644,7 @@
       "sourceFile": "liveries/A320_virgin_america_winglets_livery.jpg",
       "publicPath": "/assets/aircraft/a320/spot__a320_26.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a320+a320-prefer+variant:a320",
+      "matchedBy": "lead-type:A320→a320",
       "sortIndex": 26
     },
     {
@@ -767,14 +767,14 @@
       "sortIndex": 9
     },
     {
-      "id": "a321-diagram-10-neo",
+      "id": "a321-diagram-10-a321neo",
       "aircraftId": "a321",
       "role": "diagram",
-      "variant": "neo",
+      "variant": "A321neo",
       "sourceFile": "liveries/A321neo_delta_side_view_delta_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/a321/diagram__neo_10.jpg",
+      "publicPath": "/assets/aircraft/a321/diagram__a321neo_10.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a321+a321-prefer+variant:a321 neo",
+      "matchedBy": "lead-type:A321→a321",
       "sortIndex": 10
     },
     {
@@ -905,7 +905,7 @@
       "sourceFile": "liveries/A321LR_jetblue-streamers-tail-design-white-background_livery.jpg",
       "publicPath": "/assets/aircraft/a321/spot__a321lr_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a321+a321-prefer+variant:a321lr",
+      "matchedBy": "lead-type:A321→a321",
       "sortIndex": 11
     },
     {
@@ -916,7 +916,7 @@
       "sourceFile": "liveries/A321_air_canada_sharklets_livery.jpg",
       "publicPath": "/assets/aircraft/a321/spot__sharklets_12.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a321+a321-prefer+variant:sharklets",
+      "matchedBy": "lead-type:A321→a321",
       "sortIndex": 12
     },
     {
@@ -1249,7 +1249,7 @@
       "sourceFile": "liveries/A330-200_hawaiian_airlines_2017_livery.jpg",
       "publicPath": "/assets/aircraft/a330/spot__a330-200_16.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a330+variant:a330 200",
+      "matchedBy": "lead-type:A330→a330",
       "sortIndex": 16
     },
     {
@@ -1260,7 +1260,7 @@
       "sourceFile": "liveries/A330-200_hawaiian_airlines_v2_livery.jpg",
       "publicPath": "/assets/aircraft/a330/spot__a330-200_17.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a330+variant:a330 200",
+      "matchedBy": "lead-type:A330→a330",
       "sortIndex": 17
     },
     {
@@ -1271,7 +1271,7 @@
       "sourceFile": "liveries/A330-300_delta_delta_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a330/spot__a330-300_18.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a330+variant:a330 300",
+      "matchedBy": "lead-type:A330→a330",
       "sortIndex": 18
     },
     {
@@ -1282,7 +1282,7 @@
       "sourceFile": "liveries/A330-300_korean_air_livery.jpg",
       "publicPath": "/assets/aircraft/a330/spot__a330-300_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a330+variant:a330 300",
+      "matchedBy": "lead-type:A330→a330",
       "sortIndex": 19
     },
     {
@@ -1293,7 +1293,7 @@
       "sourceFile": "liveries/A330-900neo_delta_livery.jpg",
       "publicPath": "/assets/aircraft/a330/spot__a330-900_20.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a330+variant:a330 900",
+      "matchedBy": "lead-type:A330→a330",
       "sortIndex": 20
     },
     {
@@ -1424,7 +1424,7 @@
       "sourceFile": "liveries/A340-300_air_canada_1994_livery.jpg",
       "publicPath": "/assets/aircraft/a340/spot__a340-300_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a340+variant:a340 300",
+      "matchedBy": "lead-type:A340→a340",
       "sortIndex": 7
     },
     {
@@ -1543,7 +1543,7 @@
       "sourceFile": "liveries/A350-1000_british_airways_livery-1.jpg",
       "publicPath": "/assets/aircraft/a350/spot__a350-1000_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a350+variant:a350 1000",
+      "matchedBy": "lead-type:A350→a350",
       "sortIndex": 5
     },
     {
@@ -1554,7 +1554,7 @@
       "sourceFile": "liveries/A350-900_cathay_pacific_livery.jpg",
       "publicPath": "/assets/aircraft/a350/spot__a350-900_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a350+variant:a350 900",
+      "matchedBy": "lead-type:A350→a350",
       "sortIndex": 6
     },
     {
@@ -1565,7 +1565,7 @@
       "sourceFile": "liveries/A350-900_continental_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a350/spot__a350-900_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a350+variant:a350 900",
+      "matchedBy": "lead-type:A350→a350",
       "sortIndex": 7
     },
     {
@@ -1576,7 +1576,7 @@
       "sourceFile": "liveries/A350-900_delta_air_lines_delta_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/a350/spot__a350-900_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a350+variant:a350 900",
+      "matchedBy": "lead-type:A350→a350",
       "sortIndex": 8
     },
     {
@@ -1587,7 +1587,7 @@
       "sourceFile": "liveries/A350-900_qatar_airways_livery.jpg",
       "publicPath": "/assets/aircraft/a350/spot__a350-900_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a350+variant:a350 900",
+      "matchedBy": "lead-type:A350→a350",
       "sortIndex": 9
     },
     {
@@ -1609,7 +1609,7 @@
       "sourceFile": "liveries/A380-800_emirates_new_vs_old_livery_comparison.jpg",
       "publicPath": "/assets/aircraft/a380/comparison__a380-800_01.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 1
     },
     {
@@ -1644,7 +1644,7 @@
       "sourceFile": "liveries/A380-800_british_airways_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_02.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 2
     },
     {
@@ -1655,7 +1655,7 @@
       "sourceFile": "liveries/A380-800_emirates_2023_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 3
     },
     {
@@ -1666,7 +1666,7 @@
       "sourceFile": "liveries/A380-800_emirates_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_04.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 4
     },
     {
@@ -1677,7 +1677,7 @@
       "sourceFile": "liveries/A380-800_emirates_year_of_zayed_2018_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 5
     },
     {
@@ -1688,7 +1688,7 @@
       "sourceFile": "liveries/A380-800_korean_air_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 6
     },
     {
@@ -1699,7 +1699,7 @@
       "sourceFile": "liveries/A380-800_qantas_new_roo_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 7
     },
     {
@@ -1710,7 +1710,7 @@
       "sourceFile": "liveries/A380-800_qatar_airways_livery.jpg",
       "publicPath": "/assets/aircraft/a380/spot__a380-800_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:a380+variant:a380 800",
+      "matchedBy": "lead-type:A380→a380",
       "sortIndex": 8
     },
     {
@@ -1829,7 +1829,7 @@
       "sourceFile": "liveries/707-320C_american_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b707/spot__707-320c_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:707 320c",
+      "matchedBy": "lead-type:707→b707",
       "sortIndex": 3
     },
     {
@@ -1840,7 +1840,7 @@
       "sourceFile": "liveries/707-320C_continental_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b707/spot__707-320c_04.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:707 320c",
+      "matchedBy": "lead-type:707→b707",
       "sortIndex": 4
     },
     {
@@ -1851,7 +1851,7 @@
       "sourceFile": "liveries/707-320C_pan_am_livery.jpg",
       "publicPath": "/assets/aircraft/b707/spot__707-320c_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:707 320c",
+      "matchedBy": "lead-type:707→b707",
       "sortIndex": 5
     },
     {
@@ -1862,7 +1862,7 @@
       "sourceFile": "liveries/707-320C_twa_arrowhead_livery.jpg",
       "publicPath": "/assets/aircraft/b707/spot__707-320c_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:707 320c",
+      "matchedBy": "lead-type:707→b707",
       "sortIndex": 6
     },
     {
@@ -1873,7 +1873,7 @@
       "sourceFile": "liveries/707-338C_qantas_v-jet-livery.jpg",
       "publicPath": "/assets/aircraft/b707/spot__707-320c_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:707",
+      "matchedBy": "lead-type:707→b707",
       "sortIndex": 7
     },
     {
@@ -1908,7 +1908,7 @@
       "sourceFile": "liveries/717-200_hawaiian_hawaiian_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b717/spot__717-200_02.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:717",
+      "matchedBy": "lead-type:717→b717",
       "sortIndex": 2
     },
     {
@@ -1979,7 +1979,7 @@
       "sourceFile": "liveries/727-200_air_canada_1980_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 3
     },
     {
@@ -1990,7 +1990,7 @@
       "sourceFile": "liveries/727-200_alaska_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_04.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 4
     },
     {
@@ -2001,7 +2001,7 @@
       "sourceFile": "liveries/727-200_pan_am_billboard_v1_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 5
     },
     {
@@ -2012,7 +2012,7 @@
       "sourceFile": "liveries/727-200_pan_am_billboard_v2_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 6
     },
     {
@@ -2023,7 +2023,7 @@
       "sourceFile": "liveries/727-200_pan_am_billboard_v3_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 7
     },
     {
@@ -2034,7 +2034,7 @@
       "sourceFile": "liveries/727-200_qatar_airways_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 8
     },
     {
@@ -2045,7 +2045,7 @@
       "sourceFile": "liveries/727-200_sun_country_1996_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 9
     },
     {
@@ -2056,7 +2056,7 @@
       "sourceFile": "liveries/727-200_sun_country_original_livery_modified.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_10.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 10
     },
     {
@@ -2067,7 +2067,7 @@
       "sourceFile": "liveries/727-200_twa_dual_stripe_hollow_titles_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 11
     },
     {
@@ -2078,7 +2078,7 @@
       "sourceFile": "liveries/727-200_twa_dual_stripe_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_12.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 12
     },
     {
@@ -2089,7 +2089,7 @@
       "sourceFile": "liveries/727-200_united_wedge_livery.jpg",
       "publicPath": "/assets/aircraft/b727/spot__727-200_13.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:727 200",
+      "matchedBy": "lead-type:727→b727",
       "sortIndex": 13
     },
     {
@@ -2712,7 +2712,7 @@
       "sourceFile": "liveries/737-200ADV_air_canada_1994_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-200_29.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 200",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 29
     },
     {
@@ -2723,7 +2723,7 @@
       "sourceFile": "liveries/737-200ADV_air_new_zealand_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-200_30.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 200",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 30
     },
     {
@@ -2734,7 +2734,7 @@
       "sourceFile": "liveries/737-700_aeromexico_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-700_31.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 31
     },
     {
@@ -2745,7 +2745,7 @@
       "sourceFile": "liveries/737-700_alaska_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-700_32.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 32
     },
     {
@@ -2756,7 +2756,7 @@
       "sourceFile": "liveries/737-700_southwest_airlines_canyon_blue_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-700_33.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 33
     },
     {
@@ -2767,7 +2767,7 @@
       "sourceFile": "liveries/737-700_southwest_airlines_desert_gold_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-700_34.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 34
     },
     {
@@ -2778,18 +2778,18 @@
       "sourceFile": "liveries/737-700_sun_country_airlines_2001_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-700_35.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 35
     },
     {
-      "id": "b737-spot-36-737-700",
+      "id": "b737-spot-36-no-winglets",
       "aircraftId": "b737",
       "role": "spot",
-      "variant": "737-700",
+      "variant": "no winglets",
       "sourceFile": "liveries/737-700_sun_country_airlines_no_winglets_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__737-700_36.jpg",
+      "publicPath": "/assets/aircraft/b737/spot__no-winglets_36.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 700",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 36
     },
     {
@@ -2800,7 +2800,7 @@
       "sourceFile": "liveries/737-800_JAL_arc_of_the_sun_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_37.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 37
     },
     {
@@ -2811,7 +2811,7 @@
       "sourceFile": "liveries/737-800_JAL_tsurumaru_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_38.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 38
     },
     {
@@ -2822,7 +2822,7 @@
       "sourceFile": "liveries/737-800_KLM_new_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_39.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 39
     },
     {
@@ -2833,7 +2833,7 @@
       "sourceFile": "liveries/737-800_alaska_airlines_lei_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_40.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 40
     },
     {
@@ -2844,7 +2844,7 @@
       "sourceFile": "liveries/737-800_alaska_airlines_new_livery_white.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_41.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 41
     },
     {
@@ -2855,7 +2855,7 @@
       "sourceFile": "liveries/737-800_alaska_airlines_old_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_42.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 42
     },
     {
@@ -2866,7 +2866,7 @@
       "sourceFile": "liveries/737-800_american_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_43.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 43
     },
     {
@@ -2877,7 +2877,7 @@
       "sourceFile": "liveries/737-800_american_airlines_new_colors_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_44.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 44
     },
     {
@@ -2888,7 +2888,7 @@
       "sourceFile": "liveries/737-800_delta_delta_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_45.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 45
     },
     {
@@ -2899,7 +2899,7 @@
       "sourceFile": "liveries/737-800_qantas_new_roo_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_46.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 46
     },
     {
@@ -2910,7 +2910,7 @@
       "sourceFile": "liveries/737-800_qantas_retro_roo_II_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_47.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 47
     },
     {
@@ -2921,7 +2921,7 @@
       "sourceFile": "liveries/737-800_southwest_southwest_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_48.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 48
     },
     {
@@ -2932,7 +2932,7 @@
       "sourceFile": "liveries/737-800_sun_country_2001_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_49.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 49
     },
     {
@@ -2943,7 +2943,7 @@
       "sourceFile": "liveries/737-800_sun_country_2018_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-800_50.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 800",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 50
     },
     {
@@ -2954,7 +2954,7 @@
       "sourceFile": "liveries/737-8_MAX_air_canada_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-max-8_51.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 51
     },
     {
@@ -2965,7 +2965,7 @@
       "sourceFile": "liveries/737-900ER_alaska_airlines_2015_updated_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-900er_52.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 900er",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 52
     },
     {
@@ -2976,7 +2976,7 @@
       "sourceFile": "liveries/737-900ER_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-900er_53.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737 900er",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 53
     },
     {
@@ -2987,7 +2987,7 @@
       "sourceFile": "liveries/737-9_MAX_alaska_alaska_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-max-8_54.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 54
     },
     {
@@ -2998,7 +2998,7 @@
       "sourceFile": "liveries/737-9_MAX_united_2019_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-max-8_55.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 55
     },
     {
@@ -3009,239 +3009,30 @@
       "sourceFile": "liveries/737-9_MAX_united_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b737/spot__737-max-8_56.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:737",
+      "matchedBy": "lead-type:737→b737",
       "sortIndex": 56
     },
     {
-      "id": "b737-spot-57-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_air_canada_1994_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_57.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 57
-    },
-    {
-      "id": "b737-spot-58-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_air_new_zealand_2006_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_58.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 58
-    },
-    {
-      "id": "b737-spot-59-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_air_new_zealand_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_59.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 59
-    },
-    {
-      "id": "b737-spot-60-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_cathay_pacific_1971_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_60.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 60
-    },
-    {
-      "id": "b737-spot-61-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_cathay_pacific_1994_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_61.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 61
-    },
-    {
-      "id": "b737-spot-62-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_delta_delta_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_62.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 62
-    },
-    {
-      "id": "b737-spot-63-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_japan_airlines_1989_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_63.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 63
-    },
-    {
-      "id": "b737-spot-64-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_northwest_airlines_bowling_shoe_colors_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_64.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 64
-    },
-    {
-      "id": "b737-spot-65-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_northwest_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_65.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 65
-    },
-    {
-      "id": "b737-spot-66-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_northwest_airlines_original_colors_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_66.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 66
-    },
-    {
-      "id": "b737-spot-67-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_united_airlines_friend_ship_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_67.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 67
-    },
-    {
-      "id": "b737-spot-68-747-400",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "747-400",
-      "sourceFile": "liveries/747-400_united_airlines_full_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__747-400_68.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 400",
-      "sortIndex": 68
-    },
-    {
-      "id": "b737-spot-69-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_american_airlines_white_background_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_69.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 69
-    },
-    {
-      "id": "b737-spot-70-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_delta_colors_in_motion_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_70.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 70
-    },
-    {
-      "id": "b737-spot-71-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_delta_onwards_and_upwards_livery_with_winglets.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_71.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 71
-    },
-    {
-      "id": "b737-spot-72-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_delta_ron_allen_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_72.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 72
-    },
-    {
-      "id": "b737-spot-73-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_twa_1995_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_73.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 73
-    },
-    {
-      "id": "b737-spot-74-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_united_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_74.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 74
-    },
-    {
-      "id": "b737-spot-75-757-200",
-      "aircraftId": "b737",
-      "role": "spot",
-      "variant": "757-200",
-      "sourceFile": "liveries/757-200_united_airlines_with_winglets_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__757-200_75.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200",
-      "sortIndex": 75
-    },
-    {
-      "id": "b737-spot-76-737-900",
+      "id": "b737-spot-57-737-900",
       "aircraftId": "b737",
       "role": "spot",
       "variant": "737-900",
       "sourceFile": "liveries/United_Airlines_737-900_livery.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__737-900_76.jpg",
+      "publicPath": "/assets/aircraft/b737/spot__737-900_57.jpg",
       "attribution": "Norebbo airline livery illustration",
       "matchedBy": "alias:737 900",
-      "sortIndex": 76
+      "sortIndex": 57
     },
     {
-      "id": "b737-spot-77-737-max-8",
+      "id": "b737-spot-58-737-max-8",
       "aircraftId": "b737",
       "role": "spot",
       "variant": "737 MAX 8",
       "sourceFile": "liveries/new_united_livery_737.jpg",
-      "publicPath": "/assets/aircraft/b737/spot__737-max-8_77.jpg",
+      "publicPath": "/assets/aircraft/b737/spot__737-max-8_58.jpg",
       "attribution": "Norebbo airline livery illustration",
       "matchedBy": "alias:737",
-      "sortIndex": 77
+      "sortIndex": 58
     },
     {
       "id": "b747-diagram-01-boeing-747-100",
@@ -3647,7 +3438,7 @@
       "sourceFile": "liveries/747-100F_ups_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-100_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 100",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 19
     },
     {
@@ -3658,7 +3449,7 @@
       "sourceFile": "liveries/747-100_air_canada_1965_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-100_20.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 100",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 20
     },
     {
@@ -3669,7 +3460,7 @@
       "sourceFile": "liveries/747-100_japan_air_lines_1959_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-100_21.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 100",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 21
     },
     {
@@ -3680,7 +3471,7 @@
       "sourceFile": "liveries/747-100_united_freind_ship_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-100_22.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 100",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 22
     },
     {
@@ -3691,7 +3482,7 @@
       "sourceFile": "liveries/747-200_air_new_zealand_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-200_23.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 200",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 23
     },
     {
@@ -3702,30 +3493,162 @@
       "sourceFile": "liveries/747-200_cathay_pacific_livery.jpg",
       "publicPath": "/assets/aircraft/b747/spot__747-200_24.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 200",
+      "matchedBy": "lead-type:747→b747",
       "sortIndex": 24
     },
     {
-      "id": "b747-spot-25-747-8f",
+      "id": "b747-spot-25-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_air_canada_1994_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_25.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 25
+    },
+    {
+      "id": "b747-spot-26-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_air_new_zealand_2006_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_26.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 26
+    },
+    {
+      "id": "b747-spot-27-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_air_new_zealand_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_27.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 27
+    },
+    {
+      "id": "b747-spot-28-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_cathay_pacific_1971_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_28.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 28
+    },
+    {
+      "id": "b747-spot-29-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_cathay_pacific_1994_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_29.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 29
+    },
+    {
+      "id": "b747-spot-30-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_delta_delta_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_30.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 30
+    },
+    {
+      "id": "b747-spot-31-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_japan_airlines_1989_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_31.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 31
+    },
+    {
+      "id": "b747-spot-32-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_northwest_airlines_bowling_shoe_colors_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_32.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 32
+    },
+    {
+      "id": "b747-spot-33-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_northwest_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_33.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 33
+    },
+    {
+      "id": "b747-spot-34-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_northwest_airlines_original_colors_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_34.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 34
+    },
+    {
+      "id": "b747-spot-35-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_united_airlines_friend_ship_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_35.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 35
+    },
+    {
+      "id": "b747-spot-36-747-400",
+      "aircraftId": "b747",
+      "role": "spot",
+      "variant": "747-400",
+      "sourceFile": "liveries/747-400_united_airlines_full_livery.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-400_36.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 36
+    },
+    {
+      "id": "b747-spot-37-747-8f",
       "aircraftId": "b747",
       "role": "spot",
       "variant": "747-8F",
       "sourceFile": "liveries/747-8F_ups_2014_livery.jpg",
-      "publicPath": "/assets/aircraft/b747/spot__747-8f_25.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-8f_37.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 8f",
-      "sortIndex": 25
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 37
     },
     {
-      "id": "b747-spot-26-747-8i",
+      "id": "b747-spot-38-747-8i",
       "aircraftId": "b747",
       "role": "spot",
       "variant": "747-8i",
       "sourceFile": "liveries/747-8i_korean_air_livery.jpg",
-      "publicPath": "/assets/aircraft/b747/spot__747-8i_26.jpg",
+      "publicPath": "/assets/aircraft/b747/spot__747-8i_38.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:747 8i",
-      "sortIndex": 26
+      "matchedBy": "lead-type:747→b747",
+      "sortIndex": 38
     },
     {
       "id": "b757-diagram-01-boeing-757-200-plus-freighter-cargo-variants",
@@ -3927,19 +3850,96 @@
       "sourceFile": "liveries/757-200PF_ups_2014_livery.jpg",
       "publicPath": "/assets/aircraft/b757/spot__757-200pf_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 200pf",
+      "matchedBy": "lead-type:757→b757",
       "sortIndex": 11
     },
     {
-      "id": "b757-spot-12-757-300",
+      "id": "b757-spot-12-757-200",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "757-200",
+      "sourceFile": "liveries/757-200_american_airlines_white_background_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-200_12.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 12
+    },
+    {
+      "id": "b757-spot-13-757-200",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "757-200",
+      "sourceFile": "liveries/757-200_delta_colors_in_motion_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-200_13.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 13
+    },
+    {
+      "id": "b757-spot-14-winglets",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "winglets",
+      "sourceFile": "liveries/757-200_delta_onwards_and_upwards_livery_with_winglets.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__winglets_14.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 14
+    },
+    {
+      "id": "b757-spot-15-757-200",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "757-200",
+      "sourceFile": "liveries/757-200_delta_ron_allen_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-200_15.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 15
+    },
+    {
+      "id": "b757-spot-16-757-200",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "757-200",
+      "sourceFile": "liveries/757-200_twa_1995_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-200_16.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 16
+    },
+    {
+      "id": "b757-spot-17-757-200",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "757-200",
+      "sourceFile": "liveries/757-200_united_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-200_17.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 17
+    },
+    {
+      "id": "b757-spot-18-winglets",
+      "aircraftId": "b757",
+      "role": "spot",
+      "variant": "winglets",
+      "sourceFile": "liveries/757-200_united_airlines_with_winglets_livery.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__winglets_18.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 18
+    },
+    {
+      "id": "b757-spot-19-757-300",
       "aircraftId": "b757",
       "role": "spot",
       "variant": "757-300",
       "sourceFile": "liveries/757-300_delta_delta_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/b757/spot__757-300_12.jpg",
+      "publicPath": "/assets/aircraft/b757/spot__757-300_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:757 300",
-      "sortIndex": 12
+      "matchedBy": "lead-type:757→b757",
+      "sortIndex": 19
     },
     {
       "id": "b767-diagram-01-boeing-767-200",
@@ -3997,7 +3997,7 @@
       "sourceFile": "liveries/767-200_usair_side_profile_livery.jpg",
       "publicPath": "/assets/aircraft/b767/diagram__767-200_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 5
     },
     {
@@ -4068,7 +4068,7 @@
       "sourceFile": "liveries/767-200_air_canada_1980_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 6
     },
     {
@@ -4079,7 +4079,7 @@
       "sourceFile": "liveries/767-200_air_canada_1987_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 7
     },
     {
@@ -4090,7 +4090,7 @@
       "sourceFile": "liveries/767-200_american_airlines_bare_metal_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 8
     },
     {
@@ -4101,7 +4101,7 @@
       "sourceFile": "liveries/767-200_delta_widget_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 9
     },
     {
@@ -4112,7 +4112,7 @@
       "sourceFile": "liveries/767-200_piedmont_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_10.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 10
     },
     {
@@ -4123,7 +4123,7 @@
       "sourceFile": "liveries/767-200_twa_dual_stripe_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-200_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 200",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 11
     },
     {
@@ -4134,7 +4134,7 @@
       "sourceFile": "liveries/767-300F_ups_2003_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-300f_12.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 300f",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 12
     },
     {
@@ -4145,7 +4145,7 @@
       "sourceFile": "liveries/767-300_air_canada_toothpaste_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-300_13.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 300",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 13
     },
     {
@@ -4156,18 +4156,18 @@
       "sourceFile": "liveries/767-300_hawaiian_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-300_14.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 300",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 14
     },
     {
-      "id": "b767-spot-15-767-300",
+      "id": "b767-spot-15-no-winglets",
       "aircraftId": "b767",
       "role": "spot",
-      "variant": "767-300",
+      "variant": "no winglets",
       "sourceFile": "liveries/767-300_hawaiian_airlines_no_winglets_livery.jpg",
-      "publicPath": "/assets/aircraft/b767/spot__767-300_15.jpg",
+      "publicPath": "/assets/aircraft/b767/spot__no-winglets_15.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 300",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 15
     },
     {
@@ -4178,7 +4178,7 @@
       "sourceFile": "liveries/767-300_united_airlines_new_livery.jpg",
       "publicPath": "/assets/aircraft/b767/spot__767-300_16.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:767 300",
+      "matchedBy": "lead-type:767→b767",
       "sortIndex": 16
     },
     {
@@ -4344,7 +4344,7 @@
       "sourceFile": "liveries/777-200LR_american_airlines_new_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 7
     },
     {
@@ -4355,7 +4355,7 @@
       "sourceFile": "liveries/777-200LR_oneworld_american_airlines_white_background_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 8
     },
     {
@@ -4366,7 +4366,7 @@
       "sourceFile": "liveries/777-200LR_united_star_alliance_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 9
     },
     {
@@ -4377,7 +4377,7 @@
       "sourceFile": "liveries/777-200_british_airways_1024_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_10.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 10
     },
     {
@@ -4388,7 +4388,7 @@
       "sourceFile": "liveries/777-200_cathay_pacific_1994_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 11
     },
     {
@@ -4399,7 +4399,7 @@
       "sourceFile": "liveries/777-200_emirates_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_12.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 12
     },
     {
@@ -4410,7 +4410,7 @@
       "sourceFile": "liveries/777-200_klm_asia_new_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_13.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 13
     },
     {
@@ -4421,7 +4421,7 @@
       "sourceFile": "liveries/777-200_united_airlines_2019_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_14.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 14
     },
     {
@@ -4432,7 +4432,7 @@
       "sourceFile": "liveries/777-200_united_battleship_gray_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_15.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 15
     },
     {
@@ -4443,7 +4443,7 @@
       "sourceFile": "liveries/777-200_united_blue_tulip_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-200_16.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 200",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 16
     },
     {
@@ -4454,7 +4454,7 @@
       "sourceFile": "liveries/777-300ER_qatar_airways_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300er_17.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300er",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 17
     },
     {
@@ -4465,7 +4465,7 @@
       "sourceFile": "liveries/777-300ER_qatar_airways_retro_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300er_18.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300er",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 18
     },
     {
@@ -4476,7 +4476,7 @@
       "sourceFile": "liveries/777-300_ANA_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 19
     },
     {
@@ -4487,7 +4487,7 @@
       "sourceFile": "liveries/777-300_air_canada_toothpaste_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_20.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 20
     },
     {
@@ -4498,7 +4498,7 @@
       "sourceFile": "liveries/777-300_air_new_zealand_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_21.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 21
     },
     {
@@ -4509,7 +4509,7 @@
       "sourceFile": "liveries/777-300_american_airlines_new_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_22.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 22
     },
     {
@@ -4520,7 +4520,7 @@
       "sourceFile": "liveries/777-300_cathay_pacific_1994_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_23.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 23
     },
     {
@@ -4531,7 +4531,7 @@
       "sourceFile": "liveries/777-300_cathay_pacific_2015_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_24.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 24
     },
     {
@@ -4542,7 +4542,7 @@
       "sourceFile": "liveries/777-300_korean_air_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_25.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 25
     },
     {
@@ -4553,7 +4553,7 @@
       "sourceFile": "liveries/777-300_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b777/spot__777-300_26.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:777 300",
+      "matchedBy": "lead-type:777→b777",
       "sortIndex": 26
     },
     {
@@ -4648,7 +4648,7 @@
       "sourceFile": "liveries/787-10_korean_air_new_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-10_04.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 10",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 4
     },
     {
@@ -4659,7 +4659,7 @@
       "sourceFile": "liveries/787-8_ANA_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 5
     },
     {
@@ -4670,7 +4670,7 @@
       "sourceFile": "liveries/787-8_ANA_special_launch_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 6
     },
     {
@@ -4681,7 +4681,7 @@
       "sourceFile": "liveries/787-8_aeromexico_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 7
     },
     {
@@ -4692,7 +4692,7 @@
       "sourceFile": "liveries/787-8_air-india_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 8
     },
     {
@@ -4703,7 +4703,7 @@
       "sourceFile": "liveries/787-8_american_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 9
     },
     {
@@ -4714,7 +4714,7 @@
       "sourceFile": "liveries/787-8_japan_airlines_tsurumaru_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_10.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 10
     },
     {
@@ -4725,7 +4725,7 @@
       "sourceFile": "liveries/787-8_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_11.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 11
     },
     {
@@ -4736,7 +4736,7 @@
       "sourceFile": "liveries/787-8_united_airlines_retro_illustration_saul_bass_united_airlines_787_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_12.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 12
     },
     {
@@ -4747,7 +4747,7 @@
       "sourceFile": "liveries/787-8_united_airlines_retro_illustration_v2_saul_bass_united_airlines_787_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-8_13.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 8",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 13
     },
     {
@@ -4758,7 +4758,7 @@
       "sourceFile": "liveries/787-9_air_canada_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_14.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 14
     },
     {
@@ -4769,7 +4769,7 @@
       "sourceFile": "liveries/787-9_air_new_zealand_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_15.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 15
     },
     {
@@ -4780,7 +4780,7 @@
       "sourceFile": "liveries/787-9_alaska-airlines-livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_16.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 16
     },
     {
@@ -4791,7 +4791,7 @@
       "sourceFile": "liveries/787-9_american_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_17.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 17
     },
     {
@@ -4802,7 +4802,7 @@
       "sourceFile": "liveries/787-9_etihad-new-livery-white-background.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_18.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 18
     },
     {
@@ -4813,7 +4813,7 @@
       "sourceFile": "liveries/787-9_hawaiian_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_19.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 19
     },
     {
@@ -4824,7 +4824,7 @@
       "sourceFile": "liveries/787-9_qantas_livery.jpg",
       "publicPath": "/assets/aircraft/b787/spot__787-9_20.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:787 9",
+      "matchedBy": "lead-type:787→b787",
       "sortIndex": 20
     },
     {
@@ -5159,7 +5159,7 @@
       "sourceFile": "liveries/CRJ-200_united_express_2019_livery.jpg",
       "publicPath": "/assets/aircraft/crj/spot__crj-200_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:crj+variant:crj 200",
+      "matchedBy": "lead-type:CRJ-200→crj",
       "sortIndex": 5
     },
     {
@@ -5385,7 +5385,7 @@
       "sourceFile": "liveries/DC-4_continental_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/dc4/spot__dc-4_02.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc4+variant:dc 4",
+      "matchedBy": "lead-type:DC-4→dc4",
       "sortIndex": 2
     },
     {
@@ -5503,7 +5503,7 @@
       "sourceFile": "liveries/DC-8-52_air_new_zealand_1965_livery.jpg",
       "publicPath": "/assets/aircraft/dc8/spot_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc8",
+      "matchedBy": "lead-type:DC-8→dc8",
       "sortIndex": 5
     },
     {
@@ -5513,7 +5513,7 @@
       "sourceFile": "liveries/DC-8-52_air_new_zealand_1973_livery.jpg",
       "publicPath": "/assets/aircraft/dc8/spot_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc8",
+      "matchedBy": "lead-type:DC-8→dc8",
       "sortIndex": 6
     },
     {
@@ -5524,7 +5524,7 @@
       "sourceFile": "liveries/DC-8-53_japan_air_lines-dc-8-livery.jpg",
       "publicPath": "/assets/aircraft/dc8/spot__dc-8-53_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc8+variant:dc 8 53",
+      "matchedBy": "lead-type:DC-8→dc8",
       "sortIndex": 7
     },
     {
@@ -5534,7 +5534,7 @@
       "sourceFile": "liveries/DC-8-60_air_canada_1965_livery.jpg",
       "publicPath": "/assets/aircraft/dc8/spot_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc8",
+      "matchedBy": "lead-type:DC-8→dc8",
       "sortIndex": 8
     },
     {
@@ -5545,7 +5545,7 @@
       "sourceFile": "liveries/DC-8-73CF_ups_livery.jpg",
       "publicPath": "/assets/aircraft/dc8/spot__dc-8-73cf_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc8+variant:dc 8 73cf",
+      "matchedBy": "lead-type:DC-8→dc8",
       "sortIndex": 9
     },
     {
@@ -5724,18 +5724,58 @@
       "sourceFile": "liveries/E195_breeze_airways_livery_white_background.jpg",
       "publicPath": "/assets/aircraft/e190/spot__e195_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:e195+variant:e195",
+      "matchedBy": "lead-type:E195→e190",
       "sortIndex": 6
     },
     {
       "id": "e190-spot-07",
       "aircraftId": "e190",
       "role": "spot",
-      "sourceFile": "liveries/ERJ-190_southwest_white_background_southwest_airlines_livery.jpg",
+      "sourceFile": "liveries/ERJ-175_alaska_airlines_new_livery.jpg",
       "publicPath": "/assets/aircraft/e190/spot_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:erj 190",
+      "matchedBy": "lead-type:ERJ-175→e190",
       "sortIndex": 7
+    },
+    {
+      "id": "e190-spot-08",
+      "aircraftId": "e190",
+      "role": "spot",
+      "sourceFile": "liveries/ERJ-175_american_eagle_1024_american_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/e190/spot_08.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:ERJ-175→e190",
+      "sortIndex": 8
+    },
+    {
+      "id": "e190-spot-09",
+      "aircraftId": "e190",
+      "role": "spot",
+      "sourceFile": "liveries/ERJ-175_delta_connection_delta_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/e190/spot_09.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:ERJ-175→e190",
+      "sortIndex": 9
+    },
+    {
+      "id": "e190-spot-10",
+      "aircraftId": "e190",
+      "role": "spot",
+      "sourceFile": "liveries/ERJ-175_united_express_livery.jpg",
+      "publicPath": "/assets/aircraft/e190/spot_10.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:ERJ-175→e190",
+      "sortIndex": 10
+    },
+    {
+      "id": "e190-spot-11",
+      "aircraftId": "e190",
+      "role": "spot",
+      "sourceFile": "liveries/ERJ-190_southwest_white_background_southwest_airlines_livery.jpg",
+      "publicPath": "/assets/aircraft/e190/spot_11.jpg",
+      "attribution": "Norebbo airline livery illustration",
+      "matchedBy": "lead-type:ERJ-190→e190",
+      "sortIndex": 11
     },
     {
       "id": "emb120-spot-01-emb-120",
@@ -5745,7 +5785,7 @@
       "sourceFile": "liveries/EMB-120_united_express_blue_united_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/emb120/spot__emb-120_01.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:emb120+variant:emb 120",
+      "matchedBy": "lead-type:EMB-120→emb120",
       "sortIndex": 1
     },
     {
@@ -5927,50 +5967,6 @@
       "attribution": "User provided (Norebbo pack)",
       "matchedBy": "sheet-stem:Embraer-ERJ-175→row 112",
       "sortIndex": 6
-    },
-    {
-      "id": "erj145-spot-07-erj-175",
-      "aircraftId": "erj145",
-      "role": "spot",
-      "variant": "ERJ-175",
-      "sourceFile": "liveries/ERJ-175_alaska_airlines_new_livery.jpg",
-      "publicPath": "/assets/aircraft/erj145/spot__erj-175_07.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:erj 175",
-      "sortIndex": 7
-    },
-    {
-      "id": "erj145-spot-08-erj-175",
-      "aircraftId": "erj145",
-      "role": "spot",
-      "variant": "ERJ-175",
-      "sourceFile": "liveries/ERJ-175_american_eagle_1024_american_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/erj145/spot__erj-175_08.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:erj 175",
-      "sortIndex": 8
-    },
-    {
-      "id": "erj145-spot-09-erj-175",
-      "aircraftId": "erj145",
-      "role": "spot",
-      "variant": "ERJ-175",
-      "sourceFile": "liveries/ERJ-175_delta_connection_delta_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/erj145/spot__erj-175_09.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:erj 175",
-      "sortIndex": 9
-    },
-    {
-      "id": "erj145-spot-10-erj-175",
-      "aircraftId": "erj145",
-      "role": "spot",
-      "variant": "ERJ-175",
-      "sourceFile": "liveries/ERJ-175_united_express_livery.jpg",
-      "publicPath": "/assets/aircraft/erj145/spot__erj-175_10.jpg",
-      "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:erj 175",
-      "sortIndex": 10
     },
     {
       "id": "falcon50-diagram-01-dassault-falcon-50-50ex",
@@ -6304,7 +6300,7 @@
       "sourceFile": "liveries/L-1011-1_TWA_1995_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l 1011 1",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 3
     },
     {
@@ -6315,7 +6311,7 @@
       "sourceFile": "liveries/L-1011-1_TWA_arrowhead_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_04.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l 1011 1",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 4
     },
     {
@@ -6326,7 +6322,7 @@
       "sourceFile": "liveries/L-1011-1_TWA_dual_stripe_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_05.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l 1011 1",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 5
     },
     {
@@ -6337,7 +6333,7 @@
       "sourceFile": "liveries/L-1011-1_eastern_airlines_thin_stripe_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l 1011 1",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 6
     },
     {
@@ -6348,7 +6344,7 @@
       "sourceFile": "liveries/L-1011-1_eastern_airlines_white_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l 1011 1",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 7
     },
     {
@@ -6359,7 +6355,7 @@
       "sourceFile": "liveries/L-1011-385_cathay_pacific_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-500_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l101",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 8
     },
     {
@@ -6370,7 +6366,7 @@
       "sourceFile": "liveries/L-1011-385_hawaiian_hawaiian_airlines_livery.jpg",
       "publicPath": "/assets/aircraft/l1011/spot__l-1011-500_09.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:l1011+variant:l101",
+      "matchedBy": "lead-type:L-1011→l1011",
       "sortIndex": 9
     },
     {
@@ -6525,7 +6521,7 @@
       "sourceFile": "liveries/MD-11F_ups_2014_livery.jpg",
       "publicPath": "/assets/aircraft/md11/spot__md-11f_03.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:md11+variant:md 11f",
+      "matchedBy": "lead-type:MD-11→md11",
       "sortIndex": 3
     },
     {
@@ -6649,25 +6645,24 @@
       "sortIndex": 5
     },
     {
-      "id": "md80-spot-06-dc-9-30",
+      "id": "md80-spot-06-md-87",
       "aircraftId": "md80",
       "role": "spot",
-      "variant": "DC-9-30",
+      "variant": "MD-87",
       "sourceFile": "liveries/DC-9-30_air_canada_1987_livery.jpg",
-      "publicPath": "/assets/aircraft/md80/spot__dc-9-30_06.jpg",
+      "publicPath": "/assets/aircraft/md80/spot__md-87_06.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc 9 30",
+      "matchedBy": "lead-type:DC-9→md80",
       "sortIndex": 6
     },
     {
-      "id": "md80-spot-07-dc-9-50",
+      "id": "md80-spot-07",
       "aircraftId": "md80",
       "role": "spot",
-      "variant": "DC-9-50",
       "sourceFile": "liveries/DC-9-50_hawaiian-copy_hawaiian_airlines_livery.jpg",
-      "publicPath": "/assets/aircraft/md80/spot__dc-9-50_07.jpg",
+      "publicPath": "/assets/aircraft/md80/spot_07.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:dc 9 50",
+      "matchedBy": "lead-type:DC-9→md80",
       "sortIndex": 7
     },
     {
@@ -6678,7 +6673,7 @@
       "sourceFile": "liveries/MD-83_american_airlines_bare_metal_livery.jpg",
       "publicPath": "/assets/aircraft/md80/spot__md-83_08.jpg",
       "attribution": "Norebbo airline livery illustration",
-      "matchedBy": "alias:md83+variant:md83",
+      "matchedBy": "lead-type:MD-83→md80",
       "sortIndex": 8
     },
     {
@@ -6885,7 +6880,7 @@
           "sourceFile": "liveries/A220-300_korean_air_livery.jpg",
           "publicPath": "/assets/aircraft/a220/spot__a220-300_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a220+variant:a220 300",
+          "matchedBy": "lead-type:A220→a220",
           "sortIndex": 6
         }
       ],
@@ -6939,7 +6934,7 @@
           "sourceFile": "liveries/A300-600F_ups_2003_livery.jpg",
           "publicPath": "/assets/aircraft/a300/spot__a300-600f_02.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a300+variant:a300 600f",
+          "matchedBy": "lead-type:A300→a300",
           "sortIndex": 2
         },
         {
@@ -6950,7 +6945,7 @@
           "sourceFile": "liveries/A300B4-600R_emirates_livery.jpg",
           "publicPath": "/assets/aircraft/a300/spot__a300b4_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a300+variant:a300b4",
+          "matchedBy": "lead-type:A300→a300",
           "sortIndex": 3
         }
       ],
@@ -7192,7 +7187,7 @@
           "sourceFile": "liveries/A319_Spirit_blue_and_white_spirit_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_14.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 14
         },
         {
@@ -7203,7 +7198,7 @@
           "sourceFile": "liveries/A319_Spirit_silver_and_gray_pixels_spirit_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_15.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 15
         },
         {
@@ -7214,7 +7209,7 @@
           "sourceFile": "liveries/A319_Spirit_yellow_spirit_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_16.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 16
         },
         {
@@ -7225,7 +7220,7 @@
           "sourceFile": "liveries/A319_american_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_17.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 17
         },
         {
@@ -7236,7 +7231,7 @@
           "sourceFile": "liveries/A319_united_new_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_18.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 18
         },
         {
@@ -7247,7 +7242,7 @@
           "sourceFile": "liveries/A319_virgin_america_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a319_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 19
         },
         {
@@ -7258,7 +7253,7 @@
           "sourceFile": "liveries/A320_ANA_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_20.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 20
         },
         {
@@ -7269,7 +7264,7 @@
           "sourceFile": "liveries/A320_air_canada_toothpaste_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_21.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 21
         },
         {
@@ -7280,7 +7275,7 @@
           "sourceFile": "liveries/A320_pan_am_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_22.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 22
         },
         {
@@ -7291,7 +7286,7 @@
           "sourceFile": "liveries/A320_qatar_airways_old_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_23.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 23
         },
         {
@@ -7302,7 +7297,7 @@
           "sourceFile": "liveries/A320_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_24.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 24
         },
         {
@@ -7313,7 +7308,7 @@
           "sourceFile": "liveries/A320_virgin_america_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_25.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 25
         },
         {
@@ -7324,7 +7319,7 @@
           "sourceFile": "liveries/A320_virgin_america_winglets_livery.jpg",
           "publicPath": "/assets/aircraft/a320/spot__a320_26.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a320+a320-prefer+variant:a320",
+          "matchedBy": "lead-type:A320→a320",
           "sortIndex": 26
         },
         {
@@ -7492,7 +7487,7 @@
           "sourceFile": "liveries/A319_allegiant_air_side_profile_livery.jpg",
           "publicPath": "/assets/aircraft/a320/diagram__a319_13.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a319+a320-prefer+variant:a319",
+          "matchedBy": "lead-type:A319→a320",
           "sortIndex": 13
         }
       ],
@@ -7628,7 +7623,7 @@
           "sourceFile": "liveries/A321LR_jetblue-streamers-tail-design-white-background_livery.jpg",
           "publicPath": "/assets/aircraft/a321/spot__a321lr_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a321+a321-prefer+variant:a321lr",
+          "matchedBy": "lead-type:A321→a321",
           "sortIndex": 11
         },
         {
@@ -7639,7 +7634,7 @@
           "sourceFile": "liveries/A321_air_canada_sharklets_livery.jpg",
           "publicPath": "/assets/aircraft/a321/spot__sharklets_12.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a321+a321-prefer+variant:sharklets",
+          "matchedBy": "lead-type:A321→a321",
           "sortIndex": 12
         },
         {
@@ -7775,14 +7770,14 @@
           "sortIndex": 9
         },
         {
-          "id": "a321-diagram-10-neo",
+          "id": "a321-diagram-10-a321neo",
           "aircraftId": "a321",
           "role": "diagram",
-          "variant": "neo",
+          "variant": "A321neo",
           "sourceFile": "liveries/A321neo_delta_side_view_delta_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/a321/diagram__neo_10.jpg",
+          "publicPath": "/assets/aircraft/a321/diagram__a321neo_10.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a321+a321-prefer+variant:a321 neo",
+          "matchedBy": "lead-type:A321→a321",
           "sortIndex": 10
         }
       ],
@@ -7978,7 +7973,7 @@
           "sourceFile": "liveries/A330-200_hawaiian_airlines_2017_livery.jpg",
           "publicPath": "/assets/aircraft/a330/spot__a330-200_16.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a330+variant:a330 200",
+          "matchedBy": "lead-type:A330→a330",
           "sortIndex": 16
         },
         {
@@ -7989,7 +7984,7 @@
           "sourceFile": "liveries/A330-200_hawaiian_airlines_v2_livery.jpg",
           "publicPath": "/assets/aircraft/a330/spot__a330-200_17.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a330+variant:a330 200",
+          "matchedBy": "lead-type:A330→a330",
           "sortIndex": 17
         },
         {
@@ -8000,7 +7995,7 @@
           "sourceFile": "liveries/A330-300_delta_delta_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a330/spot__a330-300_18.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a330+variant:a330 300",
+          "matchedBy": "lead-type:A330→a330",
           "sortIndex": 18
         },
         {
@@ -8011,7 +8006,7 @@
           "sourceFile": "liveries/A330-300_korean_air_livery.jpg",
           "publicPath": "/assets/aircraft/a330/spot__a330-300_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a330+variant:a330 300",
+          "matchedBy": "lead-type:A330→a330",
           "sortIndex": 19
         },
         {
@@ -8022,7 +8017,7 @@
           "sourceFile": "liveries/A330-900neo_delta_livery.jpg",
           "publicPath": "/assets/aircraft/a330/spot__a330-900_20.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a330+variant:a330 900",
+          "matchedBy": "lead-type:A330→a330",
           "sortIndex": 20
         }
       ],
@@ -8232,7 +8227,7 @@
           "sourceFile": "liveries/A340-300_air_canada_1994_livery.jpg",
           "publicPath": "/assets/aircraft/a340/spot__a340-300_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a340+variant:a340 300",
+          "matchedBy": "lead-type:A340→a340",
           "sortIndex": 7
         }
       ],
@@ -8346,7 +8341,7 @@
           "sourceFile": "liveries/A350-1000_british_airways_livery-1.jpg",
           "publicPath": "/assets/aircraft/a350/spot__a350-1000_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a350+variant:a350 1000",
+          "matchedBy": "lead-type:A350→a350",
           "sortIndex": 5
         },
         {
@@ -8357,7 +8352,7 @@
           "sourceFile": "liveries/A350-900_cathay_pacific_livery.jpg",
           "publicPath": "/assets/aircraft/a350/spot__a350-900_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a350+variant:a350 900",
+          "matchedBy": "lead-type:A350→a350",
           "sortIndex": 6
         },
         {
@@ -8368,7 +8363,7 @@
           "sourceFile": "liveries/A350-900_continental_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a350/spot__a350-900_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a350+variant:a350 900",
+          "matchedBy": "lead-type:A350→a350",
           "sortIndex": 7
         },
         {
@@ -8379,7 +8374,7 @@
           "sourceFile": "liveries/A350-900_delta_air_lines_delta_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/a350/spot__a350-900_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a350+variant:a350 900",
+          "matchedBy": "lead-type:A350→a350",
           "sortIndex": 8
         },
         {
@@ -8390,7 +8385,7 @@
           "sourceFile": "liveries/A350-900_qatar_airways_livery.jpg",
           "publicPath": "/assets/aircraft/a350/spot__a350-900_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a350+variant:a350 900",
+          "matchedBy": "lead-type:A350→a350",
           "sortIndex": 9
         },
         {
@@ -8492,7 +8487,7 @@
           "sourceFile": "liveries/A380-800_british_airways_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_02.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 2
         },
         {
@@ -8503,7 +8498,7 @@
           "sourceFile": "liveries/A380-800_emirates_2023_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 3
         },
         {
@@ -8514,7 +8509,7 @@
           "sourceFile": "liveries/A380-800_emirates_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_04.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 4
         },
         {
@@ -8525,7 +8520,7 @@
           "sourceFile": "liveries/A380-800_emirates_year_of_zayed_2018_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 5
         },
         {
@@ -8536,7 +8531,7 @@
           "sourceFile": "liveries/A380-800_korean_air_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 6
         },
         {
@@ -8547,7 +8542,7 @@
           "sourceFile": "liveries/A380-800_qantas_new_roo_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 7
         },
         {
@@ -8558,7 +8553,7 @@
           "sourceFile": "liveries/A380-800_qatar_airways_livery.jpg",
           "publicPath": "/assets/aircraft/a380/spot__a380-800_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 8
         }
       ],
@@ -8585,7 +8580,7 @@
           "sourceFile": "liveries/A380-800_emirates_new_vs_old_livery_comparison.jpg",
           "publicPath": "/assets/aircraft/a380/comparison__a380-800_01.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:a380+variant:a380 800",
+          "matchedBy": "lead-type:A380→a380",
           "sortIndex": 1
         }
       ]
@@ -8686,7 +8681,7 @@
           "sourceFile": "liveries/707-320C_american_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b707/spot__707-320c_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:707 320c",
+          "matchedBy": "lead-type:707→b707",
           "sortIndex": 3
         },
         {
@@ -8697,7 +8692,7 @@
           "sourceFile": "liveries/707-320C_continental_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b707/spot__707-320c_04.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:707 320c",
+          "matchedBy": "lead-type:707→b707",
           "sortIndex": 4
         },
         {
@@ -8708,7 +8703,7 @@
           "sourceFile": "liveries/707-320C_pan_am_livery.jpg",
           "publicPath": "/assets/aircraft/b707/spot__707-320c_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:707 320c",
+          "matchedBy": "lead-type:707→b707",
           "sortIndex": 5
         },
         {
@@ -8719,7 +8714,7 @@
           "sourceFile": "liveries/707-320C_twa_arrowhead_livery.jpg",
           "publicPath": "/assets/aircraft/b707/spot__707-320c_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:707 320c",
+          "matchedBy": "lead-type:707→b707",
           "sortIndex": 6
         },
         {
@@ -8730,7 +8725,7 @@
           "sourceFile": "liveries/707-338C_qantas_v-jet-livery.jpg",
           "publicPath": "/assets/aircraft/b707/spot__707-320c_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:707",
+          "matchedBy": "lead-type:707→b707",
           "sortIndex": 7
         }
       ],
@@ -8797,7 +8792,7 @@
           "sourceFile": "liveries/717-200_hawaiian_hawaiian_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b717/spot__717-200_02.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:717",
+          "matchedBy": "lead-type:717→b717",
           "sortIndex": 2
         }
       ],
@@ -8851,7 +8846,7 @@
           "sourceFile": "liveries/727-200_air_canada_1980_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 3
         },
         {
@@ -8862,7 +8857,7 @@
           "sourceFile": "liveries/727-200_alaska_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_04.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 4
         },
         {
@@ -8873,7 +8868,7 @@
           "sourceFile": "liveries/727-200_pan_am_billboard_v1_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 5
         },
         {
@@ -8884,7 +8879,7 @@
           "sourceFile": "liveries/727-200_pan_am_billboard_v2_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 6
         },
         {
@@ -8895,7 +8890,7 @@
           "sourceFile": "liveries/727-200_pan_am_billboard_v3_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 7
         },
         {
@@ -8906,7 +8901,7 @@
           "sourceFile": "liveries/727-200_qatar_airways_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 8
         },
         {
@@ -8917,7 +8912,7 @@
           "sourceFile": "liveries/727-200_sun_country_1996_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 9
         },
         {
@@ -8928,7 +8923,7 @@
           "sourceFile": "liveries/727-200_sun_country_original_livery_modified.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_10.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 10
         },
         {
@@ -8939,7 +8934,7 @@
           "sourceFile": "liveries/727-200_twa_dual_stripe_hollow_titles_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 11
         },
         {
@@ -8950,7 +8945,7 @@
           "sourceFile": "liveries/727-200_twa_dual_stripe_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_12.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 12
         },
         {
@@ -8961,7 +8956,7 @@
           "sourceFile": "liveries/727-200_united_wedge_livery.jpg",
           "publicPath": "/assets/aircraft/b727/spot__727-200_13.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:727 200",
+          "matchedBy": "lead-type:727→b727",
           "sortIndex": 13
         }
       ],
@@ -9352,7 +9347,7 @@
           "sourceFile": "liveries/737-200ADV_air_canada_1994_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-200_29.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 200",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 29
         },
         {
@@ -9363,7 +9358,7 @@
           "sourceFile": "liveries/737-200ADV_air_new_zealand_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-200_30.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 200",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 30
         },
         {
@@ -9374,7 +9369,7 @@
           "sourceFile": "liveries/737-700_aeromexico_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-700_31.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 31
         },
         {
@@ -9385,7 +9380,7 @@
           "sourceFile": "liveries/737-700_alaska_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-700_32.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 32
         },
         {
@@ -9396,7 +9391,7 @@
           "sourceFile": "liveries/737-700_southwest_airlines_canyon_blue_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-700_33.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 33
         },
         {
@@ -9407,7 +9402,7 @@
           "sourceFile": "liveries/737-700_southwest_airlines_desert_gold_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-700_34.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 34
         },
         {
@@ -9418,18 +9413,18 @@
           "sourceFile": "liveries/737-700_sun_country_airlines_2001_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-700_35.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 35
         },
         {
-          "id": "b737-spot-36-737-700",
+          "id": "b737-spot-36-no-winglets",
           "aircraftId": "b737",
           "role": "spot",
-          "variant": "737-700",
+          "variant": "no winglets",
           "sourceFile": "liveries/737-700_sun_country_airlines_no_winglets_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__737-700_36.jpg",
+          "publicPath": "/assets/aircraft/b737/spot__no-winglets_36.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 700",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 36
         },
         {
@@ -9440,7 +9435,7 @@
           "sourceFile": "liveries/737-800_JAL_arc_of_the_sun_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_37.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 37
         },
         {
@@ -9451,7 +9446,7 @@
           "sourceFile": "liveries/737-800_JAL_tsurumaru_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_38.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 38
         },
         {
@@ -9462,7 +9457,7 @@
           "sourceFile": "liveries/737-800_KLM_new_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_39.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 39
         },
         {
@@ -9473,7 +9468,7 @@
           "sourceFile": "liveries/737-800_alaska_airlines_lei_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_40.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 40
         },
         {
@@ -9484,7 +9479,7 @@
           "sourceFile": "liveries/737-800_alaska_airlines_new_livery_white.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_41.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 41
         },
         {
@@ -9495,7 +9490,7 @@
           "sourceFile": "liveries/737-800_alaska_airlines_old_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_42.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 42
         },
         {
@@ -9506,7 +9501,7 @@
           "sourceFile": "liveries/737-800_american_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_43.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 43
         },
         {
@@ -9517,7 +9512,7 @@
           "sourceFile": "liveries/737-800_american_airlines_new_colors_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_44.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 44
         },
         {
@@ -9528,7 +9523,7 @@
           "sourceFile": "liveries/737-800_delta_delta_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_45.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 45
         },
         {
@@ -9539,7 +9534,7 @@
           "sourceFile": "liveries/737-800_qantas_new_roo_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_46.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 46
         },
         {
@@ -9550,7 +9545,7 @@
           "sourceFile": "liveries/737-800_qantas_retro_roo_II_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_47.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 47
         },
         {
@@ -9561,7 +9556,7 @@
           "sourceFile": "liveries/737-800_southwest_southwest_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_48.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 48
         },
         {
@@ -9572,7 +9567,7 @@
           "sourceFile": "liveries/737-800_sun_country_2001_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_49.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 49
         },
         {
@@ -9583,7 +9578,7 @@
           "sourceFile": "liveries/737-800_sun_country_2018_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-800_50.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 800",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 50
         },
         {
@@ -9594,7 +9589,7 @@
           "sourceFile": "liveries/737-8_MAX_air_canada_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-max-8_51.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 51
         },
         {
@@ -9605,7 +9600,7 @@
           "sourceFile": "liveries/737-900ER_alaska_airlines_2015_updated_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-900er_52.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 900er",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 52
         },
         {
@@ -9616,7 +9611,7 @@
           "sourceFile": "liveries/737-900ER_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-900er_53.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737 900er",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 53
         },
         {
@@ -9627,7 +9622,7 @@
           "sourceFile": "liveries/737-9_MAX_alaska_alaska_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-max-8_54.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 54
         },
         {
@@ -9638,7 +9633,7 @@
           "sourceFile": "liveries/737-9_MAX_united_2019_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-max-8_55.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 55
         },
         {
@@ -9649,239 +9644,30 @@
           "sourceFile": "liveries/737-9_MAX_united_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b737/spot__737-max-8_56.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:737",
+          "matchedBy": "lead-type:737→b737",
           "sortIndex": 56
         },
         {
-          "id": "b737-spot-57-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_air_canada_1994_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_57.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 57
-        },
-        {
-          "id": "b737-spot-58-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_air_new_zealand_2006_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_58.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 58
-        },
-        {
-          "id": "b737-spot-59-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_air_new_zealand_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_59.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 59
-        },
-        {
-          "id": "b737-spot-60-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_cathay_pacific_1971_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_60.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 60
-        },
-        {
-          "id": "b737-spot-61-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_cathay_pacific_1994_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_61.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 61
-        },
-        {
-          "id": "b737-spot-62-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_delta_delta_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_62.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 62
-        },
-        {
-          "id": "b737-spot-63-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_japan_airlines_1989_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_63.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 63
-        },
-        {
-          "id": "b737-spot-64-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_northwest_airlines_bowling_shoe_colors_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_64.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 64
-        },
-        {
-          "id": "b737-spot-65-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_northwest_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_65.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 65
-        },
-        {
-          "id": "b737-spot-66-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_northwest_airlines_original_colors_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_66.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 66
-        },
-        {
-          "id": "b737-spot-67-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_united_airlines_friend_ship_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_67.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 67
-        },
-        {
-          "id": "b737-spot-68-747-400",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "747-400",
-          "sourceFile": "liveries/747-400_united_airlines_full_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__747-400_68.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 400",
-          "sortIndex": 68
-        },
-        {
-          "id": "b737-spot-69-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_american_airlines_white_background_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_69.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 69
-        },
-        {
-          "id": "b737-spot-70-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_delta_colors_in_motion_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_70.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 70
-        },
-        {
-          "id": "b737-spot-71-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_delta_onwards_and_upwards_livery_with_winglets.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_71.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 71
-        },
-        {
-          "id": "b737-spot-72-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_delta_ron_allen_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_72.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 72
-        },
-        {
-          "id": "b737-spot-73-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_twa_1995_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_73.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 73
-        },
-        {
-          "id": "b737-spot-74-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_united_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_74.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 74
-        },
-        {
-          "id": "b737-spot-75-757-200",
-          "aircraftId": "b737",
-          "role": "spot",
-          "variant": "757-200",
-          "sourceFile": "liveries/757-200_united_airlines_with_winglets_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__757-200_75.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200",
-          "sortIndex": 75
-        },
-        {
-          "id": "b737-spot-76-737-900",
+          "id": "b737-spot-57-737-900",
           "aircraftId": "b737",
           "role": "spot",
           "variant": "737-900",
           "sourceFile": "liveries/United_Airlines_737-900_livery.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__737-900_76.jpg",
+          "publicPath": "/assets/aircraft/b737/spot__737-900_57.jpg",
           "attribution": "Norebbo airline livery illustration",
           "matchedBy": "alias:737 900",
-          "sortIndex": 76
+          "sortIndex": 57
         },
         {
-          "id": "b737-spot-77-737-max-8",
+          "id": "b737-spot-58-737-max-8",
           "aircraftId": "b737",
           "role": "spot",
           "variant": "737 MAX 8",
           "sourceFile": "liveries/new_united_livery_737.jpg",
-          "publicPath": "/assets/aircraft/b737/spot__737-max-8_77.jpg",
+          "publicPath": "/assets/aircraft/b737/spot__737-max-8_58.jpg",
           "attribution": "Norebbo airline livery illustration",
           "matchedBy": "alias:737",
-          "sortIndex": 77
+          "sortIndex": 58
         }
       ],
       "diagram": [
@@ -10390,7 +10176,7 @@
           "sourceFile": "liveries/747-100F_ups_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-100_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 100",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 19
         },
         {
@@ -10401,7 +10187,7 @@
           "sourceFile": "liveries/747-100_air_canada_1965_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-100_20.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 100",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 20
         },
         {
@@ -10412,7 +10198,7 @@
           "sourceFile": "liveries/747-100_japan_air_lines_1959_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-100_21.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 100",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 21
         },
         {
@@ -10423,7 +10209,7 @@
           "sourceFile": "liveries/747-100_united_freind_ship_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-100_22.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 100",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 22
         },
         {
@@ -10434,7 +10220,7 @@
           "sourceFile": "liveries/747-200_air_new_zealand_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-200_23.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 200",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 23
         },
         {
@@ -10445,30 +10231,162 @@
           "sourceFile": "liveries/747-200_cathay_pacific_livery.jpg",
           "publicPath": "/assets/aircraft/b747/spot__747-200_24.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 200",
+          "matchedBy": "lead-type:747→b747",
           "sortIndex": 24
         },
         {
-          "id": "b747-spot-25-747-8f",
+          "id": "b747-spot-25-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_air_canada_1994_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_25.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 25
+        },
+        {
+          "id": "b747-spot-26-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_air_new_zealand_2006_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_26.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 26
+        },
+        {
+          "id": "b747-spot-27-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_air_new_zealand_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_27.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 27
+        },
+        {
+          "id": "b747-spot-28-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_cathay_pacific_1971_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_28.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 28
+        },
+        {
+          "id": "b747-spot-29-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_cathay_pacific_1994_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_29.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 29
+        },
+        {
+          "id": "b747-spot-30-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_delta_delta_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_30.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 30
+        },
+        {
+          "id": "b747-spot-31-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_japan_airlines_1989_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_31.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 31
+        },
+        {
+          "id": "b747-spot-32-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_northwest_airlines_bowling_shoe_colors_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_32.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 32
+        },
+        {
+          "id": "b747-spot-33-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_northwest_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_33.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 33
+        },
+        {
+          "id": "b747-spot-34-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_northwest_airlines_original_colors_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_34.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 34
+        },
+        {
+          "id": "b747-spot-35-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_united_airlines_friend_ship_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_35.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 35
+        },
+        {
+          "id": "b747-spot-36-747-400",
+          "aircraftId": "b747",
+          "role": "spot",
+          "variant": "747-400",
+          "sourceFile": "liveries/747-400_united_airlines_full_livery.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-400_36.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 36
+        },
+        {
+          "id": "b747-spot-37-747-8f",
           "aircraftId": "b747",
           "role": "spot",
           "variant": "747-8F",
           "sourceFile": "liveries/747-8F_ups_2014_livery.jpg",
-          "publicPath": "/assets/aircraft/b747/spot__747-8f_25.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-8f_37.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 8f",
-          "sortIndex": 25
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 37
         },
         {
-          "id": "b747-spot-26-747-8i",
+          "id": "b747-spot-38-747-8i",
           "aircraftId": "b747",
           "role": "spot",
           "variant": "747-8i",
           "sourceFile": "liveries/747-8i_korean_air_livery.jpg",
-          "publicPath": "/assets/aircraft/b747/spot__747-8i_26.jpg",
+          "publicPath": "/assets/aircraft/b747/spot__747-8i_38.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:747 8i",
-          "sortIndex": 26
+          "matchedBy": "lead-type:747→b747",
+          "sortIndex": 38
         }
       ],
       "diagram": [
@@ -10785,19 +10703,96 @@
           "sourceFile": "liveries/757-200PF_ups_2014_livery.jpg",
           "publicPath": "/assets/aircraft/b757/spot__757-200pf_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 200pf",
+          "matchedBy": "lead-type:757→b757",
           "sortIndex": 11
         },
         {
-          "id": "b757-spot-12-757-300",
+          "id": "b757-spot-12-757-200",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "757-200",
+          "sourceFile": "liveries/757-200_american_airlines_white_background_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-200_12.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 12
+        },
+        {
+          "id": "b757-spot-13-757-200",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "757-200",
+          "sourceFile": "liveries/757-200_delta_colors_in_motion_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-200_13.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 13
+        },
+        {
+          "id": "b757-spot-14-winglets",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "winglets",
+          "sourceFile": "liveries/757-200_delta_onwards_and_upwards_livery_with_winglets.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__winglets_14.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 14
+        },
+        {
+          "id": "b757-spot-15-757-200",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "757-200",
+          "sourceFile": "liveries/757-200_delta_ron_allen_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-200_15.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 15
+        },
+        {
+          "id": "b757-spot-16-757-200",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "757-200",
+          "sourceFile": "liveries/757-200_twa_1995_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-200_16.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 16
+        },
+        {
+          "id": "b757-spot-17-757-200",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "757-200",
+          "sourceFile": "liveries/757-200_united_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-200_17.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 17
+        },
+        {
+          "id": "b757-spot-18-winglets",
+          "aircraftId": "b757",
+          "role": "spot",
+          "variant": "winglets",
+          "sourceFile": "liveries/757-200_united_airlines_with_winglets_livery.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__winglets_18.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 18
+        },
+        {
+          "id": "b757-spot-19-757-300",
           "aircraftId": "b757",
           "role": "spot",
           "variant": "757-300",
           "sourceFile": "liveries/757-300_delta_delta_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/b757/spot__757-300_12.jpg",
+          "publicPath": "/assets/aircraft/b757/spot__757-300_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:757 300",
-          "sortIndex": 12
+          "matchedBy": "lead-type:757→b757",
+          "sortIndex": 19
         }
       ],
       "diagram": [
@@ -10946,7 +10941,7 @@
           "sourceFile": "liveries/767-200_air_canada_1980_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 6
         },
         {
@@ -10957,7 +10952,7 @@
           "sourceFile": "liveries/767-200_air_canada_1987_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 7
         },
         {
@@ -10968,7 +10963,7 @@
           "sourceFile": "liveries/767-200_american_airlines_bare_metal_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 8
         },
         {
@@ -10979,7 +10974,7 @@
           "sourceFile": "liveries/767-200_delta_widget_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 9
         },
         {
@@ -10990,7 +10985,7 @@
           "sourceFile": "liveries/767-200_piedmont_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_10.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 10
         },
         {
@@ -11001,7 +10996,7 @@
           "sourceFile": "liveries/767-200_twa_dual_stripe_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-200_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 11
         },
         {
@@ -11012,7 +11007,7 @@
           "sourceFile": "liveries/767-300F_ups_2003_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-300f_12.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 300f",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 12
         },
         {
@@ -11023,7 +11018,7 @@
           "sourceFile": "liveries/767-300_air_canada_toothpaste_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-300_13.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 300",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 13
         },
         {
@@ -11034,18 +11029,18 @@
           "sourceFile": "liveries/767-300_hawaiian_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-300_14.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 300",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 14
         },
         {
-          "id": "b767-spot-15-767-300",
+          "id": "b767-spot-15-no-winglets",
           "aircraftId": "b767",
           "role": "spot",
-          "variant": "767-300",
+          "variant": "no winglets",
           "sourceFile": "liveries/767-300_hawaiian_airlines_no_winglets_livery.jpg",
-          "publicPath": "/assets/aircraft/b767/spot__767-300_15.jpg",
+          "publicPath": "/assets/aircraft/b767/spot__no-winglets_15.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 300",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 15
         },
         {
@@ -11056,7 +11051,7 @@
           "sourceFile": "liveries/767-300_united_airlines_new_livery.jpg",
           "publicPath": "/assets/aircraft/b767/spot__767-300_16.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 300",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 16
         }
       ],
@@ -11117,7 +11112,7 @@
           "sourceFile": "liveries/767-200_usair_side_profile_livery.jpg",
           "publicPath": "/assets/aircraft/b767/diagram__767-200_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:767 200",
+          "matchedBy": "lead-type:767→b767",
           "sortIndex": 5
         }
       ],
@@ -11205,7 +11200,7 @@
           "sourceFile": "liveries/777-200LR_american_airlines_new_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 7
         },
         {
@@ -11216,7 +11211,7 @@
           "sourceFile": "liveries/777-200LR_oneworld_american_airlines_white_background_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 8
         },
         {
@@ -11227,7 +11222,7 @@
           "sourceFile": "liveries/777-200LR_united_star_alliance_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 9
         },
         {
@@ -11238,7 +11233,7 @@
           "sourceFile": "liveries/777-200_british_airways_1024_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_10.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 10
         },
         {
@@ -11249,7 +11244,7 @@
           "sourceFile": "liveries/777-200_cathay_pacific_1994_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 11
         },
         {
@@ -11260,7 +11255,7 @@
           "sourceFile": "liveries/777-200_emirates_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_12.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 12
         },
         {
@@ -11271,7 +11266,7 @@
           "sourceFile": "liveries/777-200_klm_asia_new_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_13.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 13
         },
         {
@@ -11282,7 +11277,7 @@
           "sourceFile": "liveries/777-200_united_airlines_2019_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_14.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 14
         },
         {
@@ -11293,7 +11288,7 @@
           "sourceFile": "liveries/777-200_united_battleship_gray_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_15.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 15
         },
         {
@@ -11304,7 +11299,7 @@
           "sourceFile": "liveries/777-200_united_blue_tulip_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-200_16.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 200",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 16
         },
         {
@@ -11315,7 +11310,7 @@
           "sourceFile": "liveries/777-300ER_qatar_airways_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300er_17.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300er",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 17
         },
         {
@@ -11326,7 +11321,7 @@
           "sourceFile": "liveries/777-300ER_qatar_airways_retro_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300er_18.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300er",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 18
         },
         {
@@ -11337,7 +11332,7 @@
           "sourceFile": "liveries/777-300_ANA_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 19
         },
         {
@@ -11348,7 +11343,7 @@
           "sourceFile": "liveries/777-300_air_canada_toothpaste_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_20.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 20
         },
         {
@@ -11359,7 +11354,7 @@
           "sourceFile": "liveries/777-300_air_new_zealand_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_21.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 21
         },
         {
@@ -11370,7 +11365,7 @@
           "sourceFile": "liveries/777-300_american_airlines_new_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_22.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 22
         },
         {
@@ -11381,7 +11376,7 @@
           "sourceFile": "liveries/777-300_cathay_pacific_1994_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_23.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 23
         },
         {
@@ -11392,7 +11387,7 @@
           "sourceFile": "liveries/777-300_cathay_pacific_2015_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_24.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 24
         },
         {
@@ -11403,7 +11398,7 @@
           "sourceFile": "liveries/777-300_korean_air_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_25.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 25
         },
         {
@@ -11414,7 +11409,7 @@
           "sourceFile": "liveries/777-300_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b777/spot__777-300_26.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:777 300",
+          "matchedBy": "lead-type:777→b777",
           "sortIndex": 26
         }
       ],
@@ -11552,7 +11547,7 @@
           "sourceFile": "liveries/787-10_korean_air_new_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-10_04.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 10",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 4
         },
         {
@@ -11563,7 +11558,7 @@
           "sourceFile": "liveries/787-8_ANA_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 5
         },
         {
@@ -11574,7 +11569,7 @@
           "sourceFile": "liveries/787-8_ANA_special_launch_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 6
         },
         {
@@ -11585,7 +11580,7 @@
           "sourceFile": "liveries/787-8_aeromexico_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 7
         },
         {
@@ -11596,7 +11591,7 @@
           "sourceFile": "liveries/787-8_air-india_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 8
         },
         {
@@ -11607,7 +11602,7 @@
           "sourceFile": "liveries/787-8_american_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 9
         },
         {
@@ -11618,7 +11613,7 @@
           "sourceFile": "liveries/787-8_japan_airlines_tsurumaru_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_10.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 10
         },
         {
@@ -11629,7 +11624,7 @@
           "sourceFile": "liveries/787-8_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_11.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 11
         },
         {
@@ -11640,7 +11635,7 @@
           "sourceFile": "liveries/787-8_united_airlines_retro_illustration_saul_bass_united_airlines_787_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_12.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 12
         },
         {
@@ -11651,7 +11646,7 @@
           "sourceFile": "liveries/787-8_united_airlines_retro_illustration_v2_saul_bass_united_airlines_787_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-8_13.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 8",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 13
         },
         {
@@ -11662,7 +11657,7 @@
           "sourceFile": "liveries/787-9_air_canada_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_14.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 14
         },
         {
@@ -11673,7 +11668,7 @@
           "sourceFile": "liveries/787-9_air_new_zealand_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_15.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 15
         },
         {
@@ -11684,7 +11679,7 @@
           "sourceFile": "liveries/787-9_alaska-airlines-livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_16.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 16
         },
         {
@@ -11695,7 +11690,7 @@
           "sourceFile": "liveries/787-9_american_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_17.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 17
         },
         {
@@ -11706,7 +11701,7 @@
           "sourceFile": "liveries/787-9_etihad-new-livery-white-background.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_18.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 18
         },
         {
@@ -11717,7 +11712,7 @@
           "sourceFile": "liveries/787-9_hawaiian_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_19.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 19
         },
         {
@@ -11728,7 +11723,7 @@
           "sourceFile": "liveries/787-9_qantas_livery.jpg",
           "publicPath": "/assets/aircraft/b787/spot__787-9_20.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:787 9",
+          "matchedBy": "lead-type:787→b787",
           "sortIndex": 20
         }
       ],
@@ -12127,7 +12122,7 @@
           "sourceFile": "liveries/CRJ-200_united_express_2019_livery.jpg",
           "publicPath": "/assets/aircraft/crj/spot__crj-200_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:crj+variant:crj 200",
+          "matchedBy": "lead-type:CRJ-200→crj",
           "sortIndex": 5
         }
       ],
@@ -12417,7 +12412,7 @@
           "sourceFile": "liveries/DC-4_continental_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/dc4/spot__dc-4_02.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc4+variant:dc 4",
+          "matchedBy": "lead-type:DC-4→dc4",
           "sortIndex": 2
         }
       ],
@@ -12494,7 +12489,7 @@
           "sourceFile": "liveries/DC-8-52_air_new_zealand_1965_livery.jpg",
           "publicPath": "/assets/aircraft/dc8/spot_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc8",
+          "matchedBy": "lead-type:DC-8→dc8",
           "sortIndex": 5
         },
         {
@@ -12504,7 +12499,7 @@
           "sourceFile": "liveries/DC-8-52_air_new_zealand_1973_livery.jpg",
           "publicPath": "/assets/aircraft/dc8/spot_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc8",
+          "matchedBy": "lead-type:DC-8→dc8",
           "sortIndex": 6
         },
         {
@@ -12515,7 +12510,7 @@
           "sourceFile": "liveries/DC-8-53_japan_air_lines-dc-8-livery.jpg",
           "publicPath": "/assets/aircraft/dc8/spot__dc-8-53_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc8+variant:dc 8 53",
+          "matchedBy": "lead-type:DC-8→dc8",
           "sortIndex": 7
         },
         {
@@ -12525,7 +12520,7 @@
           "sourceFile": "liveries/DC-8-60_air_canada_1965_livery.jpg",
           "publicPath": "/assets/aircraft/dc8/spot_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc8",
+          "matchedBy": "lead-type:DC-8→dc8",
           "sortIndex": 8
         },
         {
@@ -12536,7 +12531,7 @@
           "sourceFile": "liveries/DC-8-73CF_ups_livery.jpg",
           "publicPath": "/assets/aircraft/dc8/spot__dc-8-73cf_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc8+variant:dc 8 73cf",
+          "matchedBy": "lead-type:DC-8→dc8",
           "sortIndex": 9
         }
       ],
@@ -12724,18 +12719,58 @@
           "sourceFile": "liveries/E195_breeze_airways_livery_white_background.jpg",
           "publicPath": "/assets/aircraft/e190/spot__e195_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:e195+variant:e195",
+          "matchedBy": "lead-type:E195→e190",
           "sortIndex": 6
         },
         {
           "id": "e190-spot-07",
           "aircraftId": "e190",
           "role": "spot",
-          "sourceFile": "liveries/ERJ-190_southwest_white_background_southwest_airlines_livery.jpg",
+          "sourceFile": "liveries/ERJ-175_alaska_airlines_new_livery.jpg",
           "publicPath": "/assets/aircraft/e190/spot_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:erj 190",
+          "matchedBy": "lead-type:ERJ-175→e190",
           "sortIndex": 7
+        },
+        {
+          "id": "e190-spot-08",
+          "aircraftId": "e190",
+          "role": "spot",
+          "sourceFile": "liveries/ERJ-175_american_eagle_1024_american_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/e190/spot_08.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:ERJ-175→e190",
+          "sortIndex": 8
+        },
+        {
+          "id": "e190-spot-09",
+          "aircraftId": "e190",
+          "role": "spot",
+          "sourceFile": "liveries/ERJ-175_delta_connection_delta_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/e190/spot_09.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:ERJ-175→e190",
+          "sortIndex": 9
+        },
+        {
+          "id": "e190-spot-10",
+          "aircraftId": "e190",
+          "role": "spot",
+          "sourceFile": "liveries/ERJ-175_united_express_livery.jpg",
+          "publicPath": "/assets/aircraft/e190/spot_10.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:ERJ-175→e190",
+          "sortIndex": 10
+        },
+        {
+          "id": "e190-spot-11",
+          "aircraftId": "e190",
+          "role": "spot",
+          "sourceFile": "liveries/ERJ-190_southwest_white_background_southwest_airlines_livery.jpg",
+          "publicPath": "/assets/aircraft/e190/spot_11.jpg",
+          "attribution": "Norebbo airline livery illustration",
+          "matchedBy": "lead-type:ERJ-190→e190",
+          "sortIndex": 11
         }
       ],
       "diagram": [
@@ -12824,7 +12859,7 @@
           "sourceFile": "liveries/EMB-120_united_express_blue_united_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/emb120/spot__emb-120_01.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:emb120+variant:emb 120",
+          "matchedBy": "lead-type:EMB-120→emb120",
           "sortIndex": 1
         }
       ],
@@ -12904,50 +12939,6 @@
           "attribution": "User provided (Norebbo pack)",
           "matchedBy": "sheet-stem:Embraer-ERJ-175→row 112",
           "sortIndex": 6
-        },
-        {
-          "id": "erj145-spot-07-erj-175",
-          "aircraftId": "erj145",
-          "role": "spot",
-          "variant": "ERJ-175",
-          "sourceFile": "liveries/ERJ-175_alaska_airlines_new_livery.jpg",
-          "publicPath": "/assets/aircraft/erj145/spot__erj-175_07.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:erj 175",
-          "sortIndex": 7
-        },
-        {
-          "id": "erj145-spot-08-erj-175",
-          "aircraftId": "erj145",
-          "role": "spot",
-          "variant": "ERJ-175",
-          "sourceFile": "liveries/ERJ-175_american_eagle_1024_american_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/erj145/spot__erj-175_08.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:erj 175",
-          "sortIndex": 8
-        },
-        {
-          "id": "erj145-spot-09-erj-175",
-          "aircraftId": "erj145",
-          "role": "spot",
-          "variant": "ERJ-175",
-          "sourceFile": "liveries/ERJ-175_delta_connection_delta_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/erj145/spot__erj-175_09.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:erj 175",
-          "sortIndex": 9
-        },
-        {
-          "id": "erj145-spot-10-erj-175",
-          "aircraftId": "erj145",
-          "role": "spot",
-          "variant": "ERJ-175",
-          "sourceFile": "liveries/ERJ-175_united_express_livery.jpg",
-          "publicPath": "/assets/aircraft/erj145/spot__erj-175_10.jpg",
-          "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:erj 175",
-          "sortIndex": 10
         }
       ],
       "diagram": [
@@ -13424,7 +13415,7 @@
           "sourceFile": "liveries/L-1011-1_TWA_1995_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l 1011 1",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 3
         },
         {
@@ -13435,7 +13426,7 @@
           "sourceFile": "liveries/L-1011-1_TWA_arrowhead_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_04.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l 1011 1",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 4
         },
         {
@@ -13446,7 +13437,7 @@
           "sourceFile": "liveries/L-1011-1_TWA_dual_stripe_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_05.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l 1011 1",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 5
         },
         {
@@ -13457,7 +13448,7 @@
           "sourceFile": "liveries/L-1011-1_eastern_airlines_thin_stripe_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l 1011 1",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 6
         },
         {
@@ -13468,7 +13459,7 @@
           "sourceFile": "liveries/L-1011-1_eastern_airlines_white_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-1_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l 1011 1",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 7
         },
         {
@@ -13479,7 +13470,7 @@
           "sourceFile": "liveries/L-1011-385_cathay_pacific_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-500_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l101",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 8
         },
         {
@@ -13490,7 +13481,7 @@
           "sourceFile": "liveries/L-1011-385_hawaiian_hawaiian_airlines_livery.jpg",
           "publicPath": "/assets/aircraft/l1011/spot__l-1011-500_09.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:l1011+variant:l101",
+          "matchedBy": "lead-type:L-1011→l1011",
           "sortIndex": 9
         }
       ],
@@ -13673,7 +13664,7 @@
           "sourceFile": "liveries/MD-11F_ups_2014_livery.jpg",
           "publicPath": "/assets/aircraft/md11/spot__md-11f_03.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:md11+variant:md 11f",
+          "matchedBy": "lead-type:MD-11→md11",
           "sortIndex": 3
         }
       ],
@@ -13768,25 +13759,24 @@
           "sortIndex": 5
         },
         {
-          "id": "md80-spot-06-dc-9-30",
+          "id": "md80-spot-06-md-87",
           "aircraftId": "md80",
           "role": "spot",
-          "variant": "DC-9-30",
+          "variant": "MD-87",
           "sourceFile": "liveries/DC-9-30_air_canada_1987_livery.jpg",
-          "publicPath": "/assets/aircraft/md80/spot__dc-9-30_06.jpg",
+          "publicPath": "/assets/aircraft/md80/spot__md-87_06.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc 9 30",
+          "matchedBy": "lead-type:DC-9→md80",
           "sortIndex": 6
         },
         {
-          "id": "md80-spot-07-dc-9-50",
+          "id": "md80-spot-07",
           "aircraftId": "md80",
           "role": "spot",
-          "variant": "DC-9-50",
           "sourceFile": "liveries/DC-9-50_hawaiian-copy_hawaiian_airlines_livery.jpg",
-          "publicPath": "/assets/aircraft/md80/spot__dc-9-50_07.jpg",
+          "publicPath": "/assets/aircraft/md80/spot_07.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:dc 9 50",
+          "matchedBy": "lead-type:DC-9→md80",
           "sortIndex": 7
         },
         {
@@ -13797,7 +13787,7 @@
           "sourceFile": "liveries/MD-83_american_airlines_bare_metal_livery.jpg",
           "publicPath": "/assets/aircraft/md80/spot__md-83_08.jpg",
           "attribution": "Norebbo airline livery illustration",
-          "matchedBy": "alias:md83+variant:md83",
+          "matchedBy": "lead-type:MD-83→md80",
           "sortIndex": 8
         }
       ],
