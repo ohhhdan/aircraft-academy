@@ -2,7 +2,6 @@ import { useCallback, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import type { LessonCompleteResult } from '../context/AppContext';
-import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
 import {
@@ -10,7 +9,6 @@ import {
   OptionContent,
   getOptionMarkState,
   optionBtnClass,
-  pickerCardClass,
 } from '../components/QuizFeedback';
 import { useMedia } from '../context/MediaContext';
 import { aircraft, getAircraftById, pickRandom, shuffle } from '../utils/data';
@@ -308,44 +306,37 @@ export function SpotterPage() {
           : `Which variant of the ${current.family} is shown?`}
       </h2>
 
-      {mode === 'easy' ? (
-        <div className="visual-picker">
-          {options.map((ac) => {
-            const mark = getOptionMarkState(ac.family, chosen, correctAnswer, answered);
-            return (
-              <button
-                key={ac.id}
-                type="button"
-                className={pickerCardClass(mark)}
-                onClick={() => handleAnswer(ac.family)}
-                disabled={answered}
-              >
-                <div className="mini-silhouette">
-                  <MiniAircraftDiagram aircraft={ac} />
-                </div>
-                <OptionContent label={ac.family} state={mark} />
-              </button>
-            );
-          })}
-        </div>
-      ) : (
-        <div className="option-grid">
-          {variantOptions.map((v) => {
-            const mark = getOptionMarkState(v, chosen, correctAnswer, answered);
-            return (
-              <button
-                key={v}
-                type="button"
-                className={optionBtnClass(mark)}
-                onClick={() => handleAnswer(v)}
-                disabled={answered}
-              >
-                <OptionContent label={v} state={mark} />
-              </button>
-            );
-          })}
-        </div>
-      )}
+      <div className="option-grid">
+        {mode === 'easy'
+          ? options.map((ac) => {
+              const mark = getOptionMarkState(ac.family, chosen, correctAnswer, answered);
+              return (
+                <button
+                  key={ac.id}
+                  type="button"
+                  className={optionBtnClass(mark)}
+                  onClick={() => handleAnswer(ac.family)}
+                  disabled={answered}
+                >
+                  <OptionContent label={ac.family} state={mark} />
+                </button>
+              );
+            })
+          : variantOptions.map((v) => {
+              const mark = getOptionMarkState(v, chosen, correctAnswer, answered);
+              return (
+                <button
+                  key={v}
+                  type="button"
+                  className={optionBtnClass(mark)}
+                  onClick={() => handleAnswer(v)}
+                  disabled={answered}
+                >
+                  <OptionContent label={v} state={mark} />
+                </button>
+              );
+            })}
+      </div>
 
       {feedback && (
         <QuizFeedback
