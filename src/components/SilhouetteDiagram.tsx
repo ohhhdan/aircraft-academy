@@ -73,6 +73,18 @@ function getTailPath(ac: Aircraft): string {
     'md80',
     'atr42',
     'atr72',
+    'g550',
+    'learjet60',
+    'falcon50',
+    'tu154',
+    'jetstream41',
+    'saab340',
+    'emb120',
+    'beech1900',
+    'short360',
+    'dornier328',
+    'dornier328jet',
+    'c17',
   ].includes(ac.id);
   if (tTail) return 'M 88 36 L 92 20 L 96 36 Z M 90 24 L 98 24 L 98 28 L 90 28 Z';
   return 'M 88 36 L 94 18 L 96 36 Z';
@@ -82,7 +94,7 @@ function getEngines(ac: Aircraft): { x: number; y: number }[] {
   if (ac.categoryGroup === 'helicopter') return [];
   if (ac.engineCount === 1) return [{ x: 12, y: 52 }];
 
-  const rearTwin = ['c909', 'erj145', 'crj', 'fokker100', 'b717', 'md80', 'md11'].includes(ac.id);
+  const rearTwin = ['c909', 'erj145', 'crj', 'fokker100', 'b717', 'md80', 'md11', 'g550', 'learjet60'].includes(ac.id);
   if (ac.engineCount === 2) {
     if (rearTwin) {
       return [
