@@ -24,9 +24,9 @@ interface AnswerFeedback {
   explanation: string;
   learnMore?: React.ReactNode;
   xp?: number;
-  /** Wrong answer with tries left — retry only, don't advance */
+  /** Wrong answer with tries left  -  retry only, don't advance */
   canRetry?: boolean;
-  /** Wrong answer out of tries — show Next */
+  /** Wrong answer out of tries  -  show Next */
   canAdvance?: boolean;
 }
 
