@@ -18,10 +18,13 @@ export interface PathNode {
   sessionSize: number;
 }
 
+export type UnitDifficulty = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+
 export interface PathUnit {
   id: string;
   title: string;
-  description: string;
+  /** Short difficulty label shown on the unit card */
+  difficulty: UnitDifficulty;
   nodes: PathNode[];
 }
 
@@ -30,7 +33,7 @@ export const LESSON_PATH: PathUnit[] = [
   {
     id: 'unit-1',
     title: 'Unit 1 · Ramp Basics',
-    description: 'Learn the shapes you see at every hub — then prove it on photos.',
+    difficulty: 'Beginner',
     nodes: [
       {
         id: 'u1-study-jets',
@@ -80,7 +83,7 @@ export const LESSON_PATH: PathUnit[] = [
   {
     id: 'unit-2',
     title: 'Unit 2 · Twin Aisle',
-    description: 'Widebodies, long-haul rivals, and freighter tells.',
+    difficulty: 'Intermediate',
     nodes: [
       {
         id: 'u2-study-wide',
@@ -119,7 +122,7 @@ export const LESSON_PATH: PathUnit[] = [
   {
     id: 'unit-3',
     title: 'Unit 3 · Regionals & Props',
-    description: 'CRJs, E-Jets, Dash 8s, ATRs — the feeder fleet.',
+    difficulty: 'Intermediate',
     nodes: [
       {
         id: 'u3-study-prop',
@@ -158,7 +161,7 @@ export const LESSON_PATH: PathUnit[] = [
   {
     id: 'unit-4',
     title: 'Unit 4 · Bizjets & Oddballs',
-    description: 'Gulfstreams, Citations, and the weird stuff worth spotting.',
+    difficulty: 'Advanced',
     nodes: [
       {
         id: 'u4-study-biz',
