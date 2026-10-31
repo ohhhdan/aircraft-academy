@@ -1,6 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
+import { LessonComplete } from '../components/LessonComplete';
 import {
   QuizFeedback,
   OptionContent,
@@ -10,8 +13,9 @@ import {
 } from '../components/QuizFeedback';
 import { useMedia } from '../context/MediaContext';
 import { aircraft, pickRandom, shuffle } from '../utils/data';
+import { getNodeById } from '../content/lessonPath';
 import { spotterLearnMore } from '../utils/learnMore';
-import type { Aircraft } from '../types';
+import type { Aircraft, CategoryGroup } from '../types';
 
 type Mode = 'easy' | 'hard';
 type Phase = 'setup' | 'exercise' | 'result';
@@ -23,19 +27,24 @@ interface AnswerFeedback {
 }
 
 export function SpotterPage() {
+  const [params] = useSearchParams();
+  const nodeId = params.get('node');
+  const node = nodeId ? getNodeById(nodeId) : undefined;
+  const groupParam = (params.get('group') as CategoryGroup | null) ?? node?.categoryGroup;
+  const modeParam = params.get('mode') as Mode | null;
+
   const {
     startExercise,
     endExercise,
     loseLife,
     markAircraftMastered,
-    recordModuleProgress,
+    awardLessonComplete,
     canStartExercise,
-    state,
     preferences,
   } = useApp();
   const { getSpotPhoto } = useMedia();
-  const [mode, setMode] = useState<Mode>(preferences.spotterMode);
-  const [phase, setPhase] = useState<Phase>('setup');
+  const [mode, setMode] = useState<Mode>(modeParam ?? preferences.spotterMode);
+  const [phase, setPhase] = useState<Phase>(node ? 'setup' : 'setup');
   const [current, setCurrent] = useState<Aircraft | null>(null);
   const [options, setOptions] = useState<Aircraft[]>([]);
   const [variantOptions, setVariantOptions] = useState<string[]>([]);
@@ -43,9 +52,17 @@ export function SpotterPage() {
   const [chosen, setChosen] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
   const [lostLifeThisQuestion, setLostLifeThisQuestion] = useState(false);
-  const [score, setScore] = useState(0);
+  /** First-try corrects (Duolingo-style accuracy) */
+  const [firstTryScore, setFirstTryScore] = useState(0);
   const [round, setRound] = useState(0);
-  const totalRounds = 10;
+  const [lessonResult, setLessonResult] = useState<LessonCompleteResult | null>(null);
+  const totalRounds = node?.sessionSize ?? 10;
+
+  const pool = useMemo(() => {
+    if (!groupParam) return aircraft;
+    const filtered = aircraft.filter((a) => a.categoryGroup === groupParam);
+    return filtered.length >= 4 ? filtered : aircraft;
+  }, [groupParam]);
 
   const correctAnswer = current
     ? mode === 'easy'
@@ -71,15 +88,15 @@ export function SpotterPage() {
   }, []);
 
   const startRound = useCallback(() => {
-    const pool = shuffle(aircraft);
-    const target = pool[0];
+    const shuffled = shuffle(pool);
+    const target = shuffled[0];
     const distractors = pickRandom(
-      aircraft.filter((a) => a.categoryGroup === target.categoryGroup && a.id !== target.id),
+      pool.filter((a) => a.categoryGroup === target.categoryGroup && a.id !== target.id),
       3
     );
     if (distractors.length < 3) {
       const extra = pickRandom(
-        aircraft.filter((a) => a.id !== target.id && !distractors.includes(a)),
+        pool.filter((a) => a.id !== target.id && !distractors.includes(a)),
         3 - distractors.length
       );
       distractors.push(...extra);
@@ -88,7 +105,7 @@ export function SpotterPage() {
     setOptions(shuffle([target, ...distractors.slice(0, 3)]));
     if (mode === 'hard') {
       const wrongVariants = pickRandom(
-        aircraft.filter((a) => a.id !== target.id),
+        pool.filter((a) => a.id !== target.id),
         3
       ).flatMap((a) => a.variants.slice(0, 1));
       setVariantOptions(shuffle([target.variants[0], ...wrongVariants.slice(0, 3)]));
@@ -97,7 +114,7 @@ export function SpotterPage() {
     resetQuestion();
     setPhase('exercise');
     startExercise('spotter');
-  }, [mode, startExercise, resetQuestion]);
+  }, [mode, startExercise, resetQuestion, pool]);
 
   const handleAnswer = (answer: string) => {
     if (answered || !current) return;
@@ -108,10 +125,12 @@ export function SpotterPage() {
     if (ok) {
       setFeedback({
         ok: true,
-        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged to your spotter journal.`,
+        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged.`,
       });
       markAircraftMastered(current.id);
-      setScore((s) => s + 1);
+      if (!lostLifeThisQuestion) {
+        setFirstTryScore((s) => s + 1);
+      }
     } else {
       if (!lostLifeThisQuestion) {
         loseLife();
@@ -119,23 +138,31 @@ export function SpotterPage() {
       }
       setFeedback({
         ok: false,
-        explanation: `The answer is ${correctAnswer}. You chose ${answer}. Compare the photo to the diagram — ${mode === 'easy' ? 'look at overall fuselage shape, wing position, and engine count' : 'variant details like winglets, door count, or engine type often give it away'}.`,
+        explanation: `The answer is ${correctAnswer}. You chose ${answer}. Compare fuselage shape, wing position, and engines.`,
         learnMore: spotterLearnMore(current, preferences.showLearnLinks),
       });
     }
   };
 
+  const finishLesson = (finalFirstTry: number) => {
+    const result = awardLessonComplete({
+      nodeId,
+      moduleId: 'spotter',
+      correct: finalFirstTry,
+      total: totalRounds,
+    });
+    setLessonResult(result);
+    setPhase('result');
+    endExercise();
+  };
+
   const nextRound = () => {
     const newRound = round + 1;
+    // Include this question's first-try outcome (score state is already updated)
+    const finalFirstTry = firstTryScore;
     setRound(newRound);
     if (newRound >= totalRounds) {
-      const newCompleted = Math.min(
-        state.moduleProgress.spotter.completed + score,
-        state.moduleProgress.spotter.total
-      );
-      recordModuleProgress('spotter', newCompleted, state.moduleProgress.spotter.total);
-      setPhase('result');
-      endExercise();
+      finishLesson(finalFirstTry);
       return;
     }
     startRound();
@@ -144,55 +171,65 @@ export function SpotterPage() {
   if (phase === 'setup') {
     return (
       <div>
-        <div className="eyebrow">Module 02 · Identify by Photo</div>
-        <h2 className="serif" style={{ margin: '0 0 8px' }}>Read the ramp</h2>
+        <div className="eyebrow">{node ? node.title : 'Photo ID'}</div>
+        <h2 className="serif" style={{ margin: '0 0 8px' }}>
+          {node ? 'Ready?' : 'Read the ramp'}
+        </h2>
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
-          Practice identification from real spotter photographs — family level first, then variant level when you&apos;re ready.
+          {node
+            ? node.subtitle
+            : 'Practice identification from spotter plates — family level first, then variants.'}
         </p>
-        <div className="option-grid" style={{ maxWidth: 440, marginTop: 20 }}>
-          <button
-            type="button"
-            className={`option-btn ${mode === 'easy' ? 'correct' : ''}`}
-            onClick={() => setMode('easy')}
-          >
-            <strong>Family ID</strong>
-            <div className="text-muted" style={{ fontSize: 13, marginTop: 4 }}>e.g. Boeing 737, Airbus A320</div>
-          </button>
-          <button
-            type="button"
-            className={`option-btn ${mode === 'hard' ? 'correct' : ''}`}
-            onClick={() => setMode('hard')}
-          >
-            <strong>Variant ID</strong>
-            <div className="text-muted" style={{ fontSize: 13, marginTop: 4 }}>e.g. 737-800 vs MAX 8</div>
-          </button>
-        </div>
+        {!modeParam && (
+          <div className="option-grid" style={{ maxWidth: 440, marginTop: 20 }}>
+            <button
+              type="button"
+              className={`option-btn ${mode === 'easy' ? 'correct' : ''}`}
+              onClick={() => setMode('easy')}
+            >
+              <strong>Family ID</strong>
+              <div className="text-muted" style={{ fontSize: 13, marginTop: 4 }}>e.g. Boeing 737</div>
+            </button>
+            <button
+              type="button"
+              className={`option-btn ${mode === 'hard' ? 'correct' : ''}`}
+              onClick={() => setMode('hard')}
+            >
+              <strong>Variant ID</strong>
+              <div className="text-muted" style={{ fontSize: 13, marginTop: 4 }}>e.g. 737-800 vs MAX</div>
+            </button>
+          </div>
+        )}
         <button
           type="button"
           className="btn btn-primary pressable"
           style={{ marginTop: 24 }}
-          onClick={() => { setRound(0); setScore(0); startRound(); }}
+          onClick={() => {
+            setRound(0);
+            setFirstTryScore(0);
+            setLessonResult(null);
+            startRound();
+          }}
           disabled={!canStartExercise}
         >
-          Start spotting ({totalRounds} photos)
+          Start · {totalRounds} questions · +{node?.xpReward ?? 20} XP
         </button>
       </div>
     );
   }
 
-  if (phase === 'result') {
+  if (phase === 'result' && lessonResult) {
     return (
-      <div>
-        <div className="eyebrow">Photo ID</div>
-        <h2 className="serif">Session complete</h2>
-        <p className="serif" style={{ fontSize: 28, fontWeight: 600, color: 'var(--green)', margin: '8px 0 16px' }}>
-          {Math.round((score / totalRounds) * 100)}% this round
-        </p>
-        <p className="text-faint">You identified {score} of {totalRounds} photos correctly.</p>
-        <button type="button" className="btn btn-primary pressable" style={{ marginTop: 20 }} onClick={() => setPhase('setup')}>
-          New session
-        </button>
-      </div>
+      <LessonComplete
+        result={lessonResult}
+        score={firstTryScore}
+        total={totalRounds}
+        title={lessonResult.perfect ? 'Perfect flight!' : 'Lesson complete!'}
+        onAgain={() => {
+          setPhase('setup');
+          setLessonResult(null);
+        }}
+      />
     );
   }
 
@@ -205,11 +242,12 @@ export function SpotterPage() {
       </div>
       <div className="mono text-muted" style={{ fontSize: 11, marginBottom: 16 }}>
         {round + 1} / {totalRounds} · {mode === 'easy' ? 'FAMILY ID' : 'VARIANT ID'}
+        {node ? ` · ${node.title.toUpperCase()}` : ''}
       </div>
 
       <div className="wire-copy">
         <div className="timestamp">SPOTTER PHOTO</div>
-        Submitted from <strong>{location}</strong>. Identify the aircraft before logging it.
+        Submitted from <strong>{location}</strong>. Identify before logging.
       </div>
 
       <div className="photo-frame">
@@ -217,7 +255,7 @@ export function SpotterPage() {
           <img src={photo.url} alt="Aircraft for identification" />
         ) : (
           <div className="text-muted" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-            Photo pending — see PHOTO_NEEDS.md
+            Photo pending
           </div>
         )}
         <div className="photo-credit">{photo.attribution}</div>

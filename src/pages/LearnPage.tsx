@@ -1,7 +1,10 @@
 import { useCallback, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
+import { LessonComplete } from '../components/LessonComplete';
 import {
   QuizFeedback,
   OptionContent,
@@ -13,6 +16,7 @@ import {
   getAircraftByCategory,
   getAircraftByEngineCount,
 } from '../utils/data';
+import { getNodeById } from '../content/lessonPath';
 import { CATEGORY_ORDER, type Aircraft, type CategoryGroup } from '../types';
 import { recallLearnMore } from '../utils/learnMore';
 
@@ -25,9 +29,17 @@ const ENGINE_SECTIONS = [
 ];
 
 export function LearnPage() {
-  const { startExercise, endExercise, loseLife, markAircraftMastered, recordModuleProgress, canStartExercise, state, preferences } =
+  const [params] = useSearchParams();
+  const nodeId = params.get('node');
+  const groupParam = params.get('group') as CategoryGroup | null;
+  const pathNode = nodeId ? getNodeById(nodeId) : undefined;
+
+  const { startExercise, endExercise, loseLife, markAircraftMastered, recordModuleProgress, awardLessonComplete, canStartExercise, state, preferences } =
     useApp();
-  const [category, setCategory] = useState<CategoryGroup | null>(null);
+  const [category, setCategory] = useState<CategoryGroup | null>(
+    groupParam ?? pathNode?.categoryGroup ?? null
+  );
+  const [lessonResult, setLessonResult] = useState<LessonCompleteResult | null>(null);
   const [engineFilter, setEngineFilter] = useState<number | null>(null);
   const [selectedAircraft, setSelectedAircraft] = useState<Aircraft | null>(null);
   const [activeCallout, setActiveCallout] = useState<string | null>(null);
@@ -112,12 +124,45 @@ export function LearnPage() {
 
   const resetBrowse = () => {
     setPhase('browse');
-    setCategory(null);
+    setCategory(groupParam ?? pathNode?.categoryGroup ?? null);
     setEngineFilter(null);
     setSelectedAircraft(null);
     setFeedback(null);
     endExercise();
   };
+
+  const completePathLesson = (ok: boolean) => {
+    if (!ok) {
+      resetBrowse();
+      return;
+    }
+    const result = awardLessonComplete({
+      nodeId: pathNode?.id ?? (groupParam ? `learn-${groupParam}` : null),
+      moduleId: 'learn',
+      correct: ok ? 1 : 0,
+      total: 1,
+      baseXp: pathNode?.xpReward ?? 15,
+    });
+    setLessonResult(result);
+    setPhase('result');
+    endExercise();
+  };
+
+  if (phase === 'result' && lessonResult) {
+    return (
+      <LessonComplete
+        result={lessonResult}
+        score={1}
+        total={1}
+        title="Study lesson complete!"
+        onAgain={() => {
+          setLessonResult(null);
+          setStudied([]);
+          resetBrowse();
+        }}
+      />
+    );
+  }
 
   if (phase === 'recall' && recallCallout) {
     return (
@@ -151,9 +196,9 @@ export function LearnPage() {
             correct={feedback.ok}
             explanation={feedback.explanation}
             learnMore={feedback.learnMore}
-            onNext={feedback.ok ? resetBrowse : undefined}
+            onNext={feedback.ok ? () => completePathLesson(true) : undefined}
             onRetry={!feedback.ok ? resetRecallQuestion : undefined}
-            nextLabel="Continue"
+            nextLabel="Claim XP →"
           />
         )}
       </div>

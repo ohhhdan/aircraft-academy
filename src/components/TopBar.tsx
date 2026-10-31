@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { UserProfile } from './UserProfile';
 
 export function TopBar() {
-  const { exerciseSession } = useApp();
+  const { exerciseSession, state } = useApp();
   const location = useLocation();
   const inExercise = exerciseSession?.active ?? false;
   const isHome = location.pathname === '/';
@@ -21,6 +21,19 @@ export function TopBar() {
         </Link>
 
         <div className="top-bar-actions">
+          {!inExercise && (
+            <div className="top-bar-game-stats" aria-label="Streak and XP">
+              <span className="top-stat" title="Streak">
+                🔥 {state.streak}
+              </span>
+              <span className="top-stat" title="XP">
+                ⚡ {state.xp}
+              </span>
+              <span className="top-stat top-stat-hearts" title="Hearts">
+                {'♥'.repeat(Math.max(0, state.lives))}
+              </span>
+            </div>
+          )}
           {!inExercise && !isIndex && (
             <Link to="/airpedia" className="top-bar-link">
               ⌕ Index
@@ -28,7 +41,7 @@ export function TopBar() {
           )}
           {!isHome && !inExercise && (
             <Link to="/" className="top-bar-link">
-              Home
+              Path
             </Link>
           )}
           <UserProfile />

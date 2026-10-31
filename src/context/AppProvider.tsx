@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { AppState, ExerciseSession, ModuleId } from '../types';
-import { MAX_LIVES, LIFE_REGEN_MS, DEFAULT_PREFERENCES } from '../types';
-import { AppContext, type AppContextValue } from './AppContext';
+import { MAX_LIVES, LIFE_REGEN_MS, DEFAULT_PREFERENCES, DEFAULT_GAME_STATS } from '../types';
+import { AppContext, type AppContextValue, type LessonCompleteResult } from './AppContext';
+import { DAILY_XP_GOAL, MAX_CROWNS, getNodeById } from '../content/lessonPath';
+import { calcStreakAfterPractice, todayKey } from '../utils/game';
 import aircraftData from '../content/aircraft.json';
 import airportsData from '../content/airports.json';
 
@@ -27,17 +29,31 @@ const DEFAULT_STATE: AppState = {
   masteredAirports: [],
   demoMode: false,
   preferences: { ...DEFAULT_PREFERENCES },
+  ...DEFAULT_GAME_STATS,
 };
 
 function loadState(): AppState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return { ...DEFAULT_STATE };
-    const parsed = JSON.parse(raw) as AppState;
+    const parsed = JSON.parse(raw) as Partial<AppState>;
+    const today = todayKey();
+    let dailyXp = parsed.dailyXp ?? 0;
+    // Reset daily XP if calendar day changed
+    if (parsed.lastPracticeDate && parsed.lastPracticeDate !== today) {
+      // keep streak logic for display; daily XP resets until they practice
+      dailyXp = 0;
+    }
     return {
       ...DEFAULT_STATE,
       ...parsed,
       preferences: { ...DEFAULT_PREFERENCES, ...parsed.preferences },
+      xp: parsed.xp ?? 0,
+      streak: parsed.streak ?? 0,
+      lastPracticeDate: parsed.lastPracticeDate ?? null,
+      dailyXp,
+      nodeCrowns: parsed.nodeCrowns ?? {},
+      completedNodes: parsed.completedNodes ?? [],
     };
   } catch {
     return { ...DEFAULT_STATE };
@@ -135,6 +151,69 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const awardLessonComplete = useCallback(
+    (input: {
+      nodeId?: string | null;
+      moduleId: ModuleId;
+      correct: number;
+      total: number;
+      baseXp?: number;
+    }): LessonCompleteResult => {
+      const node = input.nodeId ? getNodeById(input.nodeId) : undefined;
+      const accuracy = input.total > 0 ? input.correct / input.total : 0;
+      const perfect = input.total > 0 && input.correct === input.total;
+      let gained = input.baseXp ?? node?.xpReward ?? 15;
+      gained += Math.round(input.correct * 1.5);
+      if (perfect) gained += 10;
+
+      const prevCrowns = input.nodeId ? state.nodeCrowns[input.nodeId] ?? 0 : 0;
+      const { streak, isNewDay } = calcStreakAfterPractice(state.streak, state.lastPracticeDate);
+      const dailyXp = (isNewDay ? 0 : state.dailyXp) + gained;
+      let crowns = prevCrowns;
+      let leveledNode = false;
+      if (input.nodeId && accuracy >= 0.6) {
+        const next = Math.min(MAX_CROWNS, prevCrowns + (perfect ? 2 : 1));
+        leveledNode = next > prevCrowns;
+        crowns = next;
+      }
+
+      setState((prev) => {
+        const mod = prev.moduleProgress[input.moduleId];
+        const newCompleted = Math.min(mod.completed + input.correct, mod.total);
+        const completedNodes =
+          input.nodeId && !prev.completedNodes.includes(input.nodeId)
+            ? [...prev.completedNodes, input.nodeId]
+            : prev.completedNodes;
+        return {
+          ...prev,
+          xp: prev.xp + gained,
+          streak,
+          lastPracticeDate: todayKey(),
+          dailyXp,
+          nodeCrowns: input.nodeId
+            ? { ...prev.nodeCrowns, [input.nodeId]: crowns }
+            : prev.nodeCrowns,
+          completedNodes,
+          moduleProgress: {
+            ...prev.moduleProgress,
+            [input.moduleId]: { completed: newCompleted, total: mod.total },
+          },
+        };
+      });
+
+      return {
+        xpGained: gained,
+        streak,
+        dailyXp,
+        dailyGoal: DAILY_XP_GOAL,
+        crowns,
+        perfect,
+        leveledNode,
+      };
+    },
+    [state.streak, state.dailyXp, state.nodeCrowns]
+  );
+
   const overallProgress = useMemo(() => {
     const modules = Object.values(state.moduleProgress);
     const total = modules.reduce((s, m) => s + m.total, 0);
@@ -165,13 +244,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     recordModuleProgress,
     markAircraftMastered,
     markAirportMastered,
+    awardLessonComplete,
     overallProgress,
     canStartExercise: currentLives > 0,
     nextLifeIn,
     resetDemo,
+    dailyGoal: DAILY_XP_GOAL,
   };
 
-  // Suppress unused variable warning for data imports used in totals validation
   void aircraftData;
   void airportsData;
 

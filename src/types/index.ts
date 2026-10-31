@@ -193,6 +193,16 @@ export interface AppState {
   masteredAirports: string[];
   demoMode: boolean;
   preferences: UserPreferences;
+  /** Duolingo-style gamification */
+  xp: number;
+  streak: number;
+  /** YYYY-MM-DD in local time of last practice */
+  lastPracticeDate: string | null;
+  dailyXp: number;
+  /** Crowns 0–5 per lesson path node id */
+  nodeCrowns: Record<string, number>;
+  /** Ordered list of completed node ids (at least once) */
+  completedNodes: string[];
 }
 
 export interface ExerciseSession {
@@ -262,4 +272,13 @@ export const DEFAULT_PREFERENCES: UserPreferences = {
   spotterMode: 'easy',
   codesTier: 'easy',
   showLearnLinks: true,
+};
+
+export const DEFAULT_GAME_STATS = {
+  xp: 0,
+  streak: 0,
+  lastPracticeDate: null as string | null,
+  dailyXp: 0,
+  nodeCrowns: {} as Record<string, number>,
+  completedNodes: [] as string[],
 };
