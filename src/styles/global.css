@@ -491,11 +491,9 @@ button {
   margin-bottom: 10px;
 }
 
-.plate-credit {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--ink-muted);
-  margin-top: 6px;
+.plate-credit,
+.photo-credit {
+  display: none;
 }
 
 .plate-carousel {
@@ -1091,17 +1089,6 @@ button {
   object-fit: cover;
 }
 
-.photo-credit {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 6px 10px;
-  background: rgba(35, 32, 26, 0.75);
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--cream);
-}
 
 /* ——— Deep dive ——— */
 

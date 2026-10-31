@@ -237,8 +237,8 @@ export function LearnPage() {
         .filter((f) => !selectedAircraft.callouts.some((c) => c.label.toLowerCase().includes(f.slice(0, 8).toLowerCase())))
         .map((f) => ({ label: f.charAt(0).toUpperCase() + f.slice(1), blurb: f })),
     ].slice(0, 4);
-    const oneLineTell =
-      selectedAircraft.keyFeatures.slice(0, 2).join(' — ') + (selectedAircraft.keyFeatures.length ? '.' : '');
+    const quickId =
+      selectedAircraft.keyFeatures.slice(0, 2).join(', ') + (selectedAircraft.keyFeatures.length ? '.' : '');
 
     return (
       <div>
@@ -252,6 +252,21 @@ export function LearnPage() {
           </p>
         )}
         <AircraftFacts aircraft={selectedAircraft} />
+        {quickId && (
+          <div className="tell-callout" style={{ marginTop: 14 }}>
+            <strong style={{ color: 'var(--teal)' }}>Quick ID:</strong> {quickId}
+          </div>
+        )}
+        {selectedAircraft.geekFacts.length > 0 && (
+          <div style={{ marginTop: 14 }}>
+            <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginBottom: 8 }}>Field notes</div>
+            <ul style={{ margin: 0, paddingLeft: 20, color: 'var(--ink-faint)', fontSize: 14 }}>
+              {selectedAircraft.geekFacts.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="detail-grid" style={{ marginTop: 18 }}>
           <div>
             <PlateCarousel aircraft={selectedAircraft} height={260} />
@@ -273,21 +288,8 @@ export function LearnPage() {
                 <p style={{ margin: '4px 0 0', fontSize: '0.9rem', color: 'var(--ink-faint)' }}>{callout.description}</p>
               </div>
             )}
-            <div className="tell-callout">
-              <strong style={{ color: 'var(--teal)' }}>One-line tell:</strong> {oneLineTell}
-            </div>
-            {selectedAircraft.geekFacts.length > 0 && (
-              <div style={{ marginTop: 16 }}>
-                <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginBottom: 8 }}>Field notes</div>
-                <ul style={{ margin: 0, paddingLeft: 20, color: 'var(--ink-faint)', fontSize: 14 }}>
-                  {selectedAircraft.geekFacts.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
             <button className="btn btn-primary pressable" style={{ marginTop: 20 }} onClick={finishStudy}>
-              Log specimen to journal →
+              Log aircraft to journal →
             </button>
           </div>
         </div>
@@ -306,7 +308,7 @@ export function LearnPage() {
           {ENGINE_SECTIONS.find((e) => e.count === engineFilter)?.label}
         </h2>
         <p className="text-faint" style={{ fontSize: '0.9rem' }}>
-          Select an aircraft type to learn more. After you&apos;ve logged 3 aircraft, answer a question to check your understanding.
+          Select an aircraft type to learn more. Once you&apos;ve studied three, answer a recall question to confirm your understanding.
         </p>
         <div className="grid-browse" style={{ marginTop: 16 }}>
           {sectionAircraft.map((ac) => (

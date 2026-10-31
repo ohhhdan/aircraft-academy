@@ -49,11 +49,11 @@ export function getAircraftFacts(ac: Aircraft): AircraftFact[] {
     facts.push({ label: 'Cruise speed', value: `${sky.cruiseSpeedKt} kt` });
   }
   if (sky?.seats) {
-    facts.push({ label: 'Seats', value: sky.seats });
+    facts.push({ label: 'Seats', value: sky.seats.replace(/[–—]/g, '-') });
   }
 
   if (ac.skycardsCategories?.length) {
-    facts.push({ label: 'Category', value: ac.skycardsCategories.slice(0, 3).join(' · ') });
+    facts.push({ label: 'Category', value: ac.skycardsCategories.slice(0, 3).join(', ') });
   }
 
   if (ac.icaoCodes?.length) {
@@ -65,10 +65,6 @@ export function getAircraftFacts(ac: Aircraft): AircraftFact[] {
     .filter((name): name is string => Boolean(name));
   if (rivals.length) {
     facts.push({ label: 'Rival', value: rivals.join(', ') });
-  }
-
-  if (ac.nickname) {
-    facts.push({ label: 'Nickname', value: ac.nickname });
   }
 
   return facts;
