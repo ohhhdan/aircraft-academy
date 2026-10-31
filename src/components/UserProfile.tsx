@@ -66,7 +66,7 @@ export function UserProfile() {
               <span className="serif" style={{ fontSize: 24, fontWeight: 600 }}>🔥 {state.streak}</span>
             </div>
             <div className="user-profile-stat">
-              <span className="text-muted">Mastery</span>
+              <span className="text-muted">Progress</span>
               <span className="serif" style={{ fontSize: 24, fontWeight: 600, color: 'var(--green)' }}>{overallProgress}%</span>
             </div>
           </div>
@@ -77,7 +77,7 @@ export function UserProfile() {
           <div className="user-profile-lives">
             <span className="text-muted">Hearts</span>
             <span>
-              {'♥'.repeat(state.lives)}
+              <span style={{ color: 'var(--brick)' }}>♥</span> {state.lives}
               {!canStartExercise && nextLifeIn != null && (
                 <span className="text-muted" style={{ fontSize: 12, marginLeft: 8 }}>
                   +1 in {formatLifeTimer(nextLifeIn)}
@@ -114,7 +114,7 @@ export function UserProfile() {
               value={preferences.spotterMode}
               onChange={(e) => setPreferences({ spotterMode: e.target.value as 'easy' | 'hard' })}
             >
-              <option value="easy">Family ID (easier)</option>
+              <option value="easy">Type ID (easier)</option>
               <option value="hard">Variant ID (harder)</option>
             </select>
           </label>

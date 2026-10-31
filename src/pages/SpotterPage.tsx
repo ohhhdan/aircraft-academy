@@ -95,11 +95,6 @@ export function SpotterPage() {
     return getSpotPhoto(current, variant);
   }, [current, mode, getSpotPhoto]);
 
-  const location = useMemo(() => {
-    if (!current?.spotterLocations) return 'Unknown location';
-    return current.spotterLocations[Math.floor(Math.random() * current.spotterLocations.length)];
-  }, [current]);
-
   const resetQuestion = useCallback(() => {
     setAnswered(false);
     setChosen(null);
@@ -192,7 +187,6 @@ export function SpotterPage() {
 
   const nextRound = () => {
     const newRound = round + 1;
-    // Include this question's first-try outcome (score state is already updated)
     const finalFirstTry = firstTryScore;
     setRound(newRound);
     if (newRound >= totalRounds) {
@@ -216,8 +210,19 @@ export function SpotterPage() {
             ? `Review the ${state.mistakeAircraftIds.length} aircraft you missed recently — first-try correct clears them from the queue.`
             : node
               ? node.subtitle
-              : 'Practice identification from spotter plates — family level first, then variants.'}
+              : 'Look at each photo and tap the matching aircraft. Wrong answers cost a heart — you can try again.'}
         </p>
+
+        <div className="wire-copy" style={{ marginTop: 18, maxWidth: 520 }}>
+          <div className="timestamp">How it works</div>
+          Study the photo, then choose the aircraft name from the four options.
+          {mode === 'hard'
+            ? ' Pick the exact variant (for example 737-800 vs MAX).'
+            : ' Name the type (for example Boeing 737 or Airbus A320).'}
+          {' '}
+          You&apos;ll see {totalRounds} photos this round.
+        </div>
+
         {!modeParam && (
           <div className="option-grid" style={{ maxWidth: 440, marginTop: 20 }}>
             <button
@@ -225,7 +230,7 @@ export function SpotterPage() {
               className={`option-btn ${mode === 'easy' ? 'correct' : ''}`}
               onClick={() => setMode('easy')}
             >
-              <strong>Family ID</strong>
+              <strong>Type ID</strong>
               <div className="text-muted" style={{ fontSize: 13, marginTop: 4 }}>e.g. Boeing 737</div>
             </button>
             <button
@@ -280,13 +285,7 @@ export function SpotterPage() {
         <div className="quiz-progress-fill" style={{ width: `${((round + 1) / totalRounds) * 100}%` }} />
       </div>
       <div className="mono text-muted" style={{ fontSize: 11, marginBottom: 16 }}>
-        {round + 1} / {totalRounds} · {mode === 'easy' ? 'FAMILY ID' : 'VARIANT ID'}
-        {practiceMistakes ? ' · WEAK SPOTS' : node ? ` · ${node.title.toUpperCase()}` : ''}
-      </div>
-
-      <div className="wire-copy">
-        <div className="timestamp">SPOTTER PHOTO</div>
-        Submitted from <strong>{location}</strong>. Identify before logging.
+        {round + 1} / {totalRounds}
       </div>
 
       <div className="photo-frame">
@@ -297,16 +296,9 @@ export function SpotterPage() {
             Photo pending
           </div>
         )}
-        <div className="photo-credit">{photo.attribution}</div>
       </div>
 
-      <h2 className="serif" style={{ fontSize: 28, margin: '20px 0 16px', textWrap: 'balance' }}>
-        {mode === 'easy'
-          ? 'Which aircraft family is shown?'
-          : `Which variant of the ${current.family} is shown?`}
-      </h2>
-
-      <div className="option-grid">
+      <div className="option-grid" style={{ marginTop: 20 }}>
         {mode === 'easy'
           ? options.map((ac) => {
               const mark = getOptionMarkState(ac.family, chosen, correctAnswer, answered);
