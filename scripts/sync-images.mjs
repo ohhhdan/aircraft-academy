@@ -182,15 +182,16 @@ function detectRole(stemNorm) {
   if (/\b(comparison|compare|vs|versus|side by side)\b/.test(stemNorm)) {
     return 'comparison';
   }
+  // Line drawings / blueprints → identification diagrams
   if (/\b(diagram|profile|sideview|side view|lineart|line art|line drawing|silhouette|blueprint)\b/.test(stemNorm)) {
     return 'diagram';
   }
   if (/_diagram\b|\bdiagram_|\bdiagram$|line-drawing|line_drawing/.test(stemNorm.replace(/\s+/g, '_'))) {
     return 'diagram';
   }
-  // Norebbo all-white templates are the profile diagram role
-  if (/\bwhite\b/.test(stemNorm) && !/\b(photo|ramp|gate)\b/.test(stemNorm)) {
-    return 'diagram';
+  // Norebbo all-white side plates are the quiz/flashcard "spot" images
+  if (/\bwhite\b/.test(stemNorm)) {
+    return 'spot';
   }
   return 'spot';
 }
@@ -213,7 +214,10 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
     const rest = normalize(dbl[2].replace(/[_-]?0*\d+$/, ''));
     const restRole = detectRole(normalize(dbl[2]));
     const sheetHit = norebboIndex.get(compact(left)) || norebboIndex.get(normalize(left));
-    if (sheetHit?.familyId) {
+    if (sheetHit) {
+      if (!sheetHit.familyId) {
+        return null; // sheet concept / unmapped type — don't fuzzy-assign
+      }
       return {
         aircraftId: sheetHit.familyId,
         variant: sheetHit.sheetName,

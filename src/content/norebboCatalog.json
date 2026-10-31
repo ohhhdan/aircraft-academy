@@ -265,7 +265,7 @@
     {
       "sheetRow": 15,
       "sheetName": "A\u00e9rospatiale-BAC Concorde",
-      "imageStem": "A-rospatiale-BAC-Concorde",
+      "imageStem": "Aerospatiale-BAC-Concorde",
       "familyId": "concorde",
       "norebboUrl": "https://www.norebbo.com/aerospatiale-bac-concorde-blank-illustration-templates/",
       "norebboTitle": "A\u00e9rospatiale-BAC Concorde blank illustration templates",
@@ -276,9 +276,9 @@
       ],
       "hasComparison": true,
       "preferredFilenames": {
-        "white": "A-rospatiale-BAC-Concorde__white.jpg",
-        "lineDrawing": "A-rospatiale-BAC-Concorde__line-drawing.jpg",
-        "comparison": "A-rospatiale-BAC-Concorde__comparison.jpg"
+        "white": "Aerospatiale-BAC-Concorde__white.jpg",
+        "lineDrawing": "Aerospatiale-BAC-Concorde__line-drawing.jpg",
+        "comparison": "Aerospatiale-BAC-Concorde__comparison.jpg"
       }
     },
     {

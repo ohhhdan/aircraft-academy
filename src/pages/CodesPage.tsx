@@ -1,13 +1,18 @@
 import { useCallback, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import type { LessonCompleteResult } from '../context/AppContext';
 import {
   QuizFeedback,
   OptionContent,
   getOptionMarkState,
   optionBtnClass,
 } from '../components/QuizFeedback';
+import { LessonComplete } from '../components/LessonComplete';
+import { XpPop } from '../components/XpPop';
 import { airports, getAirportsByTier, pickRandom, shuffle } from '../utils/data';
 import { codesLearnMore } from '../utils/learnMore';
+import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
 import type { Airport, AirportTier } from '../types';
 
 type DrillMode = 'code-to-name' | 'name-to-code' | 'odd-one-out';
@@ -23,6 +28,7 @@ interface AnswerFeedback {
   ok: boolean;
   explanation: string;
   learnMore?: React.ReactNode;
+  xp?: number;
 }
 
 function getCorrectAnswer(mode: DrillMode, current: Airport, tier: AirportTier, itinerary: Airport[]): string {
@@ -32,21 +38,25 @@ function getCorrectAnswer(mode: DrillMode, current: Airport, tier: AirportTier, 
 }
 
 export function CodesPage() {
+  const [params] = useSearchParams();
+  const nodeId = params.get('node');
+  const node = nodeId ? getNodeById(nodeId) : undefined;
+  const tierParam = params.get('tier') as AirportTier | null;
+
   const {
     startExercise,
     endExercise,
     loseLife,
     markAirportMastered,
-    recordModuleProgress,
+    awardLessonComplete,
     canStartExercise,
-    state,
     preferences,
   } = useApp();
-  const [tier, setTier] = useState<AirportTier>(preferences.codesTier);
+  const [tier, setTier] = useState<AirportTier>(tierParam ?? preferences.codesTier);
   const [mode, setMode] = useState<DrillMode>('code-to-name');
   const [phase, setPhase] = useState<Phase>('setup');
   const [round, setRound] = useState(0);
-  const [score, setScore] = useState(0);
+  const [firstTryScore, setFirstTryScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [chosen, setChosen] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
@@ -54,7 +64,9 @@ export function CodesPage() {
   const [current, setCurrent] = useState<Airport | null>(null);
   const [options, setOptions] = useState<string[]>([]);
   const [itinerary, setItinerary] = useState<Airport[]>([]);
-  const totalRounds = 15;
+  const [lessonResult, setLessonResult] = useState<LessonCompleteResult | null>(null);
+  const [xpPop, setXpPop] = useState(0);
+  const totalRounds = node?.sessionSize ?? 15;
 
   const correctAnswer = current ? getCorrectAnswer(mode, current, tier, itinerary) : '';
 
@@ -108,8 +120,14 @@ export function CodesPage() {
 
     if (ok) {
       if (mode !== 'odd-one-out') markAirportMastered(current.iata);
+      const firstTry = !lostLifeThisQuestion;
+      if (firstTry) {
+        setFirstTryScore((s) => s + 1);
+        setXpPop((n) => n + 1);
+      }
       setFeedback({
         ok: true,
+        xp: firstTry ? XP_PER_CORRECT : undefined,
         explanation:
           mode === 'code-to-name'
             ? `${current.iata} serves ${current.name} in ${current.city}, ${current.country}.`
@@ -117,7 +135,6 @@ export function CodesPage() {
               ? `${current.city} is coded ${current.iata} — ${current.name}.`
               : `${answer} (${airports.find((a) => a.iata === answer)?.city}) is from a different altitude tier than the others.`,
       });
-      setScore((s) => s + 1);
     } else {
       if (!lostLifeThisQuestion) {
         loseLife();
@@ -137,17 +154,25 @@ export function CodesPage() {
     }
   };
 
+  const finishLesson = (finalFirstTry: number) => {
+    const result = awardLessonComplete({
+      nodeId,
+      moduleId: 'codes',
+      correct: finalFirstTry,
+      total: totalRounds,
+      baseXp: node?.xpReward ?? 15,
+    });
+    setLessonResult(result);
+    setPhase('result');
+    endExercise();
+  };
+
   const nextRound = () => {
     const newRound = round + 1;
+    const finalFirstTry = firstTryScore;
     setRound(newRound);
     if (newRound >= totalRounds) {
-      recordModuleProgress(
-        'codes',
-        Math.min(state.moduleProgress.codes.completed + score, state.moduleProgress.codes.total),
-        state.moduleProgress.codes.total
-      );
-      setPhase('result');
-      endExercise();
+      finishLesson(finalFirstTry);
       return;
     }
     startRound();
@@ -161,36 +186,46 @@ export function CodesPage() {
   if (phase === 'setup') {
     return (
       <div>
-        <div className="eyebrow-teal">Module 04 · Airport Codes</div>
-        <h2 className="serif" style={{ margin: '0 0 8px', textWrap: 'balance' }}>Three letters. One city.</h2>
+        <div className="eyebrow-teal">{node ? node.title : 'Module 04 · Airport Codes'}</div>
+        <h2 className="serif" style={{ margin: '0 0 8px', textWrap: 'balance' }}>
+          {node ? 'Ready?' : 'Three letters. One city.'}
+        </h2>
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
-          Learn IATA airport codes through a tiered departure board — study baggage-tag flashcards, then quiz each level to build accuracy.
+          {node
+            ? node.subtitle
+            : 'Learn IATA airport codes through a tiered departure board — study baggage-tag flashcards, then quiz each level to build accuracy.'}
         </p>
 
-        <div className="card" style={{ marginTop: 24, padding: 16, borderTop: '1.5px dashed var(--dashed-plate)' }}>
-          <div className="mono" style={{ fontSize: 10, color: 'var(--teal)', marginBottom: 8 }}>Sample tag</div>
-          <div className="board-display" style={{ fontSize: '1.5rem', padding: 16, marginBottom: 0 }}>
-            LHR
+        {!node && (
+          <div className="card" style={{ marginTop: 24, padding: 16, borderTop: '1.5px dashed var(--dashed-plate)' }}>
+            <div className="mono" style={{ fontSize: 10, color: 'var(--teal)', marginBottom: 8 }}>Sample tag</div>
+            <div className="board-display" style={{ fontSize: '1.5rem', padding: 16, marginBottom: 0 }}>
+              LHR
+            </div>
+            <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginTop: 10, textAlign: 'center' }}>
+              London · Heathrow
+            </div>
           </div>
-          <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginTop: 10, textAlign: 'center' }}>
-            London · Heathrow
-          </div>
-        </div>
+        )}
 
-        <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 28 }}>Choose altitude</h3>
-        <div className="option-grid" style={{ maxWidth: 520 }}>
-          {(['easy', 'medium', 'hard'] as AirportTier[]).map((t) => (
-            <button
-              key={t}
-              type="button"
-              className={`option-btn ${tier === t ? 'correct' : ''}`}
-              onClick={() => setTier(t)}
-            >
-              <span className={`tier-badge tier-${t}`}>{TIER_LABELS[t].name}</span>
-              <div className="text-muted" style={{ fontSize: 13, marginTop: 6 }}>{TIER_LABELS[t].tag}</div>
-            </button>
-          ))}
-        </div>
+        {!tierParam && (
+          <>
+            <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 28 }}>Choose altitude</h3>
+            <div className="option-grid" style={{ maxWidth: 520 }}>
+              {(['easy', 'medium', 'hard'] as AirportTier[]).map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  className={`option-btn ${tier === t ? 'correct' : ''}`}
+                  onClick={() => setTier(t)}
+                >
+                  <span className={`tier-badge tier-${t}`}>{TIER_LABELS[t].name}</span>
+                  <div className="text-muted" style={{ fontSize: 13, marginTop: 6 }}>{TIER_LABELS[t].tag}</div>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
         <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 24 }}>Drill mode</h3>
         <div className="option-grid" style={{ maxWidth: 520 }}>
@@ -209,28 +244,33 @@ export function CodesPage() {
           type="button"
           className="btn btn-teal pressable"
           style={{ marginTop: 24 }}
-          onClick={() => { setRound(0); setScore(0); setPhase('exercise'); startRound(); }}
+          onClick={() => {
+            setRound(0);
+            setFirstTryScore(0);
+            setLessonResult(null);
+            setPhase('exercise');
+            startRound();
+          }}
           disabled={!canStartExercise}
         >
-          Board now → ({totalRounds} questions)
+          Board now → ({totalRounds} questions) · +{node?.xpReward ?? 15} XP
         </button>
       </div>
     );
   }
 
-  if (phase === 'result') {
+  if (phase === 'result' && lessonResult) {
     return (
-      <div>
-        <div className="eyebrow-teal">{TIER_LABELS[tier].name.toUpperCase()} LEVEL</div>
-        <h2 className="serif">Round complete</h2>
-        <p className="serif" style={{ fontSize: 28, fontWeight: 600, color: 'var(--green)', margin: '8px 0 16px' }}>
-          {Math.round((score / totalRounds) * 100)}% this round
-        </p>
-        <p className="text-faint">{score} of {totalRounds} codes answered correctly.</p>
-        <button type="button" className="btn btn-teal pressable" style={{ marginTop: 20 }} onClick={() => setPhase('setup')}>
-          Back to levels
-        </button>
-      </div>
+      <LessonComplete
+        result={lessonResult}
+        score={firstTryScore}
+        total={totalRounds}
+        title={lessonResult.perfect ? 'Boarding complete!' : 'Codes logged!'}
+        onAgain={() => {
+          setPhase('setup');
+          setLessonResult(null);
+        }}
+      />
     );
   }
 
@@ -238,11 +278,13 @@ export function CodesPage() {
 
   return (
     <div>
+      <XpPop trigger={xpPop} amount={XP_PER_CORRECT} />
       <div className="quiz-progress" style={{ marginBottom: 12 }}>
         <div className="quiz-progress-fill" style={{ width: `${((round + 1) / totalRounds) * 100}%`, background: 'var(--teal)' }} />
       </div>
       <div className="mono text-muted" style={{ fontSize: 11, marginBottom: 16 }}>
         {round + 1} / {totalRounds} · {TIER_LABELS[tier].name.toUpperCase()} LEVEL
+        {node ? ` · ${node.title.toUpperCase()}` : ''}
       </div>
 
       {mode === 'code-to-name' && (
@@ -302,9 +344,10 @@ export function CodesPage() {
           correct={feedback.ok}
           explanation={feedback.explanation}
           learnMore={feedback.learnMore}
+          xpGained={feedback.xp}
           onNext={feedback.ok ? nextRound : undefined}
           onRetry={!feedback.ok ? resetQuestion : undefined}
-          nextLabel={round + 1 >= totalRounds ? 'See results →' : 'Next →'}
+          nextLabel={round + 1 >= totalRounds ? 'Claim XP →' : 'Next →'}
           buttonVariant="teal"
         />
       )}
