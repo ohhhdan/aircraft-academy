@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run sync-images && vite",
     "build": "npm run sync-images && vite build",
     "sync-images": "node scripts/sync-images.mjs",
     "sync-photos": "node scripts/sync-images.mjs",

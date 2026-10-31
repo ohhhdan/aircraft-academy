@@ -76,17 +76,48 @@ export function getCatalogPhotos(ac: Aircraft): {
   };
 }
 
+function pickFromEntries(
+  entries: PhotoCatalogEntry[],
+  variant?: string,
+  familyId?: string
+): PhotoCatalogEntry | null {
+  if (!entries.length) return null;
+  const variantMatch = variant
+    ? entries.find((s) => s.variant && s.variant.toLowerCase() === variant.toLowerCase())
+    : undefined;
+  if (variantMatch) return variantMatch;
+
+  // Exact `__white` suffix (not pw-white / freighter-white / etc.)
+  const exactWhite = entries.filter((s) => /__white\.(jpe?g|png|webp)$/i.test(s.sourceFile));
+  const pool = exactWhite.length ? exactWhite : entries;
+
+  const score = (s: PhotoCatalogEntry) => {
+    const f = s.sourceFile.toLowerCase();
+    let n = 0;
+    if (/__white\.(jpe?g|png|webp)$/i.test(f)) n += 20;
+    if (/(freighter|combi|bcf|p2f|cargo|400sf)/i.test(f)) n -= 15;
+    if (/(max|neo|e2)/i.test(f)) n -= 2; // prefer classic/ceo as default quiz plate
+    // Prefer common “spotting” subtypes
+    if (/737-800/i.test(f)) n += 12;
+    if (/737-700/i.test(f)) n += 8;
+    if (/a320__/i.test(f) || /airbus-a320__/i.test(f)) n += 12;
+    if (familyId && f.includes(familyId.toLowerCase())) n += 3;
+    n -= Math.min(f.length, 100) / 50; // slightly prefer shorter stems
+    return n;
+  };
+
+  return [...pool].sort((a, b) => score(b) - score(a))[0] ?? entries[0];
+}
+
 function pickCatalogSpot(
   ac: Aircraft,
   variant?: string
 ): { url: string; attribution: string; variant?: string } | null {
+  // Prefer explicit spot role; fall back to Norebbo white plates wrongly tagged as diagram
   const spots = catalogSpots(ac.id);
-  if (!spots.length) return null;
-
-  const variantMatch = variant
-    ? spots.find((s) => s.variant && s.variant.toLowerCase() === variant.toLowerCase())
-    : undefined;
-  const preferred = variantMatch ?? spots.find((s) => !s.variant) ?? spots[0];
+  const diagrams = catalogDiagrams(ac.id).filter((d) => /white/i.test(d.sourceFile));
+  const preferred = pickFromEntries(spots.length ? spots : diagrams, variant, ac.id);
+  if (!preferred) return null;
   return {
     url: preferred.publicPath,
     attribution: preferred.attribution,
@@ -96,7 +127,7 @@ function pickCatalogSpot(
 
 /**
  * Resolve spot photo URL.
- * Priority: local photoCatalog → bundled Wikimedia (aircraftMedia) → photoOverrides → aircraft.photos
+ * Priority: local photoCatalog (spot, then white diagram) → bundled Wikimedia → overrides → aircraft.photos
  * (IndexedDB admin uploads still win via MediaContext before this is called.)
  */
 export function getPhotoUrl(ac: Aircraft, variant?: string): { url: string; attribution: string } {
@@ -118,9 +149,16 @@ export function getPhotoUrl(ac: Aircraft, variant?: string): { url: string; attr
 }
 
 export function getDiagramUrl(ac: Aircraft): { url: string; attribution?: string } | null {
-  const local = catalogDiagrams(ac.id)[0];
-  if (local) {
-    return { url: local.publicPath, attribution: local.attribution };
+  const diagrams = catalogDiagrams(ac.id);
+  const line =
+    diagrams.find((d) => /line-drawing|blueprint|diagram/i.test(d.sourceFile)) ?? diagrams[0];
+  if (line) {
+    return { url: line.publicPath, attribution: line.attribution };
+  }
+  // Fall back to a spot white plate if that's all we have
+  const spot = catalogSpots(ac.id)[0];
+  if (spot) {
+    return { url: spot.publicPath, attribution: spot.attribution };
   }
   const bundled = aircraftMedia[ac.id]?.diagram;
   if (bundled?.url) return bundled;

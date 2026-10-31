@@ -182,15 +182,16 @@ function detectRole(stemNorm) {
   if (/\b(comparison|compare|vs|versus|side by side)\b/.test(stemNorm)) {
     return 'comparison';
   }
+  // Line drawings / blueprints → identification diagrams
   if (/\b(diagram|profile|sideview|side view|lineart|line art|line drawing|silhouette|blueprint)\b/.test(stemNorm)) {
     return 'diagram';
   }
   if (/_diagram\b|\bdiagram_|\bdiagram$|line-drawing|line_drawing/.test(stemNorm.replace(/\s+/g, '_'))) {
     return 'diagram';
   }
-  // Norebbo all-white templates are the profile diagram role
-  if (/\bwhite\b/.test(stemNorm) && !/\b(photo|ramp|gate)\b/.test(stemNorm)) {
-    return 'diagram';
+  // Norebbo all-white side plates are the quiz/flashcard "spot" images
+  if (/\bwhite\b/.test(stemNorm)) {
+    return 'spot';
   }
   return 'spot';
 }
