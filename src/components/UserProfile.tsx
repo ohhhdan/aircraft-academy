@@ -140,6 +140,34 @@ export function UserProfile() {
             <span>Show study tips after wrong answers</span>
           </label>
 
+          {state.mistakeAircraftIds.length > 0 && (
+            <>
+              <div className="mono text-muted" style={{ fontSize: 10, letterSpacing: '0.12em', margin: '18px 0 10px' }}>
+                Practice
+              </div>
+              <Link
+                to={canStartExercise ? '/spotter?practice=mistakes&mode=easy' : '#'}
+                className={`user-profile-practice ${!canStartExercise ? 'is-disabled' : ''}`}
+                onClick={(e) => {
+                  if (!canStartExercise) {
+                    e.preventDefault();
+                    return;
+                  }
+                  setOpen(false);
+                }}
+                aria-disabled={!canStartExercise}
+              >
+                <span>
+                  <strong>Practice mistakes</strong>
+                  <span className="text-muted" style={{ display: 'block', fontSize: 12, marginTop: 2 }}>
+                    {state.mistakeAircraftIds.length} aircraft in your weak-spot queue
+                  </span>
+                </span>
+                <span className="mono" style={{ fontSize: 11 }}>{state.mistakeAircraftIds.length}</span>
+              </Link>
+            </>
+          )}
+
           <div className="user-profile-footer">
             <Link to="/airpedia" className="top-bar-link" onClick={() => setOpen(false)}>
               ⌕ Open index

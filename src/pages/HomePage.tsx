@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { useApp } from '../context/AppContext';
 import { LESSON_PATH, MAX_CROWNS, type PathNode } from '../content/lessonPath';
 import { formatLifeTimer } from '../utils/data';
@@ -17,6 +17,7 @@ function nodeIcon(kind: PathNode['kind'], status: NodeStatus) {
 export function HomePage() {
   const { state, canStartExercise, nextLifeIn, dailyGoal } = useApp();
   const currentNodeRef = useRef<HTMLLIElement | null>(null);
+  const [heartsModalOpen, setHeartsModalOpen] = useState(false);
 
   const { statuses, continueNode } = useMemo(() => {
     const flat = LESSON_PATH.flatMap((u) => u.nodes);
@@ -54,10 +55,28 @@ export function HomePage() {
   }, [continueNode?.id]);
 
   const dailyPct = Math.min(100, Math.round((state.dailyXp / dailyGoal) * 100));
-  const weakCount = state.mistakeAircraftIds.length;
+
+  const guardHearts = (e: MouseEvent, allowed: boolean) => {
+    if (allowed) return;
+    e.preventDefault();
+    if (!canStartExercise) setHeartsModalOpen(true);
+  };
 
   return (
     <div className="path-home">
+      <header className="path-cover">
+        <div className="path-cover-mark" aria-hidden>
+          ✈
+        </div>
+        <div className="mono path-cover-kicker">Spotter&apos;s Field Guide</div>
+        <h1 className="serif path-title">Your flight path</h1>
+        <p className="path-cover-line mono">
+          {continueNode
+            ? `Next · ${continueNode.title}`
+            : 'Open a lesson when you are ready'}
+        </p>
+      </header>
+
       <section className="path-hud" aria-label="Daily progress">
         <div className="path-hud-item">
           <div className="path-hud-label">Streak</div>
@@ -75,67 +94,26 @@ export function HomePage() {
             <div className="path-daily-fill" style={{ width: `${dailyPct}%` }} />
           </div>
         </div>
-        <div className="path-hud-item">
-          <div className="path-hud-label">Hearts</div>
-          <div className="path-hud-value path-hud-hearts">
-            <span aria-hidden>♥</span> {state.lives}
-          </div>
-          {!canStartExercise && nextLifeIn != null && (
-            <div className="mono text-muted" style={{ fontSize: 10 }}>+1 in {formatLifeTimer(nextLifeIn)}</div>
-          )}
-        </div>
       </section>
-
-      <header className="path-brand">
-        <div className="eyebrow">Spotter Field Guide</div>
-        <h1 className="serif path-title">Your flight path</h1>
-        <p className="path-lead">
-          Short lessons. Instant feedback. Come back daily to keep your streak.
-        </p>
-      </header>
 
       {continueNode && (
         <div className="path-continue-wrap">
-          <Link
-            to={canStartExercise ? continueNode.to : '#'}
-            className={`btn btn-primary pressable path-continue ${!canStartExercise ? 'is-disabled' : ''}`}
-            onClick={(e) => {
-              if (!canStartExercise) e.preventDefault();
-            }}
-            aria-disabled={!canStartExercise}
-          >
-            {state.completedNodes.length === 0 ? 'Start Unit 1' : 'Continue'} →
-          </Link>
+          {canStartExercise ? (
+            <Link to={continueNode.to} className="btn btn-primary pressable path-continue">
+              {state.completedNodes.length === 0 ? 'Start Unit 1' : 'Continue'} →
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-primary pressable path-continue is-disabled"
+              onClick={() => setHeartsModalOpen(true)}
+            >
+              {state.completedNodes.length === 0 ? 'Start Unit 1' : 'Continue'} →
+            </button>
+          )}
           <div className="path-continue-hint mono">
             NEXT · {continueNode.title.toUpperCase()}
           </div>
-        </div>
-      )}
-
-      {weakCount > 0 && (
-        <div className="path-weak-spots">
-          <div>
-            <div className="mono path-weak-kicker">Practice mistakes</div>
-            <p className="path-weak-copy">
-              {weakCount} aircraft in your weak-spot queue — clear them with first-try IDs.
-            </p>
-          </div>
-          <Link
-            to={canStartExercise ? '/spotter?practice=mistakes&mode=easy' : '#'}
-            className={`btn btn-secondary pressable ${!canStartExercise ? 'is-disabled' : ''}`}
-            onClick={(e) => {
-              if (!canStartExercise) e.preventDefault();
-            }}
-            aria-disabled={!canStartExercise}
-          >
-            Practice · {weakCount}
-          </Link>
-        </div>
-      )}
-
-      {!canStartExercise && (
-        <div className="path-out-of-hearts">
-          <strong>Out of hearts.</strong> Review the Index or wait for one to refill — then jump back on the path.
         </div>
       )}
 
@@ -150,14 +128,17 @@ export function HomePage() {
           return (
             <section key={unit.id} className={`path-unit ${unitUnlocked ? '' : 'is-locked'}`}>
               <div className="path-unit-banner">
-                <div className="mono path-unit-kicker">{unit.title}</div>
-                <p>{unit.description}</p>
+                <div className="path-unit-banner-row">
+                  <div className="mono path-unit-kicker">{unit.title}</div>
+                  <div className="mono path-unit-difficulty">{unit.difficulty}</div>
+                </div>
               </div>
 
               <ol className="path-track">
                 {unit.nodes.map((node, i) => {
                   const status = !unitUnlocked ? 'locked' : statuses.get(node.id) ?? 'locked';
                   const crowns = state.nodeCrowns[node.id] ?? 0;
+                  const needsHearts = status !== 'locked' && status !== 'done' && !canStartExercise;
                   const clickable = status !== 'locked' && (canStartExercise || status === 'done');
                   const isCurrent = status === 'current';
 
@@ -173,6 +154,10 @@ export function HomePage() {
                         to={clickable ? node.to : '#'}
                         className="path-node-btn pressable"
                         onClick={(e) => {
+                          if (needsHearts) {
+                            guardHearts(e, false);
+                            return;
+                          }
                           if (!clickable) e.preventDefault();
                         }}
                         aria-disabled={!clickable}
@@ -199,6 +184,39 @@ export function HomePage() {
           );
         })}
       </div>
+
+      {heartsModalOpen && (
+        <div
+          className="path-modal-backdrop"
+          role="presentation"
+          onClick={() => setHeartsModalOpen(false)}
+        >
+          <div
+            className="path-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="out-of-hearts-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mono path-modal-kicker">Out of hearts</div>
+            <h2 id="out-of-hearts-title" className="serif path-modal-title">
+              Take a short break
+            </h2>
+            <p className="path-modal-copy">
+              Review the Index while you wait
+              {nextLifeIn != null ? `, or come back in ${formatLifeTimer(nextLifeIn)}` : ''}.
+            </p>
+            <div className="path-modal-actions">
+              <Link to="/airpedia" className="btn btn-primary pressable" onClick={() => setHeartsModalOpen(false)}>
+                Open Index
+              </Link>
+              <button type="button" className="btn btn-secondary pressable" onClick={() => setHeartsModalOpen(false)}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
