@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T04:32:48.597Z",
+  "updatedAt": "2026-10-31T04:32:57.939Z",
   "sourceDir": "images",
   "publicDir": "public/assets/aircraft",
   "photos": [
@@ -3173,16 +3173,6 @@
       "sortIndex": 4
     },
     {
-      "id": "concorde-comparison-01",
-      "aircraftId": "concorde",
-      "role": "comparison",
-      "sourceFile": "Boeing-797-concept__comparison.jpg",
-      "publicPath": "/assets/aircraft/concorde/comparison_01.jpg",
-      "attribution": "User provided (Norebbo pack)",
-      "matchedBy": "alias:conc",
-      "sortIndex": 1
-    },
-    {
       "id": "concorde-diagram-01-aerospatiale-bac-concorde",
       "aircraftId": "concorde",
       "role": "diagram",
@@ -3205,26 +3195,6 @@
       "attribution": "User provided (Norebbo pack)",
       "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
       "sortIndex": 2
-    },
-    {
-      "id": "concorde-diagram-03",
-      "aircraftId": "concorde",
-      "role": "diagram",
-      "sourceFile": "Boeing-797-concept__line-drawing.jpg",
-      "publicPath": "/assets/aircraft/concorde/diagram_03.jpg",
-      "attribution": "User provided (Norebbo pack)",
-      "matchedBy": "alias:conc",
-      "sortIndex": 3
-    },
-    {
-      "id": "concorde-diagram-04",
-      "aircraftId": "concorde",
-      "role": "diagram",
-      "sourceFile": "Boeing-797-concept__white.jpg",
-      "publicPath": "/assets/aircraft/concorde/diagram_04.jpg",
-      "attribution": "User provided (Norebbo pack)",
-      "matchedBy": "alias:conc",
-      "sortIndex": 4
     },
     {
       "id": "crj-diagram-01-bombardier-crj-1000",
@@ -8066,40 +8036,9 @@
           "attribution": "User provided (Norebbo pack)",
           "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
           "sortIndex": 2
-        },
-        {
-          "id": "concorde-diagram-03",
-          "aircraftId": "concorde",
-          "role": "diagram",
-          "sourceFile": "Boeing-797-concept__line-drawing.jpg",
-          "publicPath": "/assets/aircraft/concorde/diagram_03.jpg",
-          "attribution": "User provided (Norebbo pack)",
-          "matchedBy": "alias:conc",
-          "sortIndex": 3
-        },
-        {
-          "id": "concorde-diagram-04",
-          "aircraftId": "concorde",
-          "role": "diagram",
-          "sourceFile": "Boeing-797-concept__white.jpg",
-          "publicPath": "/assets/aircraft/concorde/diagram_04.jpg",
-          "attribution": "User provided (Norebbo pack)",
-          "matchedBy": "alias:conc",
-          "sortIndex": 4
         }
       ],
-      "comparison": [
-        {
-          "id": "concorde-comparison-01",
-          "aircraftId": "concorde",
-          "role": "comparison",
-          "sourceFile": "Boeing-797-concept__comparison.jpg",
-          "publicPath": "/assets/aircraft/concorde/comparison_01.jpg",
-          "attribution": "User provided (Norebbo pack)",
-          "matchedBy": "alias:conc",
-          "sortIndex": 1
-        }
-      ]
+      "comparison": []
     },
     "crj": {
       "spot": [],
@@ -9752,11 +9691,24 @@
       ]
     }
   },
-  "unmatched": [],
+  "unmatched": [
+    {
+      "sourceFile": "Boeing-797-concept__comparison.jpg",
+      "reason": "No aircraft id/family/variant match"
+    },
+    {
+      "sourceFile": "Boeing-797-concept__line-drawing.jpg",
+      "reason": "No aircraft id/family/variant match"
+    },
+    {
+      "sourceFile": "Boeing-797-concept__white.jpg",
+      "reason": "No aircraft id/family/variant match"
+    }
+  ],
   "stats": {
     "sourceFiles": 392,
-    "matched": 392,
-    "unmatched": 0,
+    "matched": 389,
+    "unmatched": 3,
     "aircraftCovered": 56
   }
 }

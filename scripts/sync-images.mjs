@@ -213,7 +213,10 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
     const rest = normalize(dbl[2].replace(/[_-]?0*\d+$/, ''));
     const restRole = detectRole(normalize(dbl[2]));
     const sheetHit = norebboIndex.get(compact(left)) || norebboIndex.get(normalize(left));
-    if (sheetHit?.familyId) {
+    if (sheetHit) {
+      if (!sheetHit.familyId) {
+        return null; // sheet concept / unmapped type — don't fuzzy-assign
+      }
       return {
         aircraftId: sheetHit.familyId,
         variant: sheetHit.sheetName,
