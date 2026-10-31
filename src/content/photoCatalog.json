@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T04:32:35.376Z",
+  "updatedAt": "2026-10-31T04:32:48.597Z",
   "sourceDir": "images",
   "publicDir": "public/assets/aircraft",
   "photos": [
@@ -3188,10 +3188,10 @@
       "role": "diagram",
       "variant": "Aérospatiale-BAC Concorde",
       "sheetRow": 15,
-      "sourceFile": "A-rospatiale-BAC-Concorde__line-drawing.jpg",
+      "sourceFile": "Aerospatiale-BAC-Concorde__line-drawing.jpg",
       "publicPath": "/assets/aircraft/concorde/diagram__aerospatiale-bac-concorde_01.jpg",
       "attribution": "User provided (Norebbo pack)",
-      "matchedBy": "sheet-stem:A-rospatiale-BAC-Concorde→row 15",
+      "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
       "sortIndex": 1
     },
     {
@@ -3200,10 +3200,10 @@
       "role": "diagram",
       "variant": "Aérospatiale-BAC Concorde",
       "sheetRow": 15,
-      "sourceFile": "A-rospatiale-BAC-Concorde__white.jpg",
+      "sourceFile": "Aerospatiale-BAC-Concorde__white.jpg",
       "publicPath": "/assets/aircraft/concorde/diagram__aerospatiale-bac-concorde_02.jpg",
       "attribution": "User provided (Norebbo pack)",
-      "matchedBy": "sheet-stem:A-rospatiale-BAC-Concorde→row 15",
+      "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
       "sortIndex": 2
     },
     {
@@ -8049,10 +8049,10 @@
           "role": "diagram",
           "variant": "Aérospatiale-BAC Concorde",
           "sheetRow": 15,
-          "sourceFile": "A-rospatiale-BAC-Concorde__line-drawing.jpg",
+          "sourceFile": "Aerospatiale-BAC-Concorde__line-drawing.jpg",
           "publicPath": "/assets/aircraft/concorde/diagram__aerospatiale-bac-concorde_01.jpg",
           "attribution": "User provided (Norebbo pack)",
-          "matchedBy": "sheet-stem:A-rospatiale-BAC-Concorde→row 15",
+          "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
           "sortIndex": 1
         },
         {
@@ -8061,10 +8061,10 @@
           "role": "diagram",
           "variant": "Aérospatiale-BAC Concorde",
           "sheetRow": 15,
-          "sourceFile": "A-rospatiale-BAC-Concorde__white.jpg",
+          "sourceFile": "Aerospatiale-BAC-Concorde__white.jpg",
           "publicPath": "/assets/aircraft/concorde/diagram__aerospatiale-bac-concorde_02.jpg",
           "attribution": "User provided (Norebbo pack)",
-          "matchedBy": "sheet-stem:A-rospatiale-BAC-Concorde→row 15",
+          "matchedBy": "sheet-stem:Aerospatiale-BAC-Concorde→row 15",
           "sortIndex": 2
         },
         {
