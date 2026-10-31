@@ -231,14 +231,14 @@ export const CATEGORY_ORDER: CategoryMeta[] = [
     id: 'commercial-jets',
     label: 'Commercial Jets',
     skycardsTag: 'Airliner',
-    description: 'Narrowbody and widebody passenger jets — start with the types you see at every major hub.',
+    description: 'Narrowbody and widebody passenger jets.',
     unlockOrder: 0,
   },
   {
     id: 'business-jets',
     label: 'Business Jets',
     skycardsTag: 'Jet',
-    description: 'Corporate and private jets — from light jets to ultra-long-range flagships.',
+    description: 'Corporate and private jets.',
     unlockOrder: 1,
   },
   {
@@ -252,14 +252,14 @@ export const CATEGORY_ORDER: CategoryMeta[] = [
     id: 'propeller',
     label: 'Propeller / Piston',
     skycardsTag: 'Propeller',
-    description: 'Turboprops and piston aircraft — trainers, commuters, and classics.',
+    description: 'Turboprops and piston aircraft.',
     unlockOrder: 3,
   },
   {
     id: 'helicopter',
     label: 'Helicopter',
     skycardsTag: 'Helicopter',
-    description: 'Rotorcraft from light trainers to heavy-lift military workhorses.',
+    description: 'Rotorcraft.',
     unlockOrder: 4,
   },
 ];
