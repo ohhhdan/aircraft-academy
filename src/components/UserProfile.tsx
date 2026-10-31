@@ -56,16 +56,26 @@ export function UserProfile() {
             </div>
           </div>
 
-          <div className="user-profile-stat">
-            <span className="text-muted">Overall progress</span>
-            <span className="serif" style={{ fontSize: 28, fontWeight: 600, color: 'var(--green)' }}>{overallProgress}%</span>
+          <div className="user-profile-stat-grid">
+            <div className="user-profile-stat">
+              <span className="text-muted">XP</span>
+              <span className="serif" style={{ fontSize: 24, fontWeight: 600, color: 'var(--ochre)' }}>{state.xp}</span>
+            </div>
+            <div className="user-profile-stat">
+              <span className="text-muted">Streak</span>
+              <span className="serif" style={{ fontSize: 24, fontWeight: 600 }}>🔥 {state.streak}</span>
+            </div>
+            <div className="user-profile-stat">
+              <span className="text-muted">Mastery</span>
+              <span className="serif" style={{ fontSize: 24, fontWeight: 600, color: 'var(--green)' }}>{overallProgress}%</span>
+            </div>
           </div>
           <div className="mastery-bar" style={{ marginBottom: 16 }}>
             <div className="mastery-bar-fill" style={{ width: `${overallProgress}%` }} />
           </div>
 
           <div className="user-profile-lives">
-            <span className="text-muted">Study energy</span>
+            <span className="text-muted">Hearts</span>
             <span>
               {'♥'.repeat(state.lives)}
               {!canStartExercise && nextLifeIn != null && (

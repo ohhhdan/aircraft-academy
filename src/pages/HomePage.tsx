@@ -1,134 +1,164 @@
 import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import { getAircraftById } from '../utils/data';
-import { ImagePlate } from '../components/ImagePlate';
+import { LESSON_PATH, MAX_CROWNS, type PathNode } from '../content/lessonPath';
+import { formatLifeTimer } from '../utils/data';
 
-const MODULES = [
-  {
-    id: 'learn',
-    to: '/learn',
-    num: '01',
-    title: 'Key Features',
-    desc: 'Study specimen plates — photo, diagram, and how to spot each type.',
-    progressKey: 'learn' as const,
-    open: true,
-  },
-  {
-    id: 'spotter',
-    to: '/spotter',
-    num: '02',
-    title: 'Identify by Photo',
-    desc: 'Verify aircraft from ramp photos — family level and variant level.',
-    progressKey: 'spotter' as const,
-    open: true,
-  },
-  {
-    id: 'deepdive',
-    to: '/deepdive',
-    num: '03',
-    title: 'Deep Dive',
-    desc: 'Compare rivals, range, service dates, and mission fit.',
-    progressKey: 'deepdive' as const,
-    open: true,
-  },
-  {
-    id: 'codes',
-    to: '/codes',
-    num: '04',
-    title: 'Airport Codes',
-    desc: 'Learn IATA three-letter codes through a tiered departure board.',
-    progressKey: 'codes' as const,
-    open: true,
-  },
-];
+type NodeStatus = 'locked' | 'current' | 'done';
+
+function nodeIcon(kind: PathNode['kind'], status: NodeStatus) {
+  if (status === 'done') return '★';
+  if (kind === 'treasure') return '◆';
+  if (kind === 'checkpoint') return '◎';
+  if (kind === 'lesson') return '📖';
+  return '▶';
+}
 
 export function HomePage() {
-  const { state, canStartExercise, overallProgress } = useApp();
-  const specimen = getAircraftById('b747')!;
+  const { state, canStartExercise, nextLifeIn, dailyGoal } = useApp();
+
+  const { statuses, continueNode } = useMemo(() => {
+    const flat = LESSON_PATH.flatMap((u) => u.nodes);
+    const map = new Map<string, NodeStatus>();
+    let foundCurrent = false;
+    let continueNode: PathNode | null = null;
+
+    for (const node of flat) {
+      const crowns = state.nodeCrowns[node.id] ?? 0;
+      const done = crowns > 0 || state.completedNodes.includes(node.id);
+      if (done) {
+        map.set(node.id, 'done');
+      } else if (!foundCurrent) {
+        map.set(node.id, 'current');
+        continueNode = node;
+        foundCurrent = true;
+      } else {
+        map.set(node.id, 'locked');
+      }
+    }
+    if (!continueNode && flat.length) {
+      // All done — point at last practice for replay
+      continueNode = flat[flat.length - 1];
+      map.set(continueNode.id, 'current');
+    }
+    return { statuses: map, continueNode };
+  }, [state.nodeCrowns, state.completedNodes]);
+
+  const dailyPct = Math.min(100, Math.round((state.dailyXp / dailyGoal) * 100));
 
   return (
-    <div>
-      <div className="home-hero">
-        <div className="home-hero-copy">
-          <div className="mono" style={{ fontSize: 11, letterSpacing: '0.16em', color: 'var(--ochre)', marginBottom: 14 }}>
-            Aircraft Identification · Learning Experience
-          </div>
-          <h1 className="serif" style={{ fontSize: 'clamp(2rem, 5vw, 52px)', lineHeight: 1.02, margin: '0 0 16px', textWrap: 'balance' }}>
-            Learn to read the sky.
-          </h1>
-          <p style={{ fontSize: 17, lineHeight: 1.6, color: 'var(--ink-faint)', maxWidth: 460, marginBottom: 26, textWrap: 'pretty' }}>
-            A spotter&apos;s logbook for building visual literacy — study each aircraft like a field specimen before you practice identification. Observe, study, practice, assess.
-          </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Link to="/learn" className="btn btn-primary pressable">
-              Start with Key Features →
-            </Link>
-            <Link to="/airpedia" className="btn btn-secondary pressable">
-              Open the index
-            </Link>
+    <div className="path-home">
+      <section className="path-hud" aria-label="Daily progress">
+        <div className="path-hud-item">
+          <div className="path-hud-label">Streak</div>
+          <div className="path-hud-value path-hud-streak">
+            <span aria-hidden>🔥</span> {state.streak}
           </div>
         </div>
-        <div className="home-hero-specimen">
-          <div className="card" style={{ padding: 14 }}>
-            <ImagePlate aircraft={specimen} kind="photo" label="Plate I · Specimen" height={280} />
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: 12 }}>
-              <div className="serif" style={{ fontSize: 22, fontWeight: 600 }}>{specimen.family}</div>
-              {specimen.nickname && (
-                <div className="mono" style={{ fontSize: 11, color: 'var(--ochre)' }}>&ldquo;{specimen.nickname}&rdquo;</div>
-              )}
-            </div>
+        <div className="path-hud-item">
+          <div className="path-hud-label">Total XP</div>
+          <div className="path-hud-value">{state.xp.toLocaleString()}</div>
+        </div>
+        <div className="path-hud-item path-hud-item--grow">
+          <div className="path-hud-label">Daily goal · {state.dailyXp}/{dailyGoal} XP</div>
+          <div className="path-daily-bar">
+            <div className="path-daily-fill" style={{ width: `${dailyPct}%` }} />
           </div>
         </div>
-      </div>
+        <div className="path-hud-item">
+          <div className="path-hud-label">Hearts</div>
+          <div className="path-hud-value path-hud-hearts">
+            {'♥'.repeat(Math.max(0, state.lives))}
+            <span className="path-hud-hearts-empty">{'♡'.repeat(Math.max(0, 5 - state.lives))}</span>
+          </div>
+          {!canStartExercise && nextLifeIn != null && (
+            <div className="mono text-muted" style={{ fontSize: 10 }}>+1 in {formatLifeTimer(nextLifeIn)}</div>
+          )}
+        </div>
+      </section>
 
-      <div className="card" style={{ background: 'var(--surface-warm)', padding: '18px 20px', marginBottom: 34, display: 'flex', gap: 28, alignItems: 'center', flexWrap: 'wrap' }}>
-        <div>
-          <div className="mono" style={{ fontSize: 10, letterSpacing: '0.14em', color: 'var(--ink-muted)', marginBottom: 4 }}>
-            Field Journal Progress
-          </div>
-          <div className="serif" style={{ fontSize: 46, fontWeight: 600, lineHeight: 1, color: 'var(--green)' }}>
-            {overallProgress}%
-          </div>
-        </div>
-        <div style={{ flex: 1, minWidth: 200 }}>
-          <div className="mastery-bar" style={{ marginBottom: 8 }}>
-            <div className="mastery-bar-fill" style={{ width: `${overallProgress}%` }} />
-          </div>
-          <div className="mono" style={{ fontSize: 11, color: 'var(--ink-muted)' }}>
-            Progress across all four modules — study first, then practice.
-          </div>
-        </div>
-      </div>
+      <header className="path-brand">
+        <div className="eyebrow">Spotter Field Guide</div>
+        <h1 className="serif path-title">Your flight path</h1>
+        <p className="path-lead">
+          Short lessons. Instant feedback. Come back daily to keep your streak.
+        </p>
+      </header>
 
-      {!canStartExercise && (
-        <div className="card" style={{ marginBottom: 24, borderColor: 'var(--brick)' }}>
-          <strong style={{ color: 'var(--brick)' }}>Take a break.</strong> Review the Index or wait for your study energy to return. Reference material stays open.
+      {continueNode && (
+        <div className="path-continue-wrap">
+          <Link
+            to={canStartExercise ? continueNode.to : '#'}
+            className={`btn btn-primary pressable path-continue ${!canStartExercise ? 'is-disabled' : ''}`}
+            onClick={(e) => {
+              if (!canStartExercise) e.preventDefault();
+            }}
+            aria-disabled={!canStartExercise}
+          >
+            {state.completedNodes.length === 0 ? 'Start Unit 1' : 'Continue'} →
+          </Link>
+          <div className="path-continue-hint mono">
+            NEXT · {continueNode.title.toUpperCase()}
+          </div>
         </div>
       )}
 
-      <div className="mono" style={{ fontSize: 11, letterSpacing: '0.14em', color: 'var(--ink-muted)', marginBottom: 14 }}>
-        The Curriculum
-      </div>
-      <div className="module-grid">
-        {MODULES.map((mod) => {
-          const prog = state.moduleProgress[mod.progressKey];
-          const pct = prog.total > 0 ? Math.round((prog.completed / prog.total) * 100) : 0;
+      {!canStartExercise && (
+        <div className="path-out-of-hearts">
+          <strong>Out of hearts.</strong> Review the Index or wait for one to refill — then jump back on the path.
+        </div>
+      )}
+
+      <div className="path-units">
+        {LESSON_PATH.map((unit, unitIdx) => {
+          const unitUnlocked =
+            unitIdx === 0 ||
+            LESSON_PATH[unitIdx - 1].nodes.every(
+              (n) => (state.nodeCrowns[n.id] ?? 0) > 0 || state.completedNodes.includes(n.id)
+            );
+
           return (
-            <Link key={mod.id} to={mod.to} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className={`module-card ${mod.open ? '' : 'module-card-locked'} ${mod.id === 'codes' ? 'module-card-teal' : ''}`}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                  <h3 className="serif">{mod.num} · {mod.title}</h3>
-                  <span className="mono" style={{ fontSize: 10, color: mod.id === 'codes' ? 'var(--teal)' : mod.open ? 'var(--ochre)' : 'var(--locked-text)' }}>
-                    {mod.open ? 'OPEN' : 'SOON'}
-                  </span>
-                </div>
-                <p>{mod.desc}</p>
-                <div className="progress-bar">
-                  <div className="progress-fill" style={{ width: `${pct}%` }} />
-                </div>
-                <span className="timestamp">{prog.completed}/{prog.total} complete</span>
+            <section key={unit.id} className={`path-unit ${unitUnlocked ? '' : 'is-locked'}`}>
+              <div className="path-unit-banner">
+                <div className="mono path-unit-kicker">{unit.title}</div>
+                <p>{unit.description}</p>
               </div>
-            </Link>
+
+              <ol className="path-track">
+                {unit.nodes.map((node, i) => {
+                  const status = !unitUnlocked ? 'locked' : statuses.get(node.id) ?? 'locked';
+                  const crowns = state.nodeCrowns[node.id] ?? 0;
+                  const clickable = status !== 'locked' && (canStartExercise || status === 'done');
+
+                  return (
+                    <li key={node.id} className={`path-node path-node--${status} path-node--${node.kind}`}>
+                      {i > 0 && <div className="path-connector" aria-hidden />}
+                      <Link
+                        to={clickable ? node.to : '#'}
+                        className="path-node-btn pressable"
+                        onClick={(e) => {
+                          if (!clickable) e.preventDefault();
+                        }}
+                        aria-disabled={!clickable}
+                      >
+                        <span className="path-node-ring">
+                          <span className="path-node-glyph">{nodeIcon(node.kind, status)}</span>
+                        </span>
+                        <span className="path-node-copy">
+                          <span className="path-node-title">{node.title}</span>
+                          <span className="path-node-sub">{node.subtitle}</span>
+                          <span className="path-crowns" aria-label={`${crowns} of ${MAX_CROWNS} crowns`}>
+                            {'♛'.repeat(crowns)}
+                            <span className="path-crowns-empty">{'♛'.repeat(Math.max(0, MAX_CROWNS - crowns))}</span>
+                          </span>
+                        </span>
+                        <span className="path-node-xp">+{node.xpReward} XP</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ol>
+            </section>
           );
         })}
       </div>
