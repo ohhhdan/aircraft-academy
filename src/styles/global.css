@@ -650,6 +650,10 @@ button {
   font-size: 13px;
   letter-spacing: 0.12em;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .feedback-banner-head--ok {
@@ -658,6 +662,27 @@ button {
 
 .feedback-banner-head--err {
   color: var(--brick-dark, #8a3426);
+}
+
+.feedback-xp-chip {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--cream);
+  background: var(--green);
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 3px 10px;
+  animation: feedback-xp-pop 0.45s ease-out;
+}
+
+@keyframes feedback-xp-pop {
+  from { opacity: 0; transform: scale(0.7) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .feedback-banner-text {
@@ -1843,11 +1868,73 @@ footer.app-footer a {
   align-items: center;
 }
 
+.path-weak-spots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1.5px dashed var(--ochre);
+  background: color-mix(in srgb, var(--ochre) 12%, var(--surface));
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.path-weak-kicker {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--ochre);
+  margin-bottom: 4px;
+}
+
+.path-weak-copy {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-faint);
+  max-width: 32ch;
+}
+
+.path-weak-spots .btn.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.xp-pop {
+  position: fixed;
+  top: max(88px, 18%);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  background: var(--green);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 12px 22px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  animation: xp-float 1.35s ease-out forwards;
+}
+
+@keyframes xp-float {
+  0% { opacity: 0; transform: translate(-50%, 18px) scale(0.8); }
+  18% { opacity: 1; transform: translate(-50%, 0) scale(1.08); }
+  70% { opacity: 1; transform: translate(-50%, -10px) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -36px) scale(0.96); }
+}
+
 @media (max-width: 640px) {
   .top-bar-game-stats {
     display: none;
   }
   .path-continue-wrap {
     top: 56px;
+  }
+  .path-weak-spots {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

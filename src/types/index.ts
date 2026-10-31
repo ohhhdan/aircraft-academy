@@ -203,6 +203,8 @@ export interface AppState {
   nodeCrowns: Record<string, number>;
   /** Ordered list of completed node ids (at least once) */
   completedNodes: string[];
+  /** Aircraft ids missed recently — Practice Weak Spots queue */
+  mistakeAircraftIds: string[];
 }
 
 export interface ExerciseSession {
@@ -281,4 +283,5 @@ export const DEFAULT_GAME_STATS = {
   dailyXp: 0,
   nodeCrowns: {} as Record<string, number>,
   completedNodes: [] as string[],
+  mistakeAircraftIds: [] as string[],
 };
