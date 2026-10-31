@@ -13,7 +13,7 @@ import {
 import { useMedia } from '../context/MediaContext';
 import { aircraft, getAircraftById, pickRandom, shuffle } from '../utils/data';
 import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
-import { spotterLearnMore } from '../utils/learnMore';
+import { spotterLearnMore, spotterTell } from '../utils/learnMore';
 import type { Aircraft, CategoryGroup } from '../types';
 
 type Mode = 'easy' | 'hard';
@@ -154,10 +154,11 @@ export function SpotterPage() {
         setXpPop((n) => n + 1);
         clearMistake(current.id);
       }
+      const tell = spotterTell(current);
       setFeedback({
         ok: true,
         xp: firstTry ? XP_PER_CORRECT : undefined,
-        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged.`,
+        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged. Spot it by the ${tell}.`,
       });
     } else {
       if (!lostLifeThisQuestion) {
@@ -165,9 +166,10 @@ export function SpotterPage() {
         setLostLifeThisQuestion(true);
         recordMistake(current.id);
       }
+      const tell = spotterTell(current);
       setFeedback({
         ok: false,
-        explanation: `The answer is ${correctAnswer}. You chose ${answer}. Compare fuselage shape, wing position, and engines.`,
+        explanation: `The answer is ${correctAnswer}. You chose ${answer}. Spot it by the ${tell}.`,
         learnMore: spotterLearnMore(current, preferences.showLearnLinks),
       });
     }
