@@ -314,8 +314,8 @@ export function EncyclopediaPage() {
             )}
             {selected.keyFeatures.length > 0 && (
               <div className="tell-callout">
-                <strong style={{ color: 'var(--teal)' }}>One-line tell:</strong>{' '}
-                {selected.keyFeatures.slice(0, 2).join(' — ')}.
+                <strong style={{ color: 'var(--teal)' }}>Quick ID:</strong>{' '}
+                {selected.keyFeatures.slice(0, 2).join(', ')}.
               </div>
             )}
             <div style={{ marginTop: 16 }}>
@@ -335,7 +335,7 @@ export function EncyclopediaPage() {
       <div className="eyebrow">Reference · Index</div>
       <h2 className="serif" style={{ margin: '0 0 8px' }}>Aircraft index</h2>
       <p className="text-faint" style={{ fontSize: '0.95rem', maxWidth: 560, textWrap: 'pretty' }}>
-        Search every specimen, browse Norebbo variant comparisons, and match image stems to the spreadsheet pack.
+        Search every aircraft, browse Norebbo variant comparisons, and match image stems to the spreadsheet pack.
       </p>
 
       <input
@@ -423,7 +423,7 @@ export function EncyclopediaPage() {
           {filteredAirports.map((ap) => (
             <div key={ap.iata} className="encyclopedia-item">
               <span className={`tier-badge tier-${ap.tier}`}>{ap.tier}</span>{' '}
-              <strong>{ap.iata}</strong> / {ap.icao} — {ap.city}, {ap.country}
+              <strong>{ap.iata}</strong> / {ap.icao}: {ap.city}, {ap.country}
               <div className="text-muted" style={{ fontSize: '0.8rem' }}>{ap.name}</div>
             </div>
           ))}

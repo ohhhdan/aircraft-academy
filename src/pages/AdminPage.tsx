@@ -56,7 +56,7 @@ export function AdminPage() {
           <h1 style={{ margin: '0 0 8px', fontWeight: 400 }}>Aircraft Image Manager</h1>
           <p style={{ margin: 0, color: 'var(--ink-faint)', maxWidth: 640 }}>
             Browser uploads override everything. For photos baked into the build, drop files in{' '}
-            <code>images/</code> and run <code>npm run sync-images</code> — catalog coverage:{' '}
+            <code>images/</code> and run <code>npm run sync-images</code>  -  catalog coverage:{' '}
             {catalogStats.aircraftCovered}/{aircraft.length} aircraft ({catalogStats.matched} files).
           </p>
         </div>

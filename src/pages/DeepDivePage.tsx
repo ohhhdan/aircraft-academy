@@ -59,7 +59,7 @@ function buildExercises(): Exercise[] {
   const a380 = getAircraftById('a380')!;
   ex.push({
     type: 'timeline',
-    prompt: "Which entered service first — the 'Queen of the Skies' or the A380 Superjumbo?",
+    prompt: "Which entered service first  -  the 'Queen of the Skies' or the A380 Superjumbo?",
     data: {
       options: [
         { label: b747.nickname + ' (B747)', year: b747.introYear, id: b747.id },
@@ -193,7 +193,7 @@ export function DeepDivePage() {
         const g650 = getAircraftById('g650')!;
         const phenom = getAircraftById('phenom300')!;
         failQuestion(
-          `Transcontinental CEO trips need long range (${g650.rangeNm.toLocaleString()} nm) — ${g650.family}. Weekend hops suit lighter jets like the ${phenom.family} (${phenom.rangeNm.toLocaleString()} nm).`,
+          `Transcontinental CEO trips need long range (${g650.rangeNm.toLocaleString()} nm)  -  ${g650.family}. Weekend hops suit lighter jets like the ${phenom.family} (${phenom.rangeNm.toLocaleString()} nm).`,
           'business jet range and mission fit'
         );
       }
@@ -233,7 +233,7 @@ export function DeepDivePage() {
     const order = selected.length ? selected : data.aircraft.map((a) => a.id);
     const ok = order.every((id, i) => id === data.correctOrder[i]);
     if (ok) {
-      passQuestion('Range order is correct — shortest to longest nautical miles.');
+      passQuestion('Range order is correct  -  shortest to longest nautical miles.');
     } else {
       const sorted = data.correctOrder.map((id) => getAircraftById(id)!);
       failQuestion(
@@ -281,7 +281,7 @@ export function DeepDivePage() {
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
           {node
             ? node.subtitle
-            : 'Match rivals, rank range, place aircraft on a timeline, and fit types to missions — the context that makes identification stick.'}
+            : 'Match rivals, rank range, place aircraft on a timeline, and fit types to missions  -  the context that makes identification stick.'}
         </p>
         <button type="button" className="btn btn-primary pressable" style={{ marginTop: 24 }} onClick={startSession} disabled={!canStartExercise}>
           Start deep dive ({totalRounds} tasks) · +{node?.xpReward ?? 20} XP
@@ -378,7 +378,7 @@ export function DeepDivePage() {
       {exercise.type === 'timeline' && timelineData && (
         <div className="option-grid">
           {timelineData.options.map((opt) => {
-            const label = `${opt.label} — entered ${opt.year}`;
+            const label = `${opt.label}  -  entered ${opt.year}`;
             const mark = getOptionMarkState(opt.id, chosen, timelineData.correct, answered);
             return (
               <button
