@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run sync-images && vite build",
     "sync-images": "node scripts/sync-images.mjs",
     "sync-photos": "node scripts/sync-images.mjs",
+    "download-norebbo": "node scripts/download-norebbo-pack.mjs",
     "build-icao": "node scripts/build-icao-types.mjs",
     "expand-aircraft": "node scripts/expand-aircraft-catalog.mjs",
     "enrich-icao": "node scripts/enrich-icao-aeroapi.mjs",

@@ -26,6 +26,7 @@ const PUBLIC_AIRCRAFT_DIR = join(ROOT, 'public', 'assets', 'aircraft');
 const CATALOG_PATH = join(ROOT, 'src', 'content', 'photoCatalog.json');
 const AIRCRAFT_PATH = join(ROOT, 'src', 'content', 'aircraft.json');
 const ICAO_PATH = join(ROOT, 'src', 'content', 'icaoTypes.json');
+const NOREBBO_PATH = join(ROOT, 'src', 'content', 'norebboCatalog.json');
 
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif']);
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -169,17 +170,32 @@ function buildAliasIndex(aircraft) {
   return entries;
 }
 
+function loadNorebboCatalog() {
+  try {
+    return JSON.parse(readFileSync(NOREBBO_PATH, 'utf8'));
+  } catch {
+    return { entries: [], byImageStem: {} };
+  }
+}
+
 function detectRole(stemNorm) {
-  if (/\b(diagram|profile|sideview|side view|lineart|line art|silhouette)\b/.test(stemNorm)) {
+  if (/\b(comparison|compare|vs|versus|side by side)\b/.test(stemNorm)) {
+    return 'comparison';
+  }
+  if (/\b(diagram|profile|sideview|side view|lineart|line art|line drawing|silhouette|blueprint)\b/.test(stemNorm)) {
     return 'diagram';
   }
-  if (/_diagram\b|\bdiagram_|\bdiagram$/.test(stemNorm.replace(/\s+/g, '_'))) {
+  if (/_diagram\b|\bdiagram_|\bdiagram$|line-drawing|line_drawing/.test(stemNorm.replace(/\s+/g, '_'))) {
+    return 'diagram';
+  }
+  // Norebbo all-white templates are the profile diagram role
+  if (/\bwhite\b/.test(stemNorm) && !/\b(photo|ramp|gate)\b/.test(stemNorm)) {
     return 'diagram';
   }
   return 'spot';
 }
 
-function matchFile(relPath, aliasIndex) {
+function matchFile(relPath, aliasIndex, norebboIndex) {
   const fileName = basename(relPath);
   const stem = fileName.replace(extname(fileName), '');
   const parent = dirname(relPath);
@@ -190,10 +206,27 @@ function matchFile(relPath, aliasIndex) {
   const role = detectRole(hayNorm);
 
   // Explicit id__variant pattern: b737__737-800_01
+  // Also sheet-stem pattern: Comac-C909__white / Airbus-A321-P2F__line-drawing
   const dbl = stem.match(/^([A-Za-z0-9-]+)__(.+)$/);
   if (dbl) {
-    const idPart = compact(dbl[1]);
+    const left = dbl[1];
     const rest = normalize(dbl[2].replace(/[_-]?0*\d+$/, ''));
+    const restRole = detectRole(normalize(dbl[2]));
+    const sheetHit = norebboIndex.get(compact(left)) || norebboIndex.get(normalize(left));
+    if (sheetHit) {
+      if (!sheetHit.familyId) {
+        return null; // sheet concept / unmapped type — don't fuzzy-assign
+      }
+      return {
+        aircraftId: sheetHit.familyId,
+        variant: sheetHit.sheetName,
+        role: restRole === 'spot' ? role : restRole,
+        matchedBy: `sheet-stem:${sheetHit.imageStem}→row ${sheetHit.sheetRow}`,
+        score: 1100,
+        sheetRow: sheetHit.sheetRow,
+      };
+    }
+    const idPart = compact(left);
     const idHit = aliasIndex.find((a) => a.compact === idPart && a.weight >= 100);
     if (idHit) {
       const variantHit = aliasIndex.find(
@@ -202,9 +235,24 @@ function matchFile(relPath, aliasIndex) {
       return {
         aircraftId: idHit.aircraftId,
         variant: variantHit?.variant,
-        role: detectRole(normalize(dbl[2])) === 'diagram' ? 'diagram' : role,
+        role: restRole === 'diagram' || restRole === 'comparison' ? restRole : role,
         matchedBy: `id__variant:${idHit.aircraftId}`,
         score: 1000,
+      };
+    }
+  }
+
+  // Whole-stem sheet match (no __ suffix)
+  for (const [key, entry] of norebboIndex) {
+    if (hayCompact === key || hayCompact.startsWith(key)) {
+      if (!entry.familyId) continue;
+      return {
+        aircraftId: entry.familyId,
+        variant: entry.sheetName,
+        role,
+        matchedBy: `sheet-stem:${entry.imageStem}→row ${entry.sheetRow}`,
+        score: 1050,
+        sheetRow: entry.sheetRow,
       };
     }
   }
@@ -262,9 +310,28 @@ function safeSlug(s) {
   return normalize(s).replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'photo';
 }
 
+function buildNorebboIndex(norebbo) {
+  /** @type {Map<string, { familyId: string|null, sheetRow: number, sheetName: string, imageStem: string }>} */
+  const map = new Map();
+  for (const e of norebbo.entries ?? []) {
+    const rec = {
+      familyId: e.familyId,
+      sheetRow: e.sheetRow,
+      sheetName: e.sheetName,
+      imageStem: e.imageStem,
+    };
+    map.set(compact(e.imageStem), rec);
+    map.set(normalize(e.imageStem), rec);
+    map.set(compact(e.sheetName), rec);
+  }
+  return map;
+}
+
 function main() {
   const aircraft = JSON.parse(readFileSync(AIRCRAFT_PATH, 'utf8'));
   const aliasIndex = buildAliasIndex(aircraft);
+  const norebbo = loadNorebboCatalog();
+  const norebboIndex = buildNorebboIndex(norebbo);
   const files = walkImages(IMAGES_DIR);
 
   if (!existsSync(IMAGES_DIR)) {
@@ -272,6 +339,7 @@ function main() {
   }
 
   console.log(`Found ${files.length} image(s) in images/`);
+  console.log(`Norebbo sheet stems loaded: ${norebbo.entries?.length ?? 0}`);
 
   /** @type {import('../src/types/index.ts').PhotoCatalogEntry[]} */
   const photos = [];
@@ -291,7 +359,7 @@ function main() {
   }
 
   for (const file of files) {
-    const hit = matchFile(file.rel, aliasIndex);
+    const hit = matchFile(file.rel, aliasIndex, norebboIndex);
     if (!hit) {
       unmatched.push({ sourceFile: file.rel, reason: 'No aircraft id/family/variant match' });
       console.log(`  ? unmatched  ${file.rel}`);
@@ -319,23 +387,25 @@ function main() {
       aircraftId: hit.aircraftId,
       role: hit.role,
       ...(hit.variant ? { variant: hit.variant } : {}),
+      ...(hit.sheetRow ? { sheetRow: hit.sheetRow } : {}),
       sourceFile: file.rel,
       publicPath,
-      attribution: 'User provided',
+      attribution: 'User provided (Norebbo pack)',
       matchedBy: hit.matchedBy,
       sortIndex: idx,
     };
     photos.push(entry);
 
     const label = hit.variant ? `${hit.aircraftId} / ${hit.variant}` : hit.aircraftId;
-    console.log(`  ✓ ${hit.role.padEnd(8)} ${label.padEnd(28)} ← ${file.rel}`);
+    console.log(`  ✓ ${hit.role.padEnd(11)} ${label.padEnd(36)} ← ${file.rel}`);
   }
 
   photos.sort((a, b) => a.aircraftId.localeCompare(b.aircraftId) || a.role.localeCompare(b.role) || a.sortIndex - b.sortIndex);
 
   const byAircraft = {};
   for (const p of photos) {
-    if (!byAircraft[p.aircraftId]) byAircraft[p.aircraftId] = { spot: [], diagram: [] };
+    if (!byAircraft[p.aircraftId]) byAircraft[p.aircraftId] = { spot: [], diagram: [], comparison: [] };
+    if (!byAircraft[p.aircraftId][p.role]) byAircraft[p.aircraftId][p.role] = [];
     byAircraft[p.aircraftId][p.role].push(p);
   }
 

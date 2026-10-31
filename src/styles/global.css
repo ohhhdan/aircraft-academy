@@ -1139,6 +1139,62 @@ button {
   background: var(--surface-hover);
 }
 
+.compare-stage {
+  margin-top: 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.compare-split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  padding: 16px;
+  align-items: start;
+}
+
+.compare-side {
+  min-width: 0;
+}
+
+.compare-vs {
+  align-self: center;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ochre);
+  padding-top: 18px;
+}
+
+.compare-image-wrap {
+  padding: 12px;
+  background: linear-gradient(180deg, #f7f4ee 0%, #efe8dc 100%);
+}
+
+.compare-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.compare-image-placeholder {
+  padding: 28px 18px;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .compare-split {
+    grid-template-columns: 1fr;
+  }
+  .compare-vs {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+
 .ref-card {
   padding: 12px;
   border: 1.5px solid var(--ink);

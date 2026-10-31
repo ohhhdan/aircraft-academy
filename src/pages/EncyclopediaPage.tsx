@@ -4,10 +4,17 @@ import { useApp } from '../context/AppContext';
 import { AircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
 import { useMedia } from '../context/MediaContext';
-import { aircraft, airports } from '../utils/data';
-import type { Aircraft } from '../types';
+import {
+  aircraft,
+  airports,
+  getCatalogComparisons,
+  getComparisonsForFamily,
+  getNorebboEntriesForFamily,
+  norebboCatalog,
+} from '../utils/data';
+import type { Aircraft, NorebboComparison } from '../types';
 
-type Tab = 'aircraft' | 'airports';
+type Tab = 'aircraft' | 'compare' | 'airports';
 type RefFilter = 'all' | 'jet' | 'propeller' | 'oldies' | 'airbus' | 'boeing';
 
 const REF_FILTERS: { id: RefFilter; label: string }[] = [
@@ -36,6 +43,95 @@ function applyRefFilter(list: Aircraft[], filter: RefFilter): Aircraft[] {
   }
 }
 
+function ComparePanel({ selectedCmp, onBack }: { selectedCmp: NorebboComparison; onBack: () => void }) {
+  const leftAc = selectedCmp.familyId ? aircraft.find((a) => a.id === selectedCmp.familyId) : undefined;
+  const localCmp = leftAc ? getCatalogComparisons(leftAc.id) : [];
+  const localUrl = localCmp[0]?.publicPath;
+  const showUrl = localUrl || undefined;
+
+  return (
+    <div>
+      <button type="button" className="back-link" onClick={onBack}>
+        ← Back to comparisons
+      </button>
+      <div className="mono text-muted" style={{ fontSize: 11 }}>
+        NOREBBO · SHEET ROW {selectedCmp.sheetRow}
+      </div>
+      <h2 className="serif" style={{ fontSize: 32, margin: '4px 0 8px' }}>{selectedCmp.title}</h2>
+      <p className="text-faint" style={{ marginTop: 0 }}>
+        From <strong>{selectedCmp.sheetName}</strong>
+        {selectedCmp.norebboUrl && (
+          <>
+            {' '}·{' '}
+            <a href={selectedCmp.norebboUrl} target="_blank" rel="noreferrer">
+              View on Norebbo
+            </a>
+          </>
+        )}
+      </p>
+
+      <div className="compare-stage">
+        {selectedCmp.kind === 'peers' && (
+          <div className="compare-split">
+            <div className="compare-side">
+              <div className="mono text-muted" style={{ fontSize: 10, marginBottom: 8 }}>LEFT</div>
+              <div className="serif" style={{ fontSize: 22 }}>{selectedCmp.leftLabel}</div>
+              {leftAc && (
+                <div style={{ marginTop: 12 }}>
+                  <AircraftDiagram aircraft={leftAc} showCallouts={false} />
+                </div>
+              )}
+            </div>
+            <div className="compare-vs mono">VS</div>
+            <div className="compare-side">
+              <div className="mono text-muted" style={{ fontSize: 10, marginBottom: 8 }}>RIGHT</div>
+              <div className="serif" style={{ fontSize: 22 }}>{selectedCmp.rightLabel}</div>
+              {leftAc && (
+                <p className="text-faint" style={{ marginTop: 12, fontSize: '0.9rem' }}>
+                  Drop <code>{selectedCmp.suggestedLocalName}</code> into <code>images/</code> to show the Norebbo comparison plate here.
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
+        {(selectedCmp.kind === 'image' || showUrl) && (
+          <div className="compare-image-wrap">
+            {showUrl ? (
+              <img src={showUrl} alt={selectedCmp.title} className="compare-image" />
+            ) : (
+              <div className="compare-image-placeholder">
+                <p className="serif" style={{ fontSize: 20, margin: '0 0 8px' }}>Comparison plate not local yet</p>
+                <p className="text-faint" style={{ margin: 0 }}>
+                  Save Norebbo’s comparison graphic as{' '}
+                  <code>{selectedCmp.suggestedLocalName ?? `${selectedCmp.sheetName}__comparison.jpg`}</code>
+                  {' '}in <code>images/</code>, then run <code>npm run sync-images</code>.
+                </p>
+                {selectedCmp.imageFile && (
+                  <p className="mono text-muted" style={{ fontSize: 11, marginTop: 12 }}>
+                    Source file on Norebbo: {selectedCmp.imageFile}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {leftAc && (
+        <div style={{ marginTop: 20 }}>
+          <div className="mono text-muted" style={{ fontSize: 10, marginBottom: 8 }}>FAMILY IN APP</div>
+          <strong>{leftAc.family}</strong>
+          <div className="text-faint" style={{ fontSize: '0.9rem' }}>
+            Variants: {leftAc.variants.slice(0, 12).join(' · ')}
+            {leftAc.variants.length > 12 ? '…' : ''}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function EncyclopediaPage() {
   const { exerciseSession } = useApp();
   const navigate = useNavigate();
@@ -45,6 +141,7 @@ export function EncyclopediaPage() {
   const [refFilter, setRefFilter] = useState<RefFilter>('all');
   const [selected, setSelected] = useState<Aircraft | null>(null);
   const [activeCallout, setActiveCallout] = useState<string | null>(null);
+  const [selectedCmp, setSelectedCmp] = useState<NorebboComparison | null>(null);
 
   const filteredAircraft = useMemo(() => {
     let list = applyRefFilter(aircraft, refFilter);
@@ -56,11 +153,27 @@ export function EncyclopediaPage() {
           a.manufacturer.toLowerCase().includes(q) ||
           a.id.includes(q) ||
           (a.nickname?.toLowerCase().includes(q) ?? false) ||
+          a.variants.some((v) => v.toLowerCase().includes(q)) ||
           a.skycardsCategories.some((c) => c.toLowerCase().includes(q))
       );
     }
     return list;
   }, [search, refFilter]);
+
+  const filteredComparisons = useMemo(() => {
+    let list = norebboCatalog.comparisons;
+    if (search) {
+      const q = search.toLowerCase();
+      list = list.filter(
+        (c) =>
+          c.title.toLowerCase().includes(q) ||
+          c.sheetName.toLowerCase().includes(q) ||
+          (c.leftLabel?.toLowerCase().includes(q) ?? false) ||
+          (c.rightLabel?.toLowerCase().includes(q) ?? false)
+      );
+    }
+    return list;
+  }, [search]);
 
   const filteredAirports = useMemo(() => {
     if (!search) return airports.slice(0, 50);
@@ -92,10 +205,16 @@ export function EncyclopediaPage() {
     );
   }
 
+  if (selectedCmp) {
+    return <ComparePanel selectedCmp={selectedCmp} onBack={() => setSelectedCmp(null)} />;
+  }
+
   if (selected) {
     const callout = selected.callouts.find((c) => c.id === activeCallout);
     const equivs = selected.equivalents.map((id) => aircraft.find((a) => a.id === id)?.family).filter(Boolean);
     const features = selected.keyFeatures.slice(0, 4);
+    const norebboEntries = getNorebboEntriesForFamily(selected.id);
+    const familyCmps = getComparisonsForFamily(selected.id);
 
     return (
       <div>
@@ -135,6 +254,49 @@ export function EncyclopediaPage() {
               </tbody>
             </table>
 
+            {norebboEntries.length > 0 && (
+              <>
+                <h3 className="serif" style={{ fontSize: 22, margin: '20px 0 12px' }}>Norebbo / sheet pack</h3>
+                <div className="encyclopedia-list" style={{ maxHeight: 220 }}>
+                  {norebboEntries.map((e) => (
+                    <div key={e.sheetRow} className="encyclopedia-item" style={{ cursor: 'default' }}>
+                      <div className="mono text-muted" style={{ fontSize: 10 }}>ROW {e.sheetRow} · STEM {e.imageStem}</div>
+                      <strong>{e.sheetName}</strong>
+                      {e.variants.length > 0 && (
+                        <div className="text-muted" style={{ fontSize: '0.8rem', marginTop: 4 }}>
+                          {e.variants.slice(0, 8).join(' · ')}
+                        </div>
+                      )}
+                      {e.norebboUrl && (
+                        <div style={{ marginTop: 6 }}>
+                          <a href={e.norebboUrl} target="_blank" rel="noreferrer">Norebbo page</a>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {familyCmps.length > 0 && (
+              <>
+                <h3 className="serif" style={{ fontSize: 22, margin: '20px 0 12px' }}>Comparisons</h3>
+                <div className="encyclopedia-list" style={{ maxHeight: 200 }}>
+                  {familyCmps.map((c) => (
+                    <button
+                      key={c.id}
+                      type="button"
+                      className="encyclopedia-item"
+                      onClick={() => { setSelected(null); setSelectedCmp(c); setTab('compare'); }}
+                    >
+                      <strong>{c.title}</strong>
+                      <div className="text-muted" style={{ fontSize: '0.8rem' }}>{c.kind === 'image' ? 'Comparison plate' : 'Variant pair'}</div>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+
             <h3 className="serif" style={{ fontSize: 22, margin: '20px 0 12px' }}>How to spot it</h3>
             {features.map((f, i) => (
               <div key={f} className="feature-item">
@@ -173,12 +335,18 @@ export function EncyclopediaPage() {
       <div className="eyebrow">Reference · Index</div>
       <h2 className="serif" style={{ margin: '0 0 8px' }}>Aircraft index</h2>
       <p className="text-faint" style={{ fontSize: '0.95rem', maxWidth: 560, textWrap: 'pretty' }}>
-        Search and filter every specimen in the logbook. Available anytime outside an active quiz.
+        Search every specimen, browse Norebbo variant comparisons, and match image stems to the spreadsheet pack.
       </p>
 
       <input
         className="search-input"
-        placeholder={tab === 'aircraft' ? '⌕ Search aircraft, maker, nickname…' : '⌕ Search IATA, ICAO, city…'}
+        placeholder={
+          tab === 'aircraft'
+            ? '⌕ Search aircraft, maker, variant…'
+            : tab === 'compare'
+              ? '⌕ Search comparisons…'
+              : '⌕ Search IATA, ICAO, city…'
+        }
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -186,6 +354,9 @@ export function EncyclopediaPage() {
       <div style={{ display: 'flex', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
         <button type="button" className={`btn ${tab === 'aircraft' ? 'btn-primary' : 'btn-secondary'} pressable`} onClick={() => setTab('aircraft')}>
           Aircraft ({aircraft.length})
+        </button>
+        <button type="button" className={`btn ${tab === 'compare' ? 'btn-primary' : 'btn-secondary'} pressable`} onClick={() => setTab('compare')}>
+          Compare ({norebboCatalog.comparisons.length})
         </button>
         <button type="button" className={`btn ${tab === 'airports' ? 'btn-primary' : 'btn-secondary'} pressable`} onClick={() => setTab('airports')}>
           Airports ({airports.length})
@@ -228,6 +399,23 @@ export function EncyclopediaPage() {
             })}
           </div>
         </>
+      )}
+
+      {tab === 'compare' && (
+        <div className="encyclopedia-list" style={{ maxHeight: 'none' }}>
+          {filteredComparisons.map((c) => (
+            <button key={c.id} type="button" className="encyclopedia-item" onClick={() => setSelectedCmp(c)}>
+              <div className="mono text-muted" style={{ fontSize: 10 }}>
+                {c.kind === 'image' ? 'PLATE' : 'PAIR'} · ROW {c.sheetRow}
+              </div>
+              <strong>{c.title}</strong>
+              <div className="text-muted" style={{ fontSize: '0.8rem' }}>{c.sheetName}</div>
+            </button>
+          ))}
+          {filteredComparisons.length === 0 && (
+            <p className="text-faint">No comparisons match that search.</p>
+          )}
+        </div>
       )}
 
       {tab === 'airports' && (

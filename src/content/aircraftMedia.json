@@ -480,5 +480,173 @@
       "attribution": "Placeholder — replace with MD-80 ramp photo",
       "variant": "MD-83"
     }
+  },
+  "g550": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "G550"
+    }
+  },
+  "short360": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Short 360"
+    }
+  },
+  "dc3": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "DC-3"
+    }
+  },
+  "a300": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "A300B4"
+    }
+  },
+  "jetstream41": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Jetstream 41"
+    }
+  },
+  "c17": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "C-17A"
+    }
+  },
+  "dc8": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "DC-8-53"
+    }
+  },
+  "concorde": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Concorde"
+    }
+  },
+  "dc4": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "DC-4"
+    }
+  },
+  "tu204": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Tu-204-100"
+    }
+  },
+  "mc21": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "MC-21-200"
+    }
+  },
+  "b707": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "707-320B"
+    }
+  },
+  "tu154": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Tu-154B"
+    }
+  },
+  "dornier328jet": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "328JET"
+    }
+  },
+  "dornier328": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "328-110"
+    }
+  },
+  "saab340": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Saab 340A"
+    }
+  },
+  "dc10": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "DC-10-30"
+    }
+  },
+  "c208": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "208"
+    }
+  },
+  "a310": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "A310-200"
+    }
+  },
+  "l1011": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "L-1011-1"
+    }
+  },
+  "emb120": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "EMB-120"
+    }
+  },
+  "learjet60": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Learjet 60"
+    }
+  },
+  "falcon50": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "Falcon 50"
+    }
+  },
+  "beech1900": {
+    "spotPhoto": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+      "attribution": "Placeholder — replace with website pack drawing",
+      "variant": "1900C"
+    }
   }
 }
