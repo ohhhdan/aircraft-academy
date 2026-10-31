@@ -10,7 +10,7 @@ import {
 } from '../components/QuizFeedback';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
-import { airports, getAirportsByTier, pickRandom, shuffle } from '../utils/data';
+import { airports, formatLifeTimer, getAirportsByTier, pickRandom, shuffle } from '../utils/data';
 import { codesLearnMore } from '../utils/learnMore';
 import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
 import type { Airport, AirportTier } from '../types';
@@ -50,6 +50,7 @@ export function CodesPage() {
     markAirportMastered,
     awardLessonComplete,
     canStartExercise,
+    nextLifeIn,
     preferences,
   } = useApp();
   const [tier, setTier] = useState<AirportTier>(tierParam ?? preferences.codesTier);
@@ -250,9 +251,13 @@ export function CodesPage() {
         </div>
 
         {!canStartExercise && (
-          <p className="text-faint" style={{ marginTop: 20, maxWidth: 520 }} role="status">
-            You&apos;re out of hearts, so Board now is paused. Wait for a heart to refill in the top bar, then tap Board now to start the quiz.
-          </p>
+          <div className="wire-copy" style={{ marginTop: 20, maxWidth: 520 }} role="status">
+            <div className="timestamp">Out of hearts</div>
+            Board now stays locked until you have at least one heart.
+            {nextLifeIn != null
+              ? ` Next heart in ${formatLifeTimer(nextLifeIn)} (timer in the top bar).`
+              : ' Watch the heart timer in the top bar, then tap Board now.'}
+          </div>
         )}
 
         <button
@@ -260,6 +265,7 @@ export function CodesPage() {
           className="btn btn-teal pressable"
           style={{ marginTop: 24 }}
           onClick={() => {
+            if (!canStartExercise) return;
             setRound(0);
             setFirstTryScore(0);
             setLessonResult(null);
@@ -267,8 +273,14 @@ export function CodesPage() {
             startRound();
           }}
           disabled={!canStartExercise}
+          aria-disabled={!canStartExercise}
+          title={!canStartExercise ? 'Need at least one heart to start' : undefined}
         >
-          Board now → ({totalRounds} questions) · +{node?.xpReward ?? 15} XP
+          {canStartExercise
+            ? `Board now → (${totalRounds} questions) · +${node?.xpReward ?? 15} XP`
+            : nextLifeIn != null
+              ? `Waiting for a heart (${formatLifeTimer(nextLifeIn)})`
+              : 'Need a heart to board'}
         </button>
       </div>
     );
