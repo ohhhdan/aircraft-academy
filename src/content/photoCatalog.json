@@ -1,15 +1,179 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T03:46:08.533Z",
+  "updatedAt": "2026-10-31T04:14:50.228Z",
   "sourceDir": "images",
   "publicDir": "public/assets/aircraft",
-  "photos": [],
-  "byAircraft": {},
+  "photos": [
+    {
+      "id": "a321-diagram-01-airbus-a321-p2f",
+      "aircraftId": "a321",
+      "role": "diagram",
+      "variant": "Airbus A321(P2F)",
+      "sheetRow": 6,
+      "sourceFile": "Airbus-A321-P2F__line-drawing.jpg",
+      "publicPath": "/assets/aircraft/a321/diagram__airbus-a321-p2f_01.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Airbus-A321-P2F→row 6",
+      "sortIndex": 1
+    },
+    {
+      "id": "a321-diagram-02-airbus-a321-p2f",
+      "aircraftId": "a321",
+      "role": "diagram",
+      "variant": "Airbus A321(P2F)",
+      "sheetRow": 6,
+      "sourceFile": "Airbus-A321-P2F__white.jpg",
+      "publicPath": "/assets/aircraft/a321/diagram__airbus-a321-p2f_02.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Airbus-A321-P2F→row 6",
+      "sortIndex": 2
+    },
+    {
+      "id": "c909-diagram-01-comac-c909",
+      "aircraftId": "c909",
+      "role": "diagram",
+      "variant": "Comac C909",
+      "sheetRow": 4,
+      "sourceFile": "Comac-C909__line-drawing.jpg",
+      "publicPath": "/assets/aircraft/c909/diagram__comac-c909_01.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Comac-C909→row 4",
+      "sortIndex": 1
+    },
+    {
+      "id": "c909-diagram-02-comac-c909",
+      "aircraftId": "c909",
+      "role": "diagram",
+      "variant": "Comac C909",
+      "sheetRow": 4,
+      "sourceFile": "Comac-C909__white.jpg",
+      "publicPath": "/assets/aircraft/c909/diagram__comac-c909_02.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Comac-C909→row 4",
+      "sortIndex": 2
+    },
+    {
+      "id": "learjet60-diagram-01-learjet-60",
+      "aircraftId": "learjet60",
+      "role": "diagram",
+      "variant": "Learjet 60",
+      "sheetRow": 5,
+      "sourceFile": "Learjet-60__line-drawing.jpg",
+      "publicPath": "/assets/aircraft/learjet60/diagram__learjet-60_01.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Learjet-60→row 5",
+      "sortIndex": 1
+    },
+    {
+      "id": "learjet60-diagram-02-learjet-60",
+      "aircraftId": "learjet60",
+      "role": "diagram",
+      "variant": "Learjet 60",
+      "sheetRow": 5,
+      "sourceFile": "Learjet-60__white.jpg",
+      "publicPath": "/assets/aircraft/learjet60/diagram__learjet-60_02.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Learjet-60→row 5",
+      "sortIndex": 2
+    }
+  ],
+  "byAircraft": {
+    "a321": {
+      "spot": [],
+      "diagram": [
+        {
+          "id": "a321-diagram-01-airbus-a321-p2f",
+          "aircraftId": "a321",
+          "role": "diagram",
+          "variant": "Airbus A321(P2F)",
+          "sheetRow": 6,
+          "sourceFile": "Airbus-A321-P2F__line-drawing.jpg",
+          "publicPath": "/assets/aircraft/a321/diagram__airbus-a321-p2f_01.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Airbus-A321-P2F→row 6",
+          "sortIndex": 1
+        },
+        {
+          "id": "a321-diagram-02-airbus-a321-p2f",
+          "aircraftId": "a321",
+          "role": "diagram",
+          "variant": "Airbus A321(P2F)",
+          "sheetRow": 6,
+          "sourceFile": "Airbus-A321-P2F__white.jpg",
+          "publicPath": "/assets/aircraft/a321/diagram__airbus-a321-p2f_02.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Airbus-A321-P2F→row 6",
+          "sortIndex": 2
+        }
+      ],
+      "comparison": []
+    },
+    "c909": {
+      "spot": [],
+      "diagram": [
+        {
+          "id": "c909-diagram-01-comac-c909",
+          "aircraftId": "c909",
+          "role": "diagram",
+          "variant": "Comac C909",
+          "sheetRow": 4,
+          "sourceFile": "Comac-C909__line-drawing.jpg",
+          "publicPath": "/assets/aircraft/c909/diagram__comac-c909_01.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Comac-C909→row 4",
+          "sortIndex": 1
+        },
+        {
+          "id": "c909-diagram-02-comac-c909",
+          "aircraftId": "c909",
+          "role": "diagram",
+          "variant": "Comac C909",
+          "sheetRow": 4,
+          "sourceFile": "Comac-C909__white.jpg",
+          "publicPath": "/assets/aircraft/c909/diagram__comac-c909_02.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Comac-C909→row 4",
+          "sortIndex": 2
+        }
+      ],
+      "comparison": []
+    },
+    "learjet60": {
+      "spot": [],
+      "diagram": [
+        {
+          "id": "learjet60-diagram-01-learjet-60",
+          "aircraftId": "learjet60",
+          "role": "diagram",
+          "variant": "Learjet 60",
+          "sheetRow": 5,
+          "sourceFile": "Learjet-60__line-drawing.jpg",
+          "publicPath": "/assets/aircraft/learjet60/diagram__learjet-60_01.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Learjet-60→row 5",
+          "sortIndex": 1
+        },
+        {
+          "id": "learjet60-diagram-02-learjet-60",
+          "aircraftId": "learjet60",
+          "role": "diagram",
+          "variant": "Learjet 60",
+          "sheetRow": 5,
+          "sourceFile": "Learjet-60__white.jpg",
+          "publicPath": "/assets/aircraft/learjet60/diagram__learjet-60_02.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Learjet-60→row 5",
+          "sortIndex": 2
+        }
+      ],
+      "comparison": []
+    }
+  },
   "unmatched": [],
   "stats": {
-    "sourceFiles": 0,
-    "matched": 0,
+    "sourceFiles": 6,
+    "matched": 6,
     "unmatched": 0,
-    "aircraftCovered": 0
+    "aircraftCovered": 3
   }
 }

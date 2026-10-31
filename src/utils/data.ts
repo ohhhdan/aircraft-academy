@@ -2,6 +2,7 @@ import type {
   Aircraft,
   Airport,
   CategoryGroup,
+  NorebboCatalog,
   PhotoCatalog,
   PhotoCatalogEntry,
 } from '../types';
@@ -10,6 +11,7 @@ import aircraftJson from '../content/aircraft.json';
 import airportsJson from '../content/airports.json';
 import aircraftMediaJson from '../content/aircraftMedia.json';
 import photoCatalogJson from '../content/photoCatalog.json';
+import norebboCatalogJson from '../content/norebboCatalog.json';
 
 export interface AircraftMediaEntry {
   spotPhoto?: { url: string; attribution: string; variant?: string };
@@ -18,9 +20,22 @@ export interface AircraftMediaEntry {
 
 export const aircraftMedia = aircraftMediaJson as Record<string, AircraftMediaEntry>;
 export const photoCatalog = photoCatalogJson as PhotoCatalog;
+export const norebboCatalog = norebboCatalogJson as NorebboCatalog;
 
 export const aircraft = aircraftJson as Aircraft[];
 export const airports = airportsJson as Airport[];
+
+export function getNorebboEntriesForFamily(familyId: string) {
+  return norebboCatalog.entries.filter((e) => e.familyId === familyId);
+}
+
+export function getComparisonsForFamily(familyId: string) {
+  return norebboCatalog.comparisons.filter((c) => c.familyId === familyId);
+}
+
+export function getCatalogComparisons(aircraftId: string): PhotoCatalogEntry[] {
+  return photoCatalog.byAircraft?.[aircraftId]?.comparison ?? [];
+}
 
 export function getAircraftById(id: string): Aircraft | undefined {
   return aircraft.find((a) => a.id === id);

@@ -9,7 +9,20 @@
       "A320neo",
       "A321neo",
       "A318",
-      "A319neo"
+      "A319neo",
+      "Airbus A320",
+      "sharklets",
+      "V2500",
+      "CFM56",
+      "Airbus A318 with Pratt & Whitney",
+      "Pratt & Whitney",
+      "Airbus A319 NEO",
+      "LEAP",
+      "neo",
+      "split scimitar winglets",
+      "GE",
+      "Airbus A320 NEO",
+      "Airbus A319"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -99,7 +112,47 @@
       "737-800BCF",
       "737-900ER",
       "737 MAX 7",
-      "737 MAX 10"
+      "737 MAX 10",
+      "and 737-400SF",
+      "Combi",
+      "Boeing 737-400",
+      "737-400SF / Combi",
+      "737-400SF",
+      "Boeing 737-800",
+      "split scimitar winglets",
+      "no winglets",
+      "Boeing 737-800BCF",
+      "LEAP",
+      "neo",
+      "747-400",
+      "Boeing 737-10 MAX",
+      "Boeing 737-100",
+      "Boeing 737-200",
+      "this -200",
+      "that one",
+      "Boeing 737-300",
+      "winglets",
+      "Boeing 737-500",
+      "with",
+      "without blended winglets",
+      "blended winglets",
+      "A321",
+      "CFM56-7",
+      "Classic",
+      "Next Generation engine cowlings",
+      "Boeing 737-600",
+      "Boeing 737-9 MAX",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Boeing 737 MAX 7",
+      "GE",
+      "Boeing 737-900ER with split scimitar winglets",
+      "757-200",
+      "Boeing 737 MAX 8",
+      "CFM56",
+      "Boeing 737-900",
+      "A350F",
+      "Boeing 737-700"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -131,7 +184,7 @@
       {
         "id": "c1",
         "label": "Flat engine bottom",
-        "description": "Flattened lower nacelle — classic 737 tell",
+        "description": "Flattened lower nacelle \u2014 classic 737 tell",
         "x": 38,
         "y": 58
       },
@@ -184,7 +237,17 @@
     "variants": [
       "757-200",
       "757-300",
-      "757-200F"
+      "757-200F",
+      "Boeing 757-200",
+      "winglets",
+      "Pratt & Whitney",
+      "no winglets",
+      "Rolls-Royce",
+      "757-200PF",
+      "757-200SF",
+      "Boeing 757-300",
+      "neo",
+      "GE"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -260,7 +323,21 @@
       "A330neo",
       "A330-200F",
       "A330-800",
-      "A330-900"
+      "A330-900",
+      "Airbus A330-200F with Pratt & Whitney",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Airbus A330-800 NEO",
+      "neo",
+      "no winglets",
+      "Airbus A330-900 NEO",
+      "Airbus A330-300 with all three engine options",
+      "Airbus A330-200 with Pratt & Whitney engines",
+      "Airbus A330-200 with GE engines",
+      "GE",
+      "split scimitar winglets",
+      "Airbus A330-200 with Rolls Royce engines",
+      "A321"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -337,7 +414,15 @@
       "767-200",
       "767-300",
       "767-400",
-      "767-300F"
+      "767-300F",
+      "Boeing 767-400",
+      "GE",
+      "Boeing 767-300",
+      "including freighter versions",
+      "no winglets",
+      "winglets",
+      "Boeing 767-200",
+      "latest designs"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -412,7 +497,13 @@
       "A220-100",
       "A220-300",
       "CS100",
-      "CS300"
+      "CS300",
+      "Bombardier CS300",
+      "Airbus A220-300",
+      "neo",
+      "A350F",
+      "Bombardier CS100",
+      "Airbus A220-100"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -489,7 +580,23 @@
       "E195",
       "E175-E2",
       "E190-E2",
-      "E195-E2"
+      "E195-E2",
+      "Embraer E195",
+      "no winglets",
+      "Embraer E175-E2",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "767-300",
+      "this second generation 175",
+      "first",
+      "Embraer E195-E2",
+      "neo",
+      "Embraer E190-E2",
+      "757-200",
+      "original E190",
+      "Embraer 190",
+      "Embraer 120 Brasilia",
+      "EMB-120"
     ],
     "manufacturer": "Embraer",
     "skycardsCategories": [
@@ -571,7 +678,20 @@
       "A321XLR",
       "A321",
       "A321neo LR",
-      "A321P2F"
+      "A321P2F",
+      "Airbus A321",
+      "P2F",
+      "767-300",
+      "Airbus A321neo LR",
+      "Long Range",
+      "neo",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Airbus A321 NEO",
+      "LEAP",
+      "winglets",
+      "sharklets",
+      "V2500"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -644,7 +764,15 @@
     "variants": [
       "787-8",
       "787-9",
-      "787-10"
+      "787-10",
+      "Boeing 787-9",
+      "Boeing 787-10",
+      "777f",
+      "A321",
+      "neo",
+      "Boeing 787-8",
+      "Pratt & Whitney",
+      "Rolls-Royce"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -719,7 +847,16 @@
       "A350-900",
       "A350-1000",
       "A350-800",
-      "A350F"
+      "A350F",
+      "Airbus A350F",
+      "GE",
+      "other versions of the A350",
+      "Airbus A350-1000",
+      "777f",
+      "Pratt & Whitney",
+      "CFM56",
+      "Airbus A350-800",
+      "Airbus A350-900"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -798,7 +935,18 @@
       "777X",
       "777F",
       "777-8",
-      "777-9"
+      "777-9",
+      "Boeing 777-8",
+      "Rolls-Royce",
+      "A321",
+      "that\u2019s pretty much it! See",
+      "Boeing 777-9",
+      "first generation 777",
+      "the 777X",
+      "Boeing 777F",
+      "Boeing 777-300",
+      "Boeing 777-200",
+      "Pratt & Whitney"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -882,7 +1030,33 @@
       "747-400F",
       "747SP",
       "747-8i",
-      "747-8F"
+      "747-8F",
+      "Boeing 747-300",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "GE",
+      "A350F",
+      "these new CF6-80C2B1 engines",
+      "version prior",
+      "Boeing 747SP",
+      "split scimitar winglets",
+      "747-100 (and 747-200)",
+      "Boeing 747-200",
+      "CFM56",
+      "Boeing 747-100",
+      "A321",
+      "757-200",
+      "747-100, 747-100B",
+      "747-100SR",
+      "Boeing 747-400 with Pratt & Whitney",
+      "neo",
+      "Boeing 747-400F",
+      "SCD",
+      "BCF",
+      "Boeing 747-8F",
+      "Boeing 747-8i",
+      "Boeing 747-400 with General Electric engines",
+      "winglets"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -956,7 +1130,9 @@
     "id": "a380",
     "family": "Airbus A380",
     "variants": [
-      "A380-800"
+      "A380-800",
+      "Airbus A380-800",
+      "A321"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -977,7 +1153,7 @@
       "full-length double deck",
       "four engines",
       "massive wingspan",
-      "no hump — straight upper deck"
+      "no hump \u2014 straight upper deck"
     ],
     "geekFacts": [
       "Largest passenger airliner ever built",
@@ -1029,7 +1205,13 @@
       "A340-300",
       "A340-500",
       "A340-600",
-      "A340-200"
+      "A340-200",
+      "Airbus A340-200",
+      "Airbus A340-600",
+      "Airbus A340-500",
+      "Airbus A340-300",
+      "GE",
+      "Pratt & Whitney"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -1104,7 +1286,14 @@
     "family": "Boeing 727",
     "variants": [
       "727-100",
-      "727-200"
+      "727-200",
+      "Boeing 727-100",
+      "Pratt & Whitney",
+      "777f",
+      "GE",
+      "Rolls-Royce",
+      "the -100",
+      "Boeing 727-200"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -1176,7 +1365,10 @@
     "family": "McDonnell Douglas MD-11",
     "variants": [
       "MD-11",
-      "MD-11F"
+      "MD-11F",
+      "and MD-11F",
+      "McDonnell Douglas MD-11",
+      "freighter"
     ],
     "manufacturer": "McDonnell Douglas",
     "skycardsCategories": [
@@ -1247,7 +1439,9 @@
     "family": "Gulfstream G650",
     "variants": [
       "G650",
-      "G650ER"
+      "G650ER",
+      "Gulfstream G650ER",
+      "G-VI"
     ],
     "manufacturer": "Gulfstream",
     "skycardsCategories": [
@@ -1317,7 +1511,9 @@
     "family": "Cessna Citation X",
     "variants": [
       "Citation X",
-      "Citation X+"
+      "Citation X+",
+      "Cessna Citation X",
+      "winglets"
     ],
     "manufacturer": "Cessna",
     "skycardsCategories": [
@@ -1460,7 +1656,12 @@
     "variants": [
       "Global 7500",
       "Global 8000",
-      "Global 5000"
+      "Global 5000",
+      "Bombardier Global 5000",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Bombardier Global 7500",
+      "neo"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -1598,7 +1799,8 @@
     "variants": [
       "Learjet 75",
       "Learjet 75 Liberty",
-      "Learjet 45"
+      "Learjet 45",
+      "split scimitar winglets"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -2215,7 +2417,9 @@
     "variants": [
       "King Air 200",
       "King Air 350",
-      "King Air 90"
+      "King Air 90",
+      "Beechcraft B200 King Air",
+      "split scimitar winglets"
     ],
     "manufacturer": "Beechcraft",
     "skycardsCategories": [
@@ -2287,7 +2491,15 @@
     "variants": [
       "Q200",
       "Q300",
-      "Q400"
+      "Q400",
+      "De Havilland DHC-8-300",
+      "GE",
+      "split scimitar winglets",
+      "neo",
+      "De Havilland DHC-8-200",
+      "Dash 8",
+      "777f",
+      "Bombardier DHC-8-402 Q400"
     ],
     "manufacturer": "De Havilland Canada",
     "skycardsCategories": [
@@ -2362,7 +2574,8 @@
     "variants": [
       "ATR 72-500",
       "ATR 72-600",
-      "ATR 72"
+      "ATR 72",
+      "GE"
     ],
     "manufacturer": "ATR",
     "skycardsCategories": [
@@ -2770,7 +2983,14 @@
       "CRJ-200",
       "CRJ-700",
       "CRJ-900",
-      "CRJ-1000"
+      "CRJ-1000",
+      "Bombardier CRJ-1000",
+      "777f",
+      "Bombardier Canadair Regional Jet 900",
+      "Bombardier Canadair Regional Jet 700",
+      "Bombardier Canadair Regional Jet 200",
+      "GE",
+      "757-200"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -2915,7 +3135,10 @@
     "variants": [
       "C909",
       "ARJ21-700",
-      "ARJ21-900"
+      "ARJ21-900",
+      "Comac C909",
+      "Pratt & Whitney",
+      "CFM56"
     ],
     "manufacturer": "COMAC",
     "skycardsCategories": [
@@ -2945,7 +3168,7 @@
     ],
     "geekFacts": [
       "Formerly marketed as the ARJ21 Xiangfeng; rebranded C909",
-      "ICAO type designator AJ27 — often labeled C909 on flight trackers"
+      "ICAO type designator AJ27 \u2014 often labeled C909 on flight trackers"
     ],
     "diagramId": "c909",
     "callouts": [
@@ -2989,7 +3212,8 @@
     "id": "c919",
     "family": "COMAC C919",
     "variants": [
-      "C919"
+      "C919",
+      "Comac C919"
     ],
     "manufacturer": "COMAC",
     "skycardsCategories": [
@@ -3016,7 +3240,7 @@
       "wingtip fences / winglets depending on config"
     ],
     "geekFacts": [
-      "China’s first large indigenous narrowbody airliner",
+      "China\u2019s first large indigenous narrowbody airliner",
       "Direct competitor to A320neo and 737 MAX"
     ],
     "diagramId": "c919",
@@ -3063,7 +3287,10 @@
     "variants": [
       "SSJ100-95B",
       "SSJ100-95LR",
-      "SSJ100"
+      "SSJ100",
+      "Sukhoi SSJ-100",
+      "Pratt & Whitney",
+      "Rolls-Royce"
     ],
     "manufacturer": "Sukhoi / Yakovlev",
     "skycardsCategories": [
@@ -3099,7 +3326,7 @@
       {
         "id": "c1",
         "label": "Underwing engines",
-        "description": "Unusual for regionals — usually rear-mounted",
+        "description": "Unusual for regionals \u2014 usually rear-mounted",
         "x": 38,
         "y": 58
       },
@@ -3139,7 +3366,24 @@
       "ERJ-140",
       "ERJ-145",
       "ERJ-145XR",
-      "ERJ-175"
+      "ERJ-175",
+      "Embraer ERJ-135",
+      "767-300",
+      "neo",
+      "ERJ-135) Which one",
+      "Embraer ERJ-140",
+      "ERJ-145XR, ERJ-145",
+      "ERJ-140 Pretty neat, huh",
+      "Embraer ERJ-145",
+      "Rolls-Royce",
+      "ERJ-145 (base model)",
+      "Embraer ERJ-145XR",
+      "Pratt & Whitney",
+      "winglets",
+      "GE",
+      "Embraer ERJ-175",
+      "no winglets",
+      "CFM56"
     ],
     "manufacturer": "Embraer",
     "skycardsCategories": [
@@ -3197,7 +3441,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with ERJ ramp shot)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with ERJ ramp shot)",
         "variant": "ERJ-145"
       }
     ],
@@ -3214,7 +3458,9 @@
       "ATR 42-300",
       "ATR 42-500",
       "ATR 42-600",
-      "ATR 42"
+      "ATR 42",
+      "neo",
+      "A321"
     ],
     "manufacturer": "ATR",
     "skycardsCategories": [
@@ -3291,7 +3537,8 @@
       "BAe 146-200",
       "BAe 146-300",
       "Avro RJ85",
-      "Avro RJ100"
+      "Avro RJ100",
+      "British Aerospace BAe 146-200 / Avro RJ85"
     ],
     "manufacturer": "British Aerospace",
     "skycardsCategories": [
@@ -3353,7 +3600,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fokker_100.jpg/1280px-Fokker_100.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with BAe 146 photo)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with BAe 146 photo)",
         "variant": "Avro RJ100"
       }
     ],
@@ -3368,7 +3615,10 @@
     "family": "Fokker 100",
     "variants": [
       "Fokker 70",
-      "Fokker 100"
+      "Fokker 100",
+      "Pratt & Whitney",
+      "CFM56",
+      "F-28-0100"
     ],
     "manufacturer": "Fokker",
     "skycardsCategories": [
@@ -3440,7 +3690,10 @@
     "id": "b717",
     "family": "Boeing 717",
     "variants": [
-      "717-200"
+      "717-200",
+      "Boeing 717-200",
+      "the NEO",
+      "CEO in side view"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -3467,7 +3720,7 @@
       "short narrowbody"
     ],
     "geekFacts": [
-      "Rebranded MD-95 after Boeing–MDC merger",
+      "Rebranded MD-95 after Boeing\u2013MDC merger",
       "ICAO type B712"
     ],
     "diagramId": "b717",
@@ -3497,7 +3750,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with 717 photo)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with 717 photo)",
         "variant": "717-200"
       }
     ],
@@ -3519,7 +3772,24 @@
       "MD-90",
       "DC-9-30",
       "DC-9-40",
-      "DC-9-50"
+      "DC-9-50",
+      "McDonnell Douglas DC-9-30",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "DC-9-20",
+      "McDonnell Douglas DC-9-40",
+      "neo",
+      "a -40",
+      "McDonnell Douglas DC-9-50",
+      "777f",
+      "757-200",
+      "a -50",
+      "McDonnell Douglas MD-87",
+      "McDonnell Douglas MD-90",
+      "GE",
+      "McDonnell Douglas MD-82 / MD-83 / MD-88",
+      "them",
+      "under the skin"
     ],
     "manufacturer": "McDonnell Douglas",
     "skycardsCategories": [
@@ -3581,7 +3851,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Boeing_757_family_v1.0.png/1280px-Boeing_757_family_v1.0.png",
-        "attribution": "Placeholder — replace with MD-80 ramp photo",
+        "attribution": "Placeholder \u2014 replace with MD-80 ramp photo",
         "variant": "MD-83"
       }
     ],
@@ -3596,7 +3866,10 @@
     "family": "Gulfstream G550",
     "variants": [
       "G550",
-      "GV-SP"
+      "GV-SP",
+      "Gulfstream G550",
+      "A321",
+      "split scimitar winglets"
     ],
     "manufacturer": "Gulfstream",
     "skycardsCategories": [
@@ -3654,7 +3927,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "G550"
       }
     ],
@@ -3668,7 +3941,9 @@
     "family": "Short 360",
     "variants": [
       "Short 360",
-      "SD3-60"
+      "SD3-60",
+      "neo",
+      "winglets"
     ],
     "manufacturer": "Short Brothers",
     "skycardsCategories": [
@@ -3725,7 +4000,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Short 360"
       }
     ],
@@ -3739,7 +4014,9 @@
     "family": "Douglas DC-3",
     "variants": [
       "DC-3",
-      "C-47"
+      "C-47",
+      "Douglas DC-3",
+      "GE"
     ],
     "manufacturer": "Douglas",
     "skycardsCategories": [
@@ -3795,7 +4072,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "DC-3"
       }
     ],
@@ -3810,7 +4087,17 @@
     "variants": [
       "A300B4",
       "A300-600",
-      "A300-600F"
+      "A300-600F",
+      "and A300-600F",
+      "Airbus A300-600",
+      "LEAP",
+      "neo",
+      "Pratt & Whitney",
+      "freighter",
+      "Rolls-Royce",
+      "passenger version",
+      "freighter version",
+      "A321neo LR"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -3869,7 +4156,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "A300B4"
       }
     ],
@@ -3882,7 +4169,8 @@
     "id": "jetstream41",
     "family": "BAe Jetstream 41",
     "variants": [
-      "Jetstream 41"
+      "Jetstream 41",
+      "British Aerospace Jetstream 41"
     ],
     "manufacturer": "British Aerospace",
     "skycardsCategories": [
@@ -3939,7 +4227,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Jetstream 41"
       }
     ],
@@ -3952,7 +4240,8 @@
     "id": "c17",
     "family": "Boeing C-17 Globemaster III",
     "variants": [
-      "C-17A"
+      "C-17A",
+      "Boeing C-17 Globemaster III"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -4008,7 +4297,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "C-17A"
       }
     ],
@@ -4024,7 +4313,17 @@
       "DC-8-53",
       "DC-8-61",
       "DC-8-73",
-      "DC-8-73CF"
+      "DC-8-73CF",
+      "and DC-8-73CF",
+      "Douglas DC-8-73",
+      "GE",
+      "split scimitar winglets",
+      "freighter",
+      "Douglas DC-8-53",
+      "Douglas DC-8-61",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "neo"
     ],
     "manufacturer": "Douglas",
     "skycardsCategories": [
@@ -4082,7 +4381,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "DC-8-53"
       }
     ],
@@ -4093,11 +4392,14 @@
   },
   {
     "id": "concorde",
-    "family": "Aérospatiale-BAC Concorde",
+    "family": "A\u00e9rospatiale-BAC Concorde",
     "variants": [
-      "Concorde"
+      "Concorde",
+      "A\u00e9rospatiale-BAC Concorde",
+      "split scimitar winglets",
+      "A321"
     ],
-    "manufacturer": "Aérospatiale / BAC",
+    "manufacturer": "A\u00e9rospatiale / BAC",
     "skycardsCategories": [
       "Airliner",
       "Supersonic"
@@ -4151,7 +4453,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Concorde"
       }
     ],
@@ -4165,7 +4467,11 @@
     "family": "Douglas DC-4",
     "variants": [
       "DC-4",
-      "C-54"
+      "C-54",
+      "Douglas DC-4",
+      "Pratt & Whitney",
+      "CFM56",
+      "no winglets"
     ],
     "manufacturer": "Douglas",
     "skycardsCategories": [
@@ -4221,7 +4527,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "DC-4"
       }
     ],
@@ -4235,7 +4541,8 @@
     "family": "Tupolev Tu-204",
     "variants": [
       "Tu-204-100",
-      "Tu-214"
+      "Tu-214",
+      "Tupolev Tu-204-100"
     ],
     "manufacturer": "Tupolev",
     "skycardsCategories": [
@@ -4292,7 +4599,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Tu-204-100"
       }
     ],
@@ -4306,7 +4613,9 @@
     "family": "Irkut MC-21",
     "variants": [
       "MC-21-200",
-      "MC-21-300"
+      "MC-21-300",
+      "Irkut MC-21-300",
+      "neo"
     ],
     "manufacturer": "Irkut / Yakovlev",
     "skycardsCategories": [
@@ -4364,7 +4673,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "MC-21-200"
       }
     ],
@@ -4378,7 +4687,9 @@
     "family": "Boeing 707",
     "variants": [
       "707-320B",
-      "707-320C"
+      "707-320C",
+      "Boeing 707 MAX",
+      "Boeing 707-320C"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -4426,7 +4737,7 @@
       {
         "id": "c3",
         "label": "Wing sweep",
-        "description": "35° swept wing",
+        "description": "35\u00b0 swept wing",
         "x": 55,
         "y": 48
       }
@@ -4434,7 +4745,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "707-320B"
       }
     ],
@@ -4448,7 +4759,8 @@
     "family": "Tupolev Tu-154",
     "variants": [
       "Tu-154B",
-      "Tu-154M"
+      "Tu-154M",
+      "Tupolev Tu-154M"
     ],
     "manufacturer": "Tupolev",
     "skycardsCategories": [
@@ -4504,7 +4816,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Tu-154B"
       }
     ],
@@ -4517,7 +4829,13 @@
     "id": "dornier328jet",
     "family": "Fairchild Dornier 328JET",
     "variants": [
-      "328JET"
+      "328JET",
+      "Fairchild-Dornier 328JET",
+      "Pratt & Whitney",
+      "CFM56",
+      "GE",
+      "328 and 328JET",
+      "way they connect to the wings"
     ],
     "manufacturer": "Fairchild Dornier",
     "skycardsCategories": [
@@ -4575,7 +4893,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "328JET"
       }
     ],
@@ -4589,7 +4907,10 @@
     "family": "Dornier 328",
     "variants": [
       "328-110",
-      "Do 328"
+      "Do 328",
+      "Dornier 328-110",
+      "neo",
+      "757-200"
     ],
     "manufacturer": "Dornier",
     "skycardsCategories": [
@@ -4646,7 +4967,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "328-110"
       }
     ],
@@ -4660,7 +4981,11 @@
     "family": "Saab 340",
     "variants": [
       "Saab 340A",
-      "Saab 340B"
+      "Saab 340B",
+      "Pratt & Whitney",
+      "757-200",
+      "Rolls-Royce",
+      "CFM56"
     ],
     "manufacturer": "Saab",
     "skycardsCategories": [
@@ -4717,7 +5042,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Saab 340A"
       }
     ],
@@ -4732,7 +5057,10 @@
     "variants": [
       "DC-10-30",
       "DC-10-30F",
-      "MD-10"
+      "MD-10",
+      "McDonnell Douglas DC-10-30F / MD-10",
+      "DC-10",
+      "McDonnell Douglas DC-10-30"
     ],
     "manufacturer": "McDonnell Douglas",
     "skycardsCategories": [
@@ -4789,7 +5117,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "DC-10-30"
       }
     ],
@@ -4803,7 +5131,11 @@
     "family": "Cessna 208 Caravan",
     "variants": [
       "208",
-      "208B Grand Caravan"
+      "208B Grand Caravan",
+      "Cessna 208 Grand Caravan",
+      "Pratt & Whitney",
+      "A321",
+      "split scimitar winglets"
     ],
     "manufacturer": "Cessna",
     "skycardsCategories": [
@@ -4860,7 +5192,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "208"
       }
     ],
@@ -4874,7 +5206,8 @@
     "family": "Airbus A310",
     "variants": [
       "A310-200",
-      "A310-300"
+      "A310-300",
+      "Airbus A310-300"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -4932,7 +5265,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "A310-200"
       }
     ],
@@ -4946,7 +5279,10 @@
     "family": "Lockheed L-1011 TriStar",
     "variants": [
       "L-1011-1",
-      "L-1011-500"
+      "L-1011-500",
+      "Lockheed L-1011-500",
+      "Lockheed L-1011-1",
+      "GE"
     ],
     "manufacturer": "Lockheed",
     "skycardsCategories": [
@@ -5003,7 +5339,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "L-1011-1"
       }
     ],
@@ -5043,7 +5379,7 @@
       "predecessor spirit to ERJ/E-Jet era"
     ],
     "geekFacts": [
-      "Embraer’s breakthrough regional turboprop",
+      "Embraer\u2019s breakthrough regional turboprop",
       "ICAO type E120"
     ],
     "diagramId": "emb120",
@@ -5073,7 +5409,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "EMB-120"
       }
     ],
@@ -5145,7 +5481,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Learjet 60"
       }
     ],
@@ -5159,7 +5495,9 @@
     "family": "Dassault Falcon 50",
     "variants": [
       "Falcon 50",
-      "Falcon 50EX"
+      "Falcon 50EX",
+      "Dassault Falcon 50 / 50EX",
+      "winglets"
     ],
     "manufacturer": "Dassault",
     "skycardsCategories": [
@@ -5216,7 +5554,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "Falcon 50"
       }
     ],
@@ -5230,7 +5568,9 @@
     "family": "Beechcraft 1900",
     "variants": [
       "1900C",
-      "1900D"
+      "1900D",
+      "Beechcraft 1900D",
+      "winglets"
     ],
     "manufacturer": "Beechcraft",
     "skycardsCategories": [
@@ -5287,7 +5627,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder — replace with website pack drawing",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
         "variant": "1900C"
       }
     ],

@@ -22,13 +22,15 @@ export interface AircraftPhoto {
 }
 
 /** Role of a file in the local images/ → photoCatalog pipeline */
-export type PhotoCatalogRole = 'spot' | 'diagram';
+export type PhotoCatalogRole = 'spot' | 'diagram' | 'comparison';
 
 export interface PhotoCatalogEntry {
   id: string;
   aircraftId: string;
   role: PhotoCatalogRole;
   variant?: string;
+  /** Google Sheet row this Norebbo/image stem maps to */
+  sheetRow?: number;
   sourceFile: string;
   publicPath: string;
   attribution: string;
@@ -39,6 +41,50 @@ export interface PhotoCatalogEntry {
 export interface PhotoCatalogAircraftBucket {
   spot: PhotoCatalogEntry[];
   diagram: PhotoCatalogEntry[];
+  comparison?: PhotoCatalogEntry[];
+}
+
+export interface NorebboCatalogEntry {
+  sheetRow: number;
+  sheetName: string;
+  imageStem: string;
+  familyId: string | null;
+  norebboUrl: string | null;
+  norebboTitle?: string | null;
+  variants: string[];
+  hasComparison: boolean;
+  preferredFilenames: {
+    white: string;
+    lineDrawing: string;
+    comparison: string;
+  };
+}
+
+export interface NorebboComparison {
+  id: string;
+  kind: 'image' | 'peers';
+  title: string;
+  leftLabel?: string;
+  rightLabel?: string;
+  sheetRow: number;
+  sheetName: string;
+  familyId: string | null;
+  imageFile?: string;
+  imageUrl?: string;
+  norebboUrl?: string | null;
+  suggestedLocalName?: string;
+}
+
+export interface NorebboCatalog {
+  version: number;
+  source: string;
+  sheetId: string;
+  updatedAt: string;
+  note?: string;
+  entries: NorebboCatalogEntry[];
+  comparisons: NorebboComparison[];
+  byImageStem: Record<string, number>;
+  byFamilyId: Record<string, number[]>;
 }
 
 export interface PhotoCatalog {
