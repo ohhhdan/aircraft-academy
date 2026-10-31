@@ -1,48 +1,36 @@
 # Images drop folder
 
-Drop your own aircraft photos here. Run **`npm run sync-images`** to identify them from filenames, copy them into the app’s static assets, and update the photo catalog the app reads at runtime.
+Drop Norebbo (or your own) aircraft drawings here. Run **`npm run sync-images`** to map them into the app.
 
-Wikimedia defaults stay as fallback until a local match exists.
+## Preferred naming (matches the Google Sheet)
 
-## Naming (preferred)
-
-Use the **aircraft id** from `src/content/aircraft.json` as the start of the filename:
-
-| Filename | Result |
-|----------|--------|
-| `b737.jpg` | Spot photo for Boeing 737 |
-| `b737_01.jpg` / `b737_02.webp` | Extra spot angles (first becomes primary) |
-| `b737__737-800_01.jpg` | Spot for variant `737-800` |
-| `b737__737 MAX 8.jpg` | Spot for `737 MAX 8` |
-| `a320_diagram.png` | Profile diagram for A320 family |
-| `f35__F-35B.jpg` | F-35B spot photo |
-| `C909.jpg` / `AJ27.jpg` | COMAC C909 (ARJ21) — ICAO or marketing code |
-| `C919_ramp.jpg` | COMAC C919 |
-
-ICAO type codes from `src/content/icaoTypes.json` are recognized (e.g. `B738`, `A20N`, `SU95`).
-
-Separators `_`, `-`, and spaces are all fine. Extensions: `.jpg` `.jpeg` `.png` `.webp` `.gif`.
-
-## Folders also work
+Each spreadsheet aircraft has an **image stem**. Name files:
 
 ```
-images/b737/01.jpg
-images/b737/max8.jpg
-images/a320/diagram.png
+{Sheet-Stem}__white.jpg
+{Sheet-Stem}__line-drawing.jpg
+{Sheet-Stem}__comparison.jpg
 ```
 
-The parent folder name is treated like an id prefix when matching.
+Examples (from the current pack):
 
-## Fuzzy names
+| Filename | Sheet row |
+|----------|-----------|
+| `Comac-C909__white.jpg` | Comac C909 |
+| `Comac-C909__line-drawing.jpg` | Comac C909 |
+| `Airbus-A321-P2F__white.jpg` | Airbus A321(P2F) |
+| `Learjet-60__line-drawing.jpg` | Learjet 60 |
+| `Boeing-727-100__comparison.jpg` | Comparison graphic for that sheet type |
 
-If you don’t use ids, the sync script still tries family / nickname / variant tokens, e.g.:
+Full stem list: `NOREBBO_SHEET_IMAGE_MAP.csv` and `src/content/norebboCatalog.json`.
 
-- `Boeing_737-800_side.jpg` → `b737` / `737-800`
-- `Dreamliner_ramp.jpg` → `b787`
-- `Warthog.jpg` → `a10`
-- `Q400.jpg` → `dash8`
+Roles:
 
-Ambiguous or unmatched files are listed in the catalog under `unmatched` — rename and re-run sync.
+- `__white` / `__line-drawing` / `__blueprint` → **diagram**
+- `__comparison` / `__vs` → **comparison** (side-by-side variant feature)
+- anything else → **spot** photo
+
+Aircraft **id** names still work (`b737.jpg`, `c909_diagram.png`, etc.).
 
 ## After dropping files
 
@@ -50,4 +38,4 @@ Ambiguous or unmatched files are listed in the catalog under `unmatched` — ren
 npm run sync-images
 ```
 
-Then refresh the app. Local catalog photos override bundled Wikimedia URLs (admin / IndexedDB uploads still win over both).
+Then refresh the app. Open **Index → Compare** to browse Norebbo-derived variant comparisons.

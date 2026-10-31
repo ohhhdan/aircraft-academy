@@ -7,7 +7,22 @@
       "A320",
       "A321",
       "A320neo",
-      "A321neo"
+      "A321neo",
+      "A318",
+      "A319neo",
+      "Airbus A320",
+      "sharklets",
+      "V2500",
+      "CFM56",
+      "Airbus A318 with Pratt & Whitney",
+      "Pratt & Whitney",
+      "Airbus A319 NEO",
+      "LEAP",
+      "neo",
+      "split scimitar winglets",
+      "GE",
+      "Airbus A320 NEO",
+      "Airbus A319"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -87,7 +102,57 @@
       "737-800",
       "737-900",
       "737 MAX 8",
-      "737 MAX 9"
+      "737 MAX 9",
+      "737-100",
+      "737-200",
+      "737-300",
+      "737-400",
+      "737-500",
+      "737-600",
+      "737-800BCF",
+      "737-900ER",
+      "737 MAX 7",
+      "737 MAX 10",
+      "and 737-400SF",
+      "Combi",
+      "Boeing 737-400",
+      "737-400SF / Combi",
+      "737-400SF",
+      "Boeing 737-800",
+      "split scimitar winglets",
+      "no winglets",
+      "Boeing 737-800BCF",
+      "LEAP",
+      "neo",
+      "747-400",
+      "Boeing 737-10 MAX",
+      "Boeing 737-100",
+      "Boeing 737-200",
+      "this -200",
+      "that one",
+      "Boeing 737-300",
+      "winglets",
+      "Boeing 737-500",
+      "with",
+      "without blended winglets",
+      "blended winglets",
+      "A321",
+      "CFM56-7",
+      "Classic",
+      "Next Generation engine cowlings",
+      "Boeing 737-600",
+      "Boeing 737-9 MAX",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Boeing 737 MAX 7",
+      "GE",
+      "Boeing 737-900ER with split scimitar winglets",
+      "757-200",
+      "Boeing 737 MAX 8",
+      "CFM56",
+      "Boeing 737-900",
+      "A350F",
+      "Boeing 737-700"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -119,7 +184,7 @@
       {
         "id": "c1",
         "label": "Flat engine bottom",
-        "description": "Flattened lower nacelle — classic 737 tell",
+        "description": "Flattened lower nacelle \u2014 classic 737 tell",
         "x": 38,
         "y": 58
       },
@@ -171,7 +236,18 @@
     "family": "Boeing 757",
     "variants": [
       "757-200",
-      "757-300"
+      "757-300",
+      "757-200F",
+      "Boeing 757-200",
+      "winglets",
+      "Pratt & Whitney",
+      "no winglets",
+      "Rolls-Royce",
+      "757-200PF",
+      "757-200SF",
+      "Boeing 757-300",
+      "neo",
+      "GE"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -244,7 +320,24 @@
     "variants": [
       "A330-200",
       "A330-300",
-      "A330neo"
+      "A330neo",
+      "A330-200F",
+      "A330-800",
+      "A330-900",
+      "Airbus A330-200F with Pratt & Whitney",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Airbus A330-800 NEO",
+      "neo",
+      "no winglets",
+      "Airbus A330-900 NEO",
+      "Airbus A330-300 with all three engine options",
+      "Airbus A330-200 with Pratt & Whitney engines",
+      "Airbus A330-200 with GE engines",
+      "GE",
+      "split scimitar winglets",
+      "Airbus A330-200 with Rolls Royce engines",
+      "A321"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -320,7 +413,16 @@
     "variants": [
       "767-200",
       "767-300",
-      "767-400"
+      "767-400",
+      "767-300F",
+      "Boeing 767-400",
+      "GE",
+      "Boeing 767-300",
+      "including freighter versions",
+      "no winglets",
+      "winglets",
+      "Boeing 767-200",
+      "latest designs"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -393,7 +495,15 @@
     "family": "Airbus A220",
     "variants": [
       "A220-100",
-      "A220-300"
+      "A220-300",
+      "CS100",
+      "CS300",
+      "Bombardier CS300",
+      "Airbus A220-300",
+      "neo",
+      "A350F",
+      "Bombardier CS100",
+      "Airbus A220-100"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -467,7 +577,26 @@
       "E170",
       "E175",
       "E190",
-      "E195"
+      "E195",
+      "E175-E2",
+      "E190-E2",
+      "E195-E2",
+      "Embraer E195",
+      "no winglets",
+      "Embraer E175-E2",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "767-300",
+      "this second generation 175",
+      "first",
+      "Embraer E195-E2",
+      "neo",
+      "Embraer E190-E2",
+      "757-200",
+      "original E190",
+      "Embraer 190",
+      "Embraer 120 Brasilia",
+      "EMB-120"
     ],
     "manufacturer": "Embraer",
     "skycardsCategories": [
@@ -546,7 +675,23 @@
       "A321ceo",
       "A321neo",
       "A321LR",
-      "A321XLR"
+      "A321XLR",
+      "A321",
+      "A321neo LR",
+      "A321P2F",
+      "Airbus A321",
+      "P2F",
+      "767-300",
+      "Airbus A321neo LR",
+      "Long Range",
+      "neo",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Airbus A321 NEO",
+      "LEAP",
+      "winglets",
+      "sharklets",
+      "V2500"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -619,7 +764,15 @@
     "variants": [
       "787-8",
       "787-9",
-      "787-10"
+      "787-10",
+      "Boeing 787-9",
+      "Boeing 787-10",
+      "777f",
+      "A321",
+      "neo",
+      "Boeing 787-8",
+      "Pratt & Whitney",
+      "Rolls-Royce"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -692,7 +845,18 @@
     "family": "Airbus A350",
     "variants": [
       "A350-900",
-      "A350-1000"
+      "A350-1000",
+      "A350-800",
+      "A350F",
+      "Airbus A350F",
+      "GE",
+      "other versions of the A350",
+      "Airbus A350-1000",
+      "777f",
+      "Pratt & Whitney",
+      "CFM56",
+      "Airbus A350-800",
+      "Airbus A350-900"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -768,7 +932,21 @@
       "777-300",
       "777-200ER",
       "777-300ER",
-      "777X"
+      "777X",
+      "777F",
+      "777-8",
+      "777-9",
+      "Boeing 777-8",
+      "Rolls-Royce",
+      "A321",
+      "that\u2019s pretty much it! See",
+      "Boeing 777-9",
+      "first generation 777",
+      "the 777X",
+      "Boeing 777F",
+      "Boeing 777-300",
+      "Boeing 777-200",
+      "Pratt & Whitney"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -845,7 +1023,40 @@
     "family": "Boeing 747",
     "variants": [
       "747-400",
-      "747-8"
+      "747-8",
+      "747-100",
+      "747-200",
+      "747-300",
+      "747-400F",
+      "747SP",
+      "747-8i",
+      "747-8F",
+      "Boeing 747-300",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "GE",
+      "A350F",
+      "these new CF6-80C2B1 engines",
+      "version prior",
+      "Boeing 747SP",
+      "split scimitar winglets",
+      "747-100 (and 747-200)",
+      "Boeing 747-200",
+      "CFM56",
+      "Boeing 747-100",
+      "A321",
+      "757-200",
+      "747-100, 747-100B",
+      "747-100SR",
+      "Boeing 747-400 with Pratt & Whitney",
+      "neo",
+      "Boeing 747-400F",
+      "SCD",
+      "BCF",
+      "Boeing 747-8F",
+      "Boeing 747-8i",
+      "Boeing 747-400 with General Electric engines",
+      "winglets"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -919,7 +1130,9 @@
     "id": "a380",
     "family": "Airbus A380",
     "variants": [
-      "A380-800"
+      "A380-800",
+      "Airbus A380-800",
+      "A321"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -940,7 +1153,7 @@
       "full-length double deck",
       "four engines",
       "massive wingspan",
-      "no hump — straight upper deck"
+      "no hump \u2014 straight upper deck"
     ],
     "geekFacts": [
       "Largest passenger airliner ever built",
@@ -991,7 +1204,14 @@
     "variants": [
       "A340-300",
       "A340-500",
-      "A340-600"
+      "A340-600",
+      "A340-200",
+      "Airbus A340-200",
+      "Airbus A340-600",
+      "Airbus A340-500",
+      "Airbus A340-300",
+      "GE",
+      "Pratt & Whitney"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -1066,7 +1286,14 @@
     "family": "Boeing 727",
     "variants": [
       "727-100",
-      "727-200"
+      "727-200",
+      "Boeing 727-100",
+      "Pratt & Whitney",
+      "777f",
+      "GE",
+      "Rolls-Royce",
+      "the -100",
+      "Boeing 727-200"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -1138,7 +1365,10 @@
     "family": "McDonnell Douglas MD-11",
     "variants": [
       "MD-11",
-      "MD-11F"
+      "MD-11F",
+      "and MD-11F",
+      "McDonnell Douglas MD-11",
+      "freighter"
     ],
     "manufacturer": "McDonnell Douglas",
     "skycardsCategories": [
@@ -1209,7 +1439,9 @@
     "family": "Gulfstream G650",
     "variants": [
       "G650",
-      "G650ER"
+      "G650ER",
+      "Gulfstream G650ER",
+      "G-VI"
     ],
     "manufacturer": "Gulfstream",
     "skycardsCategories": [
@@ -1279,7 +1511,9 @@
     "family": "Cessna Citation X",
     "variants": [
       "Citation X",
-      "Citation X+"
+      "Citation X+",
+      "Cessna Citation X",
+      "winglets"
     ],
     "manufacturer": "Cessna",
     "skycardsCategories": [
@@ -1421,7 +1655,13 @@
     "family": "Bombardier Global 7500",
     "variants": [
       "Global 7500",
-      "Global 8000"
+      "Global 8000",
+      "Global 5000",
+      "Bombardier Global 5000",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "Bombardier Global 7500",
+      "neo"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -1558,7 +1798,9 @@
     "family": "Learjet 75",
     "variants": [
       "Learjet 75",
-      "Learjet 75 Liberty"
+      "Learjet 75 Liberty",
+      "Learjet 45",
+      "split scimitar winglets"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -2175,7 +2417,9 @@
     "variants": [
       "King Air 200",
       "King Air 350",
-      "King Air 90"
+      "King Air 90",
+      "Beechcraft B200 King Air",
+      "split scimitar winglets"
     ],
     "manufacturer": "Beechcraft",
     "skycardsCategories": [
@@ -2247,7 +2491,15 @@
     "variants": [
       "Q200",
       "Q300",
-      "Q400"
+      "Q400",
+      "De Havilland DHC-8-300",
+      "GE",
+      "split scimitar winglets",
+      "neo",
+      "De Havilland DHC-8-200",
+      "Dash 8",
+      "777f",
+      "Bombardier DHC-8-402 Q400"
     ],
     "manufacturer": "De Havilland Canada",
     "skycardsCategories": [
@@ -2321,7 +2573,9 @@
     "family": "ATR 72",
     "variants": [
       "ATR 72-500",
-      "ATR 72-600"
+      "ATR 72-600",
+      "ATR 72",
+      "GE"
     ],
     "manufacturer": "ATR",
     "skycardsCategories": [
@@ -2729,7 +2983,14 @@
       "CRJ-200",
       "CRJ-700",
       "CRJ-900",
-      "CRJ-1000"
+      "CRJ-1000",
+      "Bombardier CRJ-1000",
+      "777f",
+      "Bombardier Canadair Regional Jet 900",
+      "Bombardier Canadair Regional Jet 700",
+      "Bombardier Canadair Regional Jet 200",
+      "GE",
+      "757-200"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -2874,7 +3135,10 @@
     "variants": [
       "C909",
       "ARJ21-700",
-      "ARJ21-900"
+      "ARJ21-900",
+      "Comac C909",
+      "Pratt & Whitney",
+      "CFM56"
     ],
     "manufacturer": "COMAC",
     "skycardsCategories": [
@@ -2904,7 +3168,7 @@
     ],
     "geekFacts": [
       "Formerly marketed as the ARJ21 Xiangfeng; rebranded C909",
-      "ICAO type designator AJ27 — often labeled C909 on flight trackers"
+      "ICAO type designator AJ27 \u2014 often labeled C909 on flight trackers"
     ],
     "diagramId": "c909",
     "callouts": [
@@ -2948,7 +3212,8 @@
     "id": "c919",
     "family": "COMAC C919",
     "variants": [
-      "C919"
+      "C919",
+      "Comac C919"
     ],
     "manufacturer": "COMAC",
     "skycardsCategories": [
@@ -2975,7 +3240,7 @@
       "wingtip fences / winglets depending on config"
     ],
     "geekFacts": [
-      "China’s first large indigenous narrowbody airliner",
+      "China\u2019s first large indigenous narrowbody airliner",
       "Direct competitor to A320neo and 737 MAX"
     ],
     "diagramId": "c919",
@@ -3021,7 +3286,11 @@
     "family": "Sukhoi Superjet 100",
     "variants": [
       "SSJ100-95B",
-      "SSJ100-95LR"
+      "SSJ100-95LR",
+      "SSJ100",
+      "Sukhoi SSJ-100",
+      "Pratt & Whitney",
+      "Rolls-Royce"
     ],
     "manufacturer": "Sukhoi / Yakovlev",
     "skycardsCategories": [
@@ -3057,7 +3326,7 @@
       {
         "id": "c1",
         "label": "Underwing engines",
-        "description": "Unusual for regionals — usually rear-mounted",
+        "description": "Unusual for regionals \u2014 usually rear-mounted",
         "x": 38,
         "y": 58
       },
@@ -3095,7 +3364,26 @@
     "variants": [
       "ERJ-135",
       "ERJ-140",
-      "ERJ-145"
+      "ERJ-145",
+      "ERJ-145XR",
+      "ERJ-175",
+      "Embraer ERJ-135",
+      "767-300",
+      "neo",
+      "ERJ-135) Which one",
+      "Embraer ERJ-140",
+      "ERJ-145XR, ERJ-145",
+      "ERJ-140 Pretty neat, huh",
+      "Embraer ERJ-145",
+      "Rolls-Royce",
+      "ERJ-145 (base model)",
+      "Embraer ERJ-145XR",
+      "Pratt & Whitney",
+      "winglets",
+      "GE",
+      "Embraer ERJ-175",
+      "no winglets",
+      "CFM56"
     ],
     "manufacturer": "Embraer",
     "skycardsCategories": [
@@ -3153,7 +3441,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with ERJ ramp shot)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with ERJ ramp shot)",
         "variant": "ERJ-145"
       }
     ],
@@ -3169,7 +3457,10 @@
     "variants": [
       "ATR 42-300",
       "ATR 42-500",
-      "ATR 42-600"
+      "ATR 42-600",
+      "ATR 42",
+      "neo",
+      "A321"
     ],
     "manufacturer": "ATR",
     "skycardsCategories": [
@@ -3246,7 +3537,8 @@
       "BAe 146-200",
       "BAe 146-300",
       "Avro RJ85",
-      "Avro RJ100"
+      "Avro RJ100",
+      "British Aerospace BAe 146-200 / Avro RJ85"
     ],
     "manufacturer": "British Aerospace",
     "skycardsCategories": [
@@ -3308,7 +3600,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fokker_100.jpg/1280px-Fokker_100.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with BAe 146 photo)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with BAe 146 photo)",
         "variant": "Avro RJ100"
       }
     ],
@@ -3323,7 +3615,10 @@
     "family": "Fokker 100",
     "variants": [
       "Fokker 70",
-      "Fokker 100"
+      "Fokker 100",
+      "Pratt & Whitney",
+      "CFM56",
+      "F-28-0100"
     ],
     "manufacturer": "Fokker",
     "skycardsCategories": [
@@ -3395,7 +3690,10 @@
     "id": "b717",
     "family": "Boeing 717",
     "variants": [
-      "717-200"
+      "717-200",
+      "Boeing 717-200",
+      "the NEO",
+      "CEO in side view"
     ],
     "manufacturer": "Boeing",
     "skycardsCategories": [
@@ -3422,7 +3720,7 @@
       "short narrowbody"
     ],
     "geekFacts": [
-      "Rebranded MD-95 after Boeing–MDC merger",
+      "Rebranded MD-95 after Boeing\u2013MDC merger",
       "ICAO type B712"
     ],
     "diagramId": "b717",
@@ -3452,7 +3750,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Wikimedia Commons (placeholder — replace with 717 photo)",
+        "attribution": "Wikimedia Commons (placeholder \u2014 replace with 717 photo)",
         "variant": "717-200"
       }
     ],
@@ -3471,7 +3769,27 @@
       "MD-83",
       "MD-87",
       "MD-88",
-      "MD-90"
+      "MD-90",
+      "DC-9-30",
+      "DC-9-40",
+      "DC-9-50",
+      "McDonnell Douglas DC-9-30",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "DC-9-20",
+      "McDonnell Douglas DC-9-40",
+      "neo",
+      "a -40",
+      "McDonnell Douglas DC-9-50",
+      "777f",
+      "757-200",
+      "a -50",
+      "McDonnell Douglas MD-87",
+      "McDonnell Douglas MD-90",
+      "GE",
+      "McDonnell Douglas MD-82 / MD-83 / MD-88",
+      "them",
+      "under the skin"
     ],
     "manufacturer": "McDonnell Douglas",
     "skycardsCategories": [
@@ -3533,7 +3851,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Boeing_757_family_v1.0.png/1280px-Boeing_757_family_v1.0.png",
-        "attribution": "Placeholder — replace with MD-80 ramp photo",
+        "attribution": "Placeholder \u2014 replace with MD-80 ramp photo",
         "variant": "MD-83"
       }
     ],
@@ -3541,6 +3859,1781 @@
     "spotterLocations": [
       "Historic US majors",
       "Cargo conversions"
+    ]
+  },
+  {
+    "id": "g550",
+    "family": "Gulfstream G550",
+    "variants": [
+      "G550",
+      "GV-SP",
+      "Gulfstream G550",
+      "A321",
+      "split scimitar winglets"
+    ],
+    "manufacturer": "Gulfstream",
+    "skycardsCategories": [
+      "Jet",
+      "Business"
+    ],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 2003,
+    "nickname": null,
+    "rangeNm": 6750,
+    "role": "business",
+    "equivalents": [
+      "g650",
+      "global7500"
+    ],
+    "businessOrLeisure": "business",
+    "icaoCodes": [
+      "GLF5"
+    ],
+    "keyFeatures": [
+      "large oval windows",
+      "low-wing twinjet",
+      "T-tail",
+      "long-range Gulfstream fuselage"
+    ],
+    "geekFacts": [
+      "ICAO type often GLF5 (shared with G500-era Gulfstreams in some systems)",
+      "Direct predecessor spirit to the G650"
+    ],
+    "diagramId": "g550",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Oval windows",
+        "description": "Classic Gulfstream window shape",
+        "x": 40,
+        "y": 42
+      },
+      {
+        "id": "c2",
+        "label": "T-tail",
+        "description": "High horizontal stabilizer",
+        "x": 90,
+        "y": 18
+      },
+      {
+        "id": "c3",
+        "label": "Rear engines",
+        "description": "Engines on aft fuselage",
+        "x": 72,
+        "y": 48
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "G550"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "short360",
+    "family": "Short 360",
+    "variants": [
+      "Short 360",
+      "SD3-60",
+      "neo",
+      "winglets"
+    ],
+    "manufacturer": "Short Brothers",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1981,
+    "nickname": null,
+    "rangeNm": 650,
+    "role": "commercial",
+    "equivalents": [
+      "atr42",
+      "beech1900"
+    ],
+    "icaoCodes": [
+      "SH36"
+    ],
+    "keyFeatures": [
+      "boxy high-wing turboprop",
+      "square-ish fuselage cross-section",
+      "twin engines",
+      "fixed gear on many"
+    ],
+    "geekFacts": [
+      "Stretched development of the Short 330",
+      "ICAO type SH36"
+    ],
+    "diagramId": "short360",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "High wing",
+        "description": "Wing above cabin",
+        "x": 48,
+        "y": 28
+      },
+      {
+        "id": "c2",
+        "label": "Boxy fuselage",
+        "description": "Distinct rectangular section",
+        "x": 50,
+        "y": 48
+      },
+      {
+        "id": "c3",
+        "label": "Twin props",
+        "description": "Turboprops on wing",
+        "x": 35,
+        "y": 40
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Short 360"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dc3",
+    "family": "Douglas DC-3",
+    "variants": [
+      "DC-3",
+      "C-47",
+      "Douglas DC-3",
+      "GE"
+    ],
+    "manufacturer": "Douglas",
+    "skycardsCategories": [
+      "Propeller",
+      "Piston"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1935,
+    "nickname": "Dakota",
+    "rangeNm": 1500,
+    "role": "commercial",
+    "equivalents": [
+      "dc4"
+    ],
+    "icaoCodes": [
+      "DC3"
+    ],
+    "keyFeatures": [
+      "tailwheel classic",
+      "radial twin engines",
+      "low wing",
+      "iconic 1930s airliner shape"
+    ],
+    "geekFacts": [
+      "One of the most important aircraft in aviation history",
+      "Military C-47 / civilian DC-3"
+    ],
+    "diagramId": "dc3",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Tailwheel",
+        "description": "Conventional gear",
+        "x": 88,
+        "y": 58
+      },
+      {
+        "id": "c2",
+        "label": "Radial engines",
+        "description": "Twin radial nacelles",
+        "x": 35,
+        "y": 48
+      },
+      {
+        "id": "c3",
+        "label": "Low wing",
+        "description": "Wing through lower fuselage",
+        "x": 50,
+        "y": 52
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "DC-3"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "a300",
+    "family": "Airbus A300",
+    "variants": [
+      "A300B4",
+      "A300-600",
+      "A300-600F",
+      "and A300-600F",
+      "Airbus A300-600",
+      "LEAP",
+      "neo",
+      "Pratt & Whitney",
+      "freighter",
+      "Rolls-Royce",
+      "passenger version",
+      "freighter version",
+      "A321neo LR"
+    ],
+    "manufacturer": "Airbus",
+    "skycardsCategories": [
+      "Airliner",
+      "Twin Jet",
+      "Airbus"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1974,
+    "nickname": null,
+    "rangeNm": 4000,
+    "role": "commercial",
+    "equivalents": [
+      "b767",
+      "a310"
+    ],
+    "icaoCodes": [
+      "A306",
+      "A30B"
+    ],
+    "keyFeatures": [
+      "first Airbus widebody",
+      "underwing twin engines",
+      "A300 nose family",
+      "freighter conversions common"
+    ],
+    "geekFacts": [
+      "First Airbus airliner",
+      "Parent of the A310 and A330 families structurally"
+    ],
+    "diagramId": "a300",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Widebody twin",
+        "description": "Two underwing engines on a widebody",
+        "x": 38,
+        "y": 58
+      },
+      {
+        "id": "c2",
+        "label": "Airbus nose",
+        "description": "Early Airbus cockpit profile",
+        "x": 8,
+        "y": 38
+      },
+      {
+        "id": "c3",
+        "label": "Fuselage length",
+        "description": "Shorter than later A330s",
+        "x": 55,
+        "y": 44
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "A300B4"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "jetstream41",
+    "family": "BAe Jetstream 41",
+    "variants": [
+      "Jetstream 41",
+      "British Aerospace Jetstream 41"
+    ],
+    "manufacturer": "British Aerospace",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1992,
+    "nickname": null,
+    "rangeNm": 700,
+    "role": "commercial",
+    "equivalents": [
+      "atr42",
+      "beech1900"
+    ],
+    "icaoCodes": [
+      "JS41"
+    ],
+    "keyFeatures": [
+      "low-wing twin turboprop",
+      "T-tail",
+      "stretched Jetstream fuselage",
+      "regional feeder"
+    ],
+    "geekFacts": [
+      "Stretched Jetstream 31 family",
+      "ICAO type JS41"
+    ],
+    "diagramId": "jetstream41",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c2",
+        "label": "Low wing",
+        "description": "Wing low on fuselage",
+        "x": 48,
+        "y": 52
+      },
+      {
+        "id": "c3",
+        "label": "Twin props",
+        "description": "Turboprops on wing",
+        "x": 32,
+        "y": 48
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Jetstream 41"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "c17",
+    "family": "Boeing C-17 Globemaster III",
+    "variants": [
+      "C-17A",
+      "Boeing C-17 Globemaster III"
+    ],
+    "manufacturer": "Boeing",
+    "skycardsCategories": [
+      "Military",
+      "Transport"
+    ],
+    "categoryGroup": "military",
+    "engineCount": 4,
+    "introYear": 1991,
+    "nickname": "Globemaster",
+    "rangeNm": 2400,
+    "role": "military",
+    "equivalents": [
+      "c130"
+    ],
+    "icaoCodes": [
+      "C17"
+    ],
+    "keyFeatures": [
+      "high-wing strategic airlifter",
+      "four underwing engines",
+      "upswept rear cargo ramp",
+      "T-tail"
+    ],
+    "geekFacts": [
+      "Primary USAF strategic/tactical airlifter",
+      "ICAO type C17"
+    ],
+    "diagramId": "c17",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "High wing",
+        "description": "Wing above fuselage",
+        "x": 48,
+        "y": 28
+      },
+      {
+        "id": "c2",
+        "label": "Four engines",
+        "description": "Four underwing turbofans",
+        "x": 35,
+        "y": 48
+      },
+      {
+        "id": "c3",
+        "label": "Cargo ramp",
+        "description": "Rear loading ramp",
+        "x": 88,
+        "y": 55
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "C-17A"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dc8",
+    "family": "Douglas DC-8",
+    "variants": [
+      "DC-8-53",
+      "DC-8-61",
+      "DC-8-73",
+      "DC-8-73CF",
+      "and DC-8-73CF",
+      "Douglas DC-8-73",
+      "GE",
+      "split scimitar winglets",
+      "freighter",
+      "Douglas DC-8-53",
+      "Douglas DC-8-61",
+      "Pratt & Whitney",
+      "Rolls-Royce",
+      "neo"
+    ],
+    "manufacturer": "Douglas",
+    "skycardsCategories": [
+      "Airliner",
+      "Four Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 1958,
+    "nickname": null,
+    "rangeNm": 5000,
+    "role": "commercial",
+    "equivalents": [
+      "b707"
+    ],
+    "icaoCodes": [
+      "DC85",
+      "DC86",
+      "DC87"
+    ],
+    "keyFeatures": [
+      "four underwing engines",
+      "narrowbody long fuselage",
+      "classic jetliner nose",
+      "freighter conversions"
+    ],
+    "geekFacts": [
+      "Douglas answer to the 707",
+      "Many still fly as freighters"
+    ],
+    "diagramId": "dc8",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Four engines",
+        "description": "Four underwing pods",
+        "x": 35,
+        "y": 56
+      },
+      {
+        "id": "c2",
+        "label": "Long tube",
+        "description": "Stretched freighter fuselages",
+        "x": 55,
+        "y": 44
+      },
+      {
+        "id": "c3",
+        "label": "Douglas nose",
+        "description": "Distinct DC-8 cockpit profile",
+        "x": 8,
+        "y": 38
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "DC-8-53"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "concorde",
+    "family": "A\u00e9rospatiale-BAC Concorde",
+    "variants": [
+      "Concorde",
+      "A\u00e9rospatiale-BAC Concorde",
+      "split scimitar winglets",
+      "A321"
+    ],
+    "manufacturer": "A\u00e9rospatiale / BAC",
+    "skycardsCategories": [
+      "Airliner",
+      "Supersonic"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 1969,
+    "nickname": null,
+    "rangeNm": 3900,
+    "role": "commercial",
+    "equivalents": [
+      "a380"
+    ],
+    "icaoCodes": [
+      "CONC"
+    ],
+    "keyFeatures": [
+      "ogee delta wing",
+      "droop nose",
+      "four rear-ish underwing engines",
+      "supersonic slender fuselage"
+    ],
+    "geekFacts": [
+      "Only successful SST in airline service with Tu-144",
+      "Mach 2 cruise"
+    ],
+    "diagramId": "concorde",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Delta wing",
+        "description": "Ogee delta planform",
+        "x": 55,
+        "y": 55
+      },
+      {
+        "id": "c2",
+        "label": "Droop nose",
+        "description": "Visor nose for landing",
+        "x": 6,
+        "y": 42
+      },
+      {
+        "id": "c3",
+        "label": "Engine nacelles",
+        "description": "Paired underwing engines",
+        "x": 60,
+        "y": 62
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Concorde"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dc4",
+    "family": "Douglas DC-4",
+    "variants": [
+      "DC-4",
+      "C-54",
+      "Douglas DC-4",
+      "Pratt & Whitney",
+      "CFM56",
+      "no winglets"
+    ],
+    "manufacturer": "Douglas",
+    "skycardsCategories": [
+      "Propeller",
+      "Piston"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 4,
+    "introYear": 1942,
+    "nickname": null,
+    "rangeNm": 2500,
+    "role": "commercial",
+    "equivalents": [
+      "dc3"
+    ],
+    "icaoCodes": [
+      "DC4"
+    ],
+    "keyFeatures": [
+      "four radial engines",
+      "tricycle gear",
+      "low-wing piston airliner",
+      "WWII C-54 heritage"
+    ],
+    "geekFacts": [
+      "Military C-54 Skymaster",
+      "Predecessor path to the DC-6/DC-7"
+    ],
+    "diagramId": "dc4",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Four radials",
+        "description": "Four piston engines",
+        "x": 35,
+        "y": 50
+      },
+      {
+        "id": "c2",
+        "label": "Tricycle gear",
+        "description": "Nosewheel layout",
+        "x": 20,
+        "y": 62
+      },
+      {
+        "id": "c3",
+        "label": "Low wing",
+        "description": "Wing through lower fuselage",
+        "x": 50,
+        "y": 52
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "DC-4"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "tu204",
+    "family": "Tupolev Tu-204",
+    "variants": [
+      "Tu-204-100",
+      "Tu-214",
+      "Tupolev Tu-204-100"
+    ],
+    "manufacturer": "Tupolev",
+    "skycardsCategories": [
+      "Airliner",
+      "Twin Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1989,
+    "nickname": null,
+    "rangeNm": 3700,
+    "role": "commercial",
+    "equivalents": [
+      "b757",
+      "a321"
+    ],
+    "icaoCodes": [
+      "T204"
+    ],
+    "keyFeatures": [
+      "underwing twin engines",
+      "757-class narrowbody",
+      "Russian cockpit windows",
+      "medium-haul airliner"
+    ],
+    "geekFacts": [
+      "Russian counterpart class to the 757",
+      "ICAO type T204"
+    ],
+    "diagramId": "tu204",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Underwing engines",
+        "description": "Twin turbofans",
+        "x": 38,
+        "y": 58
+      },
+      {
+        "id": "c2",
+        "label": "Long fuselage",
+        "description": "757-like proportions",
+        "x": 55,
+        "y": 44
+      },
+      {
+        "id": "c3",
+        "label": "Nose",
+        "description": "Tupolev cockpit profile",
+        "x": 8,
+        "y": 38
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Tu-204-100"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "mc21",
+    "family": "Irkut MC-21",
+    "variants": [
+      "MC-21-200",
+      "MC-21-300",
+      "Irkut MC-21-300",
+      "neo"
+    ],
+    "manufacturer": "Irkut / Yakovlev",
+    "skycardsCategories": [
+      "Airliner",
+      "Twin Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 2017,
+    "nickname": null,
+    "rangeNm": 3400,
+    "role": "commercial",
+    "equivalents": [
+      "a320",
+      "b737",
+      "c919"
+    ],
+    "icaoCodes": [
+      "MC21"
+    ],
+    "keyFeatures": [
+      "composite wing narrowbody",
+      "underwing twin engines",
+      "tall landing gear",
+      "wide single-aisle cabin"
+    ],
+    "geekFacts": [
+      "Russian next-gen single aisle",
+      "Competes with A320neo / 737 MAX / C919"
+    ],
+    "diagramId": "mc21",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Tall gear",
+        "description": "High landing gear for large fans",
+        "x": 42,
+        "y": 70
+      },
+      {
+        "id": "c2",
+        "label": "Underwing engines",
+        "description": "High-bypass nacelles",
+        "x": 38,
+        "y": 58
+      },
+      {
+        "id": "c3",
+        "label": "Narrowbody",
+        "description": "A320-class length",
+        "x": 55,
+        "y": 44
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "MC-21-200"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "b707",
+    "family": "Boeing 707",
+    "variants": [
+      "707-320B",
+      "707-320C",
+      "Boeing 707 MAX",
+      "Boeing 707-320C"
+    ],
+    "manufacturer": "Boeing",
+    "skycardsCategories": [
+      "Airliner",
+      "Four Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 4,
+    "introYear": 1958,
+    "nickname": null,
+    "rangeNm": 5000,
+    "role": "commercial",
+    "equivalents": [
+      "dc8"
+    ],
+    "icaoCodes": [
+      "B703"
+    ],
+    "keyFeatures": [
+      "four underwing engines",
+      "classic Boeing jetliner nose",
+      "narrowbody pioneer",
+      "freighter/combi variants"
+    ],
+    "geekFacts": [
+      "Aircraft that launched the jet age for Boeing",
+      "ICAO type B703"
+    ],
+    "diagramId": "b707",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Four engines",
+        "description": "Four underwing pods",
+        "x": 35,
+        "y": 56
+      },
+      {
+        "id": "c2",
+        "label": "Boeing nose",
+        "description": "Classic 707 cockpit",
+        "x": 8,
+        "y": 38
+      },
+      {
+        "id": "c3",
+        "label": "Wing sweep",
+        "description": "35\u00b0 swept wing",
+        "x": 55,
+        "y": 48
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "707-320B"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "tu154",
+    "family": "Tupolev Tu-154",
+    "variants": [
+      "Tu-154B",
+      "Tu-154M",
+      "Tupolev Tu-154M"
+    ],
+    "manufacturer": "Tupolev",
+    "skycardsCategories": [
+      "Airliner",
+      "Tri Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 3,
+    "introYear": 1968,
+    "nickname": null,
+    "rangeNm": 2800,
+    "role": "commercial",
+    "equivalents": [
+      "b727"
+    ],
+    "icaoCodes": [
+      "T154"
+    ],
+    "keyFeatures": [
+      "tri-jet with rear engines",
+      "T-tail",
+      "clean wing",
+      "Soviet medium-haul workhorse"
+    ],
+    "geekFacts": [
+      "Soviet counterpart role to the 727",
+      "ICAO type T154"
+    ],
+    "diagramId": "tu154",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Tri-jet",
+        "description": "Three rear engines",
+        "x": 80,
+        "y": 48
+      },
+      {
+        "id": "c2",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c3",
+        "label": "Clean wing",
+        "description": "No underwing engines",
+        "x": 45,
+        "y": 50
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Tu-154B"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dornier328jet",
+    "family": "Fairchild Dornier 328JET",
+    "variants": [
+      "328JET",
+      "Fairchild-Dornier 328JET",
+      "Pratt & Whitney",
+      "CFM56",
+      "GE",
+      "328 and 328JET",
+      "way they connect to the wings"
+    ],
+    "manufacturer": "Fairchild Dornier",
+    "skycardsCategories": [
+      "Airliner",
+      "Twin Jet",
+      "Regional"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1999,
+    "nickname": null,
+    "rangeNm": 1200,
+    "role": "commercial",
+    "equivalents": [
+      "erj145",
+      "dornier328"
+    ],
+    "icaoCodes": [
+      "J328"
+    ],
+    "keyFeatures": [
+      "jet version of Do 328",
+      "underwing twin engines",
+      "high wing",
+      "T-tail regional"
+    ],
+    "geekFacts": [
+      "Jet derivative of the turboprop 328",
+      "ICAO type J328"
+    ],
+    "diagramId": "dornier328jet",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "High wing",
+        "description": "Wing above cabin",
+        "x": 48,
+        "y": 28
+      },
+      {
+        "id": "c2",
+        "label": "Underwing jets",
+        "description": "Twin turbofans",
+        "x": 38,
+        "y": 52
+      },
+      {
+        "id": "c3",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "328JET"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dornier328",
+    "family": "Dornier 328",
+    "variants": [
+      "328-110",
+      "Do 328",
+      "Dornier 328-110",
+      "neo",
+      "757-200"
+    ],
+    "manufacturer": "Dornier",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1991,
+    "nickname": null,
+    "rangeNm": 1000,
+    "role": "commercial",
+    "equivalents": [
+      "atr42",
+      "dornier328jet"
+    ],
+    "icaoCodes": [
+      "D328"
+    ],
+    "keyFeatures": [
+      "high-wing twin turboprop",
+      "T-tail",
+      "slim fuselage",
+      "regional feeder"
+    ],
+    "geekFacts": [
+      "Parent of the 328JET",
+      "ICAO type D328"
+    ],
+    "diagramId": "dornier328",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "High wing",
+        "description": "Wing above cabin",
+        "x": 48,
+        "y": 28
+      },
+      {
+        "id": "c2",
+        "label": "Twin props",
+        "description": "Turboprops on wing",
+        "x": 35,
+        "y": 40
+      },
+      {
+        "id": "c3",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "328-110"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "saab340",
+    "family": "Saab 340",
+    "variants": [
+      "Saab 340A",
+      "Saab 340B",
+      "Pratt & Whitney",
+      "757-200",
+      "Rolls-Royce",
+      "CFM56"
+    ],
+    "manufacturer": "Saab",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1983,
+    "nickname": null,
+    "rangeNm": 800,
+    "role": "commercial",
+    "equivalents": [
+      "atr42",
+      "emb120"
+    ],
+    "icaoCodes": [
+      "SF34"
+    ],
+    "keyFeatures": [
+      "low-wing twin turboprop",
+      "T-tail",
+      "Swedish regional",
+      "active noise control cabin on later"
+    ],
+    "geekFacts": [
+      "Very successful regional turboprop",
+      "ICAO type SF34"
+    ],
+    "diagramId": "saab340",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c2",
+        "label": "Low wing",
+        "description": "Wing low on fuselage",
+        "x": 48,
+        "y": 52
+      },
+      {
+        "id": "c3",
+        "label": "Twin props",
+        "description": "Turboprops",
+        "x": 32,
+        "y": 48
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Saab 340A"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "dc10",
+    "family": "McDonnell Douglas DC-10",
+    "variants": [
+      "DC-10-30",
+      "DC-10-30F",
+      "MD-10",
+      "McDonnell Douglas DC-10-30F / MD-10",
+      "DC-10",
+      "McDonnell Douglas DC-10-30"
+    ],
+    "manufacturer": "McDonnell Douglas",
+    "skycardsCategories": [
+      "Airliner",
+      "Tri Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 3,
+    "introYear": 1970,
+    "nickname": null,
+    "rangeNm": 5200,
+    "role": "commercial",
+    "equivalents": [
+      "md11",
+      "l1011"
+    ],
+    "icaoCodes": [
+      "DC10"
+    ],
+    "keyFeatures": [
+      "tri-jet widebody",
+      "center engine in tail",
+      "underwing outboards",
+      "freighter conversions (MD-10)"
+    ],
+    "geekFacts": [
+      "Parent of the MD-11",
+      "Many fly on as freighters"
+    ],
+    "diagramId": "dc10",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Center engine",
+        "description": "Tail-mounted third engine",
+        "x": 88,
+        "y": 40
+      },
+      {
+        "id": "c2",
+        "label": "Underwing twins",
+        "description": "Outboard engines",
+        "x": 35,
+        "y": 56
+      },
+      {
+        "id": "c3",
+        "label": "Widebody",
+        "description": "Wide fuselage",
+        "x": 50,
+        "y": 44
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "DC-10-30"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "c208",
+    "family": "Cessna 208 Caravan",
+    "variants": [
+      "208",
+      "208B Grand Caravan",
+      "Cessna 208 Grand Caravan",
+      "Pratt & Whitney",
+      "A321",
+      "split scimitar winglets"
+    ],
+    "manufacturer": "Cessna",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 1,
+    "introYear": 1984,
+    "nickname": "Caravan",
+    "rangeNm": 1000,
+    "role": "general",
+    "equivalents": [
+      "pc12"
+    ],
+    "businessOrLeisure": "both",
+    "icaoCodes": [
+      "C208"
+    ],
+    "keyFeatures": [
+      "single turboprop",
+      "high wing",
+      "fixed gear",
+      "utility / cargo / skydive workhorse"
+    ],
+    "geekFacts": [
+      "One of the most common utility turboprops",
+      "ICAO type C208"
+    ],
+    "diagramId": "c208",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "High wing",
+        "description": "Wing above cabin",
+        "x": 48,
+        "y": 28
+      },
+      {
+        "id": "c2",
+        "label": "Single prop",
+        "description": "Nose turboprop",
+        "x": 8,
+        "y": 42
+      },
+      {
+        "id": "c3",
+        "label": "Fixed gear",
+        "description": "Non-retractable gear",
+        "x": 40,
+        "y": 68
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "208"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "a310",
+    "family": "Airbus A310",
+    "variants": [
+      "A310-200",
+      "A310-300",
+      "Airbus A310-300"
+    ],
+    "manufacturer": "Airbus",
+    "skycardsCategories": [
+      "Airliner",
+      "Twin Jet",
+      "Airbus"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 2,
+    "introYear": 1982,
+    "nickname": null,
+    "rangeNm": 5150,
+    "role": "commercial",
+    "equivalents": [
+      "b767",
+      "a300"
+    ],
+    "icaoCodes": [
+      "A310"
+    ],
+    "keyFeatures": [
+      "shortened A300 widebody",
+      "underwing twin engines",
+      "two-crew cockpit",
+      "freighter conversions"
+    ],
+    "geekFacts": [
+      "First Airbus with a two-crew glass cockpit lineage",
+      "ICAO type A310"
+    ],
+    "diagramId": "a310",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Shorter widebody",
+        "description": "Truncated vs A300",
+        "x": 55,
+        "y": 44
+      },
+      {
+        "id": "c2",
+        "label": "Underwing engines",
+        "description": "Twin turbofans",
+        "x": 38,
+        "y": 58
+      },
+      {
+        "id": "c3",
+        "label": "Airbus nose",
+        "description": "A300-family cockpit",
+        "x": 8,
+        "y": 38
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "A310-200"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "l1011",
+    "family": "Lockheed L-1011 TriStar",
+    "variants": [
+      "L-1011-1",
+      "L-1011-500",
+      "Lockheed L-1011-500",
+      "Lockheed L-1011-1",
+      "GE"
+    ],
+    "manufacturer": "Lockheed",
+    "skycardsCategories": [
+      "Airliner",
+      "Tri Jet"
+    ],
+    "categoryGroup": "commercial-jets",
+    "engineCount": 3,
+    "introYear": 1970,
+    "nickname": "TriStar",
+    "rangeNm": 4900,
+    "role": "commercial",
+    "equivalents": [
+      "dc10",
+      "md11"
+    ],
+    "icaoCodes": [
+      "L101"
+    ],
+    "keyFeatures": [
+      "tri-jet widebody",
+      "S-duct center engine",
+      "underwing outboards",
+      "autoland pioneer"
+    ],
+    "geekFacts": [
+      "Direct rival to the DC-10",
+      "ICAO type L101"
+    ],
+    "diagramId": "l1011",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "S-duct",
+        "description": "Center engine intake above fuselage",
+        "x": 82,
+        "y": 30
+      },
+      {
+        "id": "c2",
+        "label": "Underwing engines",
+        "description": "Outboard twins",
+        "x": 35,
+        "y": 56
+      },
+      {
+        "id": "c3",
+        "label": "Widebody",
+        "description": "Wide fuselage",
+        "x": 50,
+        "y": 44
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "L-1011-1"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "emb120",
+    "family": "Embraer EMB 120 Brasilia",
+    "variants": [
+      "EMB-120"
+    ],
+    "manufacturer": "Embraer",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1983,
+    "nickname": "Brasilia",
+    "rangeNm": 900,
+    "role": "commercial",
+    "equivalents": [
+      "atr42",
+      "saab340"
+    ],
+    "icaoCodes": [
+      "E120"
+    ],
+    "keyFeatures": [
+      "low-wing twin turboprop",
+      "T-tail",
+      "Brazilian regional",
+      "predecessor spirit to ERJ/E-Jet era"
+    ],
+    "geekFacts": [
+      "Embraer\u2019s breakthrough regional turboprop",
+      "ICAO type E120"
+    ],
+    "diagramId": "emb120",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c2",
+        "label": "Twin props",
+        "description": "Turboprops on wing",
+        "x": 32,
+        "y": 48
+      },
+      {
+        "id": "c3",
+        "label": "Low wing",
+        "description": "Wing low on fuselage",
+        "x": 48,
+        "y": 52
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "EMB-120"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "learjet60",
+    "family": "Learjet 60",
+    "variants": [
+      "Learjet 60",
+      "Learjet 60XR"
+    ],
+    "manufacturer": "Learjet",
+    "skycardsCategories": [
+      "Jet",
+      "Business"
+    ],
+    "categoryGroup": "business-jets",
+    "engineCount": 2,
+    "introYear": 1991,
+    "nickname": null,
+    "rangeNm": 2400,
+    "role": "business",
+    "equivalents": [
+      "learjet75",
+      "citationx"
+    ],
+    "businessOrLeisure": "business",
+    "icaoCodes": [
+      "LJ60"
+    ],
+    "keyFeatures": [
+      "rear twin engines",
+      "T-tail",
+      "pointed Learjet nose",
+      "midsize business jet"
+    ],
+    "geekFacts": [
+      "Stretched Learjet 55 development",
+      "ICAO type LJ60"
+    ],
+    "diagramId": "learjet60",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Rear engines",
+        "description": "Aft twin engines",
+        "x": 74,
+        "y": 48
+      },
+      {
+        "id": "c2",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c3",
+        "label": "Learjet nose",
+        "description": "Pointed cockpit profile",
+        "x": 8,
+        "y": 40
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Learjet 60"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "falcon50",
+    "family": "Dassault Falcon 50",
+    "variants": [
+      "Falcon 50",
+      "Falcon 50EX",
+      "Dassault Falcon 50 / 50EX",
+      "winglets"
+    ],
+    "manufacturer": "Dassault",
+    "skycardsCategories": [
+      "Jet",
+      "Business"
+    ],
+    "categoryGroup": "business-jets",
+    "engineCount": 3,
+    "introYear": 1976,
+    "nickname": null,
+    "rangeNm": 3000,
+    "role": "business",
+    "equivalents": [
+      "falcon7x"
+    ],
+    "businessOrLeisure": "business",
+    "icaoCodes": [
+      "FA50"
+    ],
+    "keyFeatures": [
+      "trijet business jet",
+      "S-duct center engine",
+      "swept wing",
+      "Dassault Falcon family"
+    ],
+    "geekFacts": [
+      "First Falcon trijet",
+      "ICAO type FA50"
+    ],
+    "diagramId": "falcon50",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "Trijet",
+        "description": "Three engines with S-duct",
+        "x": 82,
+        "y": 42
+      },
+      {
+        "id": "c2",
+        "label": "Swept wing",
+        "description": "Falcon wing planform",
+        "x": 50,
+        "y": 52
+      },
+      {
+        "id": "c3",
+        "label": "Nose",
+        "description": "Dassault cockpit shape",
+        "x": 8,
+        "y": 40
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "Falcon 50"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
+    ]
+  },
+  {
+    "id": "beech1900",
+    "family": "Beechcraft 1900",
+    "variants": [
+      "1900C",
+      "1900D",
+      "Beechcraft 1900D",
+      "winglets"
+    ],
+    "manufacturer": "Beechcraft",
+    "skycardsCategories": [
+      "Propeller",
+      "Turboprop"
+    ],
+    "categoryGroup": "propeller",
+    "engineCount": 2,
+    "introYear": 1982,
+    "nickname": null,
+    "rangeNm": 1500,
+    "role": "commercial",
+    "equivalents": [
+      "kingair",
+      "atr42"
+    ],
+    "icaoCodes": [
+      "B190"
+    ],
+    "keyFeatures": [
+      "low-wing twin turboprop",
+      "T-tail",
+      "1900D has taller cabin",
+      "regional / cargo feeder"
+    ],
+    "geekFacts": [
+      "King Air family relative",
+      "ICAO type B190"
+    ],
+    "diagramId": "beech1900",
+    "callouts": [
+      {
+        "id": "c1",
+        "label": "T-tail",
+        "description": "High stabilizer",
+        "x": 90,
+        "y": 16
+      },
+      {
+        "id": "c2",
+        "label": "Twin props",
+        "description": "Turboprops",
+        "x": 32,
+        "y": 48
+      },
+      {
+        "id": "c3",
+        "label": "Cabin height",
+        "description": "1900D stand-up cabin",
+        "x": 50,
+        "y": 40
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
+        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "variant": "1900C"
+      }
+    ],
+    "needsUserPhotos": true,
+    "spotterLocations": [
+      "Website pack drawing"
     ]
   }
 ]
