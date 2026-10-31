@@ -43,7 +43,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/learn?group=commercial-jets&node=u1-study-jets',
         moduleId: 'learn',
         categoryGroup: 'commercial-jets',
-        xpReward: 15,
+        xpReward: 8,
         sessionSize: 5,
       },
       {
@@ -54,7 +54,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/spotter?mode=easy&group=commercial-jets&node=u1-spot-easy',
         moduleId: 'spotter',
         categoryGroup: 'commercial-jets',
-        xpReward: 20,
+        xpReward: 10,
         sessionSize: 10,
       },
       {
@@ -64,7 +64,7 @@ export const LESSON_PATH: PathUnit[] = [
         kind: 'practice',
         to: '/codes?tier=easy&node=u1-codes',
         moduleId: 'codes',
-        xpReward: 15,
+        xpReward: 8,
         sessionSize: 8,
       },
       {
@@ -75,7 +75,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/spotter?mode=easy&group=commercial-jets&node=u1-checkpoint',
         moduleId: 'spotter',
         categoryGroup: 'commercial-jets',
-        xpReward: 25,
+        xpReward: 12,
         sessionSize: 8,
       },
     ],
@@ -93,7 +93,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/learn?group=commercial-jets&node=u2-study-wide',
         moduleId: 'learn',
         categoryGroup: 'commercial-jets',
-        xpReward: 15,
+        xpReward: 8,
         sessionSize: 5,
       },
       {
@@ -104,7 +104,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/spotter?mode=easy&group=commercial-jets&node=u2-spot',
         moduleId: 'spotter',
         categoryGroup: 'commercial-jets',
-        xpReward: 20,
+        xpReward: 10,
         sessionSize: 10,
       },
       {
@@ -114,7 +114,7 @@ export const LESSON_PATH: PathUnit[] = [
         kind: 'practice',
         to: '/deepdive?node=u2-deep',
         moduleId: 'deepdive',
-        xpReward: 20,
+        xpReward: 10,
         sessionSize: 6,
       },
     ],
@@ -132,7 +132,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/learn?group=propeller&node=u3-study-prop',
         moduleId: 'learn',
         categoryGroup: 'propeller',
-        xpReward: 15,
+        xpReward: 8,
         sessionSize: 5,
       },
       {
@@ -143,7 +143,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/spotter?mode=easy&group=propeller&node=u3-spot-prop',
         moduleId: 'spotter',
         categoryGroup: 'propeller',
-        xpReward: 20,
+        xpReward: 10,
         sessionSize: 10,
       },
       {
@@ -153,7 +153,7 @@ export const LESSON_PATH: PathUnit[] = [
         kind: 'treasure',
         to: '/spotter?mode=easy&node=u3-treasure',
         moduleId: 'spotter',
-        xpReward: 30,
+        xpReward: 15,
         sessionSize: 5,
       },
     ],
@@ -171,7 +171,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/learn?group=business-jets&node=u4-study-biz',
         moduleId: 'learn',
         categoryGroup: 'business-jets',
-        xpReward: 15,
+        xpReward: 8,
         sessionSize: 5,
       },
       {
@@ -182,7 +182,7 @@ export const LESSON_PATH: PathUnit[] = [
         to: '/spotter?mode=easy&group=business-jets&node=u4-spot-biz',
         moduleId: 'spotter',
         categoryGroup: 'business-jets',
-        xpReward: 20,
+        xpReward: 10,
         sessionSize: 8,
       },
       {
@@ -192,7 +192,7 @@ export const LESSON_PATH: PathUnit[] = [
         kind: 'checkpoint',
         to: '/spotter?mode=hard&node=u4-hard',
         moduleId: 'spotter',
-        xpReward: 30,
+        xpReward: 15,
         sessionSize: 8,
       },
     ],
@@ -201,7 +201,8 @@ export const LESSON_PATH: PathUnit[] = [
 
 export const DAILY_XP_GOAL = 50;
 export const MAX_CROWNS = 5;
-export const XP_PER_CORRECT = 2;
+/** Mid-lesson XP chip for a first-try correct answer */
+export const XP_PER_CORRECT = 1;
 
 export function flattenPathNodes(): PathNode[] {
   return LESSON_PATH.flatMap((u) => u.nodes);
