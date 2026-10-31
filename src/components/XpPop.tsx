@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 interface XpPopProps {
   /** Increment to retrigger the pop */
@@ -9,22 +10,21 @@ interface XpPopProps {
 
 /** Brief floating “+XP” toast for first-try correct answers. */
 export function XpPop({ trigger, amount = 2, label = 'XP' }: XpPopProps) {
-  const [visible, setVisible] = useState(false);
-  const [key, setKey] = useState(0);
+  const [shown, setShown] = useState<{ key: number; amount: number; label: string } | null>(null);
 
   useEffect(() => {
     if (trigger <= 0) return;
-    setKey((k) => k + 1);
-    setVisible(true);
-    const t = window.setTimeout(() => setVisible(false), 900);
+    setShown({ key: trigger, amount, label });
+    const t = window.setTimeout(() => setShown(null), 1600);
     return () => window.clearTimeout(t);
-  }, [trigger]);
+  }, [trigger, amount, label]);
 
-  if (!visible) return null;
+  if (!shown || typeof document === 'undefined') return null;
 
-  return (
-    <div key={key} className="xp-pop" aria-live="polite">
-      +{amount} {label}
-    </div>
+  return createPortal(
+    <div key={shown.key} className="xp-pop" role="status" aria-live="polite">
+      +{shown.amount} {shown.label}
+    </div>,
+    document.body
   );
 }

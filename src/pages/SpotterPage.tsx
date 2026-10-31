@@ -25,6 +25,7 @@ interface AnswerFeedback {
   ok: boolean;
   explanation: string;
   learnMore?: React.ReactNode;
+  xp?: number;
 }
 
 export function SpotterPage() {
@@ -153,16 +154,18 @@ export function SpotterPage() {
     setAnswered(true);
 
     if (ok) {
-      setFeedback({
-        ok: true,
-        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged.`,
-      });
+      const firstTry = !lostLifeThisQuestion;
       markAircraftMastered(current.id);
-      if (!lostLifeThisQuestion) {
+      if (firstTry) {
         setFirstTryScore((s) => s + 1);
         setXpPop((n) => n + 1);
         clearMistake(current.id);
       }
+      setFeedback({
+        ok: true,
+        xp: firstTry ? XP_PER_CORRECT : undefined,
+        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged.`,
+      });
     } else {
       if (!lostLifeThisQuestion) {
         loseLife();
@@ -349,6 +352,7 @@ export function SpotterPage() {
           correct={feedback.ok}
           explanation={feedback.explanation}
           learnMore={feedback.learnMore}
+          xpGained={feedback.xp}
           onNext={feedback.ok ? nextRound : undefined}
           onRetry={!feedback.ok ? resetQuestion : undefined}
           nextLabel={round + 1 >= totalRounds ? 'Claim XP →' : 'Next →'}

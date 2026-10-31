@@ -28,6 +28,7 @@ interface AnswerFeedback {
   ok: boolean;
   explanation: string;
   learnMore?: React.ReactNode;
+  xp?: number;
 }
 
 function getCorrectAnswer(mode: DrillMode, current: Airport, tier: AirportTier, itinerary: Airport[]): string {
@@ -119,8 +120,14 @@ export function CodesPage() {
 
     if (ok) {
       if (mode !== 'odd-one-out') markAirportMastered(current.iata);
+      const firstTry = !lostLifeThisQuestion;
+      if (firstTry) {
+        setFirstTryScore((s) => s + 1);
+        setXpPop((n) => n + 1);
+      }
       setFeedback({
         ok: true,
+        xp: firstTry ? XP_PER_CORRECT : undefined,
         explanation:
           mode === 'code-to-name'
             ? `${current.iata} serves ${current.name} in ${current.city}, ${current.country}.`
@@ -128,10 +135,6 @@ export function CodesPage() {
               ? `${current.city} is coded ${current.iata} — ${current.name}.`
               : `${answer} (${airports.find((a) => a.iata === answer)?.city}) is from a different altitude tier than the others.`,
       });
-      if (!lostLifeThisQuestion) {
-        setFirstTryScore((s) => s + 1);
-        setXpPop((n) => n + 1);
-      }
     } else {
       if (!lostLifeThisQuestion) {
         loseLife();
@@ -341,6 +344,7 @@ export function CodesPage() {
           correct={feedback.ok}
           explanation={feedback.explanation}
           learnMore={feedback.learnMore}
+          xpGained={feedback.xp}
           onNext={feedback.ok ? nextRound : undefined}
           onRetry={!feedback.ok ? resetQuestion : undefined}
           nextLabel={round + 1 >= totalRounds ? 'Claim XP →' : 'Next →'}

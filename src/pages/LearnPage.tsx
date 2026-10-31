@@ -59,7 +59,7 @@ export function LearnPage() {
   const [phase, setPhase] = useState<Phase>('browse');
   const [recallAircraft, setRecallAircraft] = useState<Aircraft[]>([]);
   const [recallCallout, setRecallCallout] = useState<{ label: string; correctId: string } | null>(null);
-  const [feedback, setFeedback] = useState<{ ok: boolean; explanation: string; learnMore?: React.ReactNode } | null>(null);
+  const [feedback, setFeedback] = useState<{ ok: boolean; explanation: string; learnMore?: React.ReactNode; xp?: number } | null>(null);
   const [answered, setAnswered] = useState(false);
   const [chosenId, setChosenId] = useState<string | null>(null);
   const [lostLifeThisQuestion, setLostLifeThisQuestion] = useState(false);
@@ -95,15 +95,17 @@ export function LearnPage() {
     setAnswered(true);
 
     if (ok) {
-      setFeedback({
-        ok: true,
-        explanation: `"${recallCallout.label}" identifies the ${correctAc.family}.`,
-      });
+      const firstTry = !lostLifeThisQuestion;
       markAircraftMastered(id);
-      if (!lostLifeThisQuestion) {
+      if (firstTry) {
         clearMistake(id);
         setXpPop((n) => n + 1);
       }
+      setFeedback({
+        ok: true,
+        xp: firstTry ? XP_PER_CORRECT : undefined,
+        explanation: `"${recallCallout.label}" identifies the ${correctAc.family}.`,
+      });
       const newCompleted = Math.min(state.moduleProgress.learn.completed + 1, state.moduleProgress.learn.total);
       recordModuleProgress('learn', newCompleted, state.moduleProgress.learn.total);
     } else {
@@ -215,6 +217,7 @@ export function LearnPage() {
             correct={feedback.ok}
             explanation={feedback.explanation}
             learnMore={feedback.learnMore}
+            xpGained={feedback.xp}
             onNext={feedback.ok ? () => completePathLesson(true) : undefined}
             onRetry={!feedback.ok ? resetRecallQuestion : undefined}
             nextLabel="Claim XP →"

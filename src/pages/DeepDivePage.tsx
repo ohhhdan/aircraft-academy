@@ -109,7 +109,7 @@ export function DeepDivePage() {
   } = useApp();
   const [phase, setPhase] = useState<Phase>('setup');
   const [exIndex, setExIndex] = useState(0);
-  const [feedback, setFeedback] = useState<{ ok: boolean; explanation: string; learnMore?: React.ReactNode } | null>(null);
+  const [feedback, setFeedback] = useState<{ ok: boolean; explanation: string; learnMore?: React.ReactNode; xp?: number } | null>(null);
   const [answered, setAnswered] = useState(false);
   const [chosen, setChosen] = useState<string | null>(null);
   const [selected, setSelected] = useState<string[]>([]);
@@ -143,11 +143,12 @@ export function DeepDivePage() {
 
   const passQuestion = (explanation: string) => {
     setAnswered(true);
-    setFeedback({ ok: true, explanation });
-    if (!lostLifeThisQuestion) {
+    const firstTry = !lostLifeThisQuestion;
+    if (firstTry) {
       setFirstTryScore((s) => s + 1);
       setXpPop((n) => n + 1);
     }
+    setFeedback({ ok: true, explanation, xp: firstTry ? XP_PER_CORRECT : undefined });
   };
 
   const startSession = () => {
@@ -424,6 +425,7 @@ export function DeepDivePage() {
           correct={feedback.ok}
           explanation={feedback.explanation}
           learnMore={feedback.learnMore}
+          xpGained={feedback.xp}
           onNext={feedback.ok ? nextExercise : undefined}
           onRetry={!feedback.ok ? resetQuestion : undefined}
           nextLabel={exIndex + 1 >= totalRounds ? 'Claim XP →' : 'Next task →'}

@@ -10,6 +10,8 @@ interface QuizFeedbackProps {
   onRetry?: () => void;
   nextLabel?: string;
   buttonVariant?: ButtonVariant;
+  /** First-try XP chip shown on correct answers */
+  xpGained?: number | null;
 }
 
 export function QuizFeedback({
@@ -20,6 +22,7 @@ export function QuizFeedback({
   onRetry,
   nextLabel = 'Next →',
   buttonVariant = 'primary',
+  xpGained = null,
 }: QuizFeedbackProps) {
   const btnClass = buttonVariant === 'teal' ? 'btn btn-teal pressable' : 'btn btn-primary pressable';
 
@@ -28,6 +31,9 @@ export function QuizFeedback({
       <div className="feedback-banner-body">
         <div className={`feedback-banner-head ${correct ? 'feedback-banner-head--ok' : 'feedback-banner-head--err'}`}>
           {correct ? 'CORRECT' : 'INCORRECT'}
+          {correct && xpGained != null && xpGained > 0 && (
+            <span className="feedback-xp-chip">+{xpGained} XP</span>
+          )}
         </div>
         <p className="feedback-banner-text">{explanation}</p>
         {!correct && learnMore && (
