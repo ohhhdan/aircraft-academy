@@ -180,9 +180,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const node = input.nodeId ? getNodeById(input.nodeId) : undefined;
       const accuracy = input.total > 0 ? input.correct / input.total : 0;
       const perfect = input.total > 0 && input.correct === input.total;
-      let gained = input.baseXp ?? node?.xpReward ?? 15;
-      gained += Math.round(input.correct * 1.5);
-      if (perfect) gained += 10;
+      // Half the previous payout scale (base + per-correct + perfect bonus)
+      let gained = input.baseXp ?? node?.xpReward ?? 8;
+      gained += Math.round(input.correct * 0.75);
+      if (perfect) gained += 5;
 
       const prevCrowns = input.nodeId ? state.nodeCrowns[input.nodeId] ?? 0 : 0;
       const { streak, isNewDay } = calcStreakAfterPractice(state.streak, state.lastPracticeDate);

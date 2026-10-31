@@ -24,7 +24,13 @@ interface AnswerFeedback {
   explanation: string;
   learnMore?: React.ReactNode;
   xp?: number;
+  /** Wrong answer with tries left — retry only, don't advance */
+  canRetry?: boolean;
+  /** Wrong answer out of tries — show Next */
+  canAdvance?: boolean;
 }
+
+const MAX_ATTEMPTS = 3;
 
 export function SpotterPage() {
   const [params] = useSearchParams();
@@ -62,6 +68,9 @@ export function SpotterPage() {
   const [round, setRound] = useState(0);
   const [lessonResult, setLessonResult] = useState<LessonCompleteResult | null>(null);
   const [xpPop, setXpPop] = useState(0);
+  const [attempts, setAttempts] = useState(0);
+  const [eliminated, setEliminated] = useState<string[]>([]);
+  const [revealCorrect, setRevealCorrect] = useState(false);
   const totalRounds = practiceMistakes
     ? Math.min(10, Math.max(4, state.mistakeAircraftIds.length || 8))
     : node?.sessionSize ?? 10;
@@ -101,6 +110,18 @@ export function SpotterPage() {
     setFeedback(null);
   }, []);
 
+  const optionMark = (optionKey: string) => {
+    if (eliminated.includes(optionKey)) return 'incorrect' as const;
+    if (answered && chosen === optionKey && feedback && !feedback.ok) return 'incorrect' as const;
+    return getOptionMarkState(
+      optionKey,
+      chosen,
+      correctAnswer,
+      answered,
+      revealCorrect || Boolean(feedback?.ok)
+    );
+  };
+
   const startRound = useCallback(() => {
     // Prefer unresolved mistakes first when practicing weak spots
     let target: Aircraft;
@@ -135,20 +156,24 @@ export function SpotterPage() {
       setVariantOptions(shuffle([target.variants[0], ...wrongVariants.slice(0, 3)]));
     }
     setLostLifeThisQuestion(false);
+    setAttempts(0);
+    setEliminated([]);
+    setRevealCorrect(false);
     resetQuestion();
     setPhase('exercise');
     startExercise('spotter');
   }, [mode, startExercise, resetQuestion, pool, practiceMistakes, state.mistakeAircraftIds]);
 
   const handleAnswer = (answer: string) => {
-    if (answered || !current) return;
+    if (answered || !current || eliminated.includes(answer)) return;
     const ok = answer === correctAnswer;
     setChosen(answer);
     setAnswered(true);
 
     if (ok) {
-      const firstTry = !lostLifeThisQuestion;
+      const firstTry = attempts === 0 && !lostLifeThisQuestion;
       markAircraftMastered(current.id);
+      setRevealCorrect(true);
       if (firstTry) {
         setFirstTryScore((s) => s + 1);
         setXpPop((n) => n + 1);
@@ -160,17 +185,32 @@ export function SpotterPage() {
         xp: firstTry ? XP_PER_CORRECT : undefined,
         explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged. Spot it by the ${tell}.`,
       });
-    } else {
-      if (!lostLifeThisQuestion) {
-        loseLife();
-        setLostLifeThisQuestion(true);
-        recordMistake(current.id);
-      }
-      const tell = spotterTell(current);
+      return;
+    }
+
+    const nextAttempts = attempts + 1;
+    setAttempts(nextAttempts);
+    setEliminated((prev) => (prev.includes(answer) ? prev : [...prev, answer]));
+    if (!lostLifeThisQuestion) {
+      loseLife();
+      setLostLifeThisQuestion(true);
+      recordMistake(current.id);
+    }
+
+    const tell = spotterTell(current);
+    if (nextAttempts >= MAX_ATTEMPTS) {
+      setRevealCorrect(true);
       setFeedback({
         ok: false,
+        canAdvance: true,
         explanation: `The answer is ${correctAnswer}. You chose ${answer}. Spot it by the ${tell}.`,
         learnMore: spotterLearnMore(current, preferences.showLearnLinks),
+      });
+    } else {
+      setFeedback({
+        ok: false,
+        canRetry: true,
+        explanation: `Not ${answer}. Try again — ${MAX_ATTEMPTS - nextAttempts} ${MAX_ATTEMPTS - nextAttempts === 1 ? 'try' : 'tries'} left before the answer is shown.`,
       });
     }
   };
@@ -221,6 +261,8 @@ export function SpotterPage() {
           {mode === 'hard'
             ? ' Pick the exact variant (for example 737-800 vs MAX).'
             : ' Name the type (for example Boeing 737 or Airbus A320).'}
+          {' '}
+          You get up to three tries — the correct answer is only shown after the third miss.
           {' '}
           You&apos;ll see {totalRounds} photos this round.
         </div>
@@ -303,28 +345,28 @@ export function SpotterPage() {
       <div className="option-grid" style={{ marginTop: 20 }}>
         {mode === 'easy'
           ? options.map((ac) => {
-              const mark = getOptionMarkState(ac.family, chosen, correctAnswer, answered);
+              const mark = optionMark(ac.family);
               return (
                 <button
                   key={ac.id}
                   type="button"
                   className={optionBtnClass(mark)}
                   onClick={() => handleAnswer(ac.family)}
-                  disabled={answered}
+                  disabled={answered || eliminated.includes(ac.family)}
                 >
                   <OptionContent label={ac.family} state={mark} />
                 </button>
               );
             })
           : variantOptions.map((v) => {
-              const mark = getOptionMarkState(v, chosen, correctAnswer, answered);
+              const mark = optionMark(v);
               return (
                 <button
                   key={v}
                   type="button"
                   className={optionBtnClass(mark)}
                   onClick={() => handleAnswer(v)}
-                  disabled={answered}
+                  disabled={answered || eliminated.includes(v)}
                 >
                   <OptionContent label={v} state={mark} />
                 </button>
@@ -338,8 +380,8 @@ export function SpotterPage() {
           explanation={feedback.explanation}
           learnMore={feedback.learnMore}
           xpGained={feedback.xp}
-          onNext={feedback.ok ? nextRound : undefined}
-          onRetry={!feedback.ok ? resetQuestion : undefined}
+          onNext={feedback.ok || feedback.canAdvance ? nextRound : undefined}
+          onRetry={feedback.canRetry ? resetQuestion : undefined}
           nextLabel={round + 1 >= totalRounds ? 'Claim XP →' : 'Next →'}
         />
       )}

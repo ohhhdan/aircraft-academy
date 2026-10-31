@@ -46,7 +46,7 @@ export function QuizFeedback({
             Try again
           </button>
         )}
-        {correct && onNext && (
+        {onNext && (correct || !onRetry) && (
           <button type="button" className={btnClass} onClick={onNext}>
             {nextLabel}
           </button>
@@ -62,12 +62,19 @@ export function getOptionMarkState(
   optionKey: string,
   chosen: string | null,
   correct: string,
-  answered: boolean
+  answered: boolean,
+  /** When false, do not highlight the right answer yet (e.g. early retries). */
+  revealCorrect = true
 ): OptionMarkState {
+  if (!answered && !revealCorrect) {
+    if (optionKey === chosen) return 'incorrect';
+    return 'default';
+  }
   if (!answered) return 'default';
-  if (optionKey === correct) return 'correct';
+  if (revealCorrect && optionKey === correct) return 'correct';
   if (optionKey === chosen) return 'incorrect';
-  return 'dimmed';
+  if (revealCorrect) return 'dimmed';
+  return 'default';
 }
 
 export function OptionContent({ label, state }: { label: string; state: OptionMarkState }) {
