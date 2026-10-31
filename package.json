@@ -9,6 +9,7 @@
     "sync-images": "node scripts/sync-images.mjs",
     "sync-photos": "node scripts/sync-images.mjs",
     "download-norebbo": "node scripts/download-norebbo-pack.mjs",
+    "download-norebbo-liveries": "node scripts/download-norebbo-liveries.mjs",
     "build-icao": "node scripts/build-icao-types.mjs",
     "expand-aircraft": "node scripts/expand-aircraft-catalog.mjs",
     "enrich-icao": "node scripts/enrich-icao-aeroapi.mjs",

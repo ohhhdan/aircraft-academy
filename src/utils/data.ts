@@ -87,20 +87,22 @@ function pickFromEntries(
     : undefined;
   if (variantMatch) return variantMatch;
 
-  // Exact `__white` suffix (not pw-white / freighter-white / etc.)
+  // Prefer painted airline liveries over blank white plates when both exist
+  const liveries = entries.filter((s) => /livery/i.test(s.sourceFile));
   const exactWhite = entries.filter((s) => /__white\.(jpe?g|png|webp)$/i.test(s.sourceFile));
-  const pool = exactWhite.length ? exactWhite : entries;
+  const pool = liveries.length ? liveries : exactWhite.length ? exactWhite : entries;
 
   const score = (s: PhotoCatalogEntry) => {
     const f = s.sourceFile.toLowerCase();
     let n = 0;
+    if (/livery/i.test(f)) n += 40;
     if (/__white\.(jpe?g|png|webp)$/i.test(f)) n += 20;
     if (/(freighter|combi|bcf|p2f|cargo|400sf)/i.test(f)) n -= 15;
     if (/(max|neo|e2)/i.test(f)) n -= 2; // prefer classic/ceo as default quiz plate
     // Prefer common “spotting” subtypes
     if (/737-800/i.test(f)) n += 12;
     if (/737-700/i.test(f)) n += 8;
-    if (/a320__/i.test(f) || /airbus-a320__/i.test(f)) n += 12;
+    if (/a320__/i.test(f) || /airbus-a320__/i.test(f) || /a320_/i.test(f)) n += 12;
     if (familyId && f.includes(familyId.toLowerCase())) n += 3;
     n -= Math.min(f.length, 100) / 50; // slightly prefer shorter stems
     return n;

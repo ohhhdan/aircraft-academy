@@ -26,11 +26,24 @@ Full stem list: `NOREBBO_SHEET_IMAGE_MAP.csv` and `src/content/norebboCatalog.js
 
 Roles:
 
-- `__white` / `__line-drawing` / `__blueprint` → **diagram**
+- `__white` → **spot** (blank quiz plate; liveries preferred when present)
+- `__line-drawing` / `__blueprint` → **diagram**
 - `__comparison` / `__vs` → **comparison** (side-by-side variant feature)
+- `*livery*` (under `images/liveries/`) → **spot** (painted airline side views)
 - anything else → **spot** photo
 
 Aircraft **id** names still work (`b737.jpg`, `c909_diagram.png`, etc.).
+
+## Airline liveries
+
+Norebbo painted side views live in **`images/liveries/`**. Refresh with:
+
+```bash
+npm run download-norebbo-liveries
+npm run sync-images
+```
+
+Catalog: `src/content/norebboLiveryCatalog.json` and `NOREBBO_LIVERY_IMAGE_MAP.csv`.
 
 ## After dropping files
 

@@ -43,7 +43,20 @@ const EXTRA_ALIASES = {
   a380: ['a380', 'superjumbo', 'airbus a380'],
   a330: ['a330', 'a330neo', 'airbus a330'],
   a220: ['a220', 'cs300', 'bombardier cseries', 'airbus a220'],
-  e190: ['ejet', 'e-jet', 'embraer 190', 'e170', 'e175', 'e195'],
+  e190: [
+    'ejet',
+    'e-jet',
+    'embraer 190',
+    'e170',
+    'e175',
+    'e195',
+    'erj-190',
+    'erj190',
+    'erj-195',
+    'erj195',
+    'erj-170',
+    'erj-175',
+  ],
   md11: ['md-11', 'md11', 'mcdonnell douglas'],
   g650: ['g650', 'g650er', 'gulfstream'],
   citationx: ['citation x', 'citationx', 'cessna citation'],
@@ -76,7 +89,7 @@ const EXTRA_ALIASES = {
   c909: ['c909', 'comac 909', 'comac c909', 'arj21', 'arj 21', 'arj-21', 'aj27', 'xiangfeng'],
   c919: ['c919', 'comac 919', 'comac c919'],
   ssj100: ['ssj100', 'ssj 100', 'superjet', 'sukhoi superjet', 'su95'],
-  erj145: ['erj', 'erj145', 'erj-145', 'erj135', 'embraer 145'],
+  erj145: ['erj145', 'erj-145', 'erj135', 'erj-135', 'embraer 145', 'erj-140'],
   atr42: ['atr 42', 'atr42', 'atr-42'],
   bae146: ['bae 146', 'bae146', 'avro rj', 'jumbolino', 'rj85', 'rj100'],
   fokker100: ['fokker 100', 'fokker100', 'fokker 70', 'f100'],
@@ -93,6 +106,97 @@ function normalize(s) {
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
     .replace(/\s+/g, ' ');
+}
+
+/** Own family tokens that a variant may legally mention */
+const FAMILY_OWN_TOKENS = {
+  b737: [/737/, /max/],
+  b747: [/747/, /jumbo/],
+  b757: [/757/],
+  b767: [/767/],
+  b777: [/777/, /triple/],
+  b787: [/787/, /dreamliner/],
+  b727: [/727/],
+  b707: [/707/],
+  b717: [/717/],
+  a320: [/a318/, /a319/, /a320/, /\b320\b/, /ceo/, /neo/],
+  a321: [/a321/],
+  a330: [/a330/],
+  a340: [/a340/],
+  a350: [/a350/],
+  a380: [/a380/],
+  a220: [/a220/, /cs1/, /cs3/],
+  a300: [/a300/],
+  a310: [/a310/],
+  e190: [/e1[789]/, /e-?jet/, /erj-?1[789]/, /embraer 1[789]/],
+  erj145: [/erj-?1[34]/, /embraer 1[34]/],
+  emb120: [/emb-?120/, /brasilia/],
+  md80: [/md-?(8|9)/, /dc-?9/],
+  md11: [/md-?11/],
+  dc8: [/dc-?8/],
+  dc10: [/dc-?10/, /md-?10/],
+  dc4: [/dc-?4/],
+  dc3: [/dc-?3/],
+  l1011: [/l-?1011/, /tristar/],
+  crj: [/crj/],
+  atr42: [/atr.?42/],
+  atr72: [/atr.?72/],
+};
+
+/** True when a variant string looks like a different aircraft type family */
+function isForeignTypeVariant(aircraftId, variant) {
+  const v = normalize(variant);
+  if (!v) return false;
+  // Obvious other-type codes
+  const foreign =
+    /\b(a3\d{2}|a2\d{2}|7\d{2}|dc-?\d|md-?\d+|l-?1011|erj|emb-?\d+|crj|atr)\b/.test(v) ||
+    /\b(boeing|airbus)\s+\d/.test(v);
+  if (!foreign) return false;
+  const own = FAMILY_OWN_TOKENS[aircraftId] ?? [];
+  if (own.some((re) => re.test(v))) return false;
+  // Also allow if compact form starts with the numeric id (b737 → 737)
+  const num = aircraftId.replace(/^[a-z]+/i, '');
+  if (num && v.replace(/\s+/g, '').includes(num)) return false;
+  return true;
+}
+
+/** Map a leading Norebbo type token to a catalog family id */
+function familyFromLeadToken(lead) {
+  const t = compact(lead);
+  if (!t) return null;
+  if (/^a220/.test(t)) return 'a220';
+  if (/^a319|^a318|^a320/.test(t)) return 'a320';
+  if (/^a321/.test(t)) return 'a321';
+  if (/^a330/.test(t)) return 'a330';
+  if (/^a340/.test(t)) return 'a340';
+  if (/^a350/.test(t)) return 'a350';
+  if (/^a380/.test(t)) return 'a380';
+  if (/^a300/.test(t)) return 'a300';
+  if (/^a310/.test(t)) return 'a310';
+  if (/^737/.test(t)) return 'b737';
+  if (/^747/.test(t)) return 'b747';
+  if (/^757/.test(t)) return 'b757';
+  if (/^767/.test(t)) return 'b767';
+  if (/^777/.test(t)) return 'b777';
+  if (/^787/.test(t)) return 'b787';
+  if (/^727/.test(t)) return 'b727';
+  if (/^707/.test(t)) return 'b707';
+  if (/^717/.test(t)) return 'b717';
+  if (/^dc8/.test(t)) return 'dc8';
+  if (/^dc10/.test(t)) return 'dc10';
+  if (/^dc4/.test(t)) return 'dc4';
+  if (/^dc3/.test(t)) return 'dc3';
+  if (/^dc9/.test(t)) return 'md80';
+  if (/^md11/.test(t)) return 'md11';
+  if (/^md8|^md9/.test(t)) return 'md80';
+  if (/^l1011/.test(t)) return 'l1011';
+  if (/^erj19|^e19|^erj17|^e17/.test(t)) return 'e190';
+  if (/^erj13|^erj14/.test(t)) return 'erj145';
+  if (/^emb120/.test(t)) return 'emb120';
+  if (/^crj/.test(t)) return 'crj';
+  if (/^atr42/.test(t)) return 'atr42';
+  if (/^atr72/.test(t)) return 'atr72';
+  return null;
 }
 
 function compact(s) {
@@ -142,6 +246,8 @@ function buildAliasIndex(aircraft) {
     add(ac.id, ac.manufacturer, 20);
 
     for (const v of ac.variants ?? []) {
+      // Skip polluted cross-type variant labels (e.g. b737 listing "747-400" / "A321")
+      if (isForeignTypeVariant(ac.id, v)) continue;
       add(ac.id, v, 80, v);
       add(ac.id, `${ac.id} ${v}`, 95, v);
     }
@@ -258,12 +364,49 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
     }
   }
 
+  // Leading type token from Norebbo-style names: 707-320C_…, A320_…, ERJ-190_…
+  const lead = stem.match(
+    /^(A3\d{2}|A2\d{2}|B?\d{3}|DC-?\d|MD-?\d+|L-?1011|ERJ-?\d+|CRJ-?\d+|E1[789]\d|EMB-?\d+)/i
+  );
+  const leadCompact = lead ? compact(lead[1]) : '';
+  const leadFamily = lead ? familyFromLeadToken(lead[1]) : null;
+
+  // Hard-assign from unambiguous leading type (beats polluted cross-family variant aliases)
+  if (leadFamily) {
+    let variant;
+    for (const alias of aliasIndex) {
+      if (alias.aircraftId !== leadFamily || !alias.variant) continue;
+      if (!hayCompact.includes(alias.compact) && !hayNorm.includes(alias.alias)) continue;
+      if (!variant || alias.compact.length > compact(variant).length) variant = alias.variant;
+    }
+    return {
+      aircraftId: leadFamily,
+      variant,
+      role,
+      matchedBy: `lead-type:${lead[1]}→${leadFamily}`,
+      score: 2000,
+    };
+  }
+
   let best = null;
   for (const alias of aliasIndex) {
     if (!hayCompact.includes(alias.compact) && !hayNorm.includes(alias.alias)) continue;
-    // Prefer boundary-ish matches: avoid "a32" matching inside unrelated strings via min length
+    // Prefer boundary-ish matches: avoid "a32" / "air" matching inside unrelated strings
     if (alias.compact.length < 3 && alias.weight < 90) continue;
-    const score = alias.weight * 10 + alias.compact.length;
+    if (alias.compact.length <= 3 && alias.weight < 90 && !/\d/.test(alias.compact)) continue;
+    let score = alias.weight * 10 + alias.compact.length;
+    // Strongly prefer the type code that starts the filename (707-320 → 707, not 320→a320)
+    if (leadCompact) {
+      if (alias.compact === leadCompact || leadCompact.startsWith(alias.compact) || alias.compact.startsWith(leadCompact)) {
+        score += 500;
+      } else if (
+        // Penalize Airbus 320-family aliases when the file is clearly a Boeing 7xx-320 series
+        /^(707|727|737|747|757|767|777|787)/i.test(leadCompact) &&
+        (alias.aircraftId === 'a320' || alias.aircraftId === 'a321')
+      ) {
+        score -= 800;
+      }
+    }
     if (!best || score > best.score) {
       best = {
         aircraftId: alias.aircraftId,
@@ -279,7 +422,7 @@ function matchFile(relPath, aliasIndex, norebboIndex) {
   if (best && (best.aircraftId === 'a320' || best.aircraftId === 'a321')) {
     if (/\ba321\b|a321/.test(hayNorm) || hayCompact.includes('a321')) {
       best = { ...best, aircraftId: 'a321', matchedBy: `${best.matchedBy}+a321-prefer` };
-    } else if (/\ba320\b|a320/.test(hayNorm) || hayCompact.includes('a320')) {
+    } else if (/\ba320\b|a320/.test(hayNorm) || hayCompact.includes('a320') || /\ba319\b|a319/.test(hayNorm)) {
       best = { ...best, aircraftId: 'a320', matchedBy: `${best.matchedBy}+a320-prefer` };
     }
   }
@@ -391,7 +534,9 @@ function main() {
       ...(hit.sheetRow ? { sheetRow: hit.sheetRow } : {}),
       sourceFile: file.rel,
       publicPath,
-      attribution: 'User provided (Norebbo pack)',
+      attribution: /liveries\//i.test(file.rel)
+        ? 'Norebbo airline livery illustration'
+        : 'User provided (Norebbo pack)',
       matchedBy: hit.matchedBy,
       sortIndex: idx,
     };

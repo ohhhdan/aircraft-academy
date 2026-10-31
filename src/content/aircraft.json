@@ -5,7 +5,6 @@
     "variants": [
       "A319",
       "A320",
-      "A321",
       "A320neo",
       "A321neo",
       "A318",
@@ -124,19 +123,15 @@
       "Boeing 737-800BCF",
       "LEAP",
       "neo",
-      "747-400",
       "Boeing 737-10 MAX",
       "Boeing 737-100",
       "Boeing 737-200",
       "this -200",
-      "that one",
       "Boeing 737-300",
       "winglets",
       "Boeing 737-500",
-      "with",
       "without blended winglets",
       "blended winglets",
-      "A321",
       "CFM56-7",
       "Classic",
       "Next Generation engine cowlings",
@@ -147,11 +142,9 @@
       "Boeing 737 MAX 7",
       "GE",
       "Boeing 737-900ER with split scimitar winglets",
-      "757-200",
       "Boeing 737 MAX 8",
       "CFM56",
       "Boeing 737-900",
-      "A350F",
       "Boeing 737-700"
     ],
     "manufacturer": "Boeing",
@@ -184,7 +177,7 @@
       {
         "id": "c1",
         "label": "Flat engine bottom",
-        "description": "Flattened lower nacelle \u2014 classic 737 tell",
+        "description": "Flattened lower nacelle — classic 737 tell",
         "x": 38,
         "y": 58
       },
@@ -336,8 +329,7 @@
       "Airbus A330-200 with GE engines",
       "GE",
       "split scimitar winglets",
-      "Airbus A330-200 with Rolls Royce engines",
-      "A321"
+      "Airbus A330-200 with Rolls Royce engines"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -501,7 +493,6 @@
       "Bombardier CS300",
       "Airbus A220-300",
       "neo",
-      "A350F",
       "Bombardier CS100",
       "Airbus A220-100"
     ],
@@ -586,17 +577,13 @@
       "Embraer E175-E2",
       "Pratt & Whitney",
       "Rolls-Royce",
-      "767-300",
       "this second generation 175",
-      "first",
       "Embraer E195-E2",
       "neo",
       "Embraer E190-E2",
-      "757-200",
       "original E190",
       "Embraer 190",
-      "Embraer 120 Brasilia",
-      "EMB-120"
+      "Embraer 120 Brasilia"
     ],
     "manufacturer": "Embraer",
     "skycardsCategories": [
@@ -681,7 +668,6 @@
       "A321P2F",
       "Airbus A321",
       "P2F",
-      "767-300",
       "Airbus A321neo LR",
       "Long Range",
       "neo",
@@ -767,8 +753,6 @@
       "787-10",
       "Boeing 787-9",
       "Boeing 787-10",
-      "777f",
-      "A321",
       "neo",
       "Boeing 787-8",
       "Pratt & Whitney",
@@ -852,7 +836,6 @@
       "GE",
       "other versions of the A350",
       "Airbus A350-1000",
-      "777f",
       "Pratt & Whitney",
       "CFM56",
       "Airbus A350-800",
@@ -938,8 +921,7 @@
       "777-9",
       "Boeing 777-8",
       "Rolls-Royce",
-      "A321",
-      "that\u2019s pretty much it! See",
+      "that’s pretty much it! See",
       "Boeing 777-9",
       "first generation 777",
       "the 777X",
@@ -1035,7 +1017,6 @@
       "Pratt & Whitney",
       "Rolls-Royce",
       "GE",
-      "A350F",
       "these new CF6-80C2B1 engines",
       "version prior",
       "Boeing 747SP",
@@ -1044,8 +1025,6 @@
       "Boeing 747-200",
       "CFM56",
       "Boeing 747-100",
-      "A321",
-      "757-200",
       "747-100, 747-100B",
       "747-100SR",
       "Boeing 747-400 with Pratt & Whitney",
@@ -1131,8 +1110,7 @@
     "family": "Airbus A380",
     "variants": [
       "A380-800",
-      "Airbus A380-800",
-      "A321"
+      "Airbus A380-800"
     ],
     "manufacturer": "Airbus",
     "skycardsCategories": [
@@ -1153,7 +1131,7 @@
       "full-length double deck",
       "four engines",
       "massive wingspan",
-      "no hump \u2014 straight upper deck"
+      "no hump — straight upper deck"
     ],
     "geekFacts": [
       "Largest passenger airliner ever built",
@@ -1289,7 +1267,6 @@
       "727-200",
       "Boeing 727-100",
       "Pratt & Whitney",
-      "777f",
       "GE",
       "Rolls-Royce",
       "the -100",
@@ -2498,7 +2475,6 @@
       "neo",
       "De Havilland DHC-8-200",
       "Dash 8",
-      "777f",
       "Bombardier DHC-8-402 Q400"
     ],
     "manufacturer": "De Havilland Canada",
@@ -2985,12 +2961,9 @@
       "CRJ-900",
       "CRJ-1000",
       "Bombardier CRJ-1000",
-      "777f",
       "Bombardier Canadair Regional Jet 900",
-      "Bombardier Canadair Regional Jet 700",
       "Bombardier Canadair Regional Jet 200",
-      "GE",
-      "757-200"
+      "GE"
     ],
     "manufacturer": "Bombardier",
     "skycardsCategories": [
@@ -3134,7 +3107,6 @@
     "family": "COMAC C909",
     "variants": [
       "C909",
-      "ARJ21-700",
       "ARJ21-900",
       "Comac C909",
       "Pratt & Whitney",
@@ -3168,7 +3140,7 @@
     ],
     "geekFacts": [
       "Formerly marketed as the ARJ21 Xiangfeng; rebranded C909",
-      "ICAO type designator AJ27 \u2014 often labeled C909 on flight trackers"
+      "ICAO type designator AJ27 — often labeled C909 on flight trackers"
     ],
     "diagramId": "c909",
     "callouts": [
@@ -3240,7 +3212,7 @@
       "wingtip fences / winglets depending on config"
     ],
     "geekFacts": [
-      "China\u2019s first large indigenous narrowbody airliner",
+      "China’s first large indigenous narrowbody airliner",
       "Direct competitor to A320neo and 737 MAX"
     ],
     "diagramId": "c919",
@@ -3326,7 +3298,7 @@
       {
         "id": "c1",
         "label": "Underwing engines",
-        "description": "Unusual for regionals \u2014 usually rear-mounted",
+        "description": "Unusual for regionals — usually rear-mounted",
         "x": 38,
         "y": 58
       },
@@ -3362,26 +3334,16 @@
     "id": "erj145",
     "family": "Embraer ERJ",
     "variants": [
-      "ERJ-135",
-      "ERJ-140",
       "ERJ-145",
       "ERJ-145XR",
-      "ERJ-175",
-      "Embraer ERJ-135",
-      "767-300",
       "neo",
-      "ERJ-135) Which one",
-      "Embraer ERJ-140",
       "ERJ-145XR, ERJ-145",
-      "ERJ-140 Pretty neat, huh",
       "Embraer ERJ-145",
       "Rolls-Royce",
-      "ERJ-145 (base model)",
       "Embraer ERJ-145XR",
       "Pratt & Whitney",
       "winglets",
       "GE",
-      "Embraer ERJ-175",
       "no winglets",
       "CFM56"
     ],
@@ -3441,7 +3403,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg/1280px-KLM_Cityhopper_Embraer_190-100STD_PH-EZW.jpg",
-        "attribution": "Wikimedia Commons (placeholder \u2014 replace with ERJ ramp shot)",
+        "attribution": "Wikimedia Commons (placeholder — replace with ERJ ramp shot)",
         "variant": "ERJ-145"
       }
     ],
@@ -3459,8 +3421,7 @@
       "ATR 42-500",
       "ATR 42-600",
       "ATR 42",
-      "neo",
-      "A321"
+      "neo"
     ],
     "manufacturer": "ATR",
     "skycardsCategories": [
@@ -3600,7 +3561,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fokker_100.jpg/1280px-Fokker_100.jpg",
-        "attribution": "Wikimedia Commons (placeholder \u2014 replace with BAe 146 photo)",
+        "attribution": "Wikimedia Commons (placeholder — replace with BAe 146 photo)",
         "variant": "Avro RJ100"
       }
     ],
@@ -3720,7 +3681,7 @@
       "short narrowbody"
     ],
     "geekFacts": [
-      "Rebranded MD-95 after Boeing\u2013MDC merger",
+      "Rebranded MD-95 after Boeing–MDC merger",
       "ICAO type B712"
     ],
     "diagramId": "b717",
@@ -3750,7 +3711,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Wikimedia Commons (placeholder \u2014 replace with 717 photo)",
+        "attribution": "Wikimedia Commons (placeholder — replace with 717 photo)",
         "variant": "717-200"
       }
     ],
@@ -3764,30 +3725,12 @@
     "id": "md80",
     "family": "McDonnell Douglas MD-80",
     "variants": [
-      "MD-81",
-      "MD-82",
-      "MD-83",
-      "MD-87",
-      "MD-88",
-      "MD-90",
-      "DC-9-30",
-      "DC-9-40",
-      "DC-9-50",
-      "McDonnell Douglas DC-9-30",
       "Pratt & Whitney",
       "Rolls-Royce",
-      "DC-9-20",
-      "McDonnell Douglas DC-9-40",
       "neo",
       "a -40",
-      "McDonnell Douglas DC-9-50",
-      "777f",
-      "757-200",
       "a -50",
-      "McDonnell Douglas MD-87",
-      "McDonnell Douglas MD-90",
       "GE",
-      "McDonnell Douglas MD-82 / MD-83 / MD-88",
       "them",
       "under the skin"
     ],
@@ -3851,7 +3794,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Boeing_757_family_v1.0.png/1280px-Boeing_757_family_v1.0.png",
-        "attribution": "Placeholder \u2014 replace with MD-80 ramp photo",
+        "attribution": "Placeholder — replace with MD-80 ramp photo",
         "variant": "MD-83"
       }
     ],
@@ -3868,7 +3811,6 @@
       "G550",
       "GV-SP",
       "Gulfstream G550",
-      "A321",
       "split scimitar winglets"
     ],
     "manufacturer": "Gulfstream",
@@ -3927,7 +3869,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "G550"
       }
     ],
@@ -4000,7 +3942,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Short 360"
       }
     ],
@@ -4072,7 +4014,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "DC-3"
       }
     ],
@@ -4156,7 +4098,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "A300B4"
       }
     ],
@@ -4227,7 +4169,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Jetstream 41"
       }
     ],
@@ -4297,7 +4239,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "C-17A"
       }
     ],
@@ -4381,7 +4323,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "DC-8-53"
       }
     ],
@@ -4392,14 +4334,13 @@
   },
   {
     "id": "concorde",
-    "family": "A\u00e9rospatiale-BAC Concorde",
+    "family": "Aérospatiale-BAC Concorde",
     "variants": [
       "Concorde",
-      "A\u00e9rospatiale-BAC Concorde",
-      "split scimitar winglets",
-      "A321"
+      "Aérospatiale-BAC Concorde",
+      "split scimitar winglets"
     ],
-    "manufacturer": "A\u00e9rospatiale / BAC",
+    "manufacturer": "Aérospatiale / BAC",
     "skycardsCategories": [
       "Airliner",
       "Supersonic"
@@ -4453,7 +4394,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Concorde"
       }
     ],
@@ -4527,7 +4468,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "DC-4"
       }
     ],
@@ -4599,7 +4540,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Tu-204-100"
       }
     ],
@@ -4673,7 +4614,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "MC-21-200"
       }
     ],
@@ -4737,7 +4678,7 @@
       {
         "id": "c3",
         "label": "Wing sweep",
-        "description": "35\u00b0 swept wing",
+        "description": "35° swept wing",
         "x": 55,
         "y": 48
       }
@@ -4745,7 +4686,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "707-320B"
       }
     ],
@@ -4816,7 +4757,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Tu-154B"
       }
     ],
@@ -4893,7 +4834,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "328JET"
       }
     ],
@@ -4909,8 +4850,7 @@
       "328-110",
       "Do 328",
       "Dornier 328-110",
-      "neo",
-      "757-200"
+      "neo"
     ],
     "manufacturer": "Dornier",
     "skycardsCategories": [
@@ -4967,7 +4907,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "328-110"
       }
     ],
@@ -4983,7 +4923,6 @@
       "Saab 340A",
       "Saab 340B",
       "Pratt & Whitney",
-      "757-200",
       "Rolls-Royce",
       "CFM56"
     ],
@@ -5042,7 +4981,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Saab 340A"
       }
     ],
@@ -5117,7 +5056,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "DC-10-30"
       }
     ],
@@ -5134,7 +5073,6 @@
       "208B Grand Caravan",
       "Cessna 208 Grand Caravan",
       "Pratt & Whitney",
-      "A321",
       "split scimitar winglets"
     ],
     "manufacturer": "Cessna",
@@ -5192,7 +5130,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "208"
       }
     ],
@@ -5265,7 +5203,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "A310-200"
       }
     ],
@@ -5339,7 +5277,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "L-1011-1"
       }
     ],
@@ -5379,7 +5317,7 @@
       "predecessor spirit to ERJ/E-Jet era"
     ],
     "geekFacts": [
-      "Embraer\u2019s breakthrough regional turboprop",
+      "Embraer’s breakthrough regional turboprop",
       "ICAO type E120"
     ],
     "diagramId": "emb120",
@@ -5409,7 +5347,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "EMB-120"
       }
     ],
@@ -5481,7 +5419,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Learjet 60"
       }
     ],
@@ -5554,7 +5492,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "Falcon 50"
       }
     ],
@@ -5627,7 +5565,7 @@
     "photos": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Boeing_737-800%2C_Ryanair_JP7363237.jpg/1280px-Boeing_737-800%2C_Ryanair_JP7363237.jpg",
-        "attribution": "Placeholder \u2014 replace with website pack drawing",
+        "attribution": "Placeholder — replace with website pack drawing",
         "variant": "1900C"
       }
     ],
