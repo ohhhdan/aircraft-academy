@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import type { LessonCompleteResult } from '../context/AppContext';
 import {
   QuizFeedback,
   OptionContent,
@@ -7,8 +9,11 @@ import {
   optionBtnClass,
   pickerCardClass,
 } from '../components/QuizFeedback';
-import { aircraft, getAircraftById, shuffle } from '../utils/data';
+import { LessonComplete } from '../components/LessonComplete';
+import { XpPop } from '../components/XpPop';
+import { getAircraftById, shuffle } from '../utils/data';
 import { deepDiveLearnMore } from '../utils/learnMore';
+import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
 import type { Aircraft, DeepDiveExerciseType } from '../types';
 
 type Phase = 'setup' | 'exercise' | 'result';
@@ -22,7 +27,6 @@ interface Exercise {
 function buildExercises(): Exercise[] {
   const ex: Exercise[] = [];
 
-  // Equivalent match
   const a320 = getAircraftById('a320')!;
   const b737 = getAircraftById('b737')!;
   ex.push({
@@ -39,7 +43,6 @@ function buildExercises(): Exercise[] {
     data: { left: b777, right: a350, options: shuffle([b777, a350, getAircraftById('b747')!, getAircraftById('a380')!]) },
   });
 
-  // Mission fit
   const g650 = getAircraftById('g650')!;
   const phenom = getAircraftById('phenom300')!;
   ex.push({
@@ -52,7 +55,6 @@ function buildExercises(): Exercise[] {
     },
   });
 
-  // Timeline
   const b747 = getAircraftById('b747')!;
   const a380 = getAircraftById('a380')!;
   ex.push({
@@ -67,7 +69,6 @@ function buildExercises(): Exercise[] {
     },
   });
 
-  // Range ranking
   const rangeSet = shuffle([
     getAircraftById('a380')!,
     getAircraftById('b737')!,
@@ -80,7 +81,6 @@ function buildExercises(): Exercise[] {
     data: { aircraft: rangeSet, correctOrder: [...rangeSet].sort((a, b) => a.rangeNm - b.rangeNm).map((a) => a.id) },
   });
 
-  // More equivalents
   const b787 = getAircraftById('b787')!;
   ex.push({
     type: 'equivalent',
@@ -92,19 +92,34 @@ function buildExercises(): Exercise[] {
 }
 
 const ALL_EXERCISES = buildExercises();
+const TOTAL = 6;
 
 export function DeepDivePage() {
-  const { startExercise, endExercise, loseLife, recordModuleProgress, canStartExercise, state, preferences } = useApp();
+  const [params] = useSearchParams();
+  const nodeId = params.get('node');
+  const node = nodeId ? getNodeById(nodeId) : undefined;
+
+  const {
+    startExercise,
+    endExercise,
+    loseLife,
+    awardLessonComplete,
+    canStartExercise,
+    preferences,
+  } = useApp();
   const [phase, setPhase] = useState<Phase>('setup');
   const [exIndex, setExIndex] = useState(0);
   const [feedback, setFeedback] = useState<{ ok: boolean; explanation: string; learnMore?: React.ReactNode } | null>(null);
   const [answered, setAnswered] = useState(false);
   const [chosen, setChosen] = useState<string | null>(null);
   const [selected, setSelected] = useState<string[]>([]);
-  const [score, setScore] = useState(0);
+  const [firstTryScore, setFirstTryScore] = useState(0);
   const [lostLifeThisQuestion, setLostLifeThisQuestion] = useState(false);
+  const [lessonResult, setLessonResult] = useState<LessonCompleteResult | null>(null);
+  const [xpPop, setXpPop] = useState(0);
 
   const exercise = ALL_EXERCISES[exIndex % ALL_EXERCISES.length];
+  const totalRounds = node?.sessionSize ?? TOTAL;
 
   const resetQuestion = () => {
     setAnswered(false);
@@ -129,12 +144,16 @@ export function DeepDivePage() {
   const passQuestion = (explanation: string) => {
     setAnswered(true);
     setFeedback({ ok: true, explanation });
-    setScore((s) => s + 1);
+    if (!lostLifeThisQuestion) {
+      setFirstTryScore((s) => s + 1);
+      setXpPop((n) => n + 1);
+    }
   };
 
   const startSession = () => {
     setExIndex(0);
-    setScore(0);
+    setFirstTryScore(0);
+    setLessonResult(null);
     setPhase('exercise');
     resetQuestion();
     setLostLifeThisQuestion(false);
@@ -223,16 +242,24 @@ export function DeepDivePage() {
     }
   };
 
+  const finishLesson = (finalFirstTry: number) => {
+    const result = awardLessonComplete({
+      nodeId,
+      moduleId: 'deepdive',
+      correct: finalFirstTry,
+      total: totalRounds,
+      baseXp: node?.xpReward ?? 20,
+    });
+    setLessonResult(result);
+    setPhase('result');
+    endExercise();
+  };
+
   const nextExercise = () => {
     const next = exIndex + 1;
-    if (next >= 6) {
-      recordModuleProgress(
-        'deepdive',
-        Math.min(state.moduleProgress.deepdive.completed + score, state.moduleProgress.deepdive.total),
-        state.moduleProgress.deepdive.total
-      );
-      setPhase('result');
-      endExercise();
+    const finalFirstTry = firstTryScore;
+    if (next >= totalRounds) {
+      finishLesson(finalFirstTry);
       return;
     }
     setExIndex(next);
@@ -246,29 +273,34 @@ export function DeepDivePage() {
   if (phase === 'setup') {
     return (
       <div>
-        <div className="eyebrow">Module 03 · Deep Dive</div>
-        <h2 className="serif" style={{ margin: '0 0 8px' }}>Compare and contextualize</h2>
+        <div className="eyebrow">{node ? node.title : 'Module 03 · Deep Dive'}</div>
+        <h2 className="serif" style={{ margin: '0 0 8px' }}>
+          {node ? 'Ready?' : 'Compare and contextualize'}
+        </h2>
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
-          Match rivals, rank range, place aircraft on a timeline, and fit types to missions — the context that makes identification stick.
+          {node
+            ? node.subtitle
+            : 'Match rivals, rank range, place aircraft on a timeline, and fit types to missions — the context that makes identification stick.'}
         </p>
         <button type="button" className="btn btn-primary pressable" style={{ marginTop: 24 }} onClick={startSession} disabled={!canStartExercise}>
-          Start deep dive (6 tasks)
+          Start deep dive ({totalRounds} tasks) · +{node?.xpReward ?? 20} XP
         </button>
       </div>
     );
   }
 
-  if (phase === 'result') {
+  if (phase === 'result' && lessonResult) {
     return (
-      <div>
-        <div className="eyebrow">Deep Dive</div>
-        <h2 className="serif">Session complete</h2>
-        <p className="serif" style={{ fontSize: 28, fontWeight: 600, color: 'var(--green)', margin: '8px 0 16px' }}>
-          {Math.round((score / 6) * 100)}% this round
-        </p>
-        <p className="text-faint">{score} of 6 tasks answered correctly.</p>
-        <button type="button" className="btn btn-primary pressable" style={{ marginTop: 20 }} onClick={() => setPhase('setup')}>New session</button>
-      </div>
+      <LessonComplete
+        result={lessonResult}
+        score={firstTryScore}
+        total={totalRounds}
+        title={lessonResult.perfect ? 'Deep dive mastered!' : 'Session complete!'}
+        onAgain={() => {
+          setPhase('setup');
+          setLessonResult(null);
+        }}
+      />
     );
   }
 
@@ -276,11 +308,13 @@ export function DeepDivePage() {
 
   return (
     <div>
+      <XpPop trigger={xpPop} amount={XP_PER_CORRECT} />
       <div className="quiz-progress" style={{ marginBottom: 12 }}>
-        <div className="quiz-progress-fill" style={{ width: `${((exIndex + 1) / 6) * 100}%` }} />
+        <div className="quiz-progress-fill" style={{ width: `${((exIndex + 1) / totalRounds) * 100}%` }} />
       </div>
       <div className="mono text-muted" style={{ fontSize: 11, marginBottom: 16 }}>
-        {exIndex + 1} / 6 · DEEP DIVE
+        {exIndex + 1} / {totalRounds} · DEEP DIVE
+        {node ? ` · ${node.title.toUpperCase()}` : ''}
       </div>
       <h2 className="serif" style={{ fontSize: 26, margin: '0 0 16px', textWrap: 'balance' }}>{exercise.prompt}</h2>
 
@@ -392,7 +426,7 @@ export function DeepDivePage() {
           learnMore={feedback.learnMore}
           onNext={feedback.ok ? nextExercise : undefined}
           onRetry={!feedback.ok ? resetQuestion : undefined}
-          nextLabel={exIndex + 1 >= 6 ? 'Finish' : 'Next task →'}
+          nextLabel={exIndex + 1 >= totalRounds ? 'Claim XP →' : 'Next task →'}
         />
       )}
     </div>

@@ -5,6 +5,7 @@ import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
 import { LessonComplete } from '../components/LessonComplete';
+import { XpPop } from '../components/XpPop';
 import {
   QuizFeedback,
   OptionContent,
@@ -16,7 +17,7 @@ import {
   getAircraftByCategory,
   getAircraftByEngineCount,
 } from '../utils/data';
-import { getNodeById } from '../content/lessonPath';
+import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
 import { CATEGORY_ORDER, type Aircraft, type CategoryGroup } from '../types';
 import { recallLearnMore } from '../utils/learnMore';
 
@@ -34,8 +35,19 @@ export function LearnPage() {
   const groupParam = params.get('group') as CategoryGroup | null;
   const pathNode = nodeId ? getNodeById(nodeId) : undefined;
 
-  const { startExercise, endExercise, loseLife, markAircraftMastered, recordModuleProgress, awardLessonComplete, canStartExercise, state, preferences } =
-    useApp();
+  const {
+    startExercise,
+    endExercise,
+    loseLife,
+    markAircraftMastered,
+    recordModuleProgress,
+    awardLessonComplete,
+    recordMistake,
+    clearMistake,
+    canStartExercise,
+    state,
+    preferences,
+  } = useApp();
   const [category, setCategory] = useState<CategoryGroup | null>(
     groupParam ?? pathNode?.categoryGroup ?? null
   );
@@ -51,6 +63,7 @@ export function LearnPage() {
   const [answered, setAnswered] = useState(false);
   const [chosenId, setChosenId] = useState<string | null>(null);
   const [lostLifeThisQuestion, setLostLifeThisQuestion] = useState(false);
+  const [xpPop, setXpPop] = useState(0);
 
   const sectionAircraft = useMemo(() => {
     if (!category || engineFilter === null) return [];
@@ -87,12 +100,17 @@ export function LearnPage() {
         explanation: `"${recallCallout.label}" identifies the ${correctAc.family}.`,
       });
       markAircraftMastered(id);
+      if (!lostLifeThisQuestion) {
+        clearMistake(id);
+        setXpPop((n) => n + 1);
+      }
       const newCompleted = Math.min(state.moduleProgress.learn.completed + 1, state.moduleProgress.learn.total);
       recordModuleProgress('learn', newCompleted, state.moduleProgress.learn.total);
     } else {
       if (!lostLifeThisQuestion) {
         loseLife();
         setLostLifeThisQuestion(true);
+        recordMistake(recallCallout.correctId);
       }
       setFeedback({
         ok: false,
@@ -167,6 +185,7 @@ export function LearnPage() {
   if (phase === 'recall' && recallCallout) {
     return (
       <div>
+        <XpPop trigger={xpPop} amount={XP_PER_CORRECT} />
         <div className="eyebrow">Recall Check</div>
         <h2 className="serif" style={{ margin: '0 0 8px' }}>Match the callout</h2>
         <p style={{ color: 'var(--ink-faint)' }}>

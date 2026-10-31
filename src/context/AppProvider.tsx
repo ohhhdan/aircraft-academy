@@ -54,6 +54,7 @@ function loadState(): AppState {
       dailyXp,
       nodeCrowns: parsed.nodeCrowns ?? {},
       completedNodes: parsed.completedNodes ?? [],
+      mistakeAircraftIds: parsed.mistakeAircraftIds ?? [],
     };
   } catch {
     return { ...DEFAULT_STATE };
@@ -151,6 +152,23 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const recordMistake = useCallback((aircraftId: string) => {
+    setState((prev) => {
+      if (prev.mistakeAircraftIds.includes(aircraftId)) return prev;
+      return {
+        ...prev,
+        mistakeAircraftIds: [aircraftId, ...prev.mistakeAircraftIds].slice(0, 40),
+      };
+    });
+  }, []);
+
+  const clearMistake = useCallback((aircraftId: string) => {
+    setState((prev) => ({
+      ...prev,
+      mistakeAircraftIds: prev.mistakeAircraftIds.filter((id) => id !== aircraftId),
+    }));
+  }, []);
+
   const awardLessonComplete = useCallback(
     (input: {
       nodeId?: string | null;
@@ -245,6 +263,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     markAircraftMastered,
     markAirportMastered,
     awardLessonComplete,
+    recordMistake,
+    clearMistake,
     overallProgress,
     canStartExercise: currentLives > 0,
     nextLifeIn,

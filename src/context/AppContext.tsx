@@ -29,6 +29,8 @@ export interface AppContextValue {
     total: number;
     baseXp?: number;
   }) => LessonCompleteResult;
+  recordMistake: (aircraftId: string) => void;
+  clearMistake: (aircraftId: string) => void;
   overallProgress: number;
   canStartExercise: boolean;
   nextLifeIn: number | null;

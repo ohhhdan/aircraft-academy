@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useApp } from '../context/AppContext';
 import { LESSON_PATH, MAX_CROWNS, type PathNode } from '../content/lessonPath';
 import { formatLifeTimer } from '../utils/data';
@@ -16,6 +16,7 @@ function nodeIcon(kind: PathNode['kind'], status: NodeStatus) {
 
 export function HomePage() {
   const { state, canStartExercise, nextLifeIn, dailyGoal } = useApp();
+  const currentNodeRef = useRef<HTMLLIElement | null>(null);
 
   const { statuses, continueNode } = useMemo(() => {
     const flat = LESSON_PATH.flatMap((u) => u.nodes);
@@ -44,7 +45,16 @@ export function HomePage() {
     return { statuses: map, continueNode };
   }, [state.nodeCrowns, state.completedNodes]);
 
+  useEffect(() => {
+    if (!currentNodeRef.current) return;
+    const id = window.setTimeout(() => {
+      currentNodeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 180);
+    return () => window.clearTimeout(id);
+  }, [continueNode?.id]);
+
   const dailyPct = Math.min(100, Math.round((state.dailyXp / dailyGoal) * 100));
+  const weakCount = state.mistakeAircraftIds.length;
 
   return (
     <div className="path-home">
@@ -103,6 +113,27 @@ export function HomePage() {
         </div>
       )}
 
+      {weakCount > 0 && (
+        <div className="path-weak-spots">
+          <div>
+            <div className="mono path-weak-kicker">Practice mistakes</div>
+            <p className="path-weak-copy">
+              {weakCount} aircraft in your weak-spot queue — clear them with first-try IDs.
+            </p>
+          </div>
+          <Link
+            to={canStartExercise ? '/spotter?practice=mistakes&mode=easy' : '#'}
+            className={`btn btn-secondary pressable ${!canStartExercise ? 'is-disabled' : ''}`}
+            onClick={(e) => {
+              if (!canStartExercise) e.preventDefault();
+            }}
+            aria-disabled={!canStartExercise}
+          >
+            Practice · {weakCount}
+          </Link>
+        </div>
+      )}
+
       {!canStartExercise && (
         <div className="path-out-of-hearts">
           <strong>Out of hearts.</strong> Review the Index or wait for one to refill — then jump back on the path.
@@ -129,9 +160,15 @@ export function HomePage() {
                   const status = !unitUnlocked ? 'locked' : statuses.get(node.id) ?? 'locked';
                   const crowns = state.nodeCrowns[node.id] ?? 0;
                   const clickable = status !== 'locked' && (canStartExercise || status === 'done');
+                  const isCurrent = status === 'current';
 
                   return (
-                    <li key={node.id} className={`path-node path-node--${status} path-node--${node.kind}`}>
+                    <li
+                      key={node.id}
+                      ref={isCurrent ? currentNodeRef : undefined}
+                      className={`path-node path-node--${status} path-node--${node.kind}`}
+                      data-node={node.id}
+                    >
                       {i > 0 && <div className="path-connector" aria-hidden />}
                       <Link
                         to={clickable ? node.to : '#'}
@@ -140,6 +177,7 @@ export function HomePage() {
                           if (!clickable) e.preventDefault();
                         }}
                         aria-disabled={!clickable}
+                        aria-current={isCurrent ? 'step' : undefined}
                       >
                         <span className="path-node-ring">
                           <span className="path-node-glyph">{nodeIcon(node.kind, status)}</span>
