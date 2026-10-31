@@ -372,9 +372,9 @@ export function LearnPage() {
   return (
     <div>
       <div className="eyebrow">Module 01 · Key Features</div>
-      <h2 className="serif" style={{ margin: '0 0 8px' }}>Choose a collection</h2>
+      <h2 className="serif" style={{ margin: '0 0 8px' }}>Study aircraft by category</h2>
       <p style={{ color: 'var(--ink-faint)', maxWidth: 560 }}>
-        Study aircraft by category — start with <strong>Commercial Jets</strong> for the types you see at every gate.
+        Start with <strong>Commercial Jets</strong> for the types you see at every gate.
       </p>
       <div className="category-list" style={{ marginTop: 20 }}>
         {CATEGORY_ORDER.map((cat) => {
