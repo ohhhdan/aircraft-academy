@@ -21,7 +21,7 @@ export function spotterTell(aircraft: Aircraft): string {
 export function spotterLearnMore(aircraft: Aircraft, showLinks: boolean): ReactNode {
   const tip = spotterTell(aircraft);
   if (!showLinks) {
-    return `Study ${aircraft.family} in the Index and look for: ${tip}. The Key Features module has full specimen plates with diagrams.`;
+    return `Study ${aircraft.family} in the Index and look for: ${tip}. The Key Features module has full aircraft plates with diagrams.`;
   }
   return (
     <>
@@ -30,7 +30,7 @@ export function spotterLearnMore(aircraft: Aircraft, showLinks: boolean): ReactN
         {aircraft.family} in the Index
       </Link>{' '}
       and look for: <strong>{tip}</strong>. For diagrams and spotting features, open the{' '}
-      <Link to="/learn">Key Features</Link> module and log the specimen to your journal.
+      <Link to="/learn">Key Features</Link> module and log the aircraft to your journal.
     </>
   );
 }
@@ -51,19 +51,19 @@ export function codesLearnMore(airport: Airport, showLinks: boolean): ReactNode 
 export function recallLearnMore(aircraft: Aircraft, calloutLabel: string, showLinks: boolean): ReactNode {
   const callout = aircraft.callouts.find((c) => c.label === calloutLabel);
   if (!showLinks) {
-    return `Re-read the ${aircraft.family} specimen plate and focus on "${calloutLabel}"${callout ? `: ${callout.description}` : ''}.`;
+    return `Re-read the ${aircraft.family} plate and focus on "${calloutLabel}"${callout ? `: ${callout.description}` : ''}.`;
   }
   return (
     <>
-      Re-study the <Link to="/learn">{aircraft.family} specimen plate</Link>. The feature &ldquo;{calloutLabel}&rdquo;
-      {callout ? <> — {callout.description}</> : ''} — is the key tell for this type.
+      Re-study the <Link to="/learn">{aircraft.family} plate</Link>. The feature &ldquo;{calloutLabel}&rdquo;
+      {callout ? <> ({callout.description})</> : ''} is the key tell for this type.
     </>
   );
 }
 
 export function deepDiveLearnMore(topic: string, showLinks: boolean): ReactNode {
   if (!showLinks) {
-    return `Review ${topic} in the Index — compare specs side by side. The Deep Dive module builds on Key Features study.`;
+    return `Review ${topic} in the Index. Compare specs side by side. The Deep Dive module builds on Key Features study.`;
   }
   return (
     <>

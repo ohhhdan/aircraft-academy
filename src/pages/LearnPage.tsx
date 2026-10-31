@@ -5,6 +5,7 @@ import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
 import { PlateCarousel } from '../components/PlateCarousel';
+import { AircraftFacts } from '../components/AircraftFacts';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
 import {
@@ -236,24 +237,37 @@ export function LearnPage() {
         .filter((f) => !selectedAircraft.callouts.some((c) => c.label.toLowerCase().includes(f.slice(0, 8).toLowerCase())))
         .map((f) => ({ label: f.charAt(0).toUpperCase() + f.slice(1), blurb: f })),
     ].slice(0, 4);
-    const oneLineTell =
-      selectedAircraft.keyFeatures.slice(0, 2).join(' — ') + (selectedAircraft.keyFeatures.length ? '.' : '');
+    const quickId =
+      selectedAircraft.keyFeatures.slice(0, 2).join(', ') + (selectedAircraft.keyFeatures.length ? '.' : '');
 
     return (
       <div>
         <button type="button" className="back-link" onClick={() => { setSelectedAircraft(null); setActiveCallout(null); }}>
           ← Browse
         </button>
-        <div className="mono" style={{ fontSize: 11, color: 'var(--ink-muted)' }}>
-          {selectedAircraft.manufacturer.toUpperCase()} · {selectedAircraft.introYear}
-        </div>
-        <h2 className="serif" style={{ fontSize: 36, margin: '4px 0' }}>{selectedAircraft.family}</h2>
+        <h2 className="serif" style={{ fontSize: 36, margin: '4px 0 12px' }}>{selectedAircraft.family}</h2>
         {selectedAircraft.nickname && (
-          <p className="serif" style={{ fontStyle: 'italic', color: 'var(--ochre)', margin: '0 0 20px' }}>
+          <p className="serif" style={{ fontStyle: 'italic', color: 'var(--ochre)', margin: '0 0 12px' }}>
             &ldquo;{selectedAircraft.nickname}&rdquo;
           </p>
         )}
-        <div className="detail-grid">
+        <AircraftFacts aircraft={selectedAircraft} />
+        {quickId && (
+          <div className="tell-callout" style={{ marginTop: 14 }}>
+            <strong style={{ color: 'var(--teal)' }}>Quick ID:</strong> {quickId}
+          </div>
+        )}
+        {selectedAircraft.geekFacts.length > 0 && (
+          <div style={{ marginTop: 14 }}>
+            <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginBottom: 8 }}>Field notes</div>
+            <ul style={{ margin: 0, paddingLeft: 20, color: 'var(--ink-faint)', fontSize: 14 }}>
+              {selectedAircraft.geekFacts.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div className="detail-grid" style={{ marginTop: 18 }}>
           <div>
             <PlateCarousel aircraft={selectedAircraft} height={260} />
           </div>
@@ -274,21 +288,8 @@ export function LearnPage() {
                 <p style={{ margin: '4px 0 0', fontSize: '0.9rem', color: 'var(--ink-faint)' }}>{callout.description}</p>
               </div>
             )}
-            <div className="tell-callout">
-              <strong style={{ color: 'var(--teal)' }}>One-line tell:</strong> {oneLineTell}
-            </div>
-            {selectedAircraft.geekFacts.length > 0 && (
-              <div style={{ marginTop: 16 }}>
-                <div className="mono" style={{ fontSize: 10, color: 'var(--ink-muted)', marginBottom: 8 }}>Field notes</div>
-                <ul style={{ margin: 0, paddingLeft: 20, color: 'var(--ink-faint)', fontSize: 14 }}>
-                  {selectedAircraft.geekFacts.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
             <button className="btn btn-primary pressable" style={{ marginTop: 20 }} onClick={finishStudy}>
-              Log specimen to journal →
+              Log aircraft to journal →
             </button>
           </div>
         </div>
@@ -307,7 +308,7 @@ export function LearnPage() {
           {ENGINE_SECTIONS.find((e) => e.count === engineFilter)?.label}
         </h2>
         <p className="text-faint" style={{ fontSize: '0.9rem' }}>
-          Select an aircraft type to learn more. After you&apos;ve logged 3 aircraft, answer a question to check your understanding.
+          Select an aircraft type to learn more. Once you&apos;ve studied three, answer a recall question to confirm your understanding.
         </p>
         <div className="grid-browse" style={{ marginTop: 16 }}>
           {sectionAircraft.map((ac) => (
