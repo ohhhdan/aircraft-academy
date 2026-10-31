@@ -5,6 +5,7 @@ import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
 import { PlateCarousel } from '../components/PlateCarousel';
+import { AircraftFacts } from '../components/AircraftFacts';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
 import {
@@ -244,16 +245,14 @@ export function LearnPage() {
         <button type="button" className="back-link" onClick={() => { setSelectedAircraft(null); setActiveCallout(null); }}>
           ← Browse
         </button>
-        <div className="mono" style={{ fontSize: 11, color: 'var(--ink-muted)' }}>
-          {selectedAircraft.manufacturer.toUpperCase()} · {selectedAircraft.introYear}
-        </div>
-        <h2 className="serif" style={{ fontSize: 36, margin: '4px 0' }}>{selectedAircraft.family}</h2>
+        <h2 className="serif" style={{ fontSize: 36, margin: '4px 0 12px' }}>{selectedAircraft.family}</h2>
         {selectedAircraft.nickname && (
-          <p className="serif" style={{ fontStyle: 'italic', color: 'var(--ochre)', margin: '0 0 20px' }}>
+          <p className="serif" style={{ fontStyle: 'italic', color: 'var(--ochre)', margin: '0 0 12px' }}>
             &ldquo;{selectedAircraft.nickname}&rdquo;
           </p>
         )}
-        <div className="detail-grid">
+        <AircraftFacts aircraft={selectedAircraft} />
+        <div className="detail-grid" style={{ marginTop: 18 }}>
           <div>
             <PlateCarousel aircraft={selectedAircraft} height={260} />
           </div>
