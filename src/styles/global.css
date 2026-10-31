@@ -498,6 +498,63 @@ button {
   margin-top: 6px;
 }
 
+.plate-carousel {
+  width: 100%;
+}
+
+.plate-carousel-frame {
+  position: relative;
+}
+
+.plate-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+
+.plate-carousel-nav--prev {
+  left: 10px;
+}
+
+.plate-carousel-nav--next {
+  right: 10px;
+}
+
+.plate-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.plate-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.plate-carousel-dot.is-active {
+  background: var(--ink);
+}
+
 .feature-item {
   display: flex;
   gap: 12px;

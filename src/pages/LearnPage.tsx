@@ -4,6 +4,7 @@ import { useApp } from '../context/AppContext';
 import type { LessonCompleteResult } from '../context/AppContext';
 import { MiniAircraftDiagram } from '../components/AircraftDiagram';
 import { ImagePlate } from '../components/ImagePlate';
+import { PlateCarousel } from '../components/PlateCarousel';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
 import {
@@ -254,10 +255,7 @@ export function LearnPage() {
         )}
         <div className="detail-grid">
           <div>
-            <ImagePlate aircraft={selectedAircraft} kind="photo" label="Plate A · Photograph" height={200} />
-            <div style={{ marginTop: 14 }}>
-              <ImagePlate aircraft={selectedAircraft} kind="diagram" label="Plate B · Diagram" height={160} />
-            </div>
+            <PlateCarousel aircraft={selectedAircraft} height={260} />
           </div>
           <div>
             <h3 className="serif" style={{ fontSize: 22, margin: '0 0 16px' }}>How to spot it</h3>
