@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T04:14:50.228Z",
+  "updatedAt": "2026-10-31T04:29:25.285Z",
   "sourceDir": "images",
   "publicDir": "public/assets/aircraft",
   "photos": [
@@ -27,6 +27,54 @@
       "attribution": "User provided (Norebbo pack)",
       "matchedBy": "sheet-stem:Airbus-A321-P2F→row 6",
       "sortIndex": 2
+    },
+    {
+      "id": "b737-diagram-01-boeing-737-400-and-737-400sf-combi",
+      "aircraftId": "b737",
+      "role": "diagram",
+      "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+      "sheetRow": 22,
+      "sourceFile": "Boeing-737-400-and-737-400SF-Combi__400SF-Combi-line-drawing.jpg",
+      "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_01.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+      "sortIndex": 1
+    },
+    {
+      "id": "b737-diagram-02-boeing-737-400-and-737-400sf-combi",
+      "aircraftId": "b737",
+      "role": "diagram",
+      "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+      "sheetRow": 22,
+      "sourceFile": "Boeing-737-400-and-737-400SF-Combi__400SF-Combi-white.jpg",
+      "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_02.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+      "sortIndex": 2
+    },
+    {
+      "id": "b737-diagram-03-boeing-737-400-and-737-400sf-combi",
+      "aircraftId": "b737",
+      "role": "diagram",
+      "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+      "sheetRow": 22,
+      "sourceFile": "Boeing-737-400-and-737-400SF-Combi__passenger-line-drawing.jpg",
+      "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_03.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+      "sortIndex": 3
+    },
+    {
+      "id": "b737-diagram-04-boeing-737-400-and-737-400sf-combi",
+      "aircraftId": "b737",
+      "role": "diagram",
+      "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+      "sheetRow": 22,
+      "sourceFile": "Boeing-737-400-and-737-400SF-Combi__passenger-white.jpg",
+      "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_04.jpg",
+      "attribution": "User provided (Norebbo pack)",
+      "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+      "sortIndex": 4
     },
     {
       "id": "c909-diagram-01-comac-c909",
@@ -108,6 +156,60 @@
       ],
       "comparison": []
     },
+    "b737": {
+      "spot": [],
+      "diagram": [
+        {
+          "id": "b737-diagram-01-boeing-737-400-and-737-400sf-combi",
+          "aircraftId": "b737",
+          "role": "diagram",
+          "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+          "sheetRow": 22,
+          "sourceFile": "Boeing-737-400-and-737-400SF-Combi__400SF-Combi-line-drawing.jpg",
+          "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_01.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+          "sortIndex": 1
+        },
+        {
+          "id": "b737-diagram-02-boeing-737-400-and-737-400sf-combi",
+          "aircraftId": "b737",
+          "role": "diagram",
+          "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+          "sheetRow": 22,
+          "sourceFile": "Boeing-737-400-and-737-400SF-Combi__400SF-Combi-white.jpg",
+          "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_02.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+          "sortIndex": 2
+        },
+        {
+          "id": "b737-diagram-03-boeing-737-400-and-737-400sf-combi",
+          "aircraftId": "b737",
+          "role": "diagram",
+          "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+          "sheetRow": 22,
+          "sourceFile": "Boeing-737-400-and-737-400SF-Combi__passenger-line-drawing.jpg",
+          "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_03.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+          "sortIndex": 3
+        },
+        {
+          "id": "b737-diagram-04-boeing-737-400-and-737-400sf-combi",
+          "aircraftId": "b737",
+          "role": "diagram",
+          "variant": "Boeing 737-400 (and 737-400SF / Combi)",
+          "sheetRow": 22,
+          "sourceFile": "Boeing-737-400-and-737-400SF-Combi__passenger-white.jpg",
+          "publicPath": "/assets/aircraft/b737/diagram__boeing-737-400-and-737-400sf-combi_04.jpg",
+          "attribution": "User provided (Norebbo pack)",
+          "matchedBy": "sheet-stem:Boeing-737-400-and-737-400SF-Combi→row 22",
+          "sortIndex": 4
+        }
+      ],
+      "comparison": []
+    },
     "c909": {
       "spot": [],
       "diagram": [
@@ -171,9 +273,9 @@
   },
   "unmatched": [],
   "stats": {
-    "sourceFiles": 6,
-    "matched": 6,
+    "sourceFiles": 10,
+    "matched": 10,
     "unmatched": 0,
-    "aircraftCovered": 3
+    "aircraftCovered": 4
   }
 }
