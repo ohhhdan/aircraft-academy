@@ -24,9 +24,9 @@ interface AnswerFeedback {
   explanation: string;
   learnMore?: React.ReactNode;
   xp?: number;
-  /** Wrong answer with tries left — retry only, don't advance */
+  /** Wrong answer with tries left  -  retry only, don't advance */
   canRetry?: boolean;
-  /** Wrong answer out of tries — show Next */
+  /** Wrong answer out of tries  -  show Next */
   canAdvance?: boolean;
 }
 
@@ -180,10 +180,11 @@ export function SpotterPage() {
         clearMistake(current.id);
       }
       const tell = spotterTell(current);
+      const nick = current.nickname ? `"${current.nickname}". ` : '';
       setFeedback({
         ok: true,
         xp: firstTry ? XP_PER_CORRECT : undefined,
-        explanation: `This is the ${correctAnswer}. ${current.nickname ? `"${current.nickname}" — ` : ''}Logged. Spot it by the ${tell}.`,
+        explanation: `This is the ${correctAnswer}. ${nick}Logged. Spot it by the ${tell}.`,
       });
       return;
     }
@@ -206,13 +207,38 @@ export function SpotterPage() {
         explanation: `The answer is ${correctAnswer}. You chose ${answer}. Spot it by the ${tell}.`,
         learnMore: spotterLearnMore(current, preferences.showLearnLinks),
       });
+    } else if (nextAttempts === 1) {
+      setFeedback({
+        ok: false,
+        canRetry: true,
+        explanation: '',
+      });
     } else {
       setFeedback({
         ok: false,
         canRetry: true,
-        explanation: `Not ${answer}. Try again — ${MAX_ATTEMPTS - nextAttempts} ${MAX_ATTEMPTS - nextAttempts === 1 ? 'try' : 'tries'} left before the answer is shown.`,
+        explanation: `Hint: look for ${tell}.`,
       });
     }
+  };
+
+  const showAnswer = () => {
+    if (!current || revealCorrect) return;
+    if (!lostLifeThisQuestion) {
+      loseLife();
+      setLostLifeThisQuestion(true);
+      recordMistake(current.id);
+    }
+    setRevealCorrect(true);
+    setAnswered(true);
+    setAttempts(MAX_ATTEMPTS);
+    const tell = spotterTell(current);
+    setFeedback({
+      ok: false,
+      canAdvance: true,
+      explanation: `The answer is ${correctAnswer}. Spot it by the ${tell}. (0 XP)`,
+      learnMore: spotterLearnMore(current, preferences.showLearnLinks),
+    });
   };
 
   const finishLesson = (finalFirstTry: number) => {
@@ -249,10 +275,10 @@ export function SpotterPage() {
         </h2>
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
           {practiceMistakes
-            ? `Review the ${state.mistakeAircraftIds.length} aircraft you missed recently — first-try correct clears them from the queue.`
+            ? `Review the ${state.mistakeAircraftIds.length} aircraft you missed recently. First-try correct clears them from the queue.`
             : node
               ? node.subtitle
-              : 'Look at each photo and tap the matching aircraft. Wrong answers cost a heart — you can try again.'}
+              : 'Look at each photo and tap the matching aircraft. Wrong answers cost a heart. You can try again.'}
         </p>
 
         <div className="wire-copy" style={{ marginTop: 18, maxWidth: 520 }}>
@@ -262,7 +288,7 @@ export function SpotterPage() {
             ? ' Pick the exact variant (for example 737-800 vs MAX).'
             : ' Name the type (for example Boeing 737 or Airbus A320).'}
           {' '}
-          You get up to three tries — the correct answer is only shown after the third miss.
+          You get up to three tries. The correct answer is only shown after the third miss, or when you tap Show answer (0 XP).
           {' '}
           You&apos;ll see {totalRounds} photos this round.
         </div>
@@ -382,8 +408,16 @@ export function SpotterPage() {
           xpGained={feedback.xp}
           onNext={feedback.ok || feedback.canAdvance ? nextRound : undefined}
           onRetry={feedback.canRetry ? resetQuestion : undefined}
+          onShowAnswer={feedback.canRetry && !revealCorrect ? showAnswer : undefined}
           nextLabel={round + 1 >= totalRounds ? 'Claim XP →' : 'Next →'}
         />
+      )}
+      {!feedback && !revealCorrect && (
+        <div style={{ marginTop: 16 }}>
+          <button type="button" className="btn btn-secondary pressable" onClick={showAnswer}>
+            Show answer (0 XP)
+          </button>
+        </div>
       )}
     </div>
   );

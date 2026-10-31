@@ -10,7 +10,7 @@ import {
 } from '../components/QuizFeedback';
 import { LessonComplete } from '../components/LessonComplete';
 import { XpPop } from '../components/XpPop';
-import { airports, getAirportsByTier, pickRandom, shuffle } from '../utils/data';
+import { airports, formatLifeTimer, getAirportsByTier, pickRandom, shuffle } from '../utils/data';
 import { codesLearnMore } from '../utils/learnMore';
 import { getNodeById, XP_PER_CORRECT } from '../content/lessonPath';
 import type { Airport, AirportTier } from '../types';
@@ -50,6 +50,7 @@ export function CodesPage() {
     markAirportMastered,
     awardLessonComplete,
     canStartExercise,
+    nextLifeIn,
     preferences,
   } = useApp();
   const [tier, setTier] = useState<AirportTier>(tierParam ?? preferences.codesTier);
@@ -132,7 +133,7 @@ export function CodesPage() {
           mode === 'code-to-name'
             ? `${current.iata} serves ${current.name} in ${current.city}, ${current.country}.`
             : mode === 'name-to-code'
-              ? `${current.city} is coded ${current.iata} — ${current.name}.`
+              ? `${current.city} is coded ${current.iata} (${current.name}).`
               : `${answer} (${airports.find((a) => a.iata === answer)?.city}) is from a different altitude tier than the others.`,
       });
     } else {
@@ -145,10 +146,10 @@ export function CodesPage() {
         ok: false,
         explanation:
           mode === 'code-to-name'
-            ? `${current.iata} is ${current.city}, ${current.country} — not ${answer}. Major hub codes become familiar with repetition.`
+            ? `${current.iata} is ${current.city}, ${current.country}, not ${answer}. Major hub codes become familiar with repetition.`
             : mode === 'name-to-code'
               ? `The code for ${current.city} is ${correct}, not ${answer}. Three-letter codes are always uppercase IATA standards.`
-              : `The outlier is ${correct}. The other codes belong to ${TIER_LABELS[tier].name} airports — ${correct} is from a different tier.`,
+              : `The outlier is ${correct}. The other codes belong to ${TIER_LABELS[tier].name} airports. ${correct} is from a different tier.`,
         learnMore: codesLearnMore(learnTarget, preferences.showLearnLinks),
       });
     }
@@ -193,8 +194,17 @@ export function CodesPage() {
         <p className="text-faint" style={{ maxWidth: 520, textWrap: 'pretty' }}>
           {node
             ? node.subtitle
-            : 'Learn IATA airport codes through a tiered departure board — study baggage-tag flashcards, then quiz each level to build accuracy.'}
+            : 'Learn IATA airport codes on a tiered departure board. Study the sample tag, pick a difficulty and drill, then start the quiz.'}
         </p>
+
+        <div className="wire-copy" style={{ marginTop: 18, maxWidth: 520 }}>
+          <div className="timestamp">How to start</div>
+          <ol style={{ margin: '8px 0 0', paddingLeft: 20 }}>
+            {!tierParam && <li>Choose an altitude (difficulty).</li>}
+            <li>Pick a drill mode (Code → City, City → Code, or Odd one out).</li>
+            <li>Tap <strong>Board now</strong> to begin answering questions.</li>
+          </ol>
+        </div>
 
         {!node && (
           <div className="card" style={{ marginTop: 24, padding: 16, borderTop: '1.5px dashed var(--dashed-plate)' }}>
@@ -210,7 +220,7 @@ export function CodesPage() {
 
         {!tierParam && (
           <>
-            <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 28 }}>Choose altitude</h3>
+            <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 28 }}>1. Choose altitude</h3>
             <div className="option-grid" style={{ maxWidth: 520 }}>
               {(['easy', 'medium', 'hard'] as AirportTier[]).map((t) => (
                 <button
@@ -227,7 +237,7 @@ export function CodesPage() {
           </>
         )}
 
-        <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 24 }}>Drill mode</h3>
+        <h3 className="serif" style={{ fontSize: '1.1rem', marginTop: 24 }}>{tierParam ? '1' : '2'}. Drill mode</h3>
         <div className="option-grid" style={{ maxWidth: 520 }}>
           <button type="button" className={`option-btn ${mode === 'code-to-name' ? 'correct' : ''}`} onClick={() => setMode('code-to-name')}>
             Code → City
@@ -240,11 +250,22 @@ export function CodesPage() {
           </button>
         </div>
 
+        {!canStartExercise && (
+          <div className="wire-copy" style={{ marginTop: 20, maxWidth: 520 }} role="status">
+            <div className="timestamp">Out of hearts</div>
+            Board now stays locked until you have at least one heart.
+            {nextLifeIn != null
+              ? ` Next heart in ${formatLifeTimer(nextLifeIn)} (timer in the top bar).`
+              : ' Watch the heart timer in the top bar, then tap Board now.'}
+          </div>
+        )}
+
         <button
           type="button"
           className="btn btn-teal pressable"
           style={{ marginTop: 24 }}
           onClick={() => {
+            if (!canStartExercise) return;
             setRound(0);
             setFirstTryScore(0);
             setLessonResult(null);
@@ -252,8 +273,14 @@ export function CodesPage() {
             startRound();
           }}
           disabled={!canStartExercise}
+          aria-disabled={!canStartExercise}
+          title={!canStartExercise ? 'Need at least one heart to start' : undefined}
         >
-          Board now → ({totalRounds} questions) · +{node?.xpReward ?? 15} XP
+          {canStartExercise
+            ? `Board now → (${totalRounds} questions) · +${node?.xpReward ?? 15} XP`
+            : nextLifeIn != null
+              ? `Waiting for a heart (${formatLifeTimer(nextLifeIn)})`
+              : 'Need a heart to board'}
         </button>
       </div>
     );

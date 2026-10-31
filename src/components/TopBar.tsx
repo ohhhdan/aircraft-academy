@@ -54,7 +54,7 @@ export function TopBar() {
             </span>
             <span className="top-hearts-count">{state.lives}</span>
             {regenerating && (
-              <span className="top-hearts-timer mono">+1 {formatLifeTimer(nextLifeIn!)}</span>
+              <span className="top-hearts-timer mono">{formatLifeTimer(nextLifeIn!)}</span>
             )}
           </div>
           <UserProfile />
