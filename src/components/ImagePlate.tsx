@@ -13,7 +13,6 @@ export function ImagePlate({ aircraft, kind = 'photo', label, height = 220 }: Im
   const photo = getSpotPhoto(aircraft);
   const diagram = getDiagram(aircraft);
   const url = kind === 'photo' ? photo.url : diagram?.url;
-  const attribution = kind === 'photo' ? photo.attribution : diagram?.attribution;
 
   return (
     <div>
@@ -30,7 +29,6 @@ export function ImagePlate({ aircraft, kind = 'photo', label, height = 220 }: Im
           <span className="image-plate-placeholder">{aircraft.family}</span>
         )}
       </div>
-      {attribution && <div className="plate-credit">{attribution}</div>}
     </div>
   );
 }

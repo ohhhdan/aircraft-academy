@@ -9,7 +9,7 @@ export function Layout() {
       <div className="app-shell">
         <Outlet />
         <footer className="app-footer">
-          Spotter&apos;s Field Guide — Portfolio Learning Experience
+          Spotter&apos;s Field Guide
         </footer>
       </div>
       <BottomNav />

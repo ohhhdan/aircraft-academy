@@ -60,9 +60,6 @@ export function AircraftDiagram({
               {i + 1}
             </button>
           ))}
-        {custom.attribution && (
-          <div className="timestamp" style={{ marginTop: 6 }}>{custom.attribution}</div>
-        )}
       </div>
     );
   }
