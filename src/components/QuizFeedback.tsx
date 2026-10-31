@@ -8,6 +8,7 @@ interface QuizFeedbackProps {
   learnMore?: ReactNode;
   onNext?: () => void;
   onRetry?: () => void;
+  onShowAnswer?: () => void;
   nextLabel?: string;
   buttonVariant?: ButtonVariant;
   /** First-try XP chip shown on correct answers */
@@ -20,6 +21,7 @@ export function QuizFeedback({
   learnMore,
   onNext,
   onRetry,
+  onShowAnswer,
   nextLabel = 'Next →',
   buttonVariant = 'primary',
   xpGained = null,
@@ -35,7 +37,7 @@ export function QuizFeedback({
             <span className="feedback-xp-chip">+{xpGained} XP</span>
           )}
         </div>
-        <p className="feedback-banner-text">{explanation}</p>
+        {explanation ? <p className="feedback-banner-text">{explanation}</p> : null}
         {!correct && learnMore && (
           <p className="feedback-banner-learn">{learnMore}</p>
         )}
@@ -44,6 +46,11 @@ export function QuizFeedback({
         {!correct && onRetry && (
           <button type="button" className="btn btn-secondary pressable" onClick={onRetry}>
             Try again
+          </button>
+        )}
+        {!correct && onShowAnswer && (
+          <button type="button" className="btn btn-secondary pressable" onClick={onShowAnswer}>
+            Show answer
           </button>
         )}
         {onNext && (correct || !onRetry) && (

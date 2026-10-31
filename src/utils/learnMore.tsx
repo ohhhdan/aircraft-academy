@@ -21,7 +21,7 @@ export function spotterTell(aircraft: Aircraft): string {
 export function spotterLearnMore(aircraft: Aircraft, showLinks: boolean): ReactNode {
   const tip = spotterTell(aircraft);
   if (!showLinks) {
-    return `Study ${aircraft.family} in the Index and look for: ${tip}. The Key Features module has full specimen plates with diagrams.`;
+    return `Study ${aircraft.family} in the Index and look for: ${tip}. The Key Features module has full aircraft plates with diagrams.`;
   }
   return (
     <>
@@ -30,7 +30,7 @@ export function spotterLearnMore(aircraft: Aircraft, showLinks: boolean): ReactN
         {aircraft.family} in the Index
       </Link>{' '}
       and look for: <strong>{tip}</strong>. For diagrams and spotting features, open the{' '}
-      <Link to="/learn">Key Features</Link> module and log the specimen to your journal.
+      <Link to="/learn">Key Features</Link> module and log the aircraft to your journal.
     </>
   );
 }
